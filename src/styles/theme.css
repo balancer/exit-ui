@@ -1,0 +1,91 @@
+/*
+ * Balancer dark theme tokens, transcribed from frontend-monorepo:
+ * - packages/lib/shared/services/chakra/themes/base/colors.ts
+ * - packages/lib/shared/services/chakra/themes/base/tokens.ts (dark mode)
+ * - apps/frontend-v3/lib/services/chakra/themes/bal/colors.ts
+ */
+:root {
+  /* primary (Balancer blue) */
+  --primary-100: #daedff;
+  --primary-300: #93c6ff;
+  --primary-400: #68a1ff;
+  --primary-500: #457dff;
+  --primary-600: #2554ff;
+  --primary-700: #2048e9;
+
+  /* gray */
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-400: #a0aec0;
+  --gray-500: #718096;
+  --gray-600: #4a5568;
+  --gray-700: #2d3748;
+  --gray-800: #1a202c;
+  --gray-900: #171923;
+
+  /* red */
+  --red-300: #f9b5a8;
+  --red-400: #f48975;
+  --red-500: #ea6249;
+  --red-600: #d7462b;
+
+  /* green */
+  --green-400: #25e2a4;
+  --green-500: #00d395;
+  --green-600: #00a474;
+
+  /* orange */
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+
+  /* dark mode backgrounds (base.tokens dark.background) */
+  --bg-base: hsla(216, 12%, 25%, 1);
+  --bg-level0: #31373f;
+  --bg-level1: #383e47;
+  --bg-level2: #3f4650;
+  --bg-level3: #464d58;
+  --bg-level4: #4c5561;
+  --bg-level0-opacity: rgba(49, 55, 63, 0.96);
+
+  /* dark mode text */
+  --text-primary: #e5d3be;
+  --text-secondary: #a0aec0;
+  --text-tertiary: #cbd5e0;
+  --text-disabled: #718096;
+
+  /* borders */
+  --border-default: #4f5764;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* gradients */
+  --gradient-dawn: linear-gradient(
+    135deg,
+    hsla(244, 78%, 82%, 1) 0%,
+    hsla(266, 37%, 85%, 1) 40%,
+    hsla(0, 36%, 84%, 1) 60%,
+    rgb(239, 148, 84) 100%
+  );
+  --gradient-sand: linear-gradient(90deg, #e5d3be 0%, #e6c6a0 100%);
+  --gradient-text-special: linear-gradient(
+    90deg,
+    #b3aef5 0%,
+    #d7cbe7 25%,
+    #e5c8c8 50%,
+    #eaa879 100%
+  );
+  --gradient-warning: linear-gradient(
+    180deg,
+    rgba(253, 186, 116, 0.2) 0%,
+    rgba(151, 111, 69, 0.1) 100%
+  );
+
+  /* shadows */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-font: 0px -1px 0px rgba(255, 255, 255, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}

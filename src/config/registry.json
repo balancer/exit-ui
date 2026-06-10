@@ -1,0 +1,1584 @@
+{
+  "mainnet": {
+    "key": "mainnet",
+    "chainId": 1,
+    "name": "Ethereum",
+    "defaultRpcUrl": "https://ethereum-rpc.publicnode.com",
+    "explorerUrl": "https://etherscan.io",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 5000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 12272146,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "WeightedPoolFactory",
+          "address": "0x8E9aa87E45e92bad84D5F8DD1bff34Fb92637dE9",
+          "startBlock": 12272146,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV2Factory",
+          "address": "0xcC508a455F5b0073973107Db6a878DdBDab957bC",
+          "startBlock": 15497271,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0x5Dd94Da3644DDD055fcf6B3E1aa310Bb7801EB8b",
+          "startBlock": 16520627,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x897888115Ada5773E02aA29F775430BFB5F34c51",
+          "startBlock": 16878323,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPool2TokenFactory",
+          "address": "0xA5bf2ddF098bb0Ef6d120C98217dD6B141c74EE0",
+          "startBlock": 12272146,
+          "poolType": "weighted"
+        },
+        {
+          "name": "StablePoolFactory",
+          "address": "0xc66Ba2B6595D3613CCab350C886aCE23866EDe24",
+          "startBlock": 12703127,
+          "poolType": "stable"
+        },
+        {
+          "name": "StablePoolV2Factory",
+          "address": "0x8df6EfEc5547e31B0eb7d1291B511FF8a2bf987c",
+          "startBlock": 14934936,
+          "poolType": "stable"
+        },
+        {
+          "name": "ComposableStablePoolFactory",
+          "address": "0xf9ac7B9dF2b3454E841110CcE5550bD5AC6f875F",
+          "startBlock": 15485885,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV2Factory",
+          "address": "0x85a80afee867aDf27B50BdB7b76DA70f1E853062",
+          "startBlock": 16083775,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV3Factory",
+          "address": "0xdba127fBc23fb20F5929C546af220A991b5C6e01",
+          "startBlock": 16520627,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0xfADa0f4547AB2de89D1304A668C39B3E09Aa7c76",
+          "startBlock": 16878679,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0xDB8d758BCb971e482B2C45f7F8a7740283A1bd3A",
+          "startBlock": 17643198,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x5B42eC6D40f7B7965BE5308c70e2603c0281C1E9",
+          "startBlock": 19314764,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "HighAmpComposableStablePoolFactory",
+          "address": "0xBa1b4a90bAD57470a2cbA762A32955dC491f76e0",
+          "startBlock": 15852258,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "MetaStablePoolFactory",
+          "address": "0x67d27634E44793fE63c467035E31ea8635117cd4",
+          "startBlock": 13011941,
+          "poolType": "stable"
+        },
+        {
+          "name": "LiquidityBootstrappingPoolFactory",
+          "address": "0x751A0bC0e3f75b38e01Cf25bFCE7fF36DE1C87DE",
+          "startBlock": 12871780,
+          "poolType": "lbp"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e",
+          "startBlock": 13730248,
+          "poolType": "lbp"
+        },
+        {
+          "name": "InvestmentPoolFactory",
+          "address": "0x48767F9F868a4A7b86A90736632F6E44C2df7fa9",
+          "startBlock": 13279079,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0xBF904F9F340745B4f0c4702c7B6Ab1e808eA6b93",
+          "startBlock": 17046230,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedKassandraPoolControllerFactory",
+          "address": "0x0000000000000000000000000000000000000000",
+          "startBlock": 17046230,
+          "poolType": "managed"
+        },
+        {
+          "name": "StablePhantomPoolFactory",
+          "address": "0xb08E16cFc07C684dAA2f93C70323BAdb2A6CBFd2",
+          "startBlock": 13766527,
+          "poolType": "phantomStable"
+        },
+        {
+          "name": "AaveLinearPoolFactory",
+          "address": "0xD7FAD3bd59D6477cbe1BE7f646F7f1BA25b230f8",
+          "startBlock": 13766443,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV2Factory",
+          "address": "0x6A0AC04f5C2A10297D5FA79FA6358837a8770041",
+          "startBlock": 15359085,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV3Factory",
+          "address": "0x7d833FEF5BB92ddb578DA85fc0c35cD5Cc00Fb3e",
+          "startBlock": 16136501,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV4Factory",
+          "address": "0xb9F8AB3ED3F3aCBa64Bc6cd2DcA74B7F38fD7B88",
+          "startBlock": 16600026,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x0b576c1245F479506e7C8bbc4dB4db07C1CD31F9",
+          "startBlock": 17045353,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolFactory",
+          "address": "0xE061bF85648e9FA7b59394668CfEef980aEc4c66",
+          "startBlock": 14521506,
+          "poolType": "linear"
+        },
+        {
+          "name": "EulerLinearPoolFactory",
+          "address": "0x5F43FBa61f63Fa6bFF101a0A0458cEA917f6B347",
+          "startBlock": 16588077,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV3Factory",
+          "address": "0x67A25ca2350Ebf4a0C475cA74C257C94a373b828",
+          "startBlock": 16542240,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x813EE7a840CE909E7Fea2117A44a90b8063bd4fd",
+          "startBlock": 17045391,
+          "poolType": "linear"
+        },
+        {
+          "name": "GearboxLinearPoolFactory",
+          "address": "0x2EbE41E1aa44D61c206A94474932dADC7D3FD9E3",
+          "startBlock": 16637919,
+          "poolType": "linear"
+        },
+        {
+          "name": "GearboxLinearPoolV2Factory",
+          "address": "0x39A79EB449Fc05C92c39aA6f0e9BfaC03BE8dE5B",
+          "startBlock": 17052583,
+          "poolType": "linear"
+        },
+        {
+          "name": "SiloLinearPoolFactory",
+          "address": "0xfd1c0e6f02f71842b6ffF7CdC7A017eE1Fd3CdAC",
+          "startBlock": 16869467,
+          "poolType": "linear"
+        },
+        {
+          "name": "SiloLinearPoolV2Factory",
+          "address": "0x4E11AEec21baF1660b1a46472963cB3DA7811C89",
+          "startBlock": 17052627,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolFactory",
+          "address": "0x8b7854708c0C54f9D7d1FF351D4F84E6dE0E134C",
+          "startBlock": 16638024,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0x5F5222Ffa40F2AEd6380D022184D6ea67C776eE0",
+          "startBlock": 17052602,
+          "poolType": "linear"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x412a5B2e7a678471985542757A6855847D4931D5",
+          "startBlock": 17672894,
+          "poolType": "gyro"
+        },
+        {
+          "name": "Gyro2V2PoolFactory",
+          "address": "0x579653927BF509B361F6e3813f5D4B95331d98c9",
+          "startBlock": 18577307,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "GaugeFactory",
+          "address": "0x4E7bBd911cf1EFa442BC1b2e9Ea01ffE785412EC",
+          "startBlock": 14457664
+        },
+        {
+          "name": "GaugeV2Factory",
+          "address": "0xf1665E19bc105BE4EDD3739F88315cC699cc5b65",
+          "startBlock": 15399251
+        },
+        {
+          "name": "SingleRecipientGaugeFactory",
+          "address": "0x94f68b54191F62f781Fe8298A8A5Fa3ed772d227",
+          "startBlock": 14457748
+        },
+        {
+          "name": "SingleRecipientGaugeV2Factory",
+          "address": "0x4fb47126Fa83A8734991E41B942Ac29A3266C968",
+          "startBlock": 16686720
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 21332121,
+      "router": "0x5c6fb490bdfd3246eb0bb062c168decaf4bd9fdd"
+    }
+  },
+  "polygon": {
+    "key": "polygon",
+    "chainId": 137,
+    "name": "Polygon",
+    "defaultRpcUrl": "https://polygon-rpc.com",
+    "explorerUrl": "https://polygonscan.com",
+    "nativeSymbol": "POL",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 15832990,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "WeightedPoolFactory",
+          "address": "0x8E9aa87E45e92bad84D5F8DD1bff34Fb92637dE9",
+          "startBlock": 15832998,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV2Factory",
+          "address": "0x0e39C3D9b2ec765eFd9c5c70BB290B1fCD8536E3",
+          "startBlock": 32850162,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0x82e4cFaef85b1B6299935340c964C942280327f4",
+          "startBlock": 38709460,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0xFc8a407Bba312ac761D8BFe04CE1201904842B76",
+          "startBlock": 40611103,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPool2TokenFactory",
+          "address": "0xA5bf2ddF098bb0Ef6d120C98217dD6B141c74EE0",
+          "startBlock": 15869090,
+          "poolType": "weighted"
+        },
+        {
+          "name": "StablePoolFactory",
+          "address": "0xc66Ba2B6595D3613CCab350C886aCE23866EDe24",
+          "startBlock": 16138679,
+          "poolType": "stable"
+        },
+        {
+          "name": "StablePoolV2Factory",
+          "address": "0xcA96C4f198d343E251b1a01F3EBA061ef3DA73C1",
+          "startBlock": 29371951,
+          "poolType": "stable"
+        },
+        {
+          "name": "ComposableStablePoolFactory",
+          "address": "0x136FD06Fa01eCF624C7F2B3CB15742c1339dC2c4",
+          "startBlock": 32774224,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV2Factory",
+          "address": "0x85a80afee867aDf27B50BdB7b76DA70f1E853062",
+          "startBlock": 36258226,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV3Factory",
+          "address": "0x7bc6C0E73EDAa66eF3F6E2f27b0EE8661834c6C9",
+          "startBlock": 38709460,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0x6Ab5549bBd766A43aFb687776ad8466F8b42f777",
+          "startBlock": 40613553,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0xe2fa4e1d17725e72dcdAfe943Ecf45dF4B9E285b",
+          "startBlock": 44798194,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0xEAedc32a51c510d35ebC11088fD5fF2b47aACF2E",
+          "startBlock": 53996258,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "MetaStablePoolFactory",
+          "address": "0xdAE7e32ADc5d490a43cCba1f0c736033F2b4eFca",
+          "startBlock": 17913016,
+          "poolType": "stable"
+        },
+        {
+          "name": "LiquidityBootstrappingPoolFactory",
+          "address": "0x751A0bC0e3f75b38e01Cf25bFCE7fF36DE1C87DE",
+          "startBlock": 17116402,
+          "poolType": "lbp"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x41B953164995c11C81DA73D212ED8Af25741b7Ac",
+          "startBlock": 22067480,
+          "poolType": "lbp"
+        },
+        {
+          "name": "InvestmentPoolFactory",
+          "address": "0x0f7bb7ce7b6ed9366F9b6B910AdeFE72dC538193",
+          "startBlock": 19404118,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0xB8Dfa4fd0F083de2B7EDc0D5eeD5E684e54bA45D",
+          "startBlock": 41501253,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedKassandraPoolControllerFactory",
+          "address": "0x228885c9d0440Ae640B88fBeE31522CC6a59Fd2F",
+          "startBlock": 42020509,
+          "poolType": "managed"
+        },
+        {
+          "name": "StablePhantomPoolFactory",
+          "address": "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
+          "startBlock": 22288478,
+          "poolType": "phantomStable"
+        },
+        {
+          "name": "AaveLinearPoolFactory",
+          "address": "0xf302f9F50958c5593770FDf4d4812309fF77414f",
+          "startBlock": 22287712,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV2Factory",
+          "address": "0x8df6EfEc5547e31B0eb7d1291B511FF8a2bf987c",
+          "startBlock": 31996915,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV3Factory",
+          "address": "0x35c425234DC42e7402f54cC54573f77842963a56",
+          "startBlock": 36555199,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV4Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 39142839,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0xAB2372275809E15198A7968C7f324053867cdB0C",
+          "startBlock": 41503126,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolFactoryBeta",
+          "address": "0xC6bD2497332d24094eC16a7261eec5C412B5a2C1",
+          "startBlock": 25772863,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolFactory",
+          "address": "0x6637dA12881f66dC7E42b8879B0a79faF43C9be2",
+          "startBlock": 26746067,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV3Factory",
+          "address": "0xa3B9515A9c557455BC53F7a535A85219b59e8B2E",
+          "startBlock": 39072910,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x5C5fCf8fBd4cd563cED27e7D066b88ee20E1867A",
+          "startBlock": 41502981,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolFactory",
+          "address": "0x7396f99B48e7436b152427bfA3DD6Aa8C7C6d05B",
+          "startBlock": 39341056,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0x0b576c1245F479506e7C8bbc4dB4db07C1CD31F9",
+          "startBlock": 41503269,
+          "poolType": "linear"
+        },
+        {
+          "name": "Gyro2PoolFactory",
+          "address": "0x5d8545a7330245150bE0Ce88F8afB0EDc41dFc34",
+          "startBlock": 31556084,
+          "poolType": "gyro"
+        },
+        {
+          "name": "Gyro3PoolFactory",
+          "address": "0x90f08B3705208E41DbEEB37A42Fb628dD483AdDa",
+          "startBlock": 31556094,
+          "poolType": "gyro"
+        },
+        {
+          "name": "GyroEPoolFactory",
+          "address": "0xD4204551BC5397455f8897745d50Ac4F6beE0EF6",
+          "startBlock": 35414865,
+          "poolType": "gyro"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x1a79A24Db0F73e9087205287761fC9C5C305926b",
+          "startBlock": 41209677,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeFactory",
+          "address": "0x3b8cA519122CdD8efb272b0D3085453404B25bD0",
+          "startBlock": 27098624
+        },
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0x22625eEDd92c81a219A83e1dc48f88d54786B017",
+          "startBlock": 40687417
+        }
+      ]
+    }
+  },
+  "arbitrum": {
+    "key": "arbitrum",
+    "chainId": 42161,
+    "name": "Arbitrum",
+    "defaultRpcUrl": "https://arb1.arbitrum.io/rpc",
+    "explorerUrl": "https://arbiscan.io",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 222832,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "WeightedPoolFactory",
+          "address": "0x7dFdEF5f355096603419239CE743BfaF1120312B",
+          "startBlock": 222863,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV2Factory",
+          "address": "0x8df6EfEc5547e31B0eb7d1291B511FF8a2bf987c",
+          "startBlock": 23605789,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0xf1665E19bc105BE4EDD3739F88315cC699cc5b65",
+          "startBlock": 56668142,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0xc7E5ED1054A24Ef31D827E6F86caA58B3Bc168d7",
+          "startBlock": 72222060,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPool2TokenFactory",
+          "address": "0xCF0a32Bbef8F064969F21f7e02328FB577382018",
+          "startBlock": 222864,
+          "poolType": "weighted"
+        },
+        {
+          "name": "StablePoolFactory",
+          "address": "0x2433477A10FC5d31B9513C638F19eE85CaED53Fd",
+          "startBlock": 222866,
+          "poolType": "stable"
+        },
+        {
+          "name": "StablePoolV2Factory",
+          "address": "0xEF44D6786b2b4d544b7850Fe67CE6381626Bf2D6",
+          "startBlock": 14244664,
+          "poolType": "stable"
+        },
+        {
+          "name": "ComposableStablePoolFactory",
+          "address": "0xaEb406b0E430BF5Ea2Dc0B9Fe62E4E53f74B3a33",
+          "startBlock": 23227044,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV2Factory",
+          "address": "0x85a80afee867aDf27B50BdB7b76DA70f1E853062",
+          "startBlock": 42468618,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV3Factory",
+          "address": "0x1c99324EDC771c82A0DCCB780CC7DDA0045E50e7",
+          "startBlock": 56668142,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0x2498A2B0d6462d2260EAC50aE1C3e03F4829BA95",
+          "startBlock": 72235860,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0xA8920455934Da4D853faac1f94Fe7bEf72943eF1",
+          "startBlock": 108834057,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
+          "startBlock": 184805448,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "MetaStablePoolFactory",
+          "address": "0xEBFD5681977E38Af65A7487DC70B8221D089cCAD",
+          "startBlock": 222868,
+          "poolType": "stable"
+        },
+        {
+          "name": "LiquidityBootstrappingPoolFactory",
+          "address": "0x142B9666a0a3A30477b052962ddA81547E7029ab",
+          "startBlock": 222870,
+          "poolType": "lbp"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x1802953277FD955f9a254B80Aa0582f193cF1d77",
+          "startBlock": 4859669,
+          "poolType": "lbp"
+        },
+        {
+          "name": "InvestmentPoolFactory",
+          "address": "0xaCd615B3705B9c880E4E7293f1030B34e57B4c1c",
+          "startBlock": 1488052,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x8eA89804145c007e7D226001A96955ad53836087",
+          "startBlock": 80173649,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedKassandraPoolControllerFactory",
+          "address": "0xF9c9073590F502F12B5497ae49DA1446D224A9EA",
+          "startBlock": 120161662,
+          "poolType": "managed"
+        },
+        {
+          "name": "ERC4626LinearPoolFactory",
+          "address": "0x2794953110874981a0d301286c986992022A62a1",
+          "startBlock": 9311471,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV2Factory",
+          "address": "0xe2E901AB09f37884BA31622dF3Ca7FC19AA443Be",
+          "startBlock": 20509414,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV3Factory",
+          "address": "0xa2D801064652A269D92EE2A59F3261155ec66830",
+          "startBlock": 44470235,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV4Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 59763160,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x7396f99B48e7436b152427bfA3DD6Aa8C7C6d05B",
+          "startBlock": 80183262,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV3Factory",
+          "address": "0xa3B9515A9c557455BC53F7a535A85219b59e8B2E",
+          "startBlock": 59209879,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x7ADbdabaA80F654568421887c12F09E0C7BD9629",
+          "startBlock": 80182932,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolFactory",
+          "address": "0xD8B6b96c88ad626EB6209c4876e3B14f45f8803A",
+          "startBlock": 613196646,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0x19DFEF0a828EEC0c85FbB335aa65437417390b85",
+          "startBlock": 80185764,
+          "poolType": "linear"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0xdCA5f1F0d7994A32BC511e7dbA0259946653Eaf6",
+          "startBlock": 124858976,
+          "poolType": "gyro"
+        },
+        {
+          "name": "Gyro2V2PoolFactory",
+          "address": "0x7a36527A02d96693b0AF2b70421F952816a4a088",
+          "startBlock": 194366254,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeFactory",
+          "address": "0xb08E16cFc07C684dAA2f93C70323BAdb2A6CBFd2",
+          "startBlock": 9756975
+        },
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0x6817149cb753BF529565B4D023d7507eD2ff4Bc0",
+          "startBlock": 72942741
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 297810187,
+      "router": "0x0f08eef2c785aa5e7539684af04755dec1347b7c"
+    }
+  },
+  "gnosis": {
+    "key": "gnosis",
+    "chainId": 100,
+    "name": "Gnosis",
+    "defaultRpcUrl": "https://rpc.gnosischain.com",
+    "explorerUrl": "https://gnosisscan.io",
+    "nativeSymbol": "xDAI",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 5000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 24821598,
+      "balancerQueries": "0x0f3e0c4218b7b0108a3643cfe9d3ec0d4f57c54e",
+      "factories": [
+        {
+          "name": "WeightedPoolV2Factory",
+          "address": "0xf302f9F50958c5593770FDf4d4812309fF77414f",
+          "startBlock": 25414470,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
+          "startBlock": 26226256,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x6CaD2ea22BFA7F4C14Aae92E47F510Cd5C509bc7",
+          "startBlock": 27055829,
+          "poolType": "weighted"
+        },
+        {
+          "name": "StablePoolV2Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 25415344,
+          "poolType": "stable"
+        },
+        {
+          "name": "ComposableStablePoolV2Factory",
+          "address": "0x76578ecf9a141296Ec657847fb45B0585bCDa3a6",
+          "startBlock": 25415385,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV3Factory",
+          "address": "0xC128468b7Ce63eA702C1f104D55A2566b13D3ABD",
+          "startBlock": 26365805,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0xD87F44Df0159DC78029AB9CA7D7e57E7249F5ACD",
+          "startBlock": 27056416,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
+          "startBlock": 28832248,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x47B489bf5836f83ABD928C316F8e39bC0587B020",
+          "startBlock": 32650879,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "AaveLinearPoolV3Factory",
+          "address": "0x9dd5Db2d38b50bEF682cE532bCca5DfD203915E1",
+          "startBlock": 25415464,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV4Factory",
+          "address": "0x9dA18982a33FD0c7051B19F0d7C76F2d5E7e017c",
+          "startBlock": 26410978,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x62aaB12865d7281048c337D53a4dde9d770321E6",
+          "startBlock": 27443297,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolFactory",
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "startBlock": 25415264,
+          "poolType": "linear"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x85a80afee867aDf27B50BdB7b76DA70f1E853062",
+          "startBlock": 25415236,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0xDF9B5B00Ef9bca66e9902Bd813dB14e4343Be025",
+          "startBlock": 27434722,
+          "poolType": "managed"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x5d3be8aae57bf0d1986ff7766cc9607b6cc99b89",
+          "startBlock": 33759936,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeFactory",
+          "address": "0x809B79b53F18E9bc08A961ED4678B901aC93213a",
+          "startBlock": 26615210
+        },
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0x83E443EF4f9963C77bd860f94500075556668cb8",
+          "startBlock": 27088528
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 37360338,
+      "router": "0x84813aa3e079a665c0b80f944427ee83cba63617"
+    }
+  },
+  "optimism": {
+    "key": "optimism",
+    "chainId": 10,
+    "name": "Optimism",
+    "defaultRpcUrl": "https://mainnet.optimism.io",
+    "explorerUrl": "https://optimistic.etherscan.io",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 7003431,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "WeightedPoolFactory",
+          "address": "0xdAE7e32ADc5d490a43cCba1f0c736033F2b4eFca",
+          "startBlock": 7005512,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV2Factory",
+          "address": "0xad901309d9e9DbC5Df19c84f729f429F0189a633",
+          "startBlock": 22410483,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0xA0DAbEBAAd1b243BBb243f933013d560819eB66f",
+          "startBlock": 72832703,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x230a59F4d9ADc147480f03B0D3fFfeCd56c3289a",
+          "startBlock": 82737545,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPool2TokenFactory",
+          "address": "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e",
+          "startBlock": 7005518,
+          "poolType": "weighted"
+        },
+        {
+          "name": "StablePoolV2Factory",
+          "address": "0xeb151668006CD04DAdD098AFd0a82e78F77076c3",
+          "startBlock": 11088891,
+          "poolType": "stable"
+        },
+        {
+          "name": "ComposableStablePoolFactory",
+          "address": "0xf145caFB67081895EE80eB7c04A30Cf87f07b745",
+          "startBlock": 22182522,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV3Factory",
+          "address": "0xe2E901AB09f37884BA31622dF3Ca7FC19AA443Be",
+          "startBlock": 72832821,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0x1802953277FD955f9a254B80Aa0582f193cF1d77",
+          "startBlock": 82748180,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0x043A2daD730d585C44FB79D2614F295D2d625412",
+          "startBlock": 106574795,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
+          "startBlock": 116694338,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "MetaStablePoolFactory",
+          "address": "0xb08E16cFc07C684dAA2f93C70323BAdb2A6CBFd2",
+          "startBlock": 7005662,
+          "poolType": "stable"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0xf302f9F50958c5593770FDf4d4812309fF77414f",
+          "startBlock": 7005915,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x4C32a8a8fDa4E24139B51b456B42290f51d6A1c4",
+          "startBlock": 90348540,
+          "poolType": "managed"
+        },
+        {
+          "name": "AaveLinearPoolV2Factory",
+          "address": "0x994086630773dC6cB54D3A5E0Ef0963532789E75",
+          "startBlock": 20254495,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV3Factory",
+          "address": "0xAd3CC7852382C09fdCE54784292c6aB7fb9Df917",
+          "startBlock": 46527984,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV4Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 73524584,
+          "poolType": "linear"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x7396f99B48e7436b152427bfA3DD6Aa8C7C6d05B",
+          "startBlock": 90009956,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolFactory",
+          "address": "0x4C4287b07d293E361281bCeEe8715c8CDeB64E34",
+          "startBlock": 13408880,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV3Factory",
+          "address": "0xa3B9515A9c557455BC53F7a535A85219b59e8B2E",
+          "startBlock": 73010766,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x7ADbdabaA80F654568421887c12F09E0C7BD9629",
+          "startBlock": 90009334,
+          "poolType": "linear"
+        },
+        {
+          "name": "ReaperLinearPoolFactory",
+          "address": "0x19968D4b7126904Fd665eD25417599Df9604Df83",
+          "startBlock": 22842161,
+          "poolType": "linear"
+        },
+        {
+          "name": "ReaperLinearPoolV3Factory",
+          "address": "0xe4B88E745Dce9084B9fc2439F85A9a4C5CD6f361",
+          "startBlock": 29896926,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolFactory",
+          "address": "0xD8B6b96c88ad626EB6209c4876e3B14f45f8803A",
+          "startBlock": 74613637,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0x19DFEF0a828EEC0c85FbB335aa65437417390b85",
+          "startBlock": 90034049,
+          "poolType": "linear"
+        },
+        {
+          "name": "BeefyLinearPoolFactory",
+          "address": "0xE77f03F5007Df49005CAf2a2f1D872c51aE51fD1",
+          "startBlock": 49164540,
+          "poolType": "linear"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x9b683ca24b0e013512e2566b68704dbe9677413c",
+          "startBlock": 97253023,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeFactory",
+          "address": "0x2E96068b3D5B5BAE3D7515da4A1D2E52d08A2647",
+          "startBlock": 9052485
+        },
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0xa523f47A933D5020b23629dDf689695AA94612Dc",
+          "startBlock": 83239534
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 133969431,
+      "router": "0xe2fa4e1d17725e72dcdafe943ecf45df4b9e285b"
+    }
+  },
+  "avalanche": {
+    "key": "avalanche",
+    "chainId": 43114,
+    "name": "Avalanche",
+    "defaultRpcUrl": "https://api.avax.network/ext/bc/C/rpc",
+    "explorerUrl": "https://snowtrace.io",
+    "nativeSymbol": "AVAX",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 26386141,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0x3B1eb8EB7b43882b385aB30533D9A2BeF9052a98",
+          "startBlock": 29221425,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0xE42FFA682A26EF8F25891db4882932711D42e467",
+          "startBlock": 32301646,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0xb9F8AB3ED3F3aCBa64Bc6cd2DcA74B7F38fD7B88",
+          "startBlock": 42186350,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "WeightedPoolV3Factory",
+          "address": "0x94f68b54191F62f781Fe8298A8A5Fa3ed772d227",
+          "startBlock": 26389236,
+          "poolType": "weighted"
+        },
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x230a59F4d9ADc147480f03B0D3fFfeCd56c3289a",
+          "startBlock": 27739006,
+          "poolType": "weighted"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e",
+          "startBlock": 26386552,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x03F3Fb107e74F2EAC9358862E91ad3c692712054",
+          "startBlock": 29221742,
+          "poolType": "managed"
+        },
+        {
+          "name": "ManagedKassandraPoolControllerFactory",
+          "address": "0xbBa46B512a158aF0e41111109617c660Ff903819",
+          "startBlock": 34853589,
+          "poolType": "managed"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x6caf662b573F577DE01165d2d38D1910bba41F8A",
+          "startBlock": 29512658,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x4507d91Cd2C0D51D9B4F30Bf0B93AFC938A70BA5",
+          "startBlock": 29513456,
+          "poolType": "linear"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x41e9ac0bfed353c2de21a980da0ebb8a464d946a",
+          "startBlock": 50484541,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 32558551
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 59955604,
+      "router": "0xf39ca6ede9bf7820a952b52f3c94af526bab9015"
+    }
+  },
+  "base": {
+    "key": "base",
+    "chainId": 8453,
+    "name": "Base",
+    "defaultRpcUrl": "https://mainnet.base.org",
+    "explorerUrl": "https://basescan.org",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 1196036,
+      "balancerQueries": "0x300ab2038eac391f26d9f895dc61f8f66a548833",
+      "factories": [
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x4C32a8a8fDa4E24139B51b456B42290f51d6A1c4",
+          "startBlock": 1204869,
+          "poolType": "weighted"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0x8df317a729fcaA260306d7de28888932cb579b88",
+          "startBlock": 1204710,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x956CCab09898C0AF2aCa5e6C229c3aD4E93d9288",
+          "startBlock": 11099703,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x0c6052254551EAe3ECac77B01DFcf1025418828f",
+          "startBlock": 1206531,
+          "poolType": "lbp"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x15e86Be6084C6A5a8c17732D398dFbC2Ec574CEC",
+          "startBlock": 13035219,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0xb1a4FE1C6d25a0DDAb47431A92A723dd71d9021f",
+          "startBlock": 2555348
+        },
+        {
+          "name": "TempChildChainLiquidityGaugeV2Factory",
+          "address": "0x2498A2B0d6462d2260EAC50aE1C3e03F4829BA95",
+          "startBlock": 1204492
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 25343854,
+      "router": "0x76578ecf9a141296ec657847fb45b0585bcda3a6"
+    }
+  },
+  "zkevm": {
+    "key": "zkevm",
+    "chainId": 1101,
+    "name": "Polygon zkEVM",
+    "defaultRpcUrl": "https://zkevm-rpc.com",
+    "explorerUrl": "https://zkevm.polygonscan.com",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 1000,
+    "deprecated": true,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 203079,
+      "balancerQueries": "0x809b79b53f18e9bc08a961ed4678b901ac93213a",
+      "factories": [
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x03F3Fb107e74F2EAC9358862E91ad3c692712054",
+          "startBlock": 219385,
+          "poolType": "weighted"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0x8eA89804145c007e7D226001A96955ad53836087",
+          "startBlock": 220016,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0x956CCab09898C0AF2aCa5e6C229c3aD4E93d9288",
+          "startBlock": 2157318,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "startBlock": 10268106,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5FactoryV2",
+          "address": "0x577e5993B9Cc480F07F98B5Ebd055604bd9071C4",
+          "startBlock": 7248126,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0x4b7b369989e613ff2C65768B7Cf930cC927F901E",
+          "startBlock": 220075,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x6B1Da720Be2D11d95177ccFc40A917c2688f396c",
+          "startBlock": 220039,
+          "poolType": "linear"
+        },
+        {
+          "name": "GearboxLinearPoolV2Factory",
+          "address": "0x687b8C9b41E01Be8B591725fac5d5f52D0564d79",
+          "startBlock": 220484,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0x44d33798dddCdAbc93Fe6a40C80588033Dc502d3",
+          "startBlock": 220509,
+          "poolType": "linear"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x3B1eb8EB7b43882b385aB30533D9A2BeF9052a98",
+          "startBlock": 204739,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0xaf779e58dafb4307b998C7b3C9D3f788DFc80632",
+          "startBlock": 220536,
+          "poolType": "managed"
+        },
+        {
+          "name": "GyroEV2PoolFactory",
+          "address": "0x5D56EA1B2595d2dbe4f5014b967c78ce75324f0c",
+          "startBlock": 5147666,
+          "poolType": "gyro"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0x2498A2B0d6462d2260EAC50aE1C3e03F4829BA95",
+          "startBlock": 203653
+        }
+      ]
+    }
+  },
+  "mode": {
+    "key": "mode",
+    "chainId": 34443,
+    "name": "Mode",
+    "defaultRpcUrl": "https://mainnet.mode.network",
+    "explorerUrl": "https://explorer.mode.network",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 5000,
+    "deprecated": true,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 8110317,
+      "balancerQueries": "0x36cac20dd805d128c1a6dd16eea845c574b5a17c",
+      "factories": [
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68",
+          "startBlock": 8115586,
+          "poolType": "weighted"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x5DbAd78818D4c8958EfF2d5b95b28385A22113Cd",
+          "startBlock": 8115909,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0xE42FFA682A26EF8F25891db4882932711D42e467",
+          "startBlock": 8115232,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x7A2535f5fB47b8e44c02Ef5D9990588313fe8F05",
+          "startBlock": 8115674,
+          "poolType": "managed"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0x4fb47126Fa83A8734991E41B942Ac29A3266C968",
+          "startBlock": 8115571
+        }
+      ]
+    }
+  },
+  "fraxtal": {
+    "key": "fraxtal",
+    "chainId": 252,
+    "name": "Fraxtal",
+    "defaultRpcUrl": "https://rpc.frax.com/",
+    "explorerUrl": "https://fraxscan.com",
+    "nativeSymbol": "frxETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": true,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 4708596,
+      "balancerQueries": "0x4132f7acc9db7a6cf7be2dd3a9dc8b30c7e6e6c8",
+      "factories": [
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x9dA18982a33FD0c7051B19F0d7C76F2d5E7e017c",
+          "startBlock": 4713337,
+          "poolType": "weighted"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
+          "startBlock": 4713656,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x956CCab09898C0AF2aCa5e6C229c3aD4E93d9288",
+          "startBlock": 4708781,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x7A2535f5fB47b8e44c02Ef5D9990588313fe8F05",
+          "startBlock": 4713444,
+          "poolType": "managed"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68",
+          "startBlock": 4712390
+        }
+      ]
+    }
+  },
+  "hyperevm": {
+    "key": "hyperevm",
+    "chainId": 999,
+    "name": "HyperEVM",
+    "defaultRpcUrl": "https://rpc.hyperliquid.xyz/evm",
+    "explorerUrl": "https://hyperevmscan.io",
+    "nativeSymbol": "HYPE",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 1000,
+    "deprecated": false,
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 6132445,
+      "router": "0xa8920455934da4d853faac1f94fe7bef72943ef1"
+    }
+  },
+  "plasma": {
+    "key": "plasma",
+    "chainId": 9745,
+    "name": "Plasma",
+    "defaultRpcUrl": "https://rpc.plasma.to",
+    "explorerUrl": "https://plasmascan.to",
+    "nativeSymbol": "XPL",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 1000,
+    "deprecated": false,
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 780207,
+      "router": "0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c"
+    }
+  },
+  "xlayer": {
+    "key": "xlayer",
+    "chainId": 196,
+    "name": "X Layer",
+    "defaultRpcUrl": "https://rpc.xlayer.tech",
+    "explorerUrl": "https://www.oklink.com/xlayer",
+    "nativeSymbol": "OKB",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 100,
+    "deprecated": false,
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 43082760,
+      "router": "0xc3ccace87f6d3a81724075adcb5ddd85a8a1bb68"
+    }
+  },
+  "monad": {
+    "key": "monad",
+    "chainId": 143,
+    "name": "Monad",
+    "defaultRpcUrl": "https://rpc.monad.xyz",
+    "explorerUrl": "https://monadexplorer.com",
+    "nativeSymbol": "MON",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 1000,
+    "deprecated": false,
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 22091249,
+      "router": "0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c"
+    }
+  },
+  "sepolia": {
+    "key": "sepolia",
+    "chainId": 11155111,
+    "name": "Sepolia",
+    "defaultRpcUrl": "https://ethereum-sepolia-rpc.publicnode.com",
+    "explorerUrl": "https://sepolia.etherscan.io",
+    "nativeSymbol": "ETH",
+    "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
+    "logsMaxRange": 10000,
+    "deprecated": false,
+    "v2": {
+      "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+      "startBlock": 3418831,
+      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "factories": [
+        {
+          "name": "WeightedPoolV4Factory",
+          "address": "0x7920BFa1b2041911b354747CA7A6cDD2dfC50Cfd",
+          "startBlock": 3424893,
+          "poolType": "weighted"
+        },
+        {
+          "name": "ComposableStablePoolV4Factory",
+          "address": "0xA3fd20E29358c056B727657E83DFd139abBC9924",
+          "startBlock": 3425277,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV5Factory",
+          "address": "0xa523f47A933D5020b23629dDf689695AA94612Dc",
+          "startBlock": 3844648,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x05503B3aDE04aCA81c8D6F88eCB73Ba156982D2B",
+          "startBlock": 5369821,
+          "poolType": "composableStable"
+        },
+        {
+          "name": "AaveLinearPoolV5Factory",
+          "address": "0xDF9B5B00Ef9bca66e9902Bd813dB14e4343Be025",
+          "startBlock": 3421724,
+          "poolType": "linear"
+        },
+        {
+          "name": "ERC4626LinearPoolV4Factory",
+          "address": "0x59562f93c447656F6E4799fC1FC7c3d977C3324F",
+          "startBlock": 3421683,
+          "poolType": "linear"
+        },
+        {
+          "name": "GearboxLinearPoolV2Factory",
+          "address": "0x8df317a729fcaA260306d7de28888932cb579b88",
+          "startBlock": 3421697,
+          "poolType": "linear"
+        },
+        {
+          "name": "SiloLinearPoolV2Factory",
+          "address": "0x8eA89804145c007e7D226001A96955ad53836087",
+          "startBlock": 3421752,
+          "poolType": "linear"
+        },
+        {
+          "name": "YearnLinearPoolV2Factory",
+          "address": "0xAcf05BE5134d64d150d153818F8C67EE36996650",
+          "startBlock": 3421713,
+          "poolType": "linear"
+        },
+        {
+          "name": "TempLiquidityBootstrappingPoolFactory",
+          "address": "0x45fFd460cC6642B8D8Fb12373DFd77Ceb0f4932B",
+          "startBlock": 3419649,
+          "poolType": "lbp"
+        },
+        {
+          "name": "ManagedPoolV2Factory",
+          "address": "0x63e179C5b6d54B2c2e36b9cE4085EF5A8C86D50c",
+          "startBlock": 3425305,
+          "poolType": "managed"
+        }
+      ],
+      "gaugeFactories": [
+        {
+          "name": "GaugeV2Factory",
+          "address": "0x2FF226CD12C80511a641A6101F071d853A4e5363",
+          "startBlock": 3425130
+        },
+        {
+          "name": "SingleRecipientGaugeV2Factory",
+          "address": "0x7EE4D172Ae50C627a1BFA9A99E1260C54dA26fdF",
+          "startBlock": 3425172
+        },
+        {
+          "name": "ChildChainLiquidityGaugeV2Factory",
+          "address": "0xC370cD86d5488c1788b62f11b09adb0C47F47440",
+          "startBlock": 3425268
+        }
+      ]
+    },
+    "v3": {
+      "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
+      "startBlock": 7212247,
+      "router": "0x0bf61f706105ea44694f2e92986bd01c39930280"
+    }
+  }
+}

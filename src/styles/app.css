@@ -1,0 +1,221 @@
+@import './theme.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-level0);
+  color: var(--text-tertiary);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 64px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-primary);
+  text-shadow: var(--shadow-font);
+  font-weight: 700;
+}
+
+h1.gradient-text {
+  background: var(--gradient-text-special);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+a {
+  color: var(--primary-400);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: opacity 0.15s ease, filter 0.15s ease;
+}
+button:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.btn-primary {
+  background: var(--gradient-sand);
+  color: var(--gray-800);
+}
+
+.btn-secondary {
+  background: var(--bg-level4);
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-default);
+}
+
+.btn-danger {
+  background: var(--red-600);
+  color: #fff;
+}
+
+input,
+select {
+  font: inherit;
+  background: var(--bg-level0);
+  color: var(--gray-200);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  outline: none;
+}
+input:focus,
+select:focus {
+  border-color: var(--primary-500);
+}
+input::placeholder {
+  color: var(--text-disabled);
+}
+
+.card {
+  background: var(--bg-level1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card-inner {
+  background: var(--bg-level2);
+  border-radius: var(--radius-md);
+  padding: 12px;
+}
+
+.muted {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--bg-level4);
+  color: var(--text-secondary);
+}
+
+.badge-green {
+  background: rgba(0, 211, 149, 0.15);
+  color: var(--green-400);
+}
+
+.badge-orange {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--orange-300);
+}
+
+.badge-blue {
+  background: rgba(69, 125, 255, 0.18);
+  color: var(--primary-300);
+}
+
+.warning-box {
+  background: var(--gradient-warning);
+  border: 1px solid rgba(253, 186, 116, 0.35);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  color: var(--orange-300);
+  font-size: 13px;
+}
+
+.error-box {
+  background: rgba(215, 70, 43, 0.12);
+  border: 1px solid rgba(215, 70, 43, 0.4);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  color: var(--red-300);
+  font-size: 13px;
+  word-break: break-word;
+}
+
+table.amounts {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table.amounts td,
+table.amounts th {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+table.amounts th {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border-default);
+  border-top-color: var(--primary-400);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

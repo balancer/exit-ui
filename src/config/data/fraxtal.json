@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "chainKey": "fraxtal",
+    "scannedAtBlock": 37145720,
+    "generatedAt": "2026-06-10T14:35:51.818Z"
+  },
+  "v2Pools": [
+    {
+      "address": "0x1570315476480fA80ceC1FFF07A20c1df1aDfD53",
+      "poolId": "0x1570315476480fa80cec1fff07a20c1df1adfd53000200000000000000000009",
+      "poolType": "weighted",
+      "symbol": "sFRAX/sfrxETH",
+      "name": "Balancer sFRAX/sfrxETH",
+      "tokens": [
+        {
+          "address": "0xFC00000000000000000000000000000000000005",
+          "symbol": "sfrxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfc00000000000000000000000000000000000008",
+          "symbol": "sfrxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1fB5653B800fa675F7b791652cF60D264198e5f2",
+      "poolId": "0x1fb5653b800fa675f7b791652cf60d264198e5f2000100000000000000000002",
+      "poolType": "managed",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Managed Pool",
+      "tokens": [
+        {
+          "address": "0x1fB5653B800fa675F7b791652cF60D264198e5f2",
+          "symbol": "TEST",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x2FC7447F6cF71f9aa9E7FF8814B37E55b268Ec91",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xFC00000000000000000000000000000000000006",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x33251abeCb0364Df98a27A8D5d7b5CCddc774c42",
+      "poolId": "0x33251abecb0364df98a27a8d5d7b5ccddc774c42000000000000000000000008",
+      "poolType": "composableStable",
+      "symbol": "sFRAX/sDAI/sUSDe",
+      "name": "Balancer sFRAX/sDAI/sUSDe",
+      "tokens": [
+        {
+          "address": "0x09eAdcBAa812A4C076c3a6cDe765DC4a22E0d775",
+          "symbol": "sDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
+          "symbol": "sUSDe",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x33251abeCb0364Df98a27A8D5d7b5CCddc774c42",
+          "symbol": "sFRAX/sDAI/sUSDe",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xfc00000000000000000000000000000000000008",
+          "symbol": "sfrxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x760b30Eb4BE3CCd840e91183E33e2953c6A31253",
+      "poolId": "0x760b30eb4be3ccd840e91183e33e2953c6a31253000000000000000000000005",
+      "poolType": "composableStable",
+      "symbol": "FRAX/USDe/DAI/USDT/USDC ",
+      "name": "FRAX/USDe/DAI/USDT/USDC ",
+      "tokens": [
+        {
+          "address": "0x4d15EA9C2573ADDAeD814e48C148b5262694646A",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x760b30Eb4BE3CCd840e91183E33e2953c6A31253",
+          "symbol": "FRAX/USDe/DAI/USDT/USDC ",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xb3a7862d7B29B8E3D235299128C6985E2CD44c33",
+          "symbol": "USDe",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDcc0F2D8F90FDe85b10aC1c8Ab57dc0AE946A543",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf6a011fAC307f55Cd4bA8e43b8b93f39808DdaA9",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xFc00000000000000000000000000000000000001",
+          "symbol": "frxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7EdCA1457AAeACEbB2BCbfc3f1c6683AC4a05af4",
+      "poolId": "0x7edca1457aaeacebb2bcbfc3f1c6683ac4a05af400000000000000000000000a",
+      "poolType": "composableStable",
+      "symbol": "sFRAX/FRAX",
+      "name": "Balancer sFRAX/FRAX",
+      "tokens": [
+        {
+          "address": "0x7EdCA1457AAeACEbB2BCbfc3f1c6683AC4a05af4",
+          "symbol": "sFRAX/FRAX",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xFc00000000000000000000000000000000000001",
+          "symbol": "frxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfc00000000000000000000000000000000000008",
+          "symbol": "sfrxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa0Af0B88796C1aA67e93db89FEAd2Ab7aA3D6747",
+      "poolId": "0xa0af0b88796c1aa67e93db89fead2ab7aa3d6747000000000000000000000007",
+      "poolType": "composableStable",
+      "symbol": "FRAX/USDe",
+      "name": "Balancer FRAX/USDe",
+      "tokens": [
+        {
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "symbol": "USDe",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa0Af0B88796C1aA67e93db89FEAd2Ab7aA3D6747",
+          "symbol": "FRAX/USDe",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xFc00000000000000000000000000000000000001",
+          "symbol": "frxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xA0b92B33BeafcE388Ce0092afDcd0cA77323Eb12",
+      "poolId": "0xa0b92b33beafce388ce0092afdcd0ca77323eb12000000000000000000000006",
+      "poolType": "composableStable",
+      "symbol": "sFRAX/sDAI",
+      "name": "Balancer sFRAX/sDAI",
+      "tokens": [
+        {
+          "address": "0x09eAdcBAa812A4C076c3a6cDe765DC4a22E0d775",
+          "symbol": "sDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b92B33BeafcE388Ce0092afDcd0cA77323Eb12",
+          "symbol": "sFRAX/sDAI",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xfc00000000000000000000000000000000000008",
+          "symbol": "sfrxUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xA65bc2c42697494a53DC53bf1a45c9e72201467F",
+      "poolId": "0xa65bc2c42697494a53dc53bf1a45c9e72201467f000000000000000000000003",
+      "poolType": "composableStable",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Composable Stable Pool",
+      "tokens": [
+        {
+          "address": "0x2FC7447F6cF71f9aa9E7FF8814B37E55b268Ec91",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA65bc2c42697494a53DC53bf1a45c9e72201467F",
+          "symbol": "TEST",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xFC00000000000000000000000000000000000006",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xaeace3B34BcA1BFe585e4B0Bb303e60e0771F139",
+      "poolId": "0xaeace3b34bca1bfe585e4b0bb303e60e0771f139000200000000000000000000",
+      "poolType": "lbp",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LiquidityBootstrappingPool Pool",
+      "tokens": [
+        {
+          "address": "0x2FC7447F6cF71f9aa9E7FF8814B37E55b268Ec91",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xFC00000000000000000000000000000000000006",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xAf125dc597aeAc3d3f9f467584275bFAa8B9c08d",
+      "poolId": "0xaf125dc597aeac3d3f9f467584275bfaa8b9c08d000200000000000000000004",
+      "poolType": "weighted",
+      "symbol": "50wfrxETH/50USDC",
+      "name": "Balancer 50wfrxETH/50USDC",
+      "tokens": [
+        {
+          "address": "0xDcc0F2D8F90FDe85b10aC1c8Ab57dc0AE946A543",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xFC00000000000000000000000000000000000006",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xBbCDB19D0Fb506e5E1a186A8893cF5C51c8dEff2",
+      "poolId": "0xbbcdb19d0fb506e5e1a186a8893cf5c51c8deff2000200000000000000000001",
+      "poolType": "weighted",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x2FC7447F6cF71f9aa9E7FF8814B37E55b268Ec91",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xFC00000000000000000000000000000000000006",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    }
+  ],
+  "v3Pools": [],
+  "gauges": [
+    {
+      "address": "0x275e8514b83479f526673327B279753aBC666a05",
+      "lpToken": "0x33251abeCb0364Df98a27A8D5d7b5CCddc774c42",
+      "symbol": "sFRAX/sDAI/sUSDe"
+    },
+    {
+      "address": "0x34E040bC0342EbBfBC7a6306EB1B8E6579185c94",
+      "lpToken": "0xA0b92B33BeafcE388Ce0092afDcd0cA77323Eb12",
+      "symbol": "sFRAX/sDAI"
+    },
+    {
+      "address": "0x71c365fB739faFdba44B1564558849216de69958",
+      "lpToken": "0x1570315476480fA80ceC1FFF07A20c1df1aDfD53",
+      "symbol": "sFRAX/sfrxETH"
+    },
+    {
+      "address": "0x982653B874B059871A46F66120C69503FE391979",
+      "lpToken": "0x760b30Eb4BE3CCd840e91183E33e2953c6A31253",
+      "symbol": "FRAX/USDe/DAI/USDT/USDC "
+    },
+    {
+      "address": "0xf99d875Dd868277cf3780f51D69c6E1F8522a1e9",
+      "lpToken": "0xa0Af0B88796C1aA67e93db89FEAd2Ab7aA3D6747",
+      "symbol": "FRAX/USDe"
+    }
+  ]
+}

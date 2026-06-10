@@ -1,0 +1,551 @@
+{
+  "meta": {
+    "chainKey": "mode",
+    "scannedAtBlock": 40467947,
+    "generatedAt": "2026-06-10T14:58:07.266Z"
+  },
+  "v2Pools": [
+    {
+      "address": "0x1224d4e918E69189760888fd40EC1491c93CD59B",
+      "poolId": "0x1224d4e918e69189760888fd40ec1491c93cd59b00000000000000000000000c",
+      "poolType": "composableStable",
+      "symbol": "mBTC/uniBTC",
+      "name": "Balancer mBTC/uniBTC",
+      "tokens": [
+        {
+          "address": "0x1224d4e918E69189760888fd40EC1491c93CD59B",
+          "symbol": "mBTC/uniBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x59889b7021243dB5B1e065385F918316cD90D46c",
+          "symbol": "M-BTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6B2a01A5f79dEb4c2f3c0eDa7b01DF456FbD726a",
+          "symbol": "uniBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x16453789feD619c7FA18c068dEC1Cb2766bA2E3e",
+      "poolId": "0x16453789fed619c7fa18c068dec1cb2766ba2e3e000000000000000000000006",
+      "poolType": "composableStable",
+      "symbol": "ezETH/wETH",
+      "name": "Balancer ezETH/wETH",
+      "tokens": [
+        {
+          "address": "0x16453789feD619c7FA18c068dEC1Cb2766bA2E3e",
+          "symbol": "ezETH/wETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+          "symbol": "ezETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x197868C915E50cD7eB34EB2F56009E0BF9aa09EB",
+      "poolId": "0x197868c915e50cd7eb34eb2f56009e0bf9aa09eb000200000000000000000000",
+      "poolType": "lbp",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LiquidityBootstrappingPool Pool",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xD08a2917653d4E460893203471f0000826fb4034",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x218AEbfE4bb58ef1F898B1a9706943167D8aC3ea",
+      "poolId": "0x218aebfe4bb58ef1f898b1a9706943167d8ac3ea000000000000000000000013",
+      "poolType": "composableStable",
+      "symbol": "LBTC/wBTC",
+      "name": "Balancer LBTC/wBTC",
+      "tokens": [
+        {
+          "address": "0x218AEbfE4bb58ef1F898B1a9706943167D8aC3ea",
+          "symbol": "LBTC/wBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x964dd444e3192F636322229080A576077B06FbA3",
+          "symbol": "LBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x293F8cb2D08f8215f06b9D8b8E31d841e47A2358",
+      "poolId": "0x293f8cb2d08f8215f06b9d8b8e31d841e47a235800000000000000000000000f",
+      "poolType": "composableStable",
+      "symbol": "stUSD/USDC",
+      "name": "Balancer stUSD/USDC",
+      "tokens": [
+        {
+          "address": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
+          "symbol": "stUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x293F8cb2D08f8215f06b9D8b8E31d841e47A2358",
+          "symbol": "stUSD/USDC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x45eecA37C02f4da7Fe000C32C6eaA0699CFB669C",
+      "poolId": "0x45eeca37c02f4da7fe000c32c6eaa0699cfb669c000000000000000000000005",
+      "poolType": "composableStable",
+      "symbol": "USDT/USDC ",
+      "name": "Balancer USDT/USDC ",
+      "tokens": [
+        {
+          "address": "0x45eecA37C02f4da7Fe000C32C6eaA0699CFB669C",
+          "symbol": "USDT/USDC ",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4720aB81a4fe65fb052D8F41C27578921a3c24D8",
+      "poolId": "0x4720ab81a4fe65fb052d8f41c27578921a3c24d800020000000000000000000a",
+      "poolType": "weighted",
+      "symbol": "50ezETH-50USDC",
+      "name": "50ezETH-50USDC",
+      "tokens": [
+        {
+          "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+          "symbol": "ezETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4B9413Ea34169D4f79B3601E92aA18C5E9d41364",
+      "poolId": "0x4b9413ea34169d4f79b3601e92aa18c5e9d41364000200000000000000000004",
+      "poolType": "weighted",
+      "symbol": "50wETH/50USDC",
+      "name": "Balancer 50wETH/50USDC",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x68b1b4CDAB705047C1703365D62D90aD1A2c98E4",
+      "poolId": "0x68b1b4cdab705047c1703365d62d90ad1a2c98e4000000000000000000000012",
+      "poolType": "composableStable",
+      "symbol": "oBTC/uBTC",
+      "name": "Balancer oBTC/uBTC",
+      "tokens": [
+        {
+          "address": "0x68b1b4CDAB705047C1703365D62D90aD1A2c98E4",
+          "symbol": "oBTC/uBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd0d1b59CA62cE194E882455Fd36632d6277b192a",
+          "symbol": "uBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe3C0FF176eF92FC225096C6d1788cCB818808b35",
+          "symbol": "oBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x6e822F96dA9ce9681f4ad56bAEc329b11eAE5bd5",
+      "poolId": "0x6e822f96da9ce9681f4ad56baec329b11eae5bd5000000000000000000000014",
+      "poolType": "composableStable",
+      "symbol": "LBTC/wBTC",
+      "name": "Balancer LBTC/wBTC",
+      "tokens": [
+        {
+          "address": "0x6e822F96dA9ce9681f4ad56bAEc329b11eAE5bd5",
+          "symbol": "LBTC/wBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x964dd444e3192F636322229080A576077B06FbA3",
+          "symbol": "LBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7c86a44778c52a0AAD17860924b53bf3f35Dc932",
+      "poolId": "0x7c86a44778c52a0aad17860924b53bf3f35dc932000200000000000000000007",
+      "poolType": "weighted",
+      "symbol": "80MODE/20wETH",
+      "name": "Balancer 80MODE/20wETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDfc7C877a950e49D2610114102175A06C2e3167a",
+          "symbol": "MODE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xA4781148e4a8a0903D795464E5c206A7F33851Ba",
+      "poolId": "0xa4781148e4a8a0903d795464e5c206a7f33851ba000200000000000000000008",
+      "poolType": "weighted",
+      "symbol": "80MODE/20USDC",
+      "name": "Balancer 80MODE/20USDC",
+      "tokens": [
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDfc7C877a950e49D2610114102175A06C2e3167a",
+          "symbol": "MODE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xaFCFA565B8e00A3b3EB789dfa19261ed7DCA42C7",
+      "poolId": "0xafcfa565b8e00a3b3eb789dfa19261ed7dca42c7000000000000000000000003",
+      "poolType": "composableStable",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Composable Stable Pool",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xaFCFA565B8e00A3b3EB789dfa19261ed7DCA42C7",
+          "symbol": "TEST",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xD08a2917653d4E460893203471f0000826fb4034",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbABC81866072C2eD4821f07B113165758A684A0A",
+      "poolId": "0xbabc81866072c2ed4821f07b113165758a684a0a000000000000000000000011",
+      "poolType": "composableStable",
+      "symbol": "oBTC/oBTC.x",
+      "name": "Balancer oBTC/oBTC.x",
+      "tokens": [
+        {
+          "address": "0xbABC81866072C2eD4821f07B113165758A684A0A",
+          "symbol": "oBTC/oBTC.x",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xCeEfc504090D807fb696e2DC30e55F5eb5303A1C",
+          "symbol": "oBTC.x",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe3C0FF176eF92FC225096C6d1788cCB818808b35",
+          "symbol": "oBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbD96cc5c22c673E4BF5122367368D53BA621524e",
+      "poolId": "0xbd96cc5c22c673e4bf5122367368d53ba621524e000000000000000000000010",
+      "poolType": "composableStable",
+      "symbol": "oBTC/uBTC",
+      "name": "Balancer oBTC/uBTC",
+      "tokens": [
+        {
+          "address": "0xbD96cc5c22c673E4BF5122367368D53BA621524e",
+          "symbol": "oBTC/uBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd0d1b59CA62cE194E882455Fd36632d6277b192a",
+          "symbol": "uBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe3C0FF176eF92FC225096C6d1788cCB818808b35",
+          "symbol": "oBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbDEe91916B38BCA811f2c4c261Daf1A8953262Ca",
+      "poolId": "0xbdee91916b38bca811f2c4c261daf1a8953262ca00000000000000000000000b",
+      "poolType": "composableStable",
+      "symbol": "sDAI/USDC",
+      "name": "Balancer sDAI/USDC",
+      "tokens": [
+        {
+          "address": "0x3f51c6c5927B88CDEc4b61e2787F9BD0f5249138",
+          "symbol": "msDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xbDEe91916B38BCA811f2c4c261Daf1A8953262Ca",
+          "symbol": "sDAI/USDC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xCb528CFe5EfC65a77901d20B3E899Ecd9A8190b7",
+      "poolId": "0xcb528cfe5efc65a77901d20b3e899ecd9a8190b7000200000000000000000001",
+      "poolType": "weighted",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xD08a2917653d4E460893203471f0000826fb4034",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcC53c20aD428359FBAef29684dD2c9B55f378cE6",
+      "poolId": "0xcc53c20ad428359fbaef29684dd2c9b55f378ce6000000000000000000000015",
+      "poolType": "composableStable",
+      "symbol": "LBTC/wBTC",
+      "name": "Balancer LBTC/wBTC",
+      "tokens": [
+        {
+          "address": "0x964dd444e3192F636322229080A576077B06FbA3",
+          "symbol": "LBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcC53c20aD428359FBAef29684dD2c9B55f378cE6",
+          "symbol": "LBTC/wBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcF376Bc82686BE7f88fa8936C18C62a2F11c4003",
+      "poolId": "0xcf376bc82686be7f88fa8936c18c62a2f11c4003000200000000000000000009",
+      "poolType": "weighted",
+      "symbol": "80MODE/20ezETH",
+      "name": "Balancer 80MODE/20ezETH",
+      "tokens": [
+        {
+          "address": "0x2416092f143378750bb29b79eD961ab195CcEea5",
+          "symbol": "ezETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDfc7C877a950e49D2610114102175A06C2e3167a",
+          "symbol": "MODE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xD1DbeA51c7F23f61d020E2602D0D157D132faafC",
+      "poolId": "0xd1dbea51c7f23f61d020e2602d0d157d132faafc00020000000000000000000e",
+      "poolType": "weighted",
+      "symbol": "50OLAS-50USDC",
+      "name": "50OLAS-50USDC",
+      "tokens": [
+        {
+          "address": "0xcfD1D50ce23C46D3Cf6407487B2F8934e96DC8f9",
+          "symbol": "OLAS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd988097fb8612cc24eeC14542bC03424c656005f",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xD914DB6f2cc29bf20AE157f5f9Cdbd638D9C93F6",
+      "poolId": "0xd914db6f2cc29bf20ae157f5f9cdbd638d9c93f600000000000000000000000d",
+      "poolType": "composableStable",
+      "symbol": "aBTC/uBTC",
+      "name": "Balancer aBTC/uBTC",
+      "tokens": [
+        {
+          "address": "0x7A087e75807F2E5143C161a817E64dF6dC5EAFe0",
+          "symbol": "aBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd0d1b59CA62cE194E882455Fd36632d6277b192a",
+          "symbol": "uBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xD914DB6f2cc29bf20AE157f5f9Cdbd638D9C93F6",
+          "symbol": "aBTC/uBTC",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    }
+  ],
+  "v3Pools": [],
+  "gauges": [
+    {
+      "address": "0x56124eb16441A1eF12A4CCAeAbDD3421281b795A",
+      "lpToken": "0x7c86a44778c52a0AAD17860924b53bf3f35Dc932",
+      "symbol": "80MODE/20wETH"
+    },
+    {
+      "address": "0x5b79494824Bc256cD663648Ee1Aad251B32693A9",
+      "lpToken": "0xA4781148e4a8a0903D795464E5c206A7F33851Ba",
+      "symbol": "80MODE/20USDC"
+    },
+    {
+      "address": "0xb2007B8B7E0260042517f635CFd8E6dD2Dd7f007",
+      "lpToken": "0xcF376Bc82686BE7f88fa8936C18C62a2F11c4003",
+      "symbol": "80MODE/20ezETH"
+    },
+    {
+      "address": "0xd7C5C2B75d4133f5914f4239824D0C789aC2D3ce",
+      "lpToken": "0x45eecA37C02f4da7Fe000C32C6eaA0699CFB669C",
+      "symbol": "USDT/USDC "
+    }
+  ]
+}
