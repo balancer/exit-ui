@@ -15,14 +15,14 @@ export function Header() {
           <h1 className="gradient-text" style={{ margin: 0, fontSize: 28 }}>
             Balancer Exit
           </h1>
-          <div className="muted">Withdraw pool & gauge positions from deprecated chains</div>
+          <div className="muted">Withdraw legacy Balancer pool & gauge positions</div>
         </div>
         <div className="row" style={{ flexWrap: 'wrap' }}>
           <select value={chain.key} onChange={(e) => selectChain(e.target.value)}>
             {chains.map((c) => (
               <option key={c.key} value={c.key}>
                 {c.name}
-                {c.deprecated ? '' : ' (dev)'}
+                {c.deprecated || c.v1 ? '' : ' (dev)'}
               </option>
             ))}
           </select>

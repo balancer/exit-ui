@@ -56,8 +56,8 @@ export default function App() {
       <ManualPoolEntry onFound={addManualPool} />
 
       <footer className="muted" style={{ marginTop: 32, fontSize: 12 }}>
-        Withdrawals are proportional. USD pricing is unavailable on deprecated chains — amounts are
-        shown as token quantities. This site is fully static; it only talks to the RPC you
+        Withdrawals are proportional. USD pricing is unavailable — amounts are shown as token
+        quantities. This site is fully static; it only talks to the RPC you
         configure.
       </footer>
     </>

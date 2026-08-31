@@ -5,6 +5,7 @@
  *   - balancer-subgraph-v3/networks.json   (v3 vault + start block)
  *   - gauges-subgraph/subgraph.<chain>.yaml (child-chain gauge factories)
  *   - backend/config/<chain>.ts            (chain id, rpc, queries, v3 router, multicall3)
+ *   - Balancer V1 docs/subgraph             (mainnet V1 pool factories)
  *
  * Usage: node tools/extract-registry.mjs [--repos <dir-containing-the-four-repos>]
  */
@@ -20,6 +21,16 @@ const V2_NETWORKS = JSON.parse(readFileSync(join(REPOS, 'balancer-subgraph-v2', 
 const V3_NETWORKS = JSON.parse(readFileSync(join(REPOS, 'balancer-subgraph-v3', 'networks.json'), 'utf8'))
 const GAUGES_DIR = join(REPOS, 'gauges-subgraph')
 const BACKEND_CONFIG = join(REPOS, 'backend', 'config')
+
+// Canonical production pool factories from the archived Balancer V1 address page.
+// The protocol start block is confirmed by balancer-subgraph/subgraph.yaml.
+const V1_MAINNET = {
+  startBlock: 9562480,
+  // The V1 subgraph watches BFactory only, then uses CRPFactory.isCrp(event.caller)
+  // to map a backing BPool to its user-facing smart-pool share token.
+  factory: '0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd',
+  crpFactory: '0xed52D8E202401645eDAD1c0AA21e872498ce47D0',
+}
 
 // Public RPC fallbacks for chains whose backend config uses env-keyed (dRPC) URLs
 const PUBLIC_RPC = {
@@ -126,6 +137,8 @@ for (const [key, meta] of Object.entries(CHAINS)) {
     logsMaxRange: meta.logsMaxRange ?? Math.min(be.rpcMaxBlockRange, 10000),
     deprecated: meta.deprecated ?? false,
   }
+
+  if (key === 'mainnet') entry.v1 = V1_MAINNET
 
   if (meta.v2 && V2_NETWORKS[meta.v2]) {
     const net = V2_NETWORKS[meta.v2]

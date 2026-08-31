@@ -9,6 +9,11 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
     "deprecated": false,
+    "v1": {
+      "startBlock": 9562480,
+      "factory": "0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd",
+      "crpFactory": "0xed52D8E202401645eDAD1c0AA21e872498ce47D0"
+    },
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 12272146,

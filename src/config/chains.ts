@@ -24,6 +24,8 @@ export interface GaugeFactoryConfig {
   startBlock: number
 }
 
+export type V1PoolKind = 'core' | 'smart'
+
 export interface ChainConfig {
   key: string
   chainId: number
@@ -34,6 +36,11 @@ export interface ChainConfig {
   multicall3: Address
   logsMaxRange: number
   deprecated: boolean
+  v1?: {
+    startBlock: number
+    factory: Address
+    crpFactory: Address
+  }
   v2?: {
     vault: Address
     startBlock: number
@@ -54,10 +61,10 @@ export function isDevMode(): boolean {
   return import.meta.env.DEV || new URLSearchParams(window.location.search).has('dev')
 }
 
-/** Chains shown in the selector: deprecated ones, plus everything in dev mode. */
+/** Chains shown in the selector: legacy-exit chains, plus everything in dev mode. */
 export function visibleChains(): ChainConfig[] {
   const all = Object.values(CHAINS)
-  return isDevMode() ? all : all.filter((c) => c.deprecated)
+  return isDevMode() ? all : all.filter((c) => c.deprecated || Boolean(c.v1))
 }
 
 export function getChain(key: string): ChainConfig {
