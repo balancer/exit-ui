@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import { isAddress, type Address } from 'viem'
-import { erc20Abi } from '../abis/erc20'
+import { hexToString, isAddress, type Address } from 'viem'
+import { erc20Abi, erc20Bytes32MetadataAbi } from '../abis/erc20'
 import { useApp } from '../contexts/AppContext'
 import type { PoolPosition } from '../lib/positions'
+import { resolveV1Pool } from '../lib/v1'
 import { resolveV2Pool } from '../lib/v2'
 import { resolveV3Pool } from '../lib/v3'
 
 /**
  * Fallback for pools missing from the committed lists:
- * paste a pool address; tries v2 (getPoolId) first, then the v3 vault.
+ * paste a pool address; tries configured protocol versions in chronological order.
  */
 export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => void }) {
   const { chain, publicClient, scanTarget } = useApp()
@@ -30,17 +31,48 @@ export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => voi
 
       const tokenMeta = async (addrs: Address[]) =>
         Promise.all(
-          addrs.map(async (a) => ({
-            address: a,
-            symbol: (await publicClient
+          addrs.map(async (a) => {
+            const symbol = await publicClient
               .readContract({ address: a, abi: erc20Abi, functionName: 'symbol' })
-              .catch(() => a.slice(0, 8))) as string,
-            decimals: Number(
-              await publicClient.readContract({ address: a, abi: erc20Abi, functionName: 'decimals' }).catch(() => 18)
-            ),
-            isPhantomBpt: a.toLowerCase() === poolAddress.toLowerCase(),
-          }))
+              .catch(async () => {
+                const bytes = await publicClient
+                  .readContract({ address: a, abi: erc20Bytes32MetadataAbi, functionName: 'symbol' })
+                  .catch(() => null)
+                return bytes ? hexToString(bytes, { size: 32 }) : a.slice(0, 8)
+              })
+            return {
+              address: a,
+              symbol,
+              decimals: Number(
+                await publicClient
+                  .readContract({ address: a, abi: erc20Abi, functionName: 'decimals' })
+                  .catch(() => 18)
+              ),
+              isPhantomBpt: a.toLowerCase() === poolAddress.toLowerCase(),
+            }
+          })
         )
+
+      if (chain.v1) {
+        try {
+          const v1 = await resolveV1Pool(publicClient, chain, poolAddress)
+          onFound({
+            protocolVersion: 1,
+            address: poolAddress,
+            v1PoolKind: v1.poolKind,
+            v1UnderlyingPool: v1.underlyingPool,
+            symbol,
+            name,
+            tokens: await tokenMeta(v1.tokens),
+            balance,
+            inRecoveryMode: false,
+          })
+          setInput('')
+          return
+        } catch {
+          // not a factory-created v1 pool, try v2
+        }
+      }
 
       if (chain.v2) {
         try {

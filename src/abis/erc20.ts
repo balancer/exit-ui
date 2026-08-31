@@ -48,3 +48,21 @@ export const erc20Abi = [
     outputs: [{ type: 'uint8' }],
   },
 ] as const
+
+/** Legacy tokens such as MKR return fixed bytes instead of ABI strings. */
+export const erc20Bytes32MetadataAbi = [
+  {
+    type: 'function',
+    name: 'symbol',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [{ type: 'bytes32' }],
+  },
+  {
+    type: 'function',
+    name: 'name',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [{ type: 'bytes32' }],
+  },
+] as const

@@ -37,11 +37,14 @@ export async function scanPositions(
   user: Address,
   onProgress?: (msg: string) => void
 ): Promise<ScanResult> {
-  // Pass 1: balanceOf across all v2 pools, v3 pools and gauges
+  const v1Pools = data.v1Pools ?? []
+
+  // Pass 1: balanceOf across all v1/v2/v3 pools and gauges
   onProgress?.(
-    `Scanning ${data.v2Pools.length + data.v3Pools.length} pools and ${data.gauges.length} gauges...`
+    `Scanning ${v1Pools.length + data.v2Pools.length + data.v3Pools.length} pools and ${data.gauges.length} gauges...`
   )
   const balanceCalls = [
+    ...v1Pools.map((p) => ({ address: p.address, abi: erc20Abi, functionName: 'balanceOf', args: [user] })),
     ...data.v2Pools.map((p) => ({ address: p.address, abi: erc20Abi, functionName: 'balanceOf', args: [user] })),
     ...data.v3Pools.map((p) => ({ address: p.address, abi: erc20Abi, functionName: 'balanceOf', args: [user] })),
     ...data.gauges.map((g) => ({
@@ -53,22 +56,26 @@ export async function scanPositions(
   ]
   const balances = await multicall(client, chain, balanceCalls)
 
+  const nV1 = v1Pools.length
   const nV2 = data.v2Pools.length
   const nV3 = data.v3Pools.length
 
-  const v2Hits = data.v2Pools
+  const v1Hits = v1Pools
     .map((p, i) => ({ pool: p, balance: balances[i] as bigint | null }))
     .filter((x) => (x.balance ?? 0n) > 0n)
+  const v2Hits = data.v2Pools
+    .map((p, i) => ({ pool: p, balance: balances[nV1 + i] as bigint | null }))
+    .filter((x) => (x.balance ?? 0n) > 0n)
   const v3Hits = data.v3Pools
-    .map((p, i) => ({ pool: p, balance: balances[nV2 + i] as bigint | null }))
+    .map((p, i) => ({ pool: p, balance: balances[nV1 + nV2 + i] as bigint | null }))
     .filter((x) => (x.balance ?? 0n) > 0n)
   const gaugeHits = data.gauges
-    .map((g, i) => ({ gauge: g, balance: balances[nV2 + nV3 + i] as bigint | null }))
+    .map((g, i) => ({ gauge: g, balance: balances[nV1 + nV2 + nV3 + i] as bigint | null }))
     .filter((x) => (x.balance ?? 0n) > 0n)
 
   // Pass 2: enrich hits — recovery mode + gauge rewards
   onProgress?.(
-    `Found ${v2Hits.length + v3Hits.length} pool / ${gaugeHits.length} gauge positions, loading details...`
+    `Found ${v1Hits.length + v2Hits.length + v3Hits.length} pool / ${gaugeHits.length} gauge positions, loading details...`
   )
 
   const recoveryCalls = [
@@ -83,6 +90,17 @@ export async function scanPositions(
   const recovery = recoveryCalls.length ? await multicall(client, chain, recoveryCalls) : []
 
   const pools: PoolPosition[] = [
+    ...v1Hits.map((x) => ({
+      protocolVersion: 1 as const,
+      address: x.pool.address,
+      v1PoolKind: x.pool.poolKind,
+      v1UnderlyingPool: x.pool.underlyingPool,
+      symbol: x.pool.symbol,
+      name: x.pool.name,
+      tokens: x.pool.tokens,
+      balance: x.balance!,
+      inRecoveryMode: false,
+    })),
     ...v2Hits.map((x, i) => ({
       protocolVersion: 2 as const,
       address: x.pool.address,

@@ -5,6 +5,7 @@ import { useTransaction } from '../hooks/useTransaction'
 import { makeWalletClient } from '../lib/clients'
 import { applySlippage, fmtAmount, parseAmount, shortAddr } from '../lib/format'
 import type { PoolPosition } from '../lib/positions'
+import { emergencyV1Quote, executeV1Exit, queryV1Exit, type V1ExitQuote } from '../lib/v1'
 import { emergencyV2Quote, executeV2Exit, queryV2Exit, v2ExitMode, type V2ExitQuote } from '../lib/v2'
 import {
   approveV3Router,
@@ -29,14 +30,22 @@ export function PoolPositionCard({
   const [amountInput, setAmountInput] = useState('')
   const [slippage, setSlippage] = useState('1')
   const [emergency, setEmergency] = useState(false)
-  const [quote, setQuote] = useState<V2ExitQuote | V3ExitQuote | null>(null)
+  const [quote, setQuote] = useState<V1ExitQuote | V2ExitQuote | V3ExitQuote | null>(null)
   const [quoteError, setQuoteError] = useState('')
   const [quoting, setQuoting] = useState(false)
   const [allowance, setAllowance] = useState<bigint | null>(null)
   const debounceRef = useRef<number>()
 
+  const isV1 = position.protocolVersion === 1
   const isV2 = position.protocolVersion === 2
-  const mode = isV2 ? v2ExitMode(position) : position.inRecoveryMode ? 'recovery' : 'proportional'
+  const isV3 = position.protocolVersion === 3
+  const mode = isV1
+    ? 'proportional'
+    : isV2
+      ? v2ExitMode(position)
+      : position.inRecoveryMode
+        ? 'recovery'
+        : 'proportional'
   const bptIn = amountInput ? parseAmount(amountInput, 18) : position.balance
   const validAmount = bptIn !== null && bptIn > 0n && bptIn <= position.balance
   const slippagePct = Number(slippage) >= 0 ? Number(slippage) : 1
@@ -46,7 +55,9 @@ export function PoolPositionCard({
     setQuoting(true)
     setQuoteError('')
     try {
-      if (isV2) {
+      if (isV1) {
+        setQuote(await queryV1Exit(publicClient, position, scanTarget, bptIn!))
+      } else if (isV2) {
         setQuote(await queryV2Exit(publicClient, chain, position, scanTarget, bptIn!, mode))
       } else {
         setQuote(await queryV3Exit(publicClient, chain, position, bptIn!))
@@ -59,7 +70,7 @@ export function PoolPositionCard({
       setQuoting(false)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [publicClient, chain, position, scanTarget, account, bptIn, mode, isV2, validAmount])
+  }, [publicClient, chain, position, scanTarget, account, bptIn, mode, isV1, isV2, validAmount])
 
   useEffect(() => {
     window.clearTimeout(debounceRef.current)
@@ -68,7 +79,7 @@ export function PoolPositionCard({
   }, [refreshQuote])
 
   const needsApproval =
-    !isV2 && account && allowance !== null && validAmount && allowance < bptIn!
+    isV3 && account && allowance !== null && validAmount && allowance < bptIn!
 
   async function onApprove() {
     if (!account || !validAmount) return
@@ -84,10 +95,25 @@ export function PoolPositionCard({
     if (!quote && !emergency) return
     // simulation failed -> emergency-only path with zero mins
     const effectiveQuote =
-      quote ?? (isV2 ? emergencyV2Quote(position, bptIn!, mode) : emergencyV3Quote(position))
+      quote ??
+      (isV1
+        ? emergencyV1Quote(position)
+        : isV2
+          ? emergencyV2Quote(position, bptIn!, mode)
+          : emergencyV3Quote(position))
     const walletClient = makeWalletClient(chain, account)
     const ok = await send('Exit', () =>
-      isV2
+      isV1
+        ? executeV1Exit(
+            walletClient,
+            position,
+            account,
+            bptIn!,
+            effectiveQuote as V1ExitQuote,
+            slippagePct,
+            emergency
+          )
+        : isV2
         ? executeV2Exit(walletClient, chain, position, account, effectiveQuote as V2ExitQuote, slippagePct, emergency)
         : executeV3Exit(walletClient, chain, position, account, bptIn!, effectiveQuote as V3ExitQuote, slippagePct, emergency)
     )
@@ -102,7 +128,8 @@ export function PoolPositionCard({
       <div className="row-between" style={{ flexWrap: 'wrap' }}>
         <div>
           <strong>{position.symbol || shortAddr(position.address)}</strong>{' '}
-          <span className="badge">{isV2 ? 'v2' : 'v3'}</span>{' '}
+          <span className="badge">v{position.protocolVersion}</span>{' '}
+          {position.v1PoolKind && <span className="badge">{position.v1PoolKind}</span>}{' '}
           {position.poolType && <span className="badge">{position.poolType}</span>}{' '}
           {position.inRecoveryMode && <span className="badge badge-orange">recovery mode</span>}
           <div className="muted">{position.name}</div>

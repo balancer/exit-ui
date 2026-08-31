@@ -1,5 +1,5 @@
 import type { Address } from 'viem'
-import type { PoolType } from '../config/chains'
+import type { PoolType, V1PoolKind } from '../config/chains'
 
 export interface TokenInfo {
   address: Address
@@ -12,6 +12,15 @@ export interface V2PoolData {
   address: Address
   poolId: `0x${string}`
   poolType: PoolType
+  symbol: string
+  name: string
+  tokens: TokenInfo[]
+}
+
+export interface V1PoolData {
+  address: Address
+  poolKind: V1PoolKind
+  underlyingPool?: Address // smart pools wrap a core BPool
   symbol: string
   name: string
   tokens: TokenInfo[]
@@ -32,14 +41,17 @@ export interface GaugeData {
 
 export interface ChainData {
   meta: { chainKey: string; scannedAtBlock: number; generatedAt: string }
+  v1Pools?: V1PoolData[]
   v2Pools: V2PoolData[]
   v3Pools: V3PoolData[]
   gauges: GaugeData[]
 }
 
 export interface PoolPosition {
-  protocolVersion: 2 | 3
+  protocolVersion: 1 | 2 | 3
   address: Address
+  v1PoolKind?: V1PoolKind // v1 only
+  v1UnderlyingPool?: Address // smart-pool backing BPool
   poolId?: `0x${string}` // v2 only
   poolType?: PoolType // v2 only
   symbol: string

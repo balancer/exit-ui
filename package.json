@@ -1,5 +1,5 @@
 {
-  "name": "balancer-deprecated-exit-ui",
+  "name": "balancer-legacy-exit-ui",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "discover": "node scripts/discover.mjs",
+    "discover:v1": "node scripts/discover.mjs --chain mainnet --protocol v1",
     "discover:deprecated": "node scripts/discover.mjs --chain mode && node scripts/discover.mjs --chain fraxtal && node scripts/discover.mjs --chain zkevm"
   },
   "dependencies": {

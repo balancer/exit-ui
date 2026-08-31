@@ -1,12 +1,14 @@
-# Balancer Deprecated-Chain Exit UI
+# Balancer Legacy Exit UI
 
-Standalone static website for withdrawing Balancer positions from deprecated chains.
-Currently enabled: **Mode**, **Fraxtal**, **Polygon zkEVM**. Supports Balancer **v2 and v3**.
+Standalone static website for withdrawing legacy Balancer positions.
+Currently enabled: Balancer **v1 on Ethereum mainnet**, plus Balancer **v2/v3** on
+**Mode**, **Fraxtal**, and **Polygon zkEVM**.
 
 - Connect an injected wallet (MetaMask, Rabby, ...) or watch any address read-only
 - Optionally configure a custom RPC URL per chain (persisted in localStorage)
 - Scan for pool (BPT) and gauge (staked) positions via Multicall3 against a bundled pool list
 - Unstake from gauges (`withdraw(amount, claim_rewards=true)`) and claim rewards
+- Proportionally exit v1 core and smart pools (`BPool.exitPool` / `CRP.exitPool`)
 - Proportionally exit v2 pools (`Vault.exitPool`) and v3 pools (`Router.removeLiquidityProportional`)
 - Exits are simulated first; minimum amounts = expected − slippage (default 1%).
   An opt-in **emergency mode** submits with zero minimums.
@@ -36,6 +38,9 @@ npm run discover -- --chain mode [--rpc <url>] [--to-block <n>]
 ```
 
 The script enumerates:
+- v1 pools: `LOG_NEW_POOL` events from the Ethereum `BFactory`. Like the official V1 subgraph,
+  it classifies `event.caller` with `CRPFactory.isCrp`: a recognized caller is the user-facing
+  smart-pool share token and the emitted pool is its backing BPool.
 - v2 pools: `PoolCreated` events from every pool factory (from `src/config/registry.json`)
 - v3 pools: `PoolRegistered` events from the v3 Vault (covers all v3 factories)
 - gauges: `GaugeCreated` events from the child-chain gauge factories
@@ -43,11 +48,18 @@ The script enumerates:
 and enriches everything (poolId, tokens, symbols, decimals, phantom-BPT detection) via Multicall3.
 `eth_getLogs` is chunked adaptively and respects strict public RPCs (zkEVM caps at 1k blocks).
 
+Ethereum V1 discovery can be run independently with an archive-capable RPC:
+
+```bash
+npm run discover -- --chain mainnet --protocol v1 --rpc <archive-rpc-url>
+```
+
 Pools missing from a list can always be added in the UI by pasting the pool address.
 
 ## Chain registry
 
-`src/config/registry.json` holds config for **all** Balancer chains (v2 vault + pool factories +
+`src/config/registry.json` holds config for **all** Balancer chains (Ethereum v1 factories,
+v2 vault + pool factories +
 gauge factories + start blocks, v3 vault + router, BalancerQueries, Multicall3, default RPC).
 It is machine-generated from sibling repos — never hand-edit it; regenerate instead:
 
@@ -55,7 +67,8 @@ It is machine-generated from sibling repos — never hand-edit it; regenerate in
 node tools/extract-registry.mjs --repos <dir containing the 4 repos below>
 ```
 
-Sources: `balancer-subgraph-v2/networks.json`, `balancer-subgraph-v3/networks.json`,
+Sources: the archived Balancer V1 address docs and V1 subgraph,
+`balancer-subgraph-v2/networks.json`, `balancer-subgraph-v3/networks.json`,
 `gauges-subgraph/subgraph.<chain>.yaml`, `backend/config/<chain>.ts`.
 
 ## Deprecating another chain
@@ -87,6 +100,9 @@ For end-to-end testing with real transactions, fork a chain with
 ## Notes / limitations
 
 - Exits always pay out wrapped native tokens (no auto-unwrap), matching vault registration.
+- V1 was deployed only on Ethereum mainnet. V1 has no gauge discovery or unstaking path here.
+- V1 discovery intentionally watches only `BFactory`, matching the V1 subgraph; `CRPFactory`
+  is used to classify factory-event callers and recover the smart-pool share-token address.
 - No USD pricing — deprecated chains have no reliable price source; amounts are token quantities.
 - Linear pools (zkEVM) can only exit while in recovery mode (they all are, post-deprecation);
   the UI blocks them otherwise instead of implementing batch swaps.
