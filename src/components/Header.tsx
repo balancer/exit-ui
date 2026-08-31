@@ -21,7 +21,7 @@ export function Header() {
           <select value={chain.key} onChange={(e) => selectChain(e.target.value)}>
             {chains.map((c) => (
               <option key={c.key} value={c.key}>
-                {c.name}
+                {c.v1 ? `${c.name} (v1 only)` : c.name}
                 {c.deprecated || c.v1 ? '' : ' (dev)'}
               </option>
             ))}
