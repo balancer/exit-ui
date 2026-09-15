@@ -1,0 +1,596 @@
+{
+  "meta": {
+    "chainKey": "plasma",
+    "scannedAtBlock": 0,
+    "generatedAt": "2026-09-15T12:28:23.507Z",
+    "source": "balancer-api"
+  },
+  "v1Pools": [],
+  "v2Pools": [],
+  "v3Pools": [
+    {
+      "address": "0x01e2c7fcde2b8d5d1413732c4e274ba5b06b1e54",
+      "symbol": "USDai-waPlaUSDT0",
+      "name": "Surge USDai-waUSDT0",
+      "tokens": [
+        {
+          "address": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+          "symbol": "USDai",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x05eb2d848c431b1a37d0cf0eecc7f211b3bb1dee",
+      "symbol": "wrsETH-waPlaWETH",
+      "name": "Kelp Surge wrsETH-waWETH",
+      "tokens": [
+        {
+          "address": "0xa047fdfb3420a27a5f926735b475fe5a1e968786",
+          "symbol": "waPlaWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xe561fe05c39075312aa9bc6af79ddae981461359",
+          "symbol": "wrsETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x26266e820832b04e7b13ab05f8f0826a2768730b",
+      "symbol": "99UCF-1USDT0",
+      "name": "99UCF 1USDT0",
+      "tokens": [
+        {
+          "address": "0x677d154c0bfd7d4a87fb7068e12182dbcd1cd023",
+          "symbol": "UCF",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x2744a6df1b4b8196d05fb82e13de6f47207ce0f9",
+      "symbol": "savUSD-waPlaUSDT0",
+      "name": "Avant savUSD-waPlaUSDT0",
+      "tokens": [
+        {
+          "address": "0xa29420057f3e3b9512d4786df135da1674bd74d4",
+          "symbol": "savUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x2e8837fabc74b5731b468d9b94cde2513dd2d7a6",
+      "symbol": "1WXPL-99UCF",
+      "name": "1WXPL 99UCF",
+      "tokens": [
+        {
+          "address": "0x6100e367285b01f48d07953803a2d8dca5d19873",
+          "symbol": "WXPL",
+          "decimals": 18
+        },
+        {
+          "address": "0x677d154c0bfd7d4a87fb7068e12182dbcd1cd023",
+          "symbol": "UCF",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x307906f2e1b275c76993c81d9c536de5492337b7",
+      "symbol": "schUSD-waPlaUSDT0",
+      "name": "Chateau schUSD-waPlaUSDT0",
+      "tokens": [
+        {
+          "address": "0x888888bab58a7bd3068110749bc7b63b62ce874d",
+          "symbol": "schUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x36151aceb3e2e1442d6239e7651ee3fa676c0936",
+      "symbol": "syrupUSDT-waPlaUSDT0-ebUSD",
+      "name": "Ebisu syrupUSDT-waPlaUSDT0-ebUSD",
+      "tokens": [
+        {
+          "address": "0xc4374775489cb9c56003bf2c9b12495fc64f0771",
+          "symbol": "syrupUSDT",
+          "decimals": 6
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xef7b1a03e0897c33b63159e38d779e3970c0e2fc",
+          "symbol": "ebUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4ba45fb7de134bcb24a6053bbe21c3a4be9f85ea",
+      "symbol": "USDai-USDT0",
+      "name": "ECLP USDai-USDT0",
+      "tokens": [
+        {
+          "address": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+          "symbol": "USDai",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x68d7cd21840d29a5ecbe46c2fefa92338e92addd",
+      "symbol": "trillions-waPlaUSDT0",
+      "name": "Balancer trillions-waPlaUSDT0",
+      "tokens": [
+        {
+          "address": "0x92a01ab7317ac318b39b00eb6704ba56f0245d7a",
+          "symbol": "trillions",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x694c009aa31b3f80ee18c218b02390ca2d7151e7",
+      "symbol": "xUSD-waPlaUSDT0",
+      "name": "Stream Surge xUSD-waUSDT0",
+      "tokens": [
+        {
+          "address": "0x6eaf19b2fc24552925db245f9ff613157a7dbb4c",
+          "symbol": "xUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x69b23d0d6b08f77e71bd5929aeba526a22fcd754",
+      "symbol": "trillions-WXPL",
+      "name": "Balancer trillions-WXPL",
+      "tokens": [
+        {
+          "address": "0x6100e367285b01f48d07953803a2d8dca5d19873",
+          "symbol": "WXPL",
+          "decimals": 18
+        },
+        {
+          "address": "0x92a01ab7317ac318b39b00eb6704ba56f0245d7a",
+          "symbol": "trillions",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6a74be33b5393d8a3eba4d69b78f9d9da947c48c",
+      "symbol": "waPlaUSDe-waPlaUSDT0",
+      "name": "Ethena Surge waUSDe-waUSDT0",
+      "tokens": [
+        {
+          "address": "0xc63f1a8c0cd4493e18f6f3371182be01ce0bef02",
+          "symbol": "waPlaUSDe",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x70fbc8b852208e27ef04222db77b14e4e8e5404c",
+      "symbol": "schUSD-USDT0",
+      "name": "Chateau reCLAMM schUSD-USDT0",
+      "tokens": [
+        {
+          "address": "0x888888bab58a7bd3068110749bc7b63b62ce874d",
+          "symbol": "schUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x778ebdda037a539fc17b2802762b9c2827ed99d1",
+      "symbol": "sUSDe-waPlaUSDT0",
+      "name": "sUSDe-waPlaUSDT0-test",
+      "tokens": [
+        {
+          "address": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "symbol": "sUSDe",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x77f5eb915d1b94bb7fdc5f939fc8b30eda2da2f6",
+      "symbol": "PlasmaUSD-waPlaUSDT0",
+      "name": "PlasmaUSD waPlaUSDT0",
+      "tokens": [
+        {
+          "address": "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000",
+          "symbol": "PlasmaUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x8796722fe20f34d567f29af66e73f8a0a703638c",
+      "symbol": "ezETH-waPlaWETH",
+      "name": "Renzo ezETH-waPlaWETH",
+      "tokens": [
+        {
+          "address": "0x2416092f143378750bb29b79ed961ab195cceea5",
+          "symbol": "ezETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xa047fdfb3420a27a5f926735b475fe5a1e968786",
+          "symbol": "waPlaWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9b6640b3c5d73144c5ac8371aaae2b917a67ae6d",
+      "symbol": "plUSD-waPlaUSDT0",
+      "name": "Trevee plUSD-waPlaUSDT0",
+      "tokens": [
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xf91c31299e998c5127bc5f11e4a657fc0cf358cd",
+          "symbol": "plUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa0ab541c7122770cc7942402decd90b9385e5206",
+      "symbol": "msUSD-tcUSDT0",
+      "name": "Odyssey msUSD-tcUSDT0",
+      "tokens": [
+        {
+          "address": "0x29ad7fe4516909b9e498b5a65339e54791293234",
+          "symbol": "msUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xa9c251f8304b1b3fc2b9e8fcae78d94eff82ac66",
+          "symbol": "tcUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xb3ca3ead1c59ded552cd30a6992038284b418b65",
+      "symbol": "sUSDai-USDT0",
+      "name": "reCLAMM sUSDai-USDT0",
+      "tokens": [
+        {
+          "address": "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+          "symbol": "sUSDai",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xc61d95f86a69f38bdc00ac9e765266583adf2562",
+      "symbol": "USDT0-USDe",
+      "name": "USDT0 USDe",
+      "tokens": [
+        {
+          "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "symbol": "USDe",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xcc7e72aedb385ae14a8b2e459f40dcb264d501ae",
+      "symbol": "UCF-WXPL",
+      "name": "UCF WXPL",
+      "tokens": [
+        {
+          "address": "0x6100e367285b01f48d07953803a2d8dca5d19873",
+          "symbol": "WXPL",
+          "decimals": 18
+        },
+        {
+          "address": "0x677d154c0bfd7d4a87fb7068e12182dbcd1cd023",
+          "symbol": "UCF",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd262e59fe1d6f4280484dafb2f57a60effe312cd",
+      "symbol": "50-USDT0-50-YNK",
+      "name": "50% USDT0 / 50% YNK",
+      "tokens": [
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xdd518fe45f2e79d297dfdbae6955ec92d79b8a1e",
+          "symbol": "YNK",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd3ee3b541a516f97f1b2c120fedba7d9b3198e43",
+      "symbol": "AFN-AUR",
+      "name": "Balancer AFN-AUR",
+      "tokens": [
+        {
+          "address": "0x32879a30227675a9e7e142e11e1c1f226564957d",
+          "symbol": "AUR",
+          "decimals": 18
+        },
+        {
+          "address": "0x65e7df3cc053030a040349b97f45cbf902fc1e2a",
+          "symbol": "AFN",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd5d4ea71f9511b55498884537a9d1acea9a8ed65",
+      "symbol": "xUSD-tcUSDT0",
+      "name": "Stream Surge xUSD-tcUSDT0",
+      "tokens": [
+        {
+          "address": "0x6eaf19b2fc24552925db245f9ff613157a7dbb4c",
+          "symbol": "xUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xa9c251f8304b1b3fc2b9e8fcae78d94eff82ac66",
+          "symbol": "tcUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xd931775d9aca9859c9fdc53c63ae32ef21551492",
+      "symbol": "BALsyzUSD",
+      "name": "Yuzu Money 🍋",
+      "tokens": [
+        {
+          "address": "0x9c46ee1f01d2b551048f5ff99a4659d98d04bed1",
+          "symbol": "246USDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
+          "symbol": "syzUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd9c4e277c93374a9f8c877a9d06707a88092e8f0",
+      "symbol": "sUSDe-waPlaUSDT0",
+      "name": "Ethena Surge sUSDe-waUSDT0",
+      "tokens": [
+        {
+          "address": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "symbol": "sUSDe",
+          "decimals": 18
+        },
+        {
+          "address": "0xe0126f0c4451b2b917064a93040fd4770d6774b5",
+          "symbol": "waPlaUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xda51975d78cb172b46d7292cec9fa9e74723ef3b",
+      "symbol": "weETH-waPlaWETH",
+      "name": "Ether.Fi Surge weETH-waWETH",
+      "tokens": [
+        {
+          "address": "0xa047fdfb3420a27a5f926735b475fe5a1e968786",
+          "symbol": "waPlaWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+          "symbol": "weETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdb5617517f53ea689d773ebde54947b597e32f81",
+      "symbol": "plUSD-splUSD",
+      "name": "Trevee plUSD-splUSD",
+      "tokens": [
+        {
+          "address": "0x616185600989bf8339b58ac9e539d49536598343",
+          "symbol": "splUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xf91c31299e998c5127bc5f11e4a657fc0cf358cd",
+          "symbol": "plUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xde0cfd933d2036d99048a04acf5bacfb45492377",
+      "symbol": "savUSD-dUSDT0-V3",
+      "name": "Avant savUSD-dUSDT0V3",
+      "tokens": [
+        {
+          "address": "0x76309a9a56309104518847bba321c261b7b4a43f",
+          "symbol": "dUSDT0-V3-0",
+          "decimals": 6
+        },
+        {
+          "address": "0xa29420057f3e3b9512d4786df135da1674bd74d4",
+          "symbol": "savUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdf7131d992983603c29f0ed18d6ff4eb7335c185",
+      "symbol": "STBL-USDT0",
+      "name": "STBL / USDT0",
+      "tokens": [
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xfdf91362b7e9330f232e500c0236a02b0de3e492",
+          "symbol": "STBL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xe141a9b6eaeb2006460a5c335c83444aef33d9f0",
+      "symbol": "BALyzUSD",
+      "name": "yzUSD / USDT0",
+      "tokens": [
+        {
+          "address": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
+          "symbol": "yzUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x9d86b4fc23d8438fc4aba58642dc35d5f64fe941",
+          "symbol": "eUSDT0-30",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xe14ba497a7c51f34896d327ec075f3f18210a270",
+      "symbol": "WXPL-USDT0",
+      "name": "reCLAMM WXPL-USDT0",
+      "tokens": [
+        {
+          "address": "0x6100e367285b01f48d07953803a2d8dca5d19873",
+          "symbol": "WXPL",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xebed2dcfdf027f6dd4be2b6cfb8d0418d43714e6",
+      "symbol": "50WXPL-50trillions",
+      "name": "50WXPL 50trillions",
+      "tokens": [
+        {
+          "address": "0x6100e367285b01f48d07953803a2d8dca5d19873",
+          "symbol": "WXPL",
+          "decimals": 18
+        },
+        {
+          "address": "0x92a01ab7317ac318b39b00eb6704ba56f0245d7a",
+          "symbol": "trillions",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf3601d369aa7d41dd665e38a3c73528e6238e041",
+      "symbol": "savUSD-USDT0",
+      "name": "savUSD USDT0",
+      "tokens": [
+        {
+          "address": "0xa29420057f3e3b9512d4786df135da1674bd74d4",
+          "symbol": "savUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    }
+  ],
+  "gauges": []
+}

@@ -9,6 +9,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
     "deprecated": false,
+    "enabled": true,
     "v1": {
       "startBlock": 9562480,
       "factory": "0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd",
@@ -281,12 +282,13 @@
     "key": "polygon",
     "chainId": 137,
     "name": "Polygon",
-    "defaultRpcUrl": "https://polygon-rpc.com",
+    "defaultRpcUrl": "https://polygon-bor-rpc.publicnode.com",
     "explorerUrl": "https://polygonscan.com",
     "nativeSymbol": "POL",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 15832990,
@@ -527,6 +529,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 222832,
@@ -742,6 +745,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 24821598,
@@ -839,7 +843,7 @@
         },
         {
           "name": "GyroEV2PoolFactory",
-          "address": "0x5d3be8aae57bf0d1986ff7766cc9607b6cc99b89",
+          "address": "0x5d3Be8aaE57bf0D1986Ff7766cC9607B6cC99b89",
           "startBlock": 33759936,
           "poolType": "gyro"
         }
@@ -873,6 +877,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 7003431,
@@ -1070,6 +1075,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 26386141,
@@ -1137,7 +1143,7 @@
         },
         {
           "name": "GyroEV2PoolFactory",
-          "address": "0x41e9ac0bfed353c2de21a980da0ebb8a464d946a",
+          "address": "0x41E9ac0bfed353c2dE21a980dA0EbB8A464D946A",
           "startBlock": 50484541,
           "poolType": "gyro"
         }
@@ -1166,6 +1172,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 1196036,
@@ -1231,6 +1238,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
     "deprecated": true,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 203079,
@@ -1328,6 +1336,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
     "deprecated": true,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 8110317,
@@ -1340,12 +1349,6 @@
           "poolType": "weighted"
         },
         {
-          "name": "ComposableStablePoolV6Factory",
-          "address": "0x5DbAd78818D4c8958EfF2d5b95b28385A22113Cd",
-          "startBlock": 8115909,
-          "poolType": "composableStable"
-        },
-        {
           "name": "TempLiquidityBootstrappingPoolFactory",
           "address": "0xE42FFA682A26EF8F25891db4882932711D42e467",
           "startBlock": 8115232,
@@ -1356,6 +1359,12 @@
           "address": "0x7A2535f5fB47b8e44c02Ef5D9990588313fe8F05",
           "startBlock": 8115674,
           "poolType": "managed"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x5DbAd78818D4c8958EfF2d5b95b28385A22113Cd",
+          "startBlock": 8115909,
+          "poolType": "composableStable"
         }
       ],
       "gaugeFactories": [
@@ -1377,6 +1386,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": true,
+    "enabled": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 4708596,
@@ -1389,12 +1399,6 @@
           "poolType": "weighted"
         },
         {
-          "name": "ComposableStablePoolV6Factory",
-          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
-          "startBlock": 4713656,
-          "poolType": "composableStable"
-        },
-        {
           "name": "TempLiquidityBootstrappingPoolFactory",
           "address": "0x956CCab09898C0AF2aCa5e6C229c3aD4E93d9288",
           "startBlock": 4708781,
@@ -1405,6 +1409,12 @@
           "address": "0x7A2535f5fB47b8e44c02Ef5D9990588313fe8F05",
           "startBlock": 4713444,
           "poolType": "managed"
+        },
+        {
+          "name": "ComposableStablePoolV6Factory",
+          "address": "0x4bdCc2fb18AEb9e2d281b0278D946445070EAda7",
+          "startBlock": 4713656,
+          "poolType": "composableStable"
         }
       ],
       "gaugeFactories": [
@@ -1426,6 +1436,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
     "deprecated": false,
+    "enabled": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 6132445,
@@ -1442,6 +1453,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
     "deprecated": false,
+    "enabled": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 780207,
@@ -1458,6 +1470,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 100,
     "deprecated": false,
+    "enabled": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 43082760,
@@ -1474,6 +1487,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
     "deprecated": false,
+    "enabled": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 22091249,
@@ -1490,6 +1504,7 @@
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
     "deprecated": false,
+    "enabled": false,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 3418831,

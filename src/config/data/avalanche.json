@@ -1,0 +1,3208 @@
+{
+  "meta": {
+    "chainKey": "avalanche",
+    "scannedAtBlock": 0,
+    "generatedAt": "2026-09-15T12:51:58.280Z",
+    "source": "balancer-api"
+  },
+  "v1Pools": [],
+  "v2Pools": [
+    {
+      "address": "0x0099111ed107bdf0b05162356aee433514aac440",
+      "poolId": "0x0099111ed107bdf0b05162356aee433514aac44000020000000000000000002f",
+      "poolType": "stable",
+      "symbol": "LP-VCHF-USDC",
+      "name": "LP-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x228a48df6819ccc2eca01e2192ebafffdad56c19",
+          "symbol": "VCHF",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x01ef165c47bc594e6091911dda54a0afd139587e",
+      "poolId": "0x01ef165c47bc594e6091911dda54a0afd139587e000200000000000000000034",
+      "poolType": "weighted",
+      "symbol": "99ggAVAX-1USDC",
+      "name": "99ggAVAX-1USDC",
+      "tokens": [
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x054e7b0c73e1ee5aed6864fa511658fc2b54bcaa",
+      "poolId": "0x054e7b0c73e1ee5aed6864fa511658fc2b54bcaa000000000000000000000015",
+      "poolType": "composableStable",
+      "symbol": "ggAVAX-bb-a-WAVAX-BPT",
+      "name": "Balancer Boosted ggAVAX-WAVAX",
+      "tokens": [
+        {
+          "address": "0x054e7b0c73e1ee5aed6864fa511658fc2b54bcaa",
+          "symbol": "ggAVAX-bb-a-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x7275c131b1f67e8b53b4691f92b0e35a4c1c6e22",
+          "symbol": "bb-a-WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x072de59207cd9b3c9f545a454da0f559f19db5a5",
+      "poolId": "0x072de59207cd9b3c9f545a454da0f559f19db5a5000200000000000000000057",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-GYD",
+      "name": "Gyroscope ECLP WAVAX/GYD",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0df1be54b29aa9828bea1de6a6dfe3d03ec63082",
+      "poolId": "0x0df1be54b29aa9828bea1de6a6dfe3d03ec63082000100000000000000000047",
+      "poolType": "weighted",
+      "symbol": "AFCC",
+      "name": "AF Culture Coins",
+      "tokens": [
+        {
+          "address": "0x184ff13b3ebcb25be44e860163a5d8391dd568c1",
+          "symbol": "KIMBO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5ac04b69bde6f67c0bd5d6ba6fd5d816548b066a",
+          "symbol": "TECH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xacfb898cff266e53278cc0124fc2c7c94c8cb9a5",
+          "symbol": "NOCHILL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe8385cecb013561b69beb63ff59f4d10734881f3",
+          "symbol": "GEC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x111440768a7e23b94f3771d1deaa33b10e05d3fd",
+      "poolId": "0x111440768a7e23b94f3771d1deaa33b10e05d3fd000200000000000000000036",
+      "poolType": "weighted",
+      "symbol": "50VEUR-50WAVAX",
+      "name": "50VEUR-50WAVAX",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x121b0dfc48444c4d10cadded9885d90e7453e878",
+      "poolId": "0x121b0dfc48444c4d10cadded9885d90e7453e878000000000000000000000035",
+      "poolType": "composableStable",
+      "symbol": "SWEEP-USDC-BPT",
+      "name": "Balancer SWEEP-USDC StablePool",
+      "tokens": [
+        {
+          "address": "0x121b0dfc48444c4d10cadded9885d90e7453e878",
+          "symbol": "SWEEP-USDC-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xb88a5ac00917a02d82c7cd6cebd73e2852d43574",
+          "symbol": "SWEEP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x15365dad32910a37584233af9e28383ff276887a",
+      "poolId": "0x15365dad32910a37584233af9e28383ff276887a000100000000000000000045",
+      "poolType": "weighted",
+      "symbol": "14KIMBO-14COQ-14TECH-14NOCHILL-14WAVAX-14USDC-14GEC",
+      "name": "14KIMBO-14COQ-14TECH-14NOCHILL-14WAVAX-14USDC-14GEC",
+      "tokens": [
+        {
+          "address": "0x184ff13b3ebcb25be44e860163a5d8391dd568c1",
+          "symbol": "KIMBO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5ac04b69bde6f67c0bd5d6ba6fd5d816548b066a",
+          "symbol": "TECH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xacfb898cff266e53278cc0124fc2c7c94c8cb9a5",
+          "symbol": "NOCHILL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe8385cecb013561b69beb63ff59f4d10734881f3",
+          "symbol": "GEC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1715c229ec39a49a648c2b93909f3fe56606e6d7",
+      "poolId": "0x1715c229ec39a49a648c2b93909f3fe56606e6d700020000000000000000005d",
+      "poolType": "gyro",
+      "symbol": "ECLP-USDC.e-USDC",
+      "name": "Gyroscope ECLP USDC.e/USDC",
+      "tokens": [
+        {
+          "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1f43a5286c57813f75fb8edeef8b2c5e1878ec2d",
+      "poolId": "0x1f43a5286c57813f75fb8edeef8b2c5e1878ec2d000100000000000000000025",
+      "poolType": "weighted",
+      "symbol": "33BTC.b-33USDt-33USDC",
+      "name": "33BTC.b-33USDt-33USDC",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x20fa4dba0e5baa7da26fad0f45514a5280eb08b1",
+      "poolId": "0x20fa4dba0e5baa7da26fad0f45514a5280eb08b1000100000000000000000040",
+      "poolType": "managed",
+      "symbol": "$ICE",
+      "name": "Ice Cap",
+      "tokens": [
+        {
+          "address": "0x20fa4dba0e5baa7da26fad0f45514a5280eb08b1",
+          "symbol": "$ICE",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+          "symbol": "QI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x24760c9090eafed160209fd012eb583ae5df72bb",
+      "poolId": "0x24760c9090eafed160209fd012eb583ae5df72bb000200000000000000000027",
+      "poolType": "weighted",
+      "symbol": "80WAVAX-20USDC",
+      "name": "80WAVAX-20USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x26f28215c57dc22560be2efb09e784892802eb02",
+      "poolId": "0x26f28215c57dc22560be2efb09e784892802eb02000100000000000000000044",
+      "poolType": "weighted",
+      "symbol": "33XPOW-33APOW-33WAVAX",
+      "name": "33XPOW-33APOW-33WAVAX",
+      "tokens": [
+        {
+          "address": "0x735d8f3b6a5d2c96d0405230c50eaf96794fbb88",
+          "symbol": "XPOW",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f9c841feadddb4bdbb2a161ca40bebc4f215a9a",
+          "symbol": "APOW",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x28f3a9e42667519c83cb090b5c4f6bd34e9f5569",
+      "poolId": "0x28f3a9e42667519c83cb090b5c4f6bd34e9f5569000200000000000000000031",
+      "poolType": "stable",
+      "symbol": "LP-VEUR-USDC",
+      "name": "LP-VEUR-USDC",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x296df277579b38db06fe5bdf179252f983672d6d",
+      "poolId": "0x296df277579b38db06fe5bdf179252f983672d6d000200000000000000000056",
+      "poolType": "gyro",
+      "symbol": "ECLP-ggAVAX-WAVAX-rh",
+      "name": "Gyro ECLP ggAVAX/WAVAX rehype",
+      "tokens": [
+        {
+          "address": "0x6a02c7a974f1f13a67980c80f774ec1d2ed8f98d",
+          "symbol": "stataAvaWAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x32f0dc9e2d890bac95106a65eb82db70bc58badb",
+      "poolId": "0x32f0dc9e2d890bac95106a65eb82db70bc58badb000200000000000000000004",
+      "poolType": "lbp",
+      "symbol": "LOL_LBP",
+      "name": "LOL Fjord Foundry LBP",
+      "tokens": [
+        {
+          "address": "0x135b03c292f6b24b5a3469436d007a3aeea892dd",
+          "symbol": "LOL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3304334c759f5f5cbc263419eab792a6a1cccce7",
+      "poolId": "0x3304334c759f5f5cbc263419eab792a6a1cccce7000200000000000000000082",
+      "poolType": "gyro",
+      "symbol": "ECLPV2-WAVAX-USDC",
+      "name": "Avalanche V2 ECLP WAVAX/USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3396cca90c9335565ecdbae3a260dafb13a7959e",
+      "poolId": "0x3396cca90c9335565ecdbae3a260dafb13a7959e000200000000000000000018",
+      "poolType": "weighted",
+      "symbol": "80BETS/20sAVAX",
+      "name": "80BETS/20sAVAX Pool Token",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
+          "symbol": "BETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3441a6f48f0f5a1ada460885df5b461deb2ee494",
+      "poolId": "0x3441a6f48f0f5a1ada460885df5b461deb2ee494000200000000000000000024",
+      "poolType": "weighted",
+      "symbol": "50BTC.b-50USDC",
+      "name": "50BTC.b-50USDC",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3575d2c7c11c74199108f145a2a6f726000cf7c3",
+      "poolId": "0x3575d2c7c11c74199108f145a2a6f726000cf7c300020000000000000000005e",
+      "poolType": "gyro",
+      "symbol": "ECLP-EURC-USDC-dyn",
+      "name": "Gyroscope Dyn ECLP EURC/USDC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x383c46887a1d5f3867664091ae5d6ad3ad3369f5",
+      "poolId": "0x383c46887a1d5f3867664091ae5d6ad3ad3369f5000200000000000000000051",
+      "poolType": "stable",
+      "symbol": "LP-XSGD-USDC",
+      "name": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0xb2f85b7ab3c2b6f62df06de6ae7d09c010a5096e",
+          "symbol": "XSGD",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3bde1563903ebb564ca37d5736afbb850929cfd7",
+      "poolId": "0x3bde1563903ebb564ca37d5736afbb850929cfd7000200000000000000000017",
+      "poolType": "weighted",
+      "symbol": "ankrAVAX-ankrETH-BPT",
+      "name": "Balancer ankrAVAX-ankrETH",
+      "tokens": [
+        {
+          "address": "0x12d8ce035c5de3ce39b1fdd4c1d5a745eaba3b8c",
+          "symbol": "ankrETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc3344870d52688874b06d844e0c36cc39fc727f6",
+          "symbol": "ankrAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3f1a2c4a3a751f6626bd90ef16e104f0772d4d6b",
+      "poolId": "0x3f1a2c4a3a751f6626bd90ef16e104f0772d4d6b00020000000000000000001b",
+      "poolType": "weighted",
+      "symbol": "50BTC.b-50bb-a-USD",
+      "name": "BTC.b/Boosted Aave V3 USD",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa1d14d922a575232066520eda11e27760946c991",
+          "symbol": "bb-a-USD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3fc26a34594ec8adfd9431ff3b9e8fce00bedd19",
+      "poolId": "0x3fc26a34594ec8adfd9431ff3b9e8fce00bedd1900020000000000000000002d",
+      "poolType": "weighted",
+      "symbol": "50USDC-50EUROC",
+      "name": "50USDC-50EUROC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x516db57bac67fcb68f26c885eacc4e842bd4cf5b",
+      "poolId": "0x516db57bac67fcb68f26c885eacc4e842bd4cf5b000200000000000000000037",
+      "poolType": "weighted",
+      "symbol": "50BAL/50WAVAX",
+      "name": "Balancer 50BAL/50WAVAX",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe15bcb9e0ea69e6ab9fa080c4c4a5632896298c3",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x55bec22f8f6c69137ceaf284d9b441db1b9bfedc",
+      "poolId": "0x55bec22f8f6c69137ceaf284d9b441db1b9bfedc000200000000000000000011",
+      "poolType": "stable",
+      "symbol": "BPT",
+      "name": "BPT-EUROC-USDC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x58892ccbaf25f585862a3b8504d7a69dca2cc661",
+      "poolId": "0x58892ccbaf25f585862a3b8504d7a69dca2cc66100010000000000000000004a",
+      "poolType": "weighted",
+      "symbol": "20BTC.b-20USDt-20WAVAX-20USDC-20BAL",
+      "name": "20BTC.b-20USDt-20WAVAX-20USDC-20BAL",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe15bcb9e0ea69e6ab9fa080c4c4a5632896298c3",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x594fe86e60d8df04ec9c5b2f7fec09dc14175804",
+      "poolId": "0x594fe86e60d8df04ec9c5b2f7fec09dc14175804000100000000000000000043",
+      "poolType": "weighted",
+      "symbol": "40KIMBO-13COQ-20TECH-14WAVAX-13USDC",
+      "name": "40KIMBO-13COQ-20TECH-14WAVAX-13USDC",
+      "tokens": [
+        {
+          "address": "0x184ff13b3ebcb25be44e860163a5d8391dd568c1",
+          "symbol": "KIMBO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5ac04b69bde6f67c0bd5d6ba6fd5d816548b066a",
+          "symbol": "TECH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x65abb09b5f1d80bdf403408282f2728da2129a0c",
+      "poolId": "0x65abb09b5f1d80bdf403408282f2728da2129a0c000200000000000000000059",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-GYD-dyn",
+      "name": "Gyroscope Dyn ECLP WAVAX/GYD",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x66bb9d104c55861feb3ec3559433f01f6373c966",
+      "poolId": "0x66bb9d104c55861feb3ec3559433f01f6373c96600020000000000000000002a",
+      "poolType": "stable",
+      "symbol": "BPT",
+      "name": "BPT-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x228a48df6819ccc2eca01e2192ebafffdad56c19",
+          "symbol": "VCHF",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x670734d704eb7ef424d75321670f921fbf42e9cf",
+      "poolId": "0x670734d704eb7ef424d75321670f921fbf42e9cf000000000000000000000016",
+      "poolType": "composableStable",
+      "symbol": "sAVAX-ankrAVAX-BPT",
+      "name": "Balancer sAVAX-ankrAVAX",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x670734d704eb7ef424d75321670f921fbf42e9cf",
+          "symbol": "sAVAX-ankrAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xc3344870d52688874b06d844e0c36cc39fc727f6",
+          "symbol": "ankrAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x6b401dc1909b9608e4fc81fd51d285ad7a6c57de",
+      "poolId": "0x6b401dc1909b9608e4fc81fd51d285ad7a6c57de00020000000000000000004e",
+      "poolType": "weighted",
+      "symbol": "6BTC.b-94USDC",
+      "name": "6BTC.b-94USDC",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x721bd1900aeabc29009b08e44be37529f518f2c2",
+      "poolId": "0x721bd1900aeabc29009b08e44be37529f518f2c2000100000000000000000026",
+      "poolType": "weighted",
+      "symbol": "33VCHF-33sAVAX-33VEUR",
+      "name": "33VCHF-33sAVAX-33VEUR",
+      "tokens": [
+        {
+          "address": "0x228a48df6819ccc2eca01e2192ebafffdad56c19",
+          "symbol": "VCHF",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7557090a2088ea3f2caa7327270dc4bd3f296431",
+      "poolId": "0x7557090a2088ea3f2caa7327270dc4bd3f296431000200000000000000000053",
+      "poolType": "gyro",
+      "symbol": "ECLP-GYD-USDC-rh",
+      "name": "Gyroscope ECLP GYD/USDC Rehype",
+      "tokens": [
+        {
+          "address": "0xc509ab7bb4edbf193b82264d499a7fc526cd01f4",
+          "symbol": "stataAvaUSDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7a1a919c033ebc0d9f23cbf2aa41c24aef826ca2",
+      "poolId": "0x7a1a919c033ebc0d9f23cbf2aa41c24aef826ca200020000000000000000002e",
+      "poolType": "stable",
+      "symbol": "LP-EURC-USDC",
+      "name": "LP-EURC-USDC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7c6e42aac7494a62eb7b8691e2e2501b6aef7aa0",
+      "poolId": "0x7c6e42aac7494a62eb7b8691e2e2501b6aef7aa0000100000000000000000032",
+      "poolType": "managed",
+      "symbol": "ETF01",
+      "name": "FUTUR",
+      "tokens": [
+        {
+          "address": "0x7c6e42aac7494a62eb7b8691e2e2501b6aef7aa0",
+          "symbol": "ETF01",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x59414b3089ce2af0010e7523dea7e2b35d776ec7",
+          "symbol": "YAK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x63a72806098bd3d9520cc43356dd78afe5d386d9",
+          "symbol": "AAVE.e",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674",
+          "symbol": "STEAK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+          "symbol": "XAVA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7dac30c86e1a7bfc56790d8ea3a15c0b99bc028b",
+      "poolId": "0x7dac30c86e1a7bfc56790d8ea3a15c0b99bc028b000200000000000000000058",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-USDC-dyn",
+      "name": "Gyroscope Dyn ECLP WAVAX/USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x812958dda053219842e0499d05934be1b2fe02aa",
+      "poolId": "0x812958dda053219842e0499d05934be1b2fe02aa000100000000000000000033",
+      "poolType": "managed",
+      "symbol": "pawsp",
+      "name": "softpaws-private",
+      "tokens": [
+        {
+          "address": "0x812958dda053219842e0499d05934be1b2fe02aa",
+          "symbol": "pawsp",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x69260b9483f9871ca57f81a90d91e2f96c2cd11d",
+          "symbol": "GGP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674",
+          "symbol": "STEAK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+          "symbol": "yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x093783055f9047c2bff99c4e414501f8a147bc69",
+          "symbol": "ALOT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x82c0f5fe6bd04f2dce371d4e3f0689d1cfad1f5c",
+      "poolId": "0x82c0f5fe6bd04f2dce371d4e3f0689d1cfad1f5c000200000000000000000052",
+      "poolType": "gyro",
+      "symbol": "ECLP-sAVAX-WAVAX-rh",
+      "name": "Gyro ECLP sAVAX/WAVAX rehype",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6a02c7a974f1f13a67980c80f774ec1d2ed8f98d",
+          "symbol": "stataAvaWAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x842edf1f8c1ea26997d2502bba12a312f0476f8d",
+      "poolId": "0x842edf1f8c1ea26997d2502bba12a312f0476f8d000200000000000000000081",
+      "poolType": "gyro",
+      "symbol": "ECLPV2-WAVAX-USDC",
+      "name": "Avalanche V2 ECLP WAVAX/USDC",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x856561c3b21efca7e483b1ad197e4ab5fb56ccdb",
+      "poolId": "0x856561c3b21efca7e483b1ad197e4ab5fb56ccdb000100000000000000000048",
+      "poolType": "managed",
+      "symbol": "LRK",
+      "name": "Low Risk Kacy",
+      "tokens": [
+        {
+          "address": "0x856561c3b21efca7e483b1ad197e4ab5fb56ccdb",
+          "symbol": "LRK",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+          "symbol": "WETH.e",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x50b7545627a5162f82a992c33b87adc75187b218",
+          "symbol": "WBTC.e",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8783e0156cd747d0cc012087d3d3afc897f2328c",
+      "poolId": "0x8783e0156cd747d0cc012087d3d3afc897f2328c00000000000000000000003b",
+      "poolType": "composableStable",
+      "symbol": "sAVAX/ggAVAX/yyAVAX",
+      "name": "Balancer sAVAX/ggAVAX/yyAVAX",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8783e0156cd747d0cc012087d3d3afc897f2328c",
+          "symbol": "sAVAX/ggAVAX/yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+          "symbol": "yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8b965dd2dc8803cb720b773630ad2c5c4dd91b86",
+      "poolId": "0x8b965dd2dc8803cb720b773630ad2c5c4dd91b8600020000000000000000005a",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-USDC-dyn",
+      "name": "Gyroscope Dyn ECLP WAVAX/USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8e600715db997e1b3bbd884841a840095947cfbc",
+      "poolId": "0x8e600715db997e1b3bbd884841a840095947cfbc000200000000000000000060",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-USDT-dyn",
+      "name": "Gyroscope Dyn ECLP WAVAX/USDT",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x90065d5e455e6b26a4eaf630c26289f6b6735647",
+      "poolId": "0x90065d5e455e6b26a4eaf630c26289f6b6735647000100000000000000000019",
+      "poolType": "weighted",
+      "symbol": "BPT-QI-GGP-USDC",
+      "name": "Balancer QI-GGP-USDC",
+      "tokens": [
+        {
+          "address": "0x69260b9483f9871ca57f81a90d91e2f96c2cd11d",
+          "symbol": "GGP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+          "symbol": "QI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x956ff4e3f61344da97ff3438254a2374cd40cad9",
+      "poolId": "0x956ff4e3f61344da97ff3438254a2374cd40cad900010000000000000000003f",
+      "poolType": "managed",
+      "symbol": "SBl",
+      "name": "SnowBall",
+      "tokens": [
+        {
+          "address": "0x956ff4e3f61344da97ff3438254a2374cd40cad9",
+          "symbol": "SBl",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x59414b3089ce2af0010e7523dea7e2b35d776ec7",
+          "symbol": "YAK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
+          "symbol": "QI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb279f8dd152b99ec1d84a489d32c35bc0c7f5674",
+          "symbol": "STEAK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xec3492a2508ddf4fdc0cd76f31f340b30d1793e6",
+          "symbol": "CLY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4",
+          "symbol": "XAVA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5817d4f0b62a59b17f75207da1848c2ce75e7af4",
+          "symbol": "VTX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x96518f83d66bdc6a5812f01c54f8e022f6796399",
+      "poolId": "0x96518f83d66bdc6a5812f01c54f8e022f6796399000200000000000000000020",
+      "poolType": "weighted",
+      "symbol": "50BTC.b-50USD-BPT",
+      "name": "Balancer 50BTC.b 50USD",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c96",
+          "symbol": "USDC-USDT-BPT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9c74c167902cd1108fe3b76a9eb311c9ef9dd074",
+      "poolId": "0x9c74c167902cd1108fe3b76a9eb311c9ef9dd07400010000000000000000003e",
+      "poolType": "weighted",
+      "symbol": "40sAVAX-25ggAVAX-10WAVAX-25yyAVAX",
+      "name": "40sAVAX-25ggAVAX-10WAVAX-25yyAVAX",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+          "symbol": "yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9dc0fe02e4619f4336a14f4689cc3bec63590ab6",
+      "poolId": "0x9dc0fe02e4619f4336a14f4689cc3bec63590ab600010000000000000000003a",
+      "poolType": "weighted",
+      "symbol": "30sAVAX-40JOE-30WAVAX",
+      "name": "30sAVAX-40JOE-30WAVAX",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9fa6ab3d78984a69e712730a2227f20bcc8b5ad9",
+      "poolId": "0x9fa6ab3d78984a69e712730a2227f20bcc8b5ad900000000000000000000001f",
+      "poolType": "composableStable",
+      "symbol": "yyAVAX-WAVAX-BPT",
+      "name": "Balancer yyAVAX-WAVAX Stable Pool",
+      "tokens": [
+        {
+          "address": "0x9fa6ab3d78984a69e712730a2227f20bcc8b5ad9",
+          "symbol": "yyAVAX-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+          "symbol": "yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa0e283c24e3b506bce3bad8a87977f2707ca6d92",
+      "poolId": "0xa0e283c24e3b506bce3bad8a87977f2707ca6d9200020000000000000000005f",
+      "poolType": "gyro",
+      "symbol": "ECLP-BTC.b-WAVAX-dyn",
+      "name": "Gyroscope Dyn ECLP BTC.b/WAVAX",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa154009870e9b6431305f19b09f9cfd7284d4e7a",
+      "poolId": "0xa154009870e9b6431305f19b09f9cfd7284d4e7a000000000000000000000013",
+      "poolType": "composableStable",
+      "symbol": "sAVAX-bb-a-WAVAX-BPT",
+      "name": "Balancer Boosted sAVAX-WAVAX",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7275c131b1f67e8b53b4691f92b0e35a4c1c6e22",
+          "symbol": "bb-a-WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa154009870e9b6431305f19b09f9cfd7284d4e7a",
+          "symbol": "sAVAX-bb-a-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xa1d14d922a575232066520eda11e27760946c991",
+      "poolId": "0xa1d14d922a575232066520eda11e27760946c991000000000000000000000012",
+      "poolType": "composableStable",
+      "symbol": "bb-a-USD",
+      "name": "Balancer Aave v3 Boosted StablePool",
+      "tokens": [
+        {
+          "address": "0xa1d14d922a575232066520eda11e27760946c991",
+          "symbol": "bb-a-USD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xea67626e1f0b59e0d172a04f5702ef90bcdf440c",
+          "symbol": "bb-a-USDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xeb496161099d45b3ea4892408ef745c6182eb56e",
+          "symbol": "bb-a-USDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa39d8651689c8b6e5a9e0aa4362629aef2c58f55",
+      "poolId": "0xa39d8651689c8b6e5a9e0aa4362629aef2c58f55000200000000000000000038",
+      "poolType": "weighted",
+      "symbol": "80BAL/20WAVAX",
+      "name": "Balancer 80BAL/20WAVAX",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe15bcb9e0ea69e6ab9fa080c4c4a5632896298c3",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa759ef6699a7a10ddc734e5ba1957fb79d3d248c",
+      "poolId": "0xa759ef6699a7a10ddc734e5ba1957fb79d3d248c000200000000000000000030",
+      "poolType": "stable",
+      "symbol": "LP-VEUR-USDC",
+      "name": "LP-VEUR-USDC",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xaa4eee23426bff1af8d79d6179e5a5c311f6adcc",
+      "poolId": "0xaa4eee23426bff1af8d79d6179e5a5c311f6adcc000100000000000000000046",
+      "poolType": "weighted",
+      "symbol": "KIMBOTECHCOQAVAXUSDC",
+      "name": "Culture Vol Farm",
+      "tokens": [
+        {
+          "address": "0x184ff13b3ebcb25be44e860163a5d8391dd568c1",
+          "symbol": "KIMBO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5ac04b69bde6f67c0bd5d6ba6fd5d816548b066a",
+          "symbol": "TECH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xab0548a31519a799549e7954d430df5bd01e6b7d",
+      "poolId": "0xab0548a31519a799549e7954d430df5bd01e6b7d000200000000000000000054",
+      "poolType": "gyro",
+      "symbol": "ECLP-GYD-aUSDC",
+      "name": "Gyroscope ECLP GYD/aUSDC",
+      "tokens": [
+        {
+          "address": "0xc509ab7bb4edbf193b82264d499a7fc526cd01f4",
+          "symbol": "stataAvaUSDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xab567c27450e3fa1b4ee4e67ca7d1003c49e7ea8",
+      "poolId": "0xab567c27450e3fa1b4ee4e67ca7d1003c49e7ea800020000000000000000002b",
+      "poolType": "weighted",
+      "symbol": "93BTC.b-7USDC",
+      "name": "93BTC.b-7USDC",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xac48f987e87d6856cfcd1d6d2e63471efd5e45d9",
+      "poolId": "0xac48f987e87d6856cfcd1d6d2e63471efd5e45d900020000000000000000005b",
+      "poolType": "gyro",
+      "symbol": "ECLP-WAVAX-GYD-dyn",
+      "name": "Gyroscope Dyn ECLP WAVAX/GYD",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xad0e5e0778cac28f1ff459602b31351871b5754a",
+      "poolId": "0xad0e5e0778cac28f1ff459602b31351871b5754a000200000000000000000029",
+      "poolType": "stable",
+      "symbol": "BPT",
+      "name": "BPT-VEUR-USDC",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb06fdbd2941d2f42d60accee85086198ac729236",
+      "poolId": "0xb06fdbd2941d2f42d60accee85086198ac72923600020000000000000000001a",
+      "poolType": "weighted",
+      "symbol": "80HATCHY-20WAVAX",
+      "name": "80HATCHY-20WAVAX",
+      "tokens": [
+        {
+          "address": "0x502580fc390606b47fc3b741d6d49909383c28a9",
+          "symbol": "HATCHY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb10968b6ca2ea1c25d392a9a990559ed3f686861",
+      "poolId": "0xb10968b6ca2ea1c25d392a9a990559ed3f686861000200000000000000000028",
+      "poolType": "weighted",
+      "symbol": "80WAVAX-20USDC",
+      "name": "80WAVAX-20USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c96",
+      "poolId": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c9600000000000000000000001e",
+      "poolType": "composableStable",
+      "symbol": "USDC-USDT-BPT",
+      "name": "Balancer USDC-USDT Stable Pool",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c96",
+          "symbol": "USDC-USDT-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb6e374cd4805073780ae49be0ff814f3dd5eef7e",
+      "poolId": "0xb6e374cd4805073780ae49be0ff814f3dd5eef7e000100000000000000000055",
+      "poolType": "managed",
+      "symbol": "AVAXw",
+      "name": "AvalancheWide",
+      "tokens": [
+        {
+          "address": "0xb6e374cd4805073780ae49be0ff814f3dd5eef7e",
+          "symbol": "AVAXw",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x62edc0692bd897d2295872a9ffcac5425011c661",
+          "symbol": "GMX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xacfb898cff266e53278cc0124fc2c7c94c8cb9a5",
+          "symbol": "NOCHILL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb8d7710f7d8349a506b75dd184f05777c82dad0c",
+          "symbol": "ARENA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfb98b335551a418cd0737375a2ea0ded62ea213b",
+          "symbol": "PENDLE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb8a049353e647f29cf94f32b609bad6f67aff080",
+      "poolId": "0xb8a049353e647f29cf94f32b609bad6f67aff080000200000000000000000039",
+      "poolType": "weighted",
+      "symbol": "50BTC.b-50sAVAX",
+      "name": "50BTC.b-50sAVAX",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbf3e9c69a997776cd83cbd80cf22095c916e39b8",
+      "poolId": "0xbf3e9c69a997776cd83cbd80cf22095c916e39b8000200000000000000000021",
+      "poolType": "weighted",
+      "symbol": "50USDt-50USDC",
+      "name": "50USDt-50USDC",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc13546b97b9b1b15372368dc06529d7191081f5b",
+      "poolId": "0xc13546b97b9b1b15372368dc06529d7191081f5b00000000000000000000001d",
+      "poolType": "composableStable",
+      "symbol": "ggAVAX-WAVAX-BPT",
+      "name": "Balancer ggAVAX-WAVAX Stable Pool",
+      "tokens": [
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc13546b97b9b1b15372368dc06529d7191081f5b",
+          "symbol": "ggAVAX-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xc977f325be82198d57f5a24e8d78347a8684e3db",
+      "poolId": "0xc977f325be82198d57f5a24e8d78347a8684e3db000200000000000000000042",
+      "poolType": "weighted",
+      "symbol": "50KIMBO-50TECH",
+      "name": "50KIMBO-50TECH",
+      "tokens": [
+        {
+          "address": "0x184ff13b3ebcb25be44e860163a5d8391dd568c1",
+          "symbol": "KIMBO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5ac04b69bde6f67c0bd5d6ba6fd5d816548b066a",
+          "symbol": "TECH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd109e874e2fc4708205227a96e9ce4e6da2fe75e",
+      "poolId": "0xd109e874e2fc4708205227a96e9ce4e6da2fe75e00020000000000000000004f",
+      "poolType": "weighted",
+      "symbol": "80XAV-20WAVAX",
+      "name": "80XAV-20WAVAX",
+      "tokens": [
+        {
+          "address": "0x913c61ec3573e5e4ee6488552535fb1be84ff2ac",
+          "symbol": "XAV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd18a45c72a7362dc4f6be7505604fdd28710bcbd",
+      "poolId": "0xd18a45c72a7362dc4f6be7505604fdd28710bcbd00010000000000000000002c",
+      "poolType": "managed",
+      "symbol": "BOA",
+      "name": "Best Of Avalanche",
+      "tokens": [
+        {
+          "address": "0xd18a45c72a7362dc4f6be7505604fdd28710bcbd",
+          "symbol": "BOA",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x60781c2586d68229fde47564546784ab3faca982",
+          "symbol": "PNG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd",
+          "symbol": "JOE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf32398dae246c5f672b52a54e9b413dffcae1a44",
+          "symbol": "KACY",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xda479115800b16a271388f35cc3eac67fe4608ce",
+      "poolId": "0xda479115800b16a271388f35cc3eac67fe4608ce00020000000000000000003c",
+      "poolType": "weighted",
+      "symbol": "50WAVAX-50FRACTION",
+      "name": "50WAVAX-50FRACTION",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
+          "symbol": "FRACTION",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xdbcadaaaab7f4c37539a9538b838836dffd50d0e",
+      "poolId": "0xdbcadaaaab7f4c37539a9538b838836dffd50d0e000200000000000000000022",
+      "poolType": "weighted",
+      "symbol": "50WAVAX-50USDC",
+      "name": "50WAVAX-50USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xe3f0b00eb41395308120cc986286066725c6116e",
+      "poolId": "0xe3f0b00eb41395308120cc986286066725c6116e00000000000000000000004d",
+      "poolType": "composableStable",
+      "symbol": "vEUR-jEUR",
+      "name": "vEUR-jEUR",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2bfd1d0aaf9fd93355e5fa0b",
+          "symbol": "VEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9fb1d52596c44603198fb0aee434fac3a679f702",
+          "symbol": "jEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe3f0b00eb41395308120cc986286066725c6116e",
+          "symbol": "vEUR-jEUR",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xece571847897fd61e764d455dc15cf1cd9de8d6f",
+      "poolId": "0xece571847897fd61e764d455dc15cf1cd9de8d6f000000000000000000000014",
+      "poolType": "composableStable",
+      "symbol": "yyAVAX-bb-a-WAVAX-BPT",
+      "name": "Balancer Boosted yyAVAX-WAVAX",
+      "tokens": [
+        {
+          "address": "0x7275c131b1f67e8b53b4691f92b0e35a4c1c6e22",
+          "symbol": "bb-a-WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xece571847897fd61e764d455dc15cf1cd9de8d6f",
+          "symbol": "yyAVAX-bb-a-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xf7d9281e8e363584973f946201b82ba72c965d27",
+          "symbol": "yyAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xefc4b97cb57e8a09cba82d20261e78475ceffaac",
+      "poolId": "0xefc4b97cb57e8a09cba82d20261e78475ceffaac000200000000000000000049",
+      "poolType": "weighted",
+      "symbol": "80XAV-20USDC",
+      "name": "80XAV-20USDC",
+      "tokens": [
+        {
+          "address": "0x913c61ec3573e5e4ee6488552535fb1be84ff2ac",
+          "symbol": "XAV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf0920a4f572141252f93e66542c18753b5ef1e73",
+      "poolId": "0xf0920a4f572141252f93e66542c18753b5ef1e7300020000000000000000005c",
+      "poolType": "gyro",
+      "symbol": "ECLP-USDT.e-USDT",
+      "name": "Gyroscope ECLP USDT.e/USDT",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+          "symbol": "USDT.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf35d6c319ef5812f74b72670a3d74fa6fbd0a632",
+      "poolId": "0xf35d6c319ef5812f74b72670a3d74fa6fbd0a63200020000000000000000003d",
+      "poolType": "weighted",
+      "symbol": "20WAVAX-80EGS",
+      "name": "20WAVAX-80EGS",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc92f165f5e20979576a7ba48f16eb45361c078a2",
+          "symbol": "EGS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xfd2620c9cfcec7d152467633b3b0ca338d3d78cc",
+      "poolId": "0xfd2620c9cfcec7d152467633b3b0ca338d3d78cc00000000000000000000001c",
+      "poolType": "composableStable",
+      "symbol": "sAVAX-WAVAX-BPT",
+      "name": "Balancer sAVAX-WAVAX Stable Pool",
+      "tokens": [
+        {
+          "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+          "symbol": "sAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfd2620c9cfcec7d152467633b3b0ca338d3d78cc",
+          "symbol": "sAVAX-WAVAX-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    }
+  ],
+  "v3Pools": [
+    {
+      "address": "0x06b1a208f5f14c0ffc4e9fafa4f2c93bbaced003",
+      "symbol": "40USDC-60RFROG",
+      "name": "40USDC 60RFROG",
+      "tokens": [
+        {
+          "address": "0x900058d4e424421bfc90c2396e32588453a44e51",
+          "symbol": "RFROG",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x0b5c92a5de00879c3f37c40287efbe64183b4b22",
+      "symbol": "SkiBonk+-PEPE-COQ-AI",
+      "name": "25SkiBonk+-25PEPE-25COQ-25AI",
+      "tokens": [
+        {
+          "address": "0x2598c30330d5771ae9f983979209486ae26de875",
+          "symbol": "AI",
+          "decimals": 18
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18
+        },
+        {
+          "address": "0x446c74e55e015065fd2b41057d1589ad1447f1b5",
+          "symbol": "SkiBonk+",
+          "decimals": 18
+        },
+        {
+          "address": "0xa659d083b677d6bffe1cb704e1473b896727be6d",
+          "symbol": "PEPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0d70d432fe8949fea9ecafdc5f6cab7b58692345",
+      "symbol": "90PAIR-10USDC",
+      "name": "90PAIR 10USDC",
+      "tokens": [
+        {
+          "address": "0x1010e0c6e531be777b2b5432eb518c0e39b801df",
+          "symbol": "PAIR",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x0e7c3f32f7f155150d7a2e79501d24ccd3db8daa",
+      "symbol": "20WAVAX-80USDC",
+      "name": "20WAVAX 80USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x0fba6f8a2cdc9317509f4e0d1f6214b5465499e8",
+      "symbol": "USDC-EUROC",
+      "name": "USDC EUROC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x102c6abda2d63b37bc3fbe2abc9859c6fd107bf4",
+      "symbol": "waCoreUSDC-waCoreUSDT",
+      "name": "Aave v4 USDC-USDT",
+      "tokens": [
+        {
+          "address": "0x01d7f7b7ce2123192fecc20bd1caf3e4d9e4c10d",
+          "symbol": "waCoreUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x2e4ba06ff97e10d09fa4f5a270e97301eae729a9",
+          "symbol": "waCoreUSDT",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x1550cc4f51a0a701ebc446d351c4891591d7912a",
+      "symbol": "80ID-20WAVAX",
+      "name": "80ID 20WAVAX",
+      "tokens": [
+        {
+          "address": "0x34a528da3b2ea5c6ad1796eba756445d1299a577",
+          "symbol": "ID",
+          "decimals": 18
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1c31d3a1b5eb103c9c6ec8d42a3f465f6eb20e47",
+      "symbol": "WAVAX-USDC",
+      "name": "WAVAX-USDC spool",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x1c39ebe0ee53b52ab24d3945e9cde9e6c09d0851",
+      "symbol": "Aave wAVAX/wETH.e",
+      "name": "Balancer Aave wAVAX/wETH.e",
+      "tokens": [
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xdfd2b2437a94108323045c282ff1916de5ac6af7",
+          "symbol": "waAvaWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1fed8401c145f64da567881d272d0df233118dca",
+      "symbol": "USDp-gamiUSDC",
+      "name": "USDp-gamiUSDC",
+      "tokens": [
+        {
+          "address": "0x1f0570a081fee0e4df6eac470f9d2d53cdeda1c5",
+          "symbol": "Gami-USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x9ee1963f05553ef838604dd39403be21cef26aa4",
+          "symbol": "USDp",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x22715161201922af61f4ca22e979ef0c6c20be13",
+      "symbol": "Surge eK3 savUSD-USDT",
+      "name": "Balancer Surge eK3 savUSD-USDT",
+      "tokens": [
+        {
+          "address": "0x5030183b3dd0105d69d7d45595c120fc4b542ec3",
+          "symbol": "esavUSD-3",
+          "decimals": 18
+        },
+        {
+          "address": "0xa446938b0204aa4055cdfed68ddf0e0d1bab3e9e",
+          "symbol": "eUSDt-3",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x242cbbbb756c19d25d9e8127dce36caf6d8c49bc",
+      "symbol": "80sAbcPHAR-10USDC-10WAVAX",
+      "name": "80sAbcPHAR 10USDC 10WAVAX",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xe03a08bd497a0f1daed8f81d835c09242bb82bca",
+          "symbol": "sAbcPHAR",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x304e19e3029a6dbfde0d70d9e32ad9cc694a9b68",
+      "symbol": "eK3 weETH/aETH.e",
+      "name": "Balancer eK3 weETH/aETH.e",
+      "tokens": [
+        {
+          "address": "0x51b47b3013863c52ca28d603de3c2d7a5fef50b9",
+          "symbol": "eweETH-1",
+          "decimals": 18
+        },
+        {
+          "address": "0xdfd2b2437a94108323045c282ff1916de5ac6af7",
+          "symbol": "waAvaWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x31ae873544658654ce767bde179fd1bbcb84850b",
+      "symbol": "Aave USDT/USDC/AUSD",
+      "name": "Balancer Aave USDT/USDC/AUSD",
+      "tokens": [
+        {
+          "address": "0x45cf39eeb437fa95bb9b52c0105254a6bd25d01e",
+          "symbol": "waAvaAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x59933c571d200dc6a7fd1cda22495db442082e34",
+          "symbol": "waAvaUSDT",
+          "decimals": 6
+        },
+        {
+          "address": "0xe1bfc96d95badcb10ff013cb0c9c6c737ca07009",
+          "symbol": "waAvaUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x333e94c1901e965b532dab7f6c6ddad2a973eab1",
+      "symbol": "USDC-PAIR",
+      "name": "USDC PAIR",
+      "tokens": [
+        {
+          "address": "0x1010e0c6e531be777b2b5432eb518c0e39b801df",
+          "symbol": "PAIR",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x345e9afe5dd68237541993e5e2b9a87367ed91b7",
+      "symbol": "xBTC-mevBTC",
+      "name": "Stream Surge xBTC-mevBTC",
+      "tokens": [
+        {
+          "address": "0x1f8e769b5b6010b2c2bbcd68629ea1a0a0eda7e3",
+          "symbol": "mevBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x6eaf19b2fc24552925db245f9ff613157a7dbb4c",
+          "symbol": "xBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0x40dfa8e644744253f72cab80dfdd1022c30baab7",
+      "symbol": "esdeUSD-2-eUSDC-2",
+      "name": "Euler Surge esdeUSD2-eUSDC2",
+      "tokens": [
+        {
+          "address": "0x39de0f00189306062d79edec6dca5bb6bfd108f9",
+          "symbol": "eUSDC-2",
+          "decimals": 6
+        },
+        {
+          "address": "0xfecebf56f150a68ddd197c3a6101da35c46693ac",
+          "symbol": "esdeUSD-2",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x464b65d741c1e168ade1d75b53cdd245dc0e7fcc",
+      "symbol": "98BOAT-2waAvaWAVAX",
+      "name": "98BOAT 2waAvaWAVAX",
+      "tokens": [
+        {
+          "address": "0x0c3ac78c89d3edc4f1e692d5c1c2e6d43dc85d03",
+          "symbol": "BOAT",
+          "decimals": 18
+        },
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x495452fc7bf44f49e40095e9f19b3fec5f7fb717",
+      "symbol": "usdt-wavax-usdc",
+      "name": "usdt-wavax-usdc",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x4c6c0b3f11577aef4448b45838c7d7d379e9cc69",
+      "symbol": "SolvBTC-SolvBTC.AVAX-BTC.b",
+      "name": "SolvBTC-SolvBTC.AVAX-aBTC.b",
+      "tokens": [
+        {
+          "address": "0x2d324fd1ca86d90f61b0965d2db2f86d22ea4b74",
+          "symbol": "waAvaBTC.b",
+          "decimals": 8
+        },
+        {
+          "address": "0x6c7d727a0432d03351678f91faa1126a5b871df5",
+          "symbol": "SolvBTC.AVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xbc78d84ba0c46dfe32cf2895a19939c86b81a777",
+          "symbol": "SolvBTC",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4e0364a85f084b65a61a0e7d2d217fcbe958f9a1",
+      "symbol": "5waAvaWAVAX-95Nanana",
+      "name": "5waAvaWAVAX 95Nanana",
+      "tokens": [
+        {
+          "address": "0xa257e55aa988181e5db2a45b61e9de7837ff246d",
+          "symbol": "Nanana",
+          "decimals": 18
+        },
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4fb43f38cbe27beb7d5750fc9e3459365ce8c0e6",
+      "symbol": "Surge UTY-K3 USDT",
+      "name": "Balancer Surge UTY-K3 USDT",
+      "tokens": [
+        {
+          "address": "0xa446938b0204aa4055cdfed68ddf0e0d1bab3e9e",
+          "symbol": "eUSDt-3",
+          "decimals": 6
+        },
+        {
+          "address": "0xdbc5192a6b6ffee7451301bb4ec312f844f02b4a",
+          "symbol": "UTY",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x51d286a07e037e553ea655cd9dc8c89f84dea088",
+      "symbol": "Surge yUTY-K3 USDT",
+      "name": "Balancer Surge yUTY-K3 USDT",
+      "tokens": [
+        {
+          "address": "0x580d5e1399157fd0d58218b7a514b60974f2ab01",
+          "symbol": "yUTY",
+          "decimals": 18
+        },
+        {
+          "address": "0xa446938b0204aa4055cdfed68ddf0e0d1bab3e9e",
+          "symbol": "eUSDt-3",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x58374fff35d1f3023bbfc646fb9ecd2b180ca0b0",
+      "symbol": "Aave wAVAX/BTC.b",
+      "name": "Balancer Aave wAVAX/BTC.b",
+      "tokens": [
+        {
+          "address": "0x2d324fd1ca86d90f61b0965d2db2f86d22ea4b74",
+          "symbol": "waAvaBTC.b",
+          "decimals": 8
+        },
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x5f7d916d90453915120efa46106a886f351e6c14",
+      "symbol": "YBTC.B-BTC.b",
+      "name": "YBTC.B BTC.b",
+      "tokens": [
+        {
+          "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+          "symbol": "BTC.b",
+          "decimals": 8
+        },
+        {
+          "address": "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335",
+          "symbol": "YBTC.B",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0x695a7f28c3628187c8264d2cdf7a617036ba8406",
+      "symbol": "upAUSD-savUSD-sdeUSD",
+      "name": "Surge upAUSD-savUSD-sdeUSD",
+      "tokens": [
+        {
+          "address": "0x06d47f3fb376649c3a9dafe069b3d6e35572219e",
+          "symbol": "savUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x3408b22d8895753c9a3e14e4222e981d4e9a599e",
+          "symbol": "upAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x68088c91446c7bea49ea7dbd3b96ce62b272dc96",
+          "symbol": "sdeUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6a177d0253e4b62fcc250bbea993a130a7bc979d",
+      "symbol": "80NGL-20USDC",
+      "name": "80NGL 20USDC",
+      "tokens": [
+        {
+          "address": "0x441eed9fee4f002c541abc91075d35cd28fd6f7d",
+          "symbol": "NGL",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x82159488dc37e408128580aef25040866a910563",
+      "symbol": "USDt-USDC",
+      "name": "USDt USDC",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x832f8e068e92d56b94205ea605e5cdaa7cded1f0",
+      "symbol": "tAVAX-waAvaSAVAX",
+      "name": "tAVAX waAvaSAVAX",
+      "tokens": [
+        {
+          "address": "0x14a84f1a61ccd7d1be596a6cc11fe33a36bc1646",
+          "symbol": "tAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0x7d0394f8898fba73836bf12bd606228887705895",
+          "symbol": "waAvaSAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x8750ccffcddbff81b63790dbcb1ffd8c7dc4c16d",
+      "symbol": "ReClamm WAVAX-USDC",
+      "name": "ReClamm WAVAX-USDC",
+      "tokens": [
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x96c0adc9d5a843b19326ba61f8617d9f1a05bd19",
+      "symbol": "USDC-EUROC",
+      "name": "USDC EUROC",
+      "tokens": [
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xc891eb4cbdeff6e073e859e987815ed1505c2acd",
+          "symbol": "EUROC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x99a9a471dbe0dcc6855b4cd4bbabeccb1280f5e8",
+      "symbol": "aWAVAX-aSAVAX-ggAVAX",
+      "name": "Surge aWAVAX-aSAVAX-ggAVAX",
+      "tokens": [
+        {
+          "address": "0x7d0394f8898fba73836bf12bd606228887705895",
+          "symbol": "waAvaSAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xa25eaf2906fa1a3a13edac9b9657108af7b703e3",
+          "symbol": "ggAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9c706eda45538d23a2fe44474bf6ae1ca4fa55d0",
+      "symbol": "50tAVAX-50WAVAX",
+      "name": "50tAVAX-50WAVAX",
+      "tokens": [
+        {
+          "address": "0x14a84f1a61ccd7d1be596a6cc11fe33a36bc1646",
+          "symbol": "tAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9dfdf58e1624cba507d0a38059e85eeab74f3b6b",
+      "symbol": "xUSD-mevUSDC",
+      "name": "Stream Surge xUSD-mevUSDC",
+      "tokens": [
+        {
+          "address": "0x4dc1ce9b9f9ef00c144bfad305f16c62293dc0e8",
+          "symbol": "mevUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x94f9bb5c972285728dcee7eaece48bec2ff341ce",
+          "symbol": "xUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x9ecc80901c5bddb9f8b6db9eb49298cdf073962d",
+      "symbol": "50BLACK-50SkiBonk+",
+      "name": "Balancer 50BLACK-50SkiBonk+",
+      "tokens": [
+        {
+          "address": "0x446c74e55e015065fd2b41057d1589ad1447f1b5",
+          "symbol": "SkiBonk+",
+          "decimals": 18
+        },
+        {
+          "address": "0xcd94a87696fac69edae3a70fe5725307ae1c43f6",
+          "symbol": "BLACK",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa4e1b0ddffc0e3aa63dbca462cf370e4f1dc9b8b",
+      "symbol": "Gyro AAVE WAVAX-USDC",
+      "name": "Balancer Gyro Aave WAVAX-USDC",
+      "tokens": [
+        {
+          "address": "0xd7da0de6ef4f51d6206bf2a35fcd2030f54c3f7b",
+          "symbol": "waAvaWAVAX",
+          "decimals": 18
+        },
+        {
+          "address": "0xe1bfc96d95badcb10ff013cb0c9c6c737ca07009",
+          "symbol": "waAvaUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xa6a20c2786bb7f79f3f4fd0a958ea1ab5658ddde",
+      "symbol": "eK3 weETH/Aave wETH.e",
+      "name": "Balancer eK3 weETH/Aave wETH.e",
+      "tokens": [
+        {
+          "address": "0x51b47b3013863c52ca28d603de3c2d7a5fef50b9",
+          "symbol": "eweETH-1",
+          "decimals": 18
+        },
+        {
+          "address": "0xdfd2b2437a94108323045c282ff1916de5ac6af7",
+          "symbol": "waAvaWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xaf0303d11cbc46c90444ff3f1a5f3512dddc0fe4",
+      "symbol": "80NGL-20WAVAX",
+      "name": "80NGL 20WAVAX",
+      "tokens": [
+        {
+          "address": "0x441eed9fee4f002c541abc91075d35cd28fd6f7d",
+          "symbol": "NGL",
+          "decimals": 18
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xb109a472b1c59fadce6b3691eaa79269d4bba37c",
+      "symbol": "10KET-90PAIR",
+      "name": "10KET 90PAIR",
+      "tokens": [
+        {
+          "address": "0x1010e0c6e531be777b2b5432eb518c0e39b801df",
+          "symbol": "PAIR",
+          "decimals": 18
+        },
+        {
+          "address": "0xffff003a6bad9b743d658048742935fffe2b6ed7",
+          "symbol": "KET",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xc07f45ee39f3fa2abaeb2b3309543e69129e3c21",
+      "symbol": "Euler Re7 savUSD-AUSD-USDC",
+      "name": "Balancer eRe7 savUSD-AUSD-USDC",
+      "tokens": [
+        {
+          "address": "0x2137568666f12fc5a026f5430ae7194f1c1362ab",
+          "symbol": "eAUSD-2",
+          "decimals": 6
+        },
+        {
+          "address": "0x39de0f00189306062d79edec6dca5bb6bfd108f9",
+          "symbol": "eUSDC-2",
+          "decimals": 6
+        },
+        {
+          "address": "0x72f92a966f1874f74e1b601bee7cf57031b53a03",
+          "symbol": "esavUSD-2",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xc8e0cace515995e4324145abb052624ff2f4dc2a",
+      "symbol": "50-COQ-50-AI",
+      "name": "50% COQ / 50% AI",
+      "tokens": [
+        {
+          "address": "0x2598c30330d5771ae9f983979209486ae26de875",
+          "symbol": "AI",
+          "decimals": 18
+        },
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd593599fd09cf4870faef16bbd62342b996a8151",
+      "symbol": "34SkiBonk+-33COQ-33COQAI",
+      "name": "34SkiBonk+-33COQ-33COQAI",
+      "tokens": [
+        {
+          "address": "0x420fca0121dc28039145009570975747295f2329",
+          "symbol": "COQ",
+          "decimals": 18
+        },
+        {
+          "address": "0x446c74e55e015065fd2b41057d1589ad1447f1b5",
+          "symbol": "SkiBonk+",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7d69acbc00d0ec5d9c02162310ee21daa77f69c",
+          "symbol": "COQAI",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xe2be33d380b3fe12279553fcdb61c60871de55ce",
+      "symbol": "10WAVAX-90PAIR",
+      "name": "10WAVAX 90PAIR",
+      "tokens": [
+        {
+          "address": "0x1010e0c6e531be777b2b5432eb518c0e39b801df",
+          "symbol": "PAIR",
+          "decimals": 18
+        },
+        {
+          "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+          "symbol": "WAVAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf602b6fba3332f9a19c122ae2ecbfe8f0d3b3eff",
+      "symbol": "67PHAR-33USDC",
+      "name": "67PHAR 33USDC",
+      "tokens": [
+        {
+          "address": "0xaaab9d12a30504559b0c5a9a5977fee4a6081c6b",
+          "symbol": "PHAR",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xf6cf8b90f7e7ad9e5563773ec295791be43d8d8f",
+      "symbol": "80PHARM-20USDC",
+      "name": "80PHARM 20USDC",
+      "tokens": [
+        {
+          "address": "0x91a1c5a6001e6aa628f49094658c65a19794d7f6",
+          "symbol": "PHARM",
+          "decimals": 18
+        },
+        {
+          "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xfb4e6f150a0682a0bcb43a6f7d660a977bd194de",
+      "symbol": "eUSDt-3-USDt",
+      "name": "eUSDt 3 USDt",
+      "tokens": [
+        {
+          "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+          "symbol": "USDt",
+          "decimals": 6
+        },
+        {
+          "address": "0xa446938b0204aa4055cdfed68ddf0e0d1bab3e9e",
+          "symbol": "eUSDt-3",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xfcec3c8d86329defb548202fe1b86ff2188603a8",
+      "symbol": "Aave GHO/USDT/USDC",
+      "name": "Balancer Aave GHO/USDT/USDC",
+      "tokens": [
+        {
+          "address": "0x59933c571d200dc6a7fd1cda22495db442082e34",
+          "symbol": "waAvaUSDT",
+          "decimals": 6
+        },
+        {
+          "address": "0x79459f4c9afc902488109d058c3e76ed0b037c41",
+          "symbol": "waAvaGHO",
+          "decimals": 18
+        },
+        {
+          "address": "0xe1bfc96d95badcb10ff013cb0c9c6c737ca07009",
+          "symbol": "waAvaUSDC",
+          "decimals": 6
+        }
+      ]
+    }
+  ],
+  "gauges": [
+    {
+      "address": "0x0c22ff3f93b5c9f13e41fa9d270680e97ac13b28",
+      "lpToken": "0x55bec22f8f6c69137ceaf284d9b441db1b9bfedc",
+      "symbol": "BPT"
+    },
+    {
+      "address": "0x0f5e81246d00d79389eaa465b42527d41bb00d3b",
+      "lpToken": "0x4fb43f38cbe27beb7d5750fc9e3459365ce8c0e6",
+      "symbol": "Surge UTY-K3 USDT"
+    },
+    {
+      "address": "0x108c6c9c59e4dc3c6c75def35bad59f20e999d81",
+      "lpToken": "0x383c46887a1d5f3867664091ae5d6ad3ad3369f5",
+      "symbol": "LP-XSGD-USDC"
+    },
+    {
+      "address": "0x11884da90fb4221b3aa288a7741c51ec4fc43b2f",
+      "lpToken": "0xa1d14d922a575232066520eda11e27760946c991",
+      "symbol": "bb-a-USD"
+    },
+    {
+      "address": "0x1280ea1ca9e8d6bb62ab1c859a7bd38f88ed07d8",
+      "lpToken": "0x3bde1563903ebb564ca37d5736afbb850929cfd7",
+      "symbol": "ankrAVAX-ankrETH-BPT"
+    },
+    {
+      "address": "0x1540a81271a7de3dc65a0c4cfd11872bf9b13109",
+      "lpToken": "0x670734d704eb7ef424d75321670f921fbf42e9cf",
+      "symbol": "sAVAX-ankrAVAX-BPT"
+    },
+    {
+      "address": "0x1dda6c7b1dc1534214ed0d77dd0848b82bd6f88d",
+      "lpToken": "0xe3f0b00eb41395308120cc986286066725c6116e",
+      "symbol": "vEUR-jEUR"
+    },
+    {
+      "address": "0x231d84c37b2c4b5a2e2fe325bb77daa65bf71d92",
+      "lpToken": "0xc13546b97b9b1b15372368dc06529d7191081f5b",
+      "symbol": "ggAVAX-WAVAX-BPT"
+    },
+    {
+      "address": "0x27108a357dd1ce5e53dfc97623c4d48bfa28fa2b",
+      "lpToken": "0x072de59207cd9b3c9f545a454da0f559f19db5a5",
+      "symbol": "ECLP-WAVAX-GYD"
+    },
+    {
+      "address": "0x2c3b46e1320d8b7de7f8bcb0997fba2b93797259",
+      "lpToken": "0x304e19e3029a6dbfde0d70d9e32ad9cc694a9b68",
+      "symbol": "eK3 weETH/aETH.e"
+    },
+    {
+      "address": "0x301a121d1d0d72c4005b354854a842a55d23251f",
+      "lpToken": "0xa154009870e9b6431305f19b09f9cfd7284d4e7a",
+      "symbol": "sAVAX-bb-a-WAVAX-BPT"
+    },
+    {
+      "address": "0x35ade969237697ba794bddb9045af06edc96a47f",
+      "lpToken": "0x7a1a919c033ebc0d9f23cbf2aa41c24aef826ca2",
+      "symbol": "LP-EURC-USDC"
+    },
+    {
+      "address": "0x3a9d7506a235a52cfa30399361426709a08578bb",
+      "lpToken": "0xad0e5e0778cac28f1ff459602b31351871b5754a",
+      "symbol": "BPT"
+    },
+    {
+      "address": "0x3ca285558531543798b7158c046034ed6388d58a",
+      "lpToken": "0x345e9afe5dd68237541993e5e2b9a87367ed91b7",
+      "symbol": "xBTC-mevBTC"
+    },
+    {
+      "address": "0x408c08485af7cb4c1870b11794ff7b4429929a17",
+      "lpToken": "0x31ae873544658654ce767bde179fd1bbcb84850b",
+      "symbol": "Aave USDT/USDC/AUSD"
+    },
+    {
+      "address": "0x40f9a910685d2a41a66d13d56627505747117563",
+      "lpToken": "0xa4e1b0ddffc0e3aa63dbca462cf370e4f1dc9b8b",
+      "symbol": "Gyro AAVE WAVAX-USDC"
+    },
+    {
+      "address": "0x47c27a82f4eccab0720ab32462d4b808566bb7ee",
+      "lpToken": "0x22715161201922af61f4ca22e979ef0c6c20be13",
+      "symbol": "Surge eK3 savUSD-USDT"
+    },
+    {
+      "address": "0x4989f0c73bf38701e608147161f12111c64fd79d",
+      "lpToken": "0x670734d704eb7ef424d75321670f921fbf42e9cf",
+      "symbol": "sAVAX-ankrAVAX-BPT"
+    },
+    {
+      "address": "0x4a3550d03f702ef61798bdfc2a57aaaa7b4ec19a",
+      "lpToken": "0x1c39ebe0ee53b52ab24d3945e9cde9e6c09d0851",
+      "symbol": "Aave wAVAX/wETH.e"
+    },
+    {
+      "address": "0x5308e6fa8451bd12e8eb672124b6cf058d380c0e",
+      "lpToken": "0xaa4eee23426bff1af8d79d6179e5a5c311f6adcc",
+      "symbol": "KIMBOTECHCOQAVAXUSDC"
+    },
+    {
+      "address": "0x575f82bf474ec66e252ab6850f6d55c59b3a95c4",
+      "lpToken": "0xa6a20c2786bb7f79f3f4fd0a958ea1ab5658ddde",
+      "symbol": "eK3 weETH/Aave wETH.e"
+    },
+    {
+      "address": "0x5a9dbaed7921538d16c96510489b16e62a6e79af",
+      "lpToken": "0x96518f83d66bdc6a5812f01c54f8e022f6796399",
+      "symbol": "50BTC.b-50USD-BPT"
+    },
+    {
+      "address": "0x6a8ea33b5eef4a8ef0fa92383e155801997db801",
+      "lpToken": "0x8783e0156cd747d0cc012087d3d3afc897f2328c",
+      "symbol": "sAVAX/ggAVAX/yyAVAX"
+    },
+    {
+      "address": "0x720158c329e6558287c4539b0ed21742b0b73436",
+      "lpToken": "0x9fa6ab3d78984a69e712730a2227f20bcc8b5ad9",
+      "symbol": "yyAVAX-WAVAX-BPT"
+    },
+    {
+      "address": "0x72dd9b41fec59cf58140cab9c92cefc8f212354d",
+      "lpToken": "0x0df1be54b29aa9828bea1de6a6dfe3d03ec63082",
+      "symbol": "AFCC"
+    },
+    {
+      "address": "0x746db23a0b49e002697fad244c281a36b86b1b01",
+      "lpToken": "0x832f8e068e92d56b94205ea605e5cdaa7cded1f0",
+      "symbol": "tAVAX-waAvaSAVAX"
+    },
+    {
+      "address": "0x74abfe305bc0d729f29a2da26c5b7ef0bd1e3a8c",
+      "lpToken": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c96",
+      "symbol": "USDC-USDT-BPT"
+    },
+    {
+      "address": "0x8647a995cc10c6c529a680f446797849163be9e4",
+      "lpToken": "0x99a9a471dbe0dcc6855b4cd4bbabeccb1280f5e8",
+      "symbol": "aWAVAX-aSAVAX-ggAVAX"
+    },
+    {
+      "address": "0x87ed7550f24051b6a9e95513bb9665242d8167a6",
+      "lpToken": "0x3f1a2c4a3a751f6626bd90ef16e104f0772d4d6b",
+      "symbol": "50BTC.b-50bb-a-USD"
+    },
+    {
+      "address": "0x890941a69a58fa4b180abde1d28b1b5da049abaf",
+      "lpToken": "0x51d286a07e037e553ea655cd9dc8c89f84dea088",
+      "symbol": "Surge yUTY-K3 USDT"
+    },
+    {
+      "address": "0x8e8c3d4313fd5c5051a02b9e580415691a0f7951",
+      "lpToken": "0xfcec3c8d86329defb548202fe1b86ff2188603a8",
+      "symbol": "Aave GHO/USDT/USDC"
+    },
+    {
+      "address": "0x8fff0bd6cadebe9b36f42876727d9e30c76fba02",
+      "lpToken": "0x296df277579b38db06fe5bdf179252f983672d6d",
+      "symbol": "ECLP-ggAVAX-WAVAX-rh"
+    },
+    {
+      "address": "0x92b441e349d099d6b630cbf8ec09d5700e649fb5",
+      "lpToken": "0x832f8e068e92d56b94205ea605e5cdaa7cded1f0",
+      "symbol": "tAVAX-waAvaSAVAX"
+    },
+    {
+      "address": "0xa0d1dfe42ee4e99e973e51bc7e7c74b1bdc94f11",
+      "lpToken": "0x695a7f28c3628187c8264d2cdf7a617036ba8406",
+      "symbol": "upAUSD-savUSD-sdeUSD"
+    },
+    {
+      "address": "0xa18d642af6fabfbb8b9b24d93ac12114768a2538",
+      "lpToken": "0x721bd1900aeabc29009b08e44be37529f518f2c2",
+      "symbol": "33VCHF-33sAVAX-33VEUR"
+    },
+    {
+      "address": "0xb4611396a59a46cb756c4097a14dbe3bf8147924",
+      "lpToken": "0x1fed8401c145f64da567881d272d0df233118dca",
+      "symbol": "USDp-gamiUSDC"
+    },
+    {
+      "address": "0xb4efa48f32ba11deeaab9fcc0c2f29e91381705d",
+      "lpToken": "0x82c0f5fe6bd04f2dce371d4e3f0689d1cfad1f5c",
+      "symbol": "ECLP-sAVAX-WAVAX-rh"
+    },
+    {
+      "address": "0xb80c5b24c98714f0fd52a276d5da6c6f68821eb9",
+      "lpToken": "0x8750ccffcddbff81b63790dbcb1ffd8c7dc4c16d",
+      "symbol": "ReClamm WAVAX-USDC"
+    },
+    {
+      "address": "0xb9ca65c7fda939aad76bc286c95a1249d2c9ece1",
+      "lpToken": "0xc07f45ee39f3fa2abaeb2b3309543e69129e3c21",
+      "symbol": "Euler Re7 savUSD-AUSD-USDC"
+    },
+    {
+      "address": "0xc1d68db49b7c0615252abc4ae86f224f75512ff4",
+      "lpToken": "0x7557090a2088ea3f2caa7327270dc4bd3f296431",
+      "symbol": "ECLP-GYD-USDC-rh"
+    },
+    {
+      "address": "0xc2b75a2ebfc9479efa0ef9c4b013b4fe4b2adf8a",
+      "lpToken": "0x66bb9d104c55861feb3ec3559433f01f6373c966",
+      "symbol": "BPT"
+    },
+    {
+      "address": "0xc8aae478acde1d5676c3fc6614cd25183c207f1a",
+      "lpToken": "0xece571847897fd61e764d455dc15cf1cd9de8d6f",
+      "symbol": "yyAVAX-bb-a-WAVAX-BPT"
+    },
+    {
+      "address": "0xd6cf1adc6bf14634435b66deb2900b9441fb3739",
+      "lpToken": "0x58374fff35d1f3023bbfc646fb9ecd2b180ca0b0",
+      "symbol": "Aave wAVAX/BTC.b"
+    },
+    {
+      "address": "0xd8b74632ea90bd6eb51c8da0b4183748df62e638",
+      "lpToken": "0x4c6c0b3f11577aef4448b45838c7d7d379e9cc69",
+      "symbol": "SolvBTC-SolvBTC.AVAX-BTC.b"
+    },
+    {
+      "address": "0xe41978aca73f93bf67c27b60232449f2f4a29168",
+      "lpToken": "0x28f3a9e42667519c83cb090b5c4f6bd34e9f5569",
+      "symbol": "LP-VEUR-USDC"
+    },
+    {
+      "address": "0xe98e468074baa30aaa7747bcd32b77a16ae3d9d8",
+      "lpToken": "0x054e7b0c73e1ee5aed6864fa511658fc2b54bcaa",
+      "symbol": "ggAVAX-bb-a-WAVAX-BPT"
+    },
+    {
+      "address": "0xeb96333b3e0efef18a45d40c6144b78b0dc70981",
+      "lpToken": "0x0099111ed107bdf0b05162356aee433514aac440",
+      "symbol": "LP-VCHF-USDC"
+    },
+    {
+      "address": "0xec4f410cd8e04d52846a20e160d300d76a911fc7",
+      "lpToken": "0x9dfdf58e1624cba507d0a38059e85eeab74f3b6b",
+      "symbol": "xUSD-mevUSDC"
+    },
+    {
+      "address": "0xf9ae6d2d56f02304f72dcc61694ead0dc8db51f7",
+      "lpToken": "0xfd2620c9cfcec7d152467633b3b0ca338d3d78cc",
+      "symbol": "sAVAX-WAVAX-BPT"
+    }
+  ]
+}

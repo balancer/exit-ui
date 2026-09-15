@@ -1,0 +1,5457 @@
+{
+  "meta": {
+    "chainKey": "optimism",
+    "scannedAtBlock": 0,
+    "generatedAt": "2026-09-15T12:51:53.939Z",
+    "source": "balancer-api"
+  },
+  "v1Pools": [],
+  "v2Pools": [
+    {
+      "address": "0x004700ba0a4f5f22e1e78a277fca55e36f47e09c",
+      "poolId": "0x004700ba0a4f5f22e1e78a277fca55e36f47e09c000000000000000000000104",
+      "poolType": "composableStable",
+      "symbol": "bpt-ankrgalaharm",
+      "name": "Ankr's Galactic Harmony",
+      "tokens": [
+        {
+          "address": "0x004700ba0a4f5f22e1e78a277fca55e36f47e09c",
+          "symbol": "bpt-ankrgalaharm",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe05a08226c49b636acf99c40da8dc6af83ce5bb3",
+          "symbol": "ankrETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x00b82bc5edea6e5e6c77635e31a1a25aad99f881",
+      "poolId": "0x00b82bc5edea6e5e6c77635e31a1a25aad99f881000200000000000000000105",
+      "poolType": "weighted",
+      "symbol": "80OVN/20wUSD+",
+      "name": "Overnight Opening Ensemble",
+      "tokens": [
+        {
+          "address": "0x3b08fcd15280e7b5a6e404c4abb87f7c774d1b2e",
+          "symbol": "OVN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa348700745d249c3b49d2c2acac9a5ae8155f826",
+          "symbol": "wUSD+",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0244b0025264dc5f5c113d472d579c9c994a59ce",
+      "poolId": "0x0244b0025264dc5f5c113d472d579c9c994a59ce0002000000000000000000c9",
+      "poolType": "weighted",
+      "symbol": "BPT-OPARA",
+      "name": "A Night at the OPara",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "symbol": "PSP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x025db202cba62a0d804cf337df055ee6dabde843",
+      "poolId": "0x025db202cba62a0d804cf337df055ee6dabde843000100000000000000000121",
+      "poolType": "weighted",
+      "symbol": "20BEETS-40BAL-40OP",
+      "name": "20BEETS-40BAL-40OP",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x04953368a77af5b65512ee3536efe152b96aa453",
+      "poolId": "0x04953368a77af5b65512ee3536efe152b96aa453000200000000000000000010",
+      "poolType": "weighted",
+      "symbol": "BPT-UY",
+      "name": "terri",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0495e8d283c08a3bf6c3163a72763797a06c56d8",
+      "poolId": "0x0495e8d283c08a3bf6c3163a72763797a06c56d8000100000000000000000021",
+      "poolType": "weighted",
+      "symbol": "BPT-CT-HODL",
+      "name": "Come Together & HODL",
+      "tokens": [
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0503dd6b2d3dd463c9bef67fb5156870af63393e",
+      "poolId": "0x0503dd6b2d3dd463c9bef67fb5156870af63393e00020000000000000000008f",
+      "poolType": "lbp",
+      "symbol": "BAL_LBP",
+      "name": "BAL Fjord Foundry LBP",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x05e7732bf9ae5592e6aa05afe8cd80f7ab0a7bea",
+      "poolId": "0x05e7732bf9ae5592e6aa05afe8cd80f7ab0a7bea00020000000000000000005a",
+      "poolType": "weighted",
+      "symbol": "bb-STG-USD",
+      "name": "Enter the Stargate",
+      "tokens": [
+        {
+          "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+          "symbol": "STG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xba7834bb3cd2db888e6a06fb45e82b4225cd0c71",
+          "symbol": "bb-rf-aUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0604d50e1a314e0b8963a8387713ec0b539920b3",
+      "poolId": "0x0604d50e1a314e0b8963a8387713ec0b539920b30001000000000000000000bf",
+      "poolType": "weighted",
+      "symbol": "BPT-O70EE15",
+      "name": "An OATH to ERN",
+      "tokens": [
+        {
+          "address": "0x39fde572a18448f8139b7788099f0a0740f51205",
+          "symbol": "OATHv1",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0770cbf42a5c142f0060b7c8241f541fc8357ff4",
+      "poolId": "0x0770cbf42a5c142f0060b7c8241f541fc8357ff4000200000000000000000169",
+      "poolType": "weighted",
+      "symbol": "80XYZ/20WETH",
+      "name": "80XYZ/20WETH",
+      "tokens": [
+        {
+          "address": "0x326aec8d7d99d1d6022c57c5f6194d2a7867227d",
+          "symbol": "TST",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x085edd09c21b33f6b35dfa6ac2c5cd0dbe275799",
+      "poolId": "0x085edd09c21b33f6b35dfa6ac2c5cd0dbe275799000200000000000000000162",
+      "poolType": "weighted",
+      "symbol": "80USDC/20WETH",
+      "name": "80USDC/20WETH",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x098f32d98d0d64dba199fc1923d3bf4192e78719",
+      "poolId": "0x098f32d98d0d64dba199fc1923d3bf4192e787190001000000000000000000d2",
+      "poolType": "weighted",
+      "symbol": "bb-rf-SOTRI",
+      "name": "Tri-SONNE Harmonic Crescendo",
+      "tokens": [
+        {
+          "address": "0x6af3737f6d58ae8bcb9f2b597125d37244596e59",
+          "symbol": "bb-rf-soWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7e9250cc13559eb50536859e8c076ef53e275fb3",
+          "symbol": "bb-rf-soWSTETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xedcfaf390906a8f91fb35b7bac23f3111dbaee1c",
+          "symbol": "bb-rf-soUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0a54996ce9ceaa449cde73da6aa0368bfe3df6dc",
+      "poolId": "0x0a54996ce9ceaa449cde73da6aa0368bfe3df6dc000200000000000000000017",
+      "poolType": "weighted",
+      "symbol": "BPT-BICO",
+      "name": "WETH/BICO",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd6909e9e702024eb93312b989ee46794c0fb1c9d",
+          "symbol": "BICO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0ccb0c34d4898dfa8de3ece9d814074e60adefd0",
+      "poolId": "0x0ccb0c34d4898dfa8de3ece9d814074e60adefd0000000000000000000000142",
+      "poolType": "composableStable",
+      "symbol": "bpt-ineth-wsteth",
+      "name": "(Re)stake On Me, Natively",
+      "tokens": [
+        {
+          "address": "0x0ccb0c34d4898dfa8de3ece9d814074e60adefd0",
+          "symbol": "bpt-ineth-wsteth",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d",
+          "symbol": "inETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x0f2f5723ffe5e8c9b29941b18248180f65e08be7",
+      "poolId": "0x0f2f5723ffe5e8c9b29941b18248180f65e08be700010000000000000000016a",
+      "poolType": "weighted",
+      "symbol": "sVFD2",
+      "name": "Synthetix Volatility Fund 2",
+      "tokens": [
+        {
+          "address": "0x298b9b95708152ff6968aafd889c6586e9169f1d",
+          "symbol": "sBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x455ba8e4c6dff2453e78cef92625b38c93f4f3dd",
+          "symbol": "BTC2S",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+          "symbol": "aOptSUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x102ba5c72e4bdf8e9243340425f0e523f8983d03",
+      "poolId": "0x102ba5c72e4bdf8e9243340425f0e523f8983d030002000000000000000000c3",
+      "poolType": "weighted",
+      "symbol": "BPT-WGRAIN",
+      "name": "Whole GRAIN",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfd389dc9533717239856190f42475d3f263a270d",
+          "symbol": "GRAIN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x10d89732c7e3c5b548e766805b40bc0ecdca4499",
+      "poolId": "0x10d89732c7e3c5b548e766805b40bc0ecdca4499000000000000000000000132",
+      "poolType": "composableStable",
+      "symbol": "rsETH/wETH",
+      "name": "Balancer rsETH/wETH",
+      "tokens": [
+        {
+          "address": "0x10d89732c7e3c5b548e766805b40bc0ecdca4499",
+          "symbol": "rsETH/wETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+          "symbol": "rsETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c68440",
+      "poolId": "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c684400002000000000000000000d4",
+      "poolType": "weighted",
+      "symbol": "BPT-BREV",
+      "name": "Blue Rev",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "symbol": "PSP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x14d92549e0570d226736ff3524515b9d91a7d0c7",
+      "poolId": "0x14d92549e0570d226736ff3524515b9d91a7d0c7000200000000000000000156",
+      "poolType": "weighted",
+      "symbol": "50BEETS-50multiBeets",
+      "name": "50BEETS-50multiBeets",
+      "tokens": [
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x16d7e97b845145da68bd22291d6c10275c3b3f77",
+      "poolId": "0x16d7e97b845145da68bd22291d6c10275c3b3f77000200000000000000000128",
+      "poolType": "gyro",
+      "symbol": "ECLP-AUSDC-AUSDT",
+      "name": "Gyroscope ECLP AUSDC/AUSDT",
+      "tokens": [
+        {
+          "address": "0x035c93db04e5aaea54e6cd0261c492a3e0638b37",
+          "symbol": "waUSDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x19b5f4f829115cba31aecececfa9ba23aced91c4",
+      "poolId": "0x19b5f4f829115cba31aecececfa9ba23aced91c4000200000000000000000129",
+      "poolType": "weighted",
+      "symbol": "50OP-50sUSD",
+      "name": "50OP-50sUSD",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1cc3e990b23a09fc9715aaf7ccf21c212a9cbc16",
+      "poolId": "0x1cc3e990b23a09fc9715aaf7ccf21c212a9cbc160001000000000000000000bd",
+      "poolType": "weighted",
+      "symbol": "BPT-OG",
+      "name": "Oats and Grains",
+      "tokens": [
+        {
+          "address": "0x39fde572a18448f8139b7788099f0a0740f51205",
+          "symbol": "OATHv1",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfd389dc9533717239856190f42475d3f263a270d",
+          "symbol": "GRAIN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1d95129c18a8c91c464111fdf7d0eb241b37a985",
+      "poolId": "0x1d95129c18a8c91c464111fdf7d0eb241b37a9850002000000000000000000c1",
+      "poolType": "weighted",
+      "symbol": "BPT-RESERVE",
+      "name": " Proof of Reserves",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x1f131ec1175f023ee1534b16fa8ab237c00e2381",
+      "poolId": "0x1f131ec1175f023ee1534b16fa8ab237c00e238100000000000000000000004a",
+      "poolType": "composableStable",
+      "symbol": "bbrfaUSD-MAI",
+      "name": "It’s MAI life",
+      "tokens": [
+        {
+          "address": "0x1f131ec1175f023ee1534b16fa8ab237c00e2381",
+          "symbol": "bbrfaUSD-MAI",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+          "symbol": "MAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x20ac7c9329822ee3cf61d244bd4816941b50cf7a",
+      "poolId": "0x20ac7c9329822ee3cf61d244bd4816941b50cf7a000200000000000000000111",
+      "poolType": "weighted",
+      "symbol": "50WETH-50USDC",
+      "name": "test53",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x22ed403fadc58110f128246a7e13962f308841a1",
+      "poolId": "0x22ed403fadc58110f128246a7e13962f308841a1000200000000000000000110",
+      "poolType": "weighted",
+      "symbol": "50USDC-50WETH",
+      "name": "test51",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x23ca0306b21ea71552b148cf3c4db4fc85ae1929",
+      "poolId": "0x23ca0306b21ea71552b148cf3c4db4fc85ae19290000000000000000000000ac",
+      "poolType": "composableStable",
+      "symbol": "bbrfsoUSD",
+      "name": "House of the rising Sonne",
+      "tokens": [
+        {
+          "address": "0x23ca0306b21ea71552b148cf3c4db4fc85ae1929",
+          "symbol": "bbrfsoUSD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x62ec8b26c08ffe504f22390a65e6e3c1e45e9877",
+          "symbol": "bb-rf-soDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb96c5bada4bf6a70e71795a3197ba94751dae2db",
+          "symbol": "bb-rf-soUSDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xedcfaf390906a8f91fb35b7bac23f3111dbaee1c",
+          "symbol": "bb-rf-soUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x250a1381f79593b96b462fb0d575c75795f80332",
+      "poolId": "0x250a1381f79593b96b462fb0d575c75795f8033200000000000000000000012f",
+      "poolType": "composableStable",
+      "symbol": "weETH/wETH",
+      "name": "Balancer weETH/wETH",
+      "tokens": [
+        {
+          "address": "0x250a1381f79593b96b462fb0d575c75795f80332",
+          "symbol": "weETH/wETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x346e03f8cce9fe01dcb3d0da3e9d00dc2c0e08f0",
+          "symbol": "weETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x2a5139cd86c041aa3467e649f5ee0880a5de2f2f",
+      "poolId": "0x2a5139cd86c041aa3467e649f5ee0880a5de2f2f00020000000000000000011a",
+      "poolType": "weighted",
+      "symbol": "bpt-stadue",
+      "name": "Staked Duet",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x3ee6107d9c93955acbb3f39871d32b02f82b78ab",
+          "symbol": "stERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x2bb4712247d5f451063b5e4f6948abdfb925d93d",
+      "poolId": "0x2bb4712247d5f451063b5e4f6948abdfb925d93d000000000000000000000136",
+      "poolType": "composableStable",
+      "symbol": "bpt-weethwsteth",
+      "name": "Stake me baby one more time",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2bb4712247d5f451063b5e4f6948abdfb925d93d",
+          "symbol": "bpt-weethwsteth",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
+          "symbol": "weETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x2c2549e410ebc7d2a709b37667f9a034f7d9af0b",
+      "poolId": "0x2c2549e410ebc7d2a709b37667f9a034f7d9af0b00010000000000000000013f",
+      "poolType": "weighted",
+      "symbol": "25sUSD-25USDT-25USDC-25DAI",
+      "name": "Pool 3",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x2f6b6973f38381fe453ea819b7e0f0897adeaae7",
+      "poolId": "0x2f6b6973f38381fe453ea819b7e0f0897adeaae7000200000000000000000113",
+      "poolType": "weighted",
+      "symbol": "80AURA-20WETH",
+      "name": "AURA VILLAGE",
+      "tokens": [
+        {
+          "address": "0x1509706a6c66ca549ff0cb464de88231ddbe213b",
+          "symbol": "AURA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x2feb76966459d7841fa8a7ed0aa4bf574d6111bf",
+      "poolId": "0x2feb76966459d7841fa8a7ed0aa4bf574d6111bf00020000000000000000011d",
+      "poolType": "weighted",
+      "symbol": "bpt-yieldconcerto",
+      "name": "Yield Concerto by FRAX",
+      "tokens": [
+        {
+          "address": "0x2dd1b4d4548accea497050619965f91f78b3b532",
+          "symbol": "sFRAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x484c2d6e3cdd945a8b2df735e079178c1036578c",
+          "symbol": "sfrxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x32f0dc9e2d890bac95106a65eb82db70bc58badb",
+      "poolId": "0x32f0dc9e2d890bac95106a65eb82db70bc58badb000200000000000000000008",
+      "poolType": "weighted",
+      "symbol": "BPT-OP",
+      "name": "Op-Beet van Tempo",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x34a81e8956bf20b7448b31990a2c06f96830a6e4",
+      "poolId": "0x34a81e8956bf20b7448b31990a2c06f96830a6e4000100000000000000000016",
+      "poolType": "weighted",
+      "symbol": "BPT-CHORD",
+      "name": "Common Chord",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x359ea8618c405023fc4b98dab1b01f373792a126",
+      "poolId": "0x359ea8618c405023fc4b98dab1b01f373792a12600010000000000000000004f",
+      "poolType": "weighted",
+      "symbol": "bb-WONDER",
+      "name": "Wonderwall",
+      "tokens": [
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd0d334b6cfd77acc94bab28c7783982387856449",
+          "symbol": "bb-rf-grBAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x362715c164d606682c4ea7e479633e419d9345eb",
+      "poolId": "0x362715c164d606682c4ea7e479633e419d9345eb0001000000000000000000e7",
+      "poolType": "weighted",
+      "symbol": "bb-rf-triyie",
+      "name": "Triple Yield Symphony",
+      "tokens": [
+        {
+          "address": "0xb85245929dc65b5eddb56c4b4e84b20bce69db35",
+          "symbol": "bb-rfWSTETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd32f78f5ae235269c6d2cabbd26a57ff9fd62967",
+          "symbol": "bb-rfWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdc2007d9e9a33f50630f26069faab69c25f7758c",
+          "symbol": "bb-rfUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x373643b17cd80e37675c8c98ef774efe6ca0b4de",
+      "poolId": "0x373643b17cd80e37675c8c98ef774efe6ca0b4de00000000000000000000001c",
+      "poolType": "stable",
+      "symbol": "BPT-STABEET",
+      "name": "Optimistic Steady Beets",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x38db9cb893bafcc4668e143e22fe08ecf9104229",
+      "poolId": "0x38db9cb893bafcc4668e143e22fe08ecf910422900020000000000000000014e",
+      "poolType": "weighted",
+      "symbol": "50imxB (OPP-opxVELO)-50WETH",
+      "name": "50imxB (OPP-opxVELO)-50WETH",
+      "tokens": [
+        {
+          "address": "0x1d61313ce48fa3c60df3a4b567378b954fe6f9a6",
+          "symbol": "imxB (OPP-opxVELO)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x390c2a1ffe5576ce97c07850f027cb5c0628fac4",
+      "poolId": "0x390c2a1ffe5576ce97c07850f027cb5c0628fac400010000000000000000013e",
+      "poolType": "weighted",
+      "symbol": "25sUSD-25SNX-13OP-13wstETH-13WBTC-13BEETS",
+      "name": "Pool 2",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x39965c9dab5448482cf7e002f583c812ceb53046",
+      "poolId": "0x39965c9dab5448482cf7e002f583c812ceb53046000100000000000000000003",
+      "poolType": "weighted",
+      "symbol": "BPT-ROAD",
+      "name": "Happy Road",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3bc061a95b0aeeda3a9eca051f478468a03d5826",
+      "poolId": "0x3bc061a95b0aeeda3a9eca051f478468a03d5826000200000000000000000155",
+      "poolType": "weighted",
+      "symbol": "50uniBTC-50WBTC",
+      "name": "50uniBTC-50WBTC",
+      "tokens": [
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x93919784c523f39cacaa98ee0a9d96c3f32b593e",
+          "symbol": "uniBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3c74c4ed512050eb843d89fb9dcd5ebb4668eb6d",
+      "poolId": "0x3c74c4ed512050eb843d89fb9dcd5ebb4668eb6d0002000000000000000000cc",
+      "poolType": "weighted",
+      "symbol": "bb-moo-exETHUSDC",
+      "name": "Exactly Like You",
+      "tokens": [
+        {
+          "address": "0x5bdd8c19b44c3e4a15305601a2c9841bde9366f0",
+          "symbol": "bb-moo-exUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x72d6df381cac8c2283c0b13fe5262a1f5e8e8d1b",
+          "symbol": "bb-moo-exWETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3dc09db8e571da76dd04e9176afc7feee0b89106",
+      "poolId": "0x3dc09db8e571da76dd04e9176afc7feee0b89106000000000000000000000019",
+      "poolType": "stable",
+      "symbol": "BPT-FRAX-MAI",
+      "name": "Come Together",
+      "tokens": [
+        {
+          "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+          "symbol": "FRAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+          "symbol": "MAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3dd504bd492d0d8db245eb38b1b39220c1f72721",
+      "poolId": "0x3dd504bd492d0d8db245eb38b1b39220c1f7272100020000000000000000012c",
+      "poolType": "weighted",
+      "symbol": "1WETH-99USDT",
+      "name": "1WETH-99USDT",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x3f16f0301b62015b926c3b559b645a5a0e19d8aa",
+      "poolId": "0x3f16f0301b62015b926c3b559b645a5a0e19d8aa00000000000000000000008a",
+      "poolType": "stable",
+      "symbol": "BPT-MAISELF-I",
+      "name": "Me, MAIself and I",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+          "symbol": "MAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4055c21130112f8cf8f4fab7a04236deee9fac29",
+      "poolId": "0x4055c21130112f8cf8f4fab7a04236deee9fac29000200000000000000000112",
+      "poolType": "weighted",
+      "symbol": "80BEETS-20USDC",
+      "name": "test_80BEETS-20USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x408e11ec9b1751c3d00589b61cae484e07fb9e44",
+      "poolId": "0x408e11ec9b1751c3d00589b61cae484e07fb9e44000000000000000000000141",
+      "poolType": "composableStable",
+      "symbol": "bpt-unibtc-wbtc",
+      "name": "Bedrock'n'Roll",
+      "tokens": [
+        {
+          "address": "0x408e11ec9b1751c3d00589b61cae484e07fb9e44",
+          "symbol": "bpt-unibtc-wbtc",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x93919784c523f39cacaa98ee0a9d96c3f32b593e",
+          "symbol": "uniBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x40dbe796eae37e371cf0217a6dbb946cdaf9f1b7",
+      "poolId": "0x40dbe796eae37e371cf0217a6dbb946cdaf9f1b7000100000000000000000026",
+      "poolType": "weighted",
+      "symbol": "BPT-QI",
+      "name": "Qi Dao On Optimism",
+      "tokens": [
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4136e861e0ad0642cb2f16962540a7808bbade53",
+      "poolId": "0x4136e861e0ad0642cb2f16962540a7808bbade53000000000000000000000102",
+      "poolType": "composableStable",
+      "symbol": "bpt-steamounrhyt",
+      "name": "Steady Mountain Rhythms",
+      "tokens": [
+        {
+          "address": "0x4136e861e0ad0642cb2f16962540a7808bbade53",
+          "symbol": "bpt-steamounrhyt",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+          "symbol": "bpt-stablebeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb396b31599333739a97951b74652c117be86ee1d",
+          "symbol": "DUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x428e1cc3099cf461b87d124957a0d48273f334b1",
+      "poolId": "0x428e1cc3099cf461b87d124957a0d48273f334b100000000000000000000007f",
+      "poolType": "composableStable",
+      "symbol": "bbrfsoUSD",
+      "name": "Here comes the Sonne",
+      "tokens": [
+        {
+          "address": "0x428e1cc3099cf461b87d124957a0d48273f334b1",
+          "symbol": "bb-rf-soUSD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x62ec8b26c08ffe504f22390a65e6e3c1e45e9877",
+          "symbol": "bb-rf-soDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb96c5bada4bf6a70e71795a3197ba94751dae2db",
+          "symbol": "bb-rf-soUSDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xedcfaf390906a8f91fb35b7bac23f3111dbaee1c",
+          "symbol": "bb-rf-soUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x43da214fab3315aa6c02e0b8f2bfb7ef2e3c60a5",
+      "poolId": "0x43da214fab3315aa6c02e0b8f2bfb7ef2e3c60a50000000000000000000000ae",
+      "poolType": "composableStable",
+      "symbol": "BPT-overnight-II",
+      "name": "Overnight Pulse Act II",
+      "tokens": [
+        {
+          "address": "0x43da214fab3315aa6c02e0b8f2bfb7ef2e3c60a5",
+          "symbol": "BPT-overnight-II",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x88d07558470484c03d3bb44c3ecc36cafcf43253",
+          "symbol": "bb-USD+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb5ad7d6d6f92a77f47f98c28c84893fbccc94809",
+          "symbol": "bb-DAI+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x44ab8efb8909330b4c646b509ee593815c0f0ec5",
+      "poolId": "0x44ab8efb8909330b4c646b509ee593815c0f0ec500010000000000000000011e",
+      "poolType": "weighted",
+      "symbol": "33USDC-33WBTC-33USDT",
+      "name": "33USDC-33WBTC-33USDT",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4519c64266c8320a188800558d52cb6d0e1f00cf",
+      "poolId": "0x4519c64266c8320a188800558d52cb6d0e1f00cf000100000000000000000115",
+      "poolType": "weighted",
+      "symbol": "20LINK-20UNI-20AAVE-20SNX-20LDO",
+      "name": "20LINK-20UNI-20AAVE-20SNX-20LDO",
+      "tokens": [
+        {
+          "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
+          "symbol": "LINK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6fd9d7ad17242c41f7131d257212c54a0e816691",
+          "symbol": "UNI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278",
+          "symbol": "AAVE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+          "symbol": "LDO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x478980c67d53cd990f2b7bab311ddc9934324e7b",
+      "poolId": "0x478980c67d53cd990f2b7bab311ddc9934324e7b00020000000000000000010c",
+      "poolType": "weighted",
+      "symbol": "bpt-allrdsfrx",
+      "name": "All Roads Lead to Frax",
+      "tokens": [
+        {
+          "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+          "symbol": "FRAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x484c2d6e3cdd945a8b2df735e079178c1036578c",
+          "symbol": "sfrxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x479a7d1fcdd71ce0c2ed3184bfbe9d23b92e8337",
+      "poolId": "0x479a7d1fcdd71ce0c2ed3184bfbe9d23b92e8337000000000000000000000049",
+      "poolType": "composableStable",
+      "symbol": "bb-rf-aUSD-asUSD",
+      "name": "Smells Like Spartan Spirit",
+      "tokens": [
+        {
+          "address": "0x479a7d1fcdd71ce0c2ed3184bfbe9d23b92e8337",
+          "symbol": "bb-rf-aUSD-asUSD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc0d7013a05860271a1edb52415cf74bc85b2ace7",
+          "symbol": "bb-rf-asUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4d6461f181cf2b26a1cb4e3a070d63d0d31a5155",
+      "poolId": "0x4d6461f181cf2b26a1cb4e3a070d63d0d31a51550002000000000000000000f8",
+      "poolType": "weighted",
+      "symbol": "50USDC-50BEETS",
+      "name": "50USDC-50BEETS",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4dde571dc66217a062e4b50f9b20c4d08b3245a0",
+      "poolId": "0x4dde571dc66217a062e4b50f9b20c4d08b3245a0000200000000000000000118",
+      "poolType": "weighted",
+      "symbol": "VW8020",
+      "name": "VMEX-WETH 80/20",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6d2e5b8841a6aa5f0f973436357f75d3eeb93312",
+          "symbol": "VMEX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x4fd63966879300cafafbb35d157dc5229278ed23",
+      "poolId": "0x4fd63966879300cafafbb35d157dc5229278ed2300020000000000000000002b",
+      "poolType": "stable",
+      "symbol": "BPT-rETH-ETH",
+      "name": "Rocket Fuel",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x5028497af0c9a54ea8c6d42a054c0341b9fc6168",
+      "poolId": "0x5028497af0c9a54ea8c6d42a054c0341b9fc6168000100000000000000000004",
+      "poolType": "weighted",
+      "symbol": "BPT-LONG",
+      "name": "Lennon's Long",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x50bd3d0414fda3acb1559d8e2efbbdce974584e1",
+      "poolId": "0x50bd3d0414fda3acb1559d8e2efbbdce974584e1000200000000000000000153",
+      "poolType": "weighted",
+      "symbol": "50BEETS-50OP",
+      "name": "50BEETS-50OP",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x5457e7098013fb703078a5b5b69e0836eba002cd",
+      "poolId": "0x5457e7098013fb703078a5b5b69e0836eba002cd00010000000000000000015b",
+      "poolType": "weighted",
+      "symbol": "1BEETS-1multiBeets-2OP-69SNX-13sUSD-7waUSDCn-7waUSDT",
+      "name": "Synthesizer",
+      "tokens": [
+        {
+          "address": "0x035c93db04e5aaea54e6cd0261c492a3e0638b37",
+          "symbol": "waUSDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x558c91142948de588edfcee6da6a8c3ace22e9f8",
+      "poolId": "0x558c91142948de588edfcee6da6a8c3ace22e9f800020000000000000000014c",
+      "poolType": "weighted",
+      "symbol": "50wstETH-50WETH",
+      "name": "50wstETH-50WETH",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x561193522f792f464018b01f43d264f5b3759930",
+      "poolId": "0x561193522f792f464018b01f43d264f5b3759930000200000000000000000157",
+      "poolType": "weighted",
+      "symbol": "50OP-50USDC",
+      "name": "50OP-50USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x587c2ac5303d22e09cfff5f3e75c7a46f802f566",
+      "poolId": "0x587c2ac5303d22e09cfff5f3e75c7a46f802f56600020000000000000000016f",
+      "poolType": "gyro",
+      "symbol": "ECLP-USDC.e-USDC",
+      "name": "Gyroscope ECLP USDC.e/USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x58910d5bd045a20a37de147f8acea75b2d881f61",
+      "poolId": "0x58910d5bd045a20a37de147f8acea75b2d881f610002000000000000000000d3",
+      "poolType": "gyro",
+      "symbol": "ECLP-USDT-USDC",
+      "name": "Gyroscope ECLP USDT/USDC",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x59a22a7859acb8505968344d463809211b0c9cf6",
+      "poolId": "0x59a22a7859acb8505968344d463809211b0c9cf6000200000000000000000131",
+      "poolType": "weighted",
+      "symbol": "50OP-50WETH",
+      "name": "50OP-50WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x59a8fc1c5b424473b39339783aa4765d40aa4d53",
+      "poolId": "0x59a8fc1c5b424473b39339783aa4765d40aa4d5300020000000000000000012d",
+      "poolType": "weighted",
+      "symbol": "50OP-50USDC",
+      "name": "50OP-50USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x59aba93eb2fb1d12ae0a292d96655a13469417a0",
+      "poolId": "0x59aba93eb2fb1d12ae0a292d96655a13469417a00001000000000000000000af",
+      "poolType": "weighted",
+      "symbol": "BPT-TERB",
+      "name": "The Earth Rocket Bomb",
+      "tokens": [
+        {
+          "address": "0x74ccbe53f77b08632ce0cb91d3a545bf6b8e0979",
+          "symbol": "fBOMB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc96f4f893286137ac17e07ae7f217ffca5db3ab6",
+          "symbol": "NFTE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x59d9af011578ae587749d65d4c4f49a63221e236",
+      "poolId": "0x59d9af011578ae587749d65d4c4f49a63221e23600020000000000000000001f",
+      "poolType": "weighted",
+      "symbol": "BPT-QIUSDC",
+      "name": "Can't Buy Me QI",
+      "tokens": [
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x5bb3e58887264b667f915130fd04bbb56116c278",
+      "poolId": "0x5bb3e58887264b667f915130fd04bbb56116c27800020000000000000000012a",
+      "poolType": "weighted",
+      "symbol": "50WETH-50OLAS",
+      "name": "50WETH-50OLAS",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfc2e6e6bcbd49ccf3a5f029c79984372dcbfe527",
+          "symbol": "OLAS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x5f8893506ddc4c271837187d14a9c87964a074dc",
+      "poolId": "0x5f8893506ddc4c271837187d14a9c87964a074dc000000000000000000000106",
+      "poolType": "composableStable",
+      "symbol": "bpt-ethtri",
+      "name": "Ethereum Triplets",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x484c2d6e3cdd945a8b2df735e079178c1036578c",
+          "symbol": "sfrxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5f8893506ddc4c271837187d14a9c87964a074dc",
+          "symbol": "bpt-ethtri",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x5fc073e9c763af7cb02f403130acc62f9f034dbc",
+      "poolId": "0x5fc073e9c763af7cb02f403130acc62f9f034dbc0002000000000000000000fc",
+      "poolType": "weighted",
+      "symbol": "50USDC-50BEETS",
+      "name": "50BEETS-50USDC",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+      "poolId": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd000000000000000000000046",
+      "poolType": "composableStable",
+      "symbol": "bb-rf-aUSD",
+      "name": "Steady Beets, Boosted",
+      "tokens": [
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x888a6195d42a95e80d81e1c506172772a80b80bc",
+          "symbol": "bb-rf-aDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9253d7e1b42fa01ede2c53f3a21b3b4d13239cd4",
+          "symbol": "bb-rf-aUSDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xba7834bb3cd2db888e6a06fb45e82b4225cd0c71",
+          "symbol": "bb-rf-aUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x62cf35db540152e94936de63efc90d880d4e241b",
+      "poolId": "0x62cf35db540152e94936de63efc90d880d4e241b0000000000000000000000ef",
+      "poolType": "composableStable",
+      "symbol": "bb-dolbil",
+      "name": "Dollar Dollar Bills",
+      "tokens": [
+        {
+          "address": "0x20715545c15c76461861cb0d6ba96929766d05a5",
+          "symbol": "bb-rfUSDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x62cf35db540152e94936de63efc90d880d4e241b",
+          "symbol": "bb-dolbil",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf970659221bb9d01b615321b63a26e857ffc030b",
+          "symbol": "bb-rfUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x62de5ca16a618e22f6dfe5315ebd31acb10c44b6",
+      "poolId": "0x62de5ca16a618e22f6dfe5315ebd31acb10c44b6000000000000000000000037",
+      "poolType": "composableStable",
+      "symbol": "test-bb-WETH",
+      "name": "Test Boosted WETH",
+      "tokens": [
+        {
+          "address": "0x62de5ca16a618e22f6dfe5315ebd31acb10c44b6",
+          "symbol": "test-bb-WETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x75062a04a8cc587c588a6bb50bd0cc009da483dc",
+          "symbol": "test-bb-rf-aWETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x63c6ea3047ee8c90aa1f0d271a307b04fb87499c",
+      "poolId": "0x63c6ea3047ee8c90aa1f0d271a307b04fb87499c00020000000000000000014b",
+      "poolType": "weighted",
+      "symbol": "50OPP-50imxB (OPP-opxVELO)",
+      "name": "50OPP-50imxB (OPP-opxVELO)",
+      "tokens": [
+        {
+          "address": "0x1d61313ce48fa3c60df3a4b567378b954fe6f9a6",
+          "symbol": "imxB (OPP-opxVELO)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x676f784d19c7f1ac6c6beaeaac78b02a73427852",
+          "symbol": "OPP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x679c316bb2bfa7eca6b69d599d24e7646ea89729",
+      "poolId": "0x679c316bb2bfa7eca6b69d599d24e7646ea89729000200000000000000000158",
+      "poolType": "weighted",
+      "symbol": "50OP-50rETH",
+      "name": "50OP-50rETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x6d26239ba2ec1a11ab9f68743e11c094d4c593a2",
+      "poolId": "0x6d26239ba2ec1a11ab9f68743e11c094d4c593a2000100000000000000000163",
+      "poolType": "weighted",
+      "symbol": "sVFD",
+      "name": "Synthetix Volatility Fund",
+      "tokens": [
+        {
+          "address": "0x455ba8e4c6dff2453e78cef92625b38c93f4f3dd",
+          "symbol": "BTC2S",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfbc4198702e81ae77c06d58f81b629bdf36f0a71",
+          "symbol": "sEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x731290da2fa9970304e270940a91f3244b4637c9",
+      "poolId": "0x731290da2fa9970304e270940a91f3244b4637c900020000000000000000016e",
+      "poolType": "weighted",
+      "symbol": "99USDC/1USDT",
+      "name": "99USDC/1USDT",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x73a7fe27fe9545d53924e529acf11f3073841b9e",
+      "poolId": "0x73a7fe27fe9545d53924e529acf11f3073841b9e000000000000000000000133",
+      "poolType": "composableStable",
+      "symbol": "wrsETH/wETH",
+      "name": "Balancer wrsETH/wETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x73a7fe27fe9545d53924e529acf11f3073841b9e",
+          "symbol": "wrsETH/wETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
+          "symbol": "wrsETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x74716000811f20bb7f3a4744c074644c220d62f0",
+      "poolId": "0x74716000811f20bb7f3a4744c074644c220d62f0000200000000000000000159",
+      "poolType": "weighted",
+      "symbol": "50OP-50USDC",
+      "name": "50OP-50USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x747d0a5b18ac88e1e44fcea9f7022990e2c1b7ac",
+      "poolId": "0x747d0a5b18ac88e1e44fcea9f7022990e2c1b7ac00010000000000000000016b",
+      "poolType": "weighted",
+      "symbol": "sTYF",
+      "name": "Synthetix Treasury",
+      "tokens": [
+        {
+          "address": "0x298b9b95708152ff6968aafd889c6586e9169f1d",
+          "symbol": "sBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x455ba8e4c6dff2453e78cef92625b38c93f4f3dd",
+          "symbol": "BTC2S",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+          "symbol": "aOptSUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfbc4198702e81ae77c06d58f81b629bdf36f0a71",
+          "symbol": "sEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7498470d6ac742b31644298413714d63496f3a22",
+      "poolId": "0x7498470d6ac742b31644298413714d63496f3a22000200000000000000000154",
+      "poolType": "weighted",
+      "symbol": "5OP-95BEETS",
+      "name": "5OP-95BEETS",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x752de5046a3f726d3165cb8cd4143f299949ce9d",
+      "poolId": "0x752de5046a3f726d3165cb8cd4143f299949ce9d000200000000000000000077",
+      "poolType": "weighted",
+      "symbol": "BPT-BRINE",
+      "name": "Brined Pickles",
+      "tokens": [
+        {
+          "address": "0x0c5b4c92c948691eebf185c17eeb9c230dc019e9",
+          "symbol": "PICKLE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x785f08fb77ec934c01736e30546f87b4daccbe50",
+      "poolId": "0x785f08fb77ec934c01736e30546f87b4daccbe50000200000000000000000041",
+      "poolType": "weighted",
+      "symbol": "IBT-IBRETH",
+      "name": "Galactic Dragon",
+      "tokens": [
+        {
+          "address": "0x00a35fd824c717879bf370e70ac6868b95870dfb",
+          "symbol": "IB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7ad4f5536d903aea6f973f36e18f5b4610a7583e",
+      "poolId": "0x7ad4f5536d903aea6f973f36e18f5b4610a7583e000100000000000000000000",
+      "poolType": "weighted",
+      "symbol": "TEST-WEIGHTED",
+      "name": "Test pool",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2",
+      "poolId": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb200020000000000000000008b",
+      "poolType": "stable",
+      "symbol": "BPT-WSTETH-WETH",
+      "name": "Shanghai Shakedown",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7ba1351e805bed53ecb1e6ad13113966024f7f43",
+      "poolId": "0x7ba1351e805bed53ecb1e6ad13113966024f7f43000200000000000000000139",
+      "poolType": "weighted",
+      "symbol": "50USDC.e-50DAI",
+      "name": "50USDC.e-50DAI",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7c52a0853de6e9e7c5b5940aac33ce095ebbd275",
+      "poolId": "0x7c52a0853de6e9e7c5b5940aac33ce095ebbd275000200000000000000000138",
+      "poolType": "weighted",
+      "symbol": "50USDC-50WETH",
+      "name": "50USDC-50WETH",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7ca75bdea9dede97f8b13c6641b768650cb83782",
+      "poolId": "0x7ca75bdea9dede97f8b13c6641b768650cb837820002000000000000000000d5",
+      "poolType": "gyro",
+      "symbol": "ECLP-wstETH-WETH",
+      "name": "Gyroscope ECLP wstETH/WETH",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7d6bff131b359da66d92f215fd4e186003bfaa42",
+      "poolId": "0x7d6bff131b359da66d92f215fd4e186003bfaa42000000000000000000000058",
+      "poolType": "composableStable",
+      "symbol": "BPT-USD+",
+      "name": "Overnight Pulse",
+      "tokens": [
+        {
+          "address": "0x7d6bff131b359da66d92f215fd4e186003bfaa42",
+          "symbol": "BPT-USD+",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0x88d07558470484c03d3bb44c3ecc36cafcf43253",
+          "symbol": "bb-USD+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfbf87d2c22d1d298298ab5b0ec957583a2731d15",
+          "symbol": "bb-DAI+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7e40fe211c8053b78f31d6c4c15157a430a03349",
+      "poolId": "0x7e40fe211c8053b78f31d6c4c15157a430a0334900020000000000000000014d",
+      "poolType": "weighted",
+      "symbol": "50imxB (OPP-ETH)-50WETH",
+      "name": "50imxB (OPP-ETH)-50WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc70134c6858f3fe09d051f05dcdda215ace5c153",
+          "symbol": "imxB (OPP-ETH)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7ed087afab0b2653c8137744916ed1aba97e2fa2",
+      "poolId": "0x7ed087afab0b2653c8137744916ed1aba97e2fa2000200000000000000000050",
+      "poolType": "weighted",
+      "symbol": "BPT-OATHUSD",
+      "name": "Hall & Oaths",
+      "tokens": [
+        {
+          "address": "0x39fde572a18448f8139b7788099f0a0740f51205",
+          "symbol": "OATHv1",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7ef99013e446ddce2486b8e04735b7019a115e6f",
+      "poolId": "0x7ef99013e446ddce2486b8e04735b7019a115e6f000100000000000000000005",
+      "poolType": "weighted",
+      "symbol": "BPT-8TRACK",
+      "name": "Optimistic 8-Track",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
+          "symbol": "LYRA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9e1028f5f1d5ede59748ffcee5532509976840e0",
+          "symbol": "PERP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8337ce79a6d99865ff23c92bff558cc7b611e984",
+      "poolId": "0x8337ce79a6d99865ff23c92bff558cc7b611e984000200000000000000000167",
+      "poolType": "weighted",
+      "symbol": "20WETH/80XYZ",
+      "name": "20WETH/80XYZ",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa2781111f824ca1cd98454b2c9722baefc898e99",
+          "symbol": "XYZ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x84e27b600155a5b411e311285cac97889aea281a",
+      "poolId": "0x84e27b600155a5b411e311285cac97889aea281a000100000000000000000114",
+      "poolType": "weighted",
+      "symbol": "20aOptLINK-20UNI-20SNX-20aOptAAVE-20LDO",
+      "name": "DeFi Index",
+      "tokens": [
+        {
+          "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530",
+          "symbol": "aOptLINK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6fd9d7ad17242c41f7131d257212c54a0e816691",
+          "symbol": "UNI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375",
+          "symbol": "aOptAAVE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+          "symbol": "LDO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x876e0a21626c33bdab879330505eccc6091aa607",
+      "poolId": "0x876e0a21626c33bdab879330505eccc6091aa60700020000000000000000012e",
+      "poolType": "gyro",
+      "symbol": "GDSRH",
+      "name": "Gyro DAI savings rehype",
+      "tokens": [
+        {
+          "address": "0x2218a117083f5b482b0bb821d27056ba9c04b1d3",
+          "symbol": "sDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x899f737750db562b88c1e412ee1902980d3a4844",
+      "poolId": "0x899f737750db562b88c1e412ee1902980d3a4844000200000000000000000081",
+      "poolType": "weighted",
+      "symbol": "BPT-WSTETH-USDC",
+      "name": "Helter Skelter",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8a2872fd28f42bd9f6559907235e83fbf4167f48",
+      "poolId": "0x8a2872fd28f42bd9f6559907235e83fbf4167f480001000000000000000000f2",
+      "poolType": "weighted",
+      "symbol": "bb-rf-triple",
+      "name": "Triple Yield Symphony",
+      "tokens": [
+        {
+          "address": "0x48ace81c09382bfc08ed102e7eadd37e3b049752",
+          "symbol": "bb-rfWSTETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8025586ac5fb265a23b9492e7414beccc2059ec3",
+          "symbol": "bb-rfWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf970659221bb9d01b615321b63a26e857ffc030b",
+          "symbol": "bb-rfUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8a819a4cabd6efcb4e5504fe8679a1abd831dd8f",
+      "poolId": "0x8a819a4cabd6efcb4e5504fe8679a1abd831dd8f00020000000000000000008e",
+      "poolType": "lbp",
+      "symbol": "BAL_LBP",
+      "name": "BAL Fjord Foundry LBP",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8abd32f63328de16fd4274e7c4a352b626b1ed7d",
+      "poolId": "0x8abd32f63328de16fd4274e7c4a352b626b1ed7d00020000000000000000013a",
+      "poolType": "weighted",
+      "symbol": "50WETH-50wrsETH",
+      "name": "50WETH-50wrsETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
+          "symbol": "wrsETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8b6d3aa69c1cf47677281691b1abf3831ba1329d",
+      "poolId": "0x8b6d3aa69c1cf47677281691b1abf3831ba1329d0001000000000000000000d0",
+      "poolType": "weighted",
+      "symbol": "bb-rf-SOTRI",
+      "name": "Tri-SONNE Harmonic Crescendo",
+      "tokens": [
+        {
+          "address": "0x055a4cfa8cd9ced1d7bc9ae5eb46c404c130e46d",
+          "symbol": "bb-rf-soWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7e9250cc13559eb50536859e8c076ef53e275fb3",
+          "symbol": "bb-rf-soWSTETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xedcfaf390906a8f91fb35b7bac23f3111dbaee1c",
+          "symbol": "bb-rf-soUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8bb826afc0ff7d2c034a2883f4c461ffd238e1c3",
+      "poolId": "0x8bb826afc0ff7d2c034a2883f4c461ffd238e1c300020000000000000000012b",
+      "poolType": "gyro",
+      "symbol": "RSB",
+      "name": "Rehype Stable Beets",
+      "tokens": [
+        {
+          "address": "0x035c93db04e5aaea54e6cd0261c492a3e0638b37",
+          "symbol": "waUSDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8ce93cf0ac66f2a22a19a9ac2631d83068481469",
+      "poolId": "0x8ce93cf0ac66f2a22a19a9ac2631d83068481469000200000000000000000170",
+      "poolType": "gyro",
+      "symbol": "ECLP-USDT0-USDT",
+      "name": "Gyroscope ECLP USDT0/USDT",
+      "tokens": [
+        {
+          "address": "0x01bff41798a0bcf287b996046ca68b395dbc1071",
+          "symbol": "USD₮0",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x92163a34af0365197447133c4f53f00a0454e8db",
+      "poolId": "0x92163a34af0365197447133c4f53f00a0454e8db00020000000000000000014f",
+      "poolType": "weighted",
+      "symbol": "50OP-50USDC",
+      "name": "50OP-50USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x947beaafe07d45a89425e7c00ab245bca02b9125",
+      "poolId": "0x947beaafe07d45a89425e7c00ab245bca02b9125000100000000000000000144",
+      "poolType": "weighted",
+      "symbol": "33CRV-33SNX-33BAL",
+      "name": "33CRV-33SNX-33BAL",
+      "tokens": [
+        {
+          "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
+          "symbol": "CRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x95b7da84d58869366178d6d8caf80469b49527a2",
+      "poolId": "0x95b7da84d58869366178d6d8caf80469b49527a2000200000000000000000147",
+      "poolType": "weighted",
+      "symbol": "50WETH-50USDC",
+      "name": "50WETH-50USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7",
+      "poolId": "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7000200000000000000000171",
+      "poolType": "weighted",
+      "symbol": "20WETH/80VLR",
+      "name": "20WETH/80VLR",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "symbol": "VLR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x981fb05b738e981ac532a99e77170ecb4bc27aef",
+      "poolId": "0x981fb05b738e981ac532a99e77170ecb4bc27aef00010000000000000000004b",
+      "poolType": "weighted",
+      "symbol": "bb-YELLOW",
+      "name": "Yellow submarine, our yield machine",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa1a77e5d7d769bfbb790a08ec976dc738bf795b9",
+          "symbol": "bb-rf-aWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9964b1bd3cc530e5c58ba564e45d45290f677be2",
+      "poolId": "0x9964b1bd3cc530e5c58ba564e45d45290f677be2000000000000000000000036",
+      "poolType": "composableStable",
+      "symbol": "test-bb-rf-a-USD",
+      "name": "Test Boosted USD",
+      "tokens": [
+        {
+          "address": "0x15873081c0aa67ad5c5dba362169d352e2a128a2",
+          "symbol": "test-bb-rf-aUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9964b1bd3cc530e5c58ba564e45d45290f677be2",
+          "symbol": "test-bb-rf-a-USD",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xce9329f138cd6319fcfbd8704e6ae50b6bb04f31",
+          "symbol": "test-bb-rf-aDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9a339cab07c16c0b0df874d7c546f6b7a69c8fa1",
+      "poolId": "0x9a339cab07c16c0b0df874d7c546f6b7a69c8fa100020000000000000000015c",
+      "poolType": "weighted",
+      "symbol": "50BEETS-50multiBeets",
+      "name": "Maraca$s",
+      "tokens": [
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9ab692518817739e0cb111670e63cb7b08d6012c",
+      "poolId": "0x9ab692518817739e0cb111670e63cb7b08d6012c000200000000000000000152",
+      "poolType": "weighted",
+      "symbol": "60USDC-40OP",
+      "name": "60USDC-40OP",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+      "poolId": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9000000000000000000000100",
+      "poolType": "composableStable",
+      "symbol": "bpt-stablebeets",
+      "name": "Native Stable Beets",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+          "symbol": "bpt-stablebeets",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9ff36e48edbf6cb910ebf9ef70f6aeba41391fce",
+      "poolId": "0x9ff36e48edbf6cb910ebf9ef70f6aeba41391fce00020000000000000000016d",
+      "poolType": "gyro",
+      "symbol": "ECLP-WETH-USDC-dyn",
+      "name": "Gyroscope Dynamic ECLP WETH/USDC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xa71021492a3966eec735ed1b505afa097c7cfe6f",
+      "poolId": "0xa71021492a3966eec735ed1b505afa097c7cfe6f00000000000000000000010d",
+      "poolType": "composableStable",
+      "symbol": "bpt-fraxethe",
+      "name": "Fraximalist Ethereum",
+      "tokens": [
+        {
+          "address": "0x484c2d6e3cdd945a8b2df735e079178c1036578c",
+          "symbol": "sfrxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6806411765af15bddd26f8f544a34cc40cb9838b",
+          "symbol": "frxETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa71021492a3966eec735ed1b505afa097c7cfe6f",
+          "symbol": "bpt-fraxethe",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xa96a0545460d2f550d58a10e14d82073c55a8b67",
+      "poolId": "0xa96a0545460d2f550d58a10e14d82073c55a8b670002000000000000000000f9",
+      "poolType": "weighted",
+      "symbol": "50USDC-50BEETS",
+      "name": "50USDC-50BEETS",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xab143aa133536237922e113f1d91023b73ad6d18",
+      "poolId": "0xab143aa133536237922e113f1d91023b73ad6d1800020000000000000000015a",
+      "poolType": "gyro",
+      "symbol": "ECLP-GYD-AUSDC",
+      "name": "Gyroscope ECLP GYD/AUSDC",
+      "tokens": [
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8",
+          "symbol": "GYD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xab3bcd6365c7b3e80f9633c2c54ebf09d66c616d",
+      "poolId": "0xab3bcd6365c7b3e80f9633c2c54ebf09d66c616d000200000000000000000148",
+      "poolType": "weighted",
+      "symbol": "50OPP-50WETH",
+      "name": "50OPP-50WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x676f784d19c7f1ac6c6beaeaac78b02a73427852",
+          "symbol": "OPP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xac9f52e656cee6097bd7b8a251b33529b5e30bd5",
+      "poolId": "0xac9f52e656cee6097bd7b8a251b33529b5e30bd5000200000000000000000149",
+      "poolType": "gyro",
+      "symbol": "ECLP-wUSDM-USDC-rh",
+      "name": "Gyroscope ECLP wUSDM/USDC Rehype",
+      "tokens": [
+        {
+          "address": "0x4dd03dfd36548c840b563745e3fbec320f37ba7e",
+          "symbol": "waUSDCn",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x57f5e098cad7a3d1eed53991d4d66c45c9af7812",
+          "symbol": "wUSDM",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xacfe9b4782910a853b68abba60f3fd8049ffe638",
+      "poolId": "0xacfe9b4782910a853b68abba60f3fd8049ffe6380000000000000000000000ff",
+      "poolType": "composableStable",
+      "symbol": "bpt-dolausdc",
+      "name": "Sonata for Two: DOLA & USDC",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8ae125e8653821e851f12a49f7765db9a9ce7384",
+          "symbol": "DOLA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xacfe9b4782910a853b68abba60f3fd8049ffe638",
+          "symbol": "bpt-dolausdc",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xadf86a03af1c77d81380f9fa7c4c797a3ebf2d3a",
+      "poolId": "0xadf86a03af1c77d81380f9fa7c4c797a3ebf2d3a000100000000000000000146",
+      "poolType": "weighted",
+      "symbol": "30OPP-35imxB (OPP-ETH)-35imxB (OPP-opxVELO)",
+      "name": "Optimism Prime Soundwave",
+      "tokens": [
+        {
+          "address": "0x1d61313ce48fa3c60df3a4b567378b954fe6f9a6",
+          "symbol": "imxB (OPP-opxVELO)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x676f784d19c7f1ac6c6beaeaac78b02a73427852",
+          "symbol": "OPP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc70134c6858f3fe09d051f05dcdda215ace5c153",
+          "symbol": "imxB (OPP-ETH)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb0305b8b5cb8cb8d20e8071cdf601977b40f6ba2",
+      "poolId": "0xb0305b8b5cb8cb8d20e8071cdf601977b40f6ba2000200000000000000000140",
+      "poolType": "weighted",
+      "symbol": "50COMP-50WETH",
+      "name": "COMP & ETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7e7d4467112689329f7e06571ed0e8cbad4910ee",
+          "symbol": "COMP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb0de49429fbb80c635432bbad0b3965b28560177",
+      "poolId": "0xb0de49429fbb80c635432bbad0b3965b2856017700010000000000000000004e",
+      "poolType": "weighted",
+      "symbol": "bb-HAPPY",
+      "name": "Happy Road reloaded",
+      "tokens": [
+        {
+          "address": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+          "symbol": "bb-rf-aUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa4e597c1bd01859b393b124ce18427aa4426a871",
+          "symbol": "bb-rf-grOP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb0f2c34b9cd5c377c5efbba3b31e67114810cbc8",
+      "poolId": "0xb0f2c34b9cd5c377c5efbba3b31e67114810cbc8000000000000000000000030",
+      "poolType": "composableStable",
+      "symbol": "PTSPP",
+      "name": "optimism Test StablePhantom Pool",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb0f2c34b9cd5c377c5efbba3b31e67114810cbc8",
+          "symbol": "PTSPP",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xb1c9ac57594e9b1ec0f3787d9f6744ef4cb0a024",
+      "poolId": "0xb1c9ac57594e9b1ec0f3787d9f6744ef4cb0a02400000000000000000000006e",
+      "poolType": "composableStable",
+      "symbol": "BPT-USD+",
+      "name": "Overnight Pulse",
+      "tokens": [
+        {
+          "address": "0x88d07558470484c03d3bb44c3ecc36cafcf43253",
+          "symbol": "bb-USD+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb1c9ac57594e9b1ec0f3787d9f6744ef4cb0a024",
+          "symbol": "BPT-USD+",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xb5ad7d6d6f92a77f47f98c28c84893fbccc94809",
+          "symbol": "bb-DAI+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb390a4e78442c1ddd5f446e2950533a4294b89d9",
+      "poolId": "0xb390a4e78442c1ddd5f446e2950533a4294b89d90001000000000000000000b7",
+      "poolType": "weighted",
+      "symbol": "BPT-USDEAD",
+      "name": "The Dollar is DEAD",
+      "tokens": [
+        {
+          "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+          "symbol": "STG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb5285238628f80f1399b286cd6a1ce280c61e2f7",
+      "poolId": "0xb5285238628f80f1399b286cd6a1ce280c61e2f7000200000000000000000120",
+      "poolType": "weighted",
+      "symbol": "50STG-50SNX",
+      "name": "50STG-50SNX",
+      "tokens": [
+        {
+          "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+          "symbol": "STG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xb8ece82fcfb948b1af937e2819eb2d72bb3d98d2",
+      "poolId": "0xb8ece82fcfb948b1af937e2819eb2d72bb3d98d200020000000000000000001a",
+      "poolType": "weighted",
+      "symbol": "BPT-QI",
+      "name": "Qi Dynasty",
+      "tokens": [
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbad8de88febc2d9364254e108fe5a547a7b6b4c0",
+      "poolId": "0xbad8de88febc2d9364254e108fe5a547a7b6b4c000020000000000000000005b",
+      "poolType": "weighted",
+      "symbol": "BPT-LIDOTES",
+      "name": "Lido Test",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+          "symbol": "LDO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbb65192fc43cff2e2823bae211ebe367f81f2f26",
+      "poolId": "0xbb65192fc43cff2e2823bae211ebe367f81f2f260001000000000000000000bb",
+      "poolType": "weighted",
+      "symbol": "BPT-DED",
+      "name": "Fiat is dead",
+      "tokens": [
+        {
+          "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
+          "symbol": "CRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+          "symbol": "STG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbc80540bb282e7724be7f1e0b92b4ea51340ddbf",
+      "poolId": "0xbc80540bb282e7724be7f1e0b92b4ea51340ddbf00010000000000000000010e",
+      "poolType": "weighted",
+      "symbol": "20wstETH-25LINK-25OP-20WBTC-10LDO",
+      "name": "20wstETH-25LINK-25OP-20WBTC-10LDO",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
+          "symbol": "LINK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+          "symbol": "LDO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbe8dda0753ef6992a28759282585209c98c25de2",
+      "poolId": "0xbe8dda0753ef6992a28759282585209c98c25de2000200000000000000000161",
+      "poolType": "weighted",
+      "symbol": "80XYZ/20WETH",
+      "name": "80XYZ/20WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe0b197133ec7e2db9cb574b1e3da21b93f6e3cbf",
+          "symbol": "XYZ",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a4",
+      "poolId": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a40000000000000000000000f3",
+      "poolType": "composableStable",
+      "symbol": "bpt-onsteady",
+      "name": "Overnight Steady Accord",
+      "tokens": [
+        {
+          "address": "0x88d07558470484c03d3bb44c3ecc36cafcf43253",
+          "symbol": "bb-USD+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb5ad7d6d6f92a77f47f98c28c84893fbccc94809",
+          "symbol": "bb-DAI+",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a4",
+          "symbol": "bpt-onsteady",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xc05ab1b0ad472ce802e2c8db6f23e4a2865fdca6",
+      "poolId": "0xc05ab1b0ad472ce802e2c8db6f23e4a2865fdca6000000000000000000000103",
+      "poolType": "composableStable",
+      "symbol": "bpt-steamounrhyt",
+      "name": "Steady Mountain Rhythms",
+      "tokens": [
+        {
+          "address": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+          "symbol": "bpt-stablebeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb396b31599333739a97951b74652c117be86ee1d",
+          "symbol": "DUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc05ab1b0ad472ce802e2c8db6f23e4a2865fdca6",
+          "symbol": "bpt-steamounrhyt",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xc1f46ce83439886f0ea9c21512b36e7e67239d2c",
+      "poolId": "0xc1f46ce83439886f0ea9c21512b36e7e67239d2c000200000000000000000108",
+      "poolType": "weighted",
+      "symbol": "bpt-roabee",
+      "name": "Roast Beets",
+      "tokens": [
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb4bc46bc6cb217b59ea8f4530bae26bf69f677f0",
+          "symbol": "BEETS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc38c2fc871188935b9c615e73b17f2e7e463c8b1",
+      "poolId": "0xc38c2fc871188935b9c615e73b17f2e7e463c8b1000200000000000000000119",
+      "poolType": "weighted",
+      "symbol": "80BAL-20WETH",
+      "name": "Keep the BAL rolling",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc4cd76040a87604c78627dee2450728ac5e971e5",
+      "poolId": "0xc4cd76040a87604c78627dee2450728ac5e971e500020000000000000000010f",
+      "poolType": "weighted",
+      "symbol": "50WETH-50USDC",
+      "name": "test50",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc4ee406970047a70aed14621d97b3b460a7dea0b",
+      "poolId": "0xc4ee406970047a70aed14621d97b3b460a7dea0b00000000000000000000010b",
+      "poolType": "composableStable",
+      "symbol": "SWEEP-USDC-BPT",
+      "name": "Balancer SWEEP-USDC StablePool",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb88a5ac00917a02d82c7cd6cebd73e2852d43574",
+          "symbol": "SWEEP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc4ee406970047a70aed14621d97b3b460a7dea0b",
+          "symbol": "SWEEP-USDC-BPT",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xc523ec066e0ef4fa2dff4e4d336d8a03b3b0c8d5",
+      "poolId": "0xc523ec066e0ef4fa2dff4e4d336d8a03b3b0c8d500020000000000000000013d",
+      "poolType": "weighted",
+      "symbol": "50WETH-50COMP",
+      "name": "COMP & wETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7e7d4467112689329f7e06571ed0e8cbad4910ee",
+          "symbol": "COMP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc77e5645dbe48d54afc06655e39d3fe17eb76c1c",
+      "poolId": "0xc77e5645dbe48d54afc06655e39d3fe17eb76c1c00020000000000000000005c",
+      "poolType": "weighted",
+      "symbol": "BPT-LDO-WSTEH",
+      "name": "Lido's Swan Song",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+          "symbol": "LDO",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc931b64e181a4a29416f55e67921bfe16e4fe789",
+      "poolId": "0xc931b64e181a4a29416f55e67921bfe16e4fe789000200000000000000000066",
+      "poolType": "weighted",
+      "symbol": "BPT-W",
+      "name": "aaa",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc97dee022137a8c5f65b5138cc690fbe87806ed5",
+      "poolId": "0xc97dee022137a8c5f65b5138cc690fbe87806ed500020000000000000000001b",
+      "poolType": "weighted",
+      "symbol": "BPT-DAOUSDC",
+      "name": "Qi Dao Le",
+      "tokens": [
+        {
+          "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+          "symbol": "QI (old)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xc9eb4b8ce914ee451360b315ffd1d1af8df96be9",
+      "poolId": "0xc9eb4b8ce914ee451360b315ffd1d1af8df96be9000000000000000000000143",
+      "poolType": "composableStable",
+      "symbol": "bpt-insteth-wsteth",
+      "name": "Staked Inception Opus No 1",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc9eb4b8ce914ee451360b315ffd1d1af8df96be9",
+          "symbol": "bpt-insteth-wsteth",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xd08c3f25862077056cb1b710937576af899a4959",
+          "symbol": "InstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcaca4544534f5c7c114c8fe939693e7595f370f7",
+      "poolId": "0xcaca4544534f5c7c114c8fe939693e7595f370f700020000000000000000014a",
+      "poolType": "weighted",
+      "symbol": "50OPP-50imxB (OPP-ETH)",
+      "name": "50OPP-50imxB (OPP-ETH)",
+      "tokens": [
+        {
+          "address": "0x676f784d19c7f1ac6c6beaeaac78b02a73427852",
+          "symbol": "OPP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc70134c6858f3fe09d051f05dcdda215ace5c153",
+          "symbol": "imxB (OPP-ETH)",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcb7d357c84b101e3d559ff4845cef63d7d0753ef",
+      "poolId": "0xcb7d357c84b101e3d559ff4845cef63d7d0753ef000000000000000000000150",
+      "poolType": "composableStable",
+      "symbol": "bpt-wrseth-wsteth",
+      "name": "Kelp's Restaking Symphony",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
+          "symbol": "wrsETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcb7d357c84b101e3d559ff4845cef63d7d0753ef",
+          "symbol": "bpt-wrseth-wsteth",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xcbac17bc5fa5285df031ae20956632a3720866a9",
+      "poolId": "0xcbac17bc5fa5285df031ae20956632a3720866a90001000000000000000000c2",
+      "poolType": "weighted",
+      "symbol": "BPT-TRIPOOL",
+      "name": "Decentralized Sandwich",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcd7b2232b7435595bbc7fd7962f1f352fc2cc61a",
+      "poolId": "0xcd7b2232b7435595bbc7fd7962f1f352fc2cc61a0000000000000000000000f0",
+      "poolType": "composableStable",
+      "symbol": "bb-rf-usd",
+      "name": "Rock Steady",
+      "tokens": [
+        {
+          "address": "0x20715545c15c76461861cb0d6ba96929766d05a5",
+          "symbol": "bb-rfUSDT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xa5d4802b4ce6b745b0c9e1b4a79c093d197869c8",
+          "symbol": "bb-rfDAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcd7b2232b7435595bbc7fd7962f1f352fc2cc61a",
+          "symbol": "bb-rf-usd",
+          "decimals": 18,
+          "isPhantomBpt": true
+        },
+        {
+          "address": "0xf970659221bb9d01b615321b63a26e857ffc030b",
+          "symbol": "bb-rfUSDC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xcef953fb1563c5a2bc89c3b54712d03d16689a17",
+      "poolId": "0xcef953fb1563c5a2bc89c3b54712d03d16689a17000200000000000000000130",
+      "poolType": "weighted",
+      "symbol": "50STG-50WETH",
+      "name": "50STG-50WETH",
+      "tokens": [
+        {
+          "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+          "symbol": "STG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd0fab195ef9db5365b289fb3e38d38ef6b5d0361",
+      "poolId": "0xd0fab195ef9db5365b289fb3e38d38ef6b5d03610002000000000000000000fa",
+      "poolType": "weighted",
+      "symbol": "50USDC-50BEETS",
+      "name": "50USDC-50BEETS",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd12fd67d1522b79af539cf651f3d2f6981519fe9",
+      "poolId": "0xd12fd67d1522b79af539cf651f3d2f6981519fe900020000000000000000010a",
+      "poolType": "weighted",
+      "symbol": "50OATHv1-50BAL",
+      "name": "50OATHv1-50BAL",
+      "tokens": [
+        {
+          "address": "0x39fde572a18448f8139b7788099f0a0740f51205",
+          "symbol": "OATHv1",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd13d81af624956327a24d0275cbe54b0ee0e9070",
+      "poolId": "0xd13d81af624956327a24d0275cbe54b0ee0e9070000200000000000000000109",
+      "poolType": "weighted",
+      "symbol": "80OATHv2-20WETH",
+      "name": "Bonded OATH Token",
+      "tokens": [
+        {
+          "address": "0x00e1724885473b63bce08a9f0a52f35b0979e35a",
+          "symbol": "OATHv2",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd20f6f1d8a675cdca155cb07b5dc9042c467153f",
+      "poolId": "0xd20f6f1d8a675cdca155cb07b5dc9042c467153f0002000000000000000000bc",
+      "poolType": "weighted",
+      "symbol": "BPT-BOATH",
+      "name": "Bonded Oath Token",
+      "tokens": [
+        {
+          "address": "0x39fde572a18448f8139b7788099f0a0740f51205",
+          "symbol": "OATHv1",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd4156a7a7e85d8cb2de2932807d8d5f08d05a889",
+      "poolId": "0xd4156a7a7e85d8cb2de2932807d8d5f08d05a88900020000000000000000011c",
+      "poolType": "weighted",
+      "symbol": "50WETH-50FRACTION",
+      "name": "50WETH-50FRACTION",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
+          "symbol": "FRACTION",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd501e07c1b0640a4be471ea6a0a29e2f34788b18",
+      "poolId": "0xd501e07c1b0640a4be471ea6a0a29e2f34788b18000200000000000000000160",
+      "poolType": "weighted",
+      "symbol": "80TST/20WETH",
+      "name": "80TST/20WETH",
+      "tokens": [
+        {
+          "address": "0x326aec8d7d99d1d6022c57c5f6194d2a7867227d",
+          "symbol": "TST",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd6e5824b54f64ce6f1161210bc17eebffc77e031",
+      "poolId": "0xd6e5824b54f64ce6f1161210bc17eebffc77e031000100000000000000000006",
+      "poolType": "weighted",
+      "symbol": "BPT-LOVE",
+      "name": "All You Need Is Love",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd74e7d1bdfa2f79ea893542d864d2ee245476b69",
+      "poolId": "0xd74e7d1bdfa2f79ea893542d864d2ee245476b690002000000000000000000fd",
+      "poolType": "weighted",
+      "symbol": "50USDC-50BEETS",
+      "name": "50BEETS-50USDC",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd9c57025b3da04e5bd078c22b69222e92ddb62f6",
+      "poolId": "0xd9c57025b3da04e5bd078c22b69222e92ddb62f600010000000000000000001e",
+      "poolType": "weighted",
+      "symbol": "BPT-STABLE",
+      "name": "Bear Market Pool",
+      "tokens": [
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819",
+          "symbol": "LUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xdc125d09891c5b6b66061e3170e9a1e1c5cf9be4",
+      "poolId": "0xdc125d09891c5b6b66061e3170e9a1e1c5cf9be40002000000000000000000ad",
+      "poolType": "weighted",
+      "symbol": "BPT-IB-RETH",
+      "name": "Galactic Dragon Act II",
+      "tokens": [
+        {
+          "address": "0x00a35fd824c717879bf370e70ac6868b95870dfb",
+          "symbol": "IB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xdcd803c0ad8778662c0a53b4daed81ab9ef06834",
+      "poolId": "0xdcd803c0ad8778662c0a53b4daed81ab9ef06834000200000000000000000001",
+      "poolType": "weighted",
+      "symbol": "BPT-TEST2",
+      "name": "Test Pool 2",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xdd25a7c4ba6bd7e9fea298e4b231379abccca884",
+      "poolId": "0xdd25a7c4ba6bd7e9fea298e4b231379abccca88400020000000000000000011f",
+      "poolType": "weighted",
+      "symbol": "50OP-50USDC.e",
+      "name": "50OP-50USDC.e",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xde45f101250f2ca1c0f8adfc172576d10c12072d",
+      "poolId": "0xde45f101250f2ca1c0f8adfc172576d10c12072d00000000000000000000003f",
+      "poolType": "composableStable",
+      "symbol": "bb-wstETH",
+      "name": "Lido Shuffle",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdd89c7cd0613c1557b2daac6ae663282900204f1",
+          "symbol": "bb-rf-aWETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xde45f101250f2ca1c0f8adfc172576d10c12072d",
+          "symbol": "bb-wstETH",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xdf73fd65f5f480d13a788d57b5ad42cdd6f34742",
+      "poolId": "0xdf73fd65f5f480d13a788d57b5ad42cdd6f34742000100000000000000000134",
+      "poolType": "weighted",
+      "symbol": "33USDC-33OP-33WBTC",
+      "name": "33USDC-33OP-33WBTC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xe0b50b0635b90f7021d2618f76ab9a31b92d0094",
+      "poolId": "0xe0b50b0635b90f7021d2618f76ab9a31b92d009400010000000000000000003a",
+      "poolType": "weighted",
+      "symbol": "test-bb-TRI",
+      "name": "Test Boosted Tricrypto",
+      "tokens": [
+        {
+          "address": "0x9964b1bd3cc530e5c58ba564e45d45290f677be2",
+          "symbol": "test-bb-rf-a-USD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xd3e47cbdb2a9c1b1deb857c6415b87fce63a4bf5",
+          "symbol": "test-bb-rf-aWBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xe906d4c4fc4c3fe96560de86b4bf7ed89af9a69a",
+      "poolId": "0xe906d4c4fc4c3fe96560de86b4bf7ed89af9a69a000200000000000000000126",
+      "poolType": "gyro",
+      "symbol": "bpt-fraxsym",
+      "name": "Frax Symphony",
+      "tokens": [
+        {
+          "address": "0x2dd1b4d4548accea497050619965f91f78b3b532",
+          "symbol": "sFRAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+          "symbol": "FRAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xe94c45de980f914904fdcfa9fbbe7c4a0ffe6ac7",
+      "poolId": "0xe94c45de980f914904fdcfa9fbbe7c4a0ffe6ac70000000000000000000000e0",
+      "poolType": "composableStable",
+      "symbol": "bb-ern-usd",
+      "name": "Dollar Dollar Bills",
+      "tokens": [
+        {
+          "address": "0x64cee2338369aa9b36fc756ea231eb9bc242926f",
+          "symbol": "bb-rfUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe94c45de980f914904fdcfa9fbbe7c4a0ffe6ac7",
+          "symbol": "bb-ern-usd",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xe9949934c882c13d928e2fcf9d99138d3d16a52a",
+      "poolId": "0xe9949934c882c13d928e2fcf9d99138d3d16a52a000200000000000000000116",
+      "poolType": "weighted",
+      "symbol": "50BOB-50BAL",
+      "name": "50BOB-50BAL",
+      "tokens": [
+        {
+          "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
+          "symbol": "BOB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xeb7ee98165b305fbbf9e6bce58229815570c654e",
+      "poolId": "0xeb7ee98165b305fbbf9e6bce58229815570c654e000200000000000000000107",
+      "poolType": "weighted",
+      "symbol": "50AURA-50USDC.e",
+      "name": "Living in Vibration",
+      "tokens": [
+        {
+          "address": "0x1509706a6c66ca549ff0cb464de88231ddbe213b",
+          "symbol": "AURA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+          "symbol": "USDC.e",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xece874b7a9051154866ce79154d653481b0b8759",
+      "poolId": "0xece874b7a9051154866ce79154d653481b0b87590002000000000000000000fb",
+      "poolType": "weighted",
+      "symbol": "50BEETS-50BAL",
+      "name": "50BEETS-50BAL",
+      "tokens": [
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xefb0d9f51efd52d7589a9083a6d0ca4de416c249",
+      "poolId": "0xefb0d9f51efd52d7589a9083a6d0ca4de416c24900020000000000000000002c",
+      "poolType": "weighted",
+      "symbol": "BPT-IBETH",
+      "name": "Puff the Magic Dragon",
+      "tokens": [
+        {
+          "address": "0x00a35fd824c717879bf370e70ac6868b95870dfb",
+          "symbol": "IB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf246fd9800a36907602a02c7c8bf2b11c585218a",
+      "poolId": "0xf246fd9800a36907602a02c7c8bf2b11c585218a000200000000000000000151",
+      "poolType": "weighted",
+      "symbol": "50USDC-50OP",
+      "name": "50USDC-50OP",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf30db0ca4605e5115df91b56bd299564dca02666",
+      "poolId": "0xf30db0ca4605e5115df91b56bd299564dca0266600020000000000000000005d",
+      "poolType": "weighted",
+      "symbol": "BPT-BEET-WSTEH",
+      "name": "Just BEET it",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x97513e975a7fa9072c72c92d8000b0db90b163c5",
+          "symbol": "multiBeets",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf3420d479d8daa6ced1d48097aad67ef38a1fe1c",
+      "poolId": "0xf3420d479d8daa6ced1d48097aad67ef38a1fe1c0001000000000000000000c0",
+      "poolType": "weighted",
+      "symbol": "BPT-GTRAIN",
+      "name": "All Aboard The GRAIN Train",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc5b001dc33727f8f26880b184090d3e252470d45",
+          "symbol": "ERN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfd389dc9533717239856190f42475d3f263a270d",
+          "symbol": "GRAIN",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf5521ca6a3295babb4b2729931cd358be35da7e3",
+      "poolId": "0xf5521ca6a3295babb4b2729931cd358be35da7e3000100000000000000000125",
+      "poolType": "weighted",
+      "symbol": "1",
+      "name": "Pool",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
+          "symbol": "LINK",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6fd9d7ad17242c41f7131d257212c54a0e816691",
+          "symbol": "UNI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+          "symbol": "sUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xf572649606db4743d217a2fa6e8b8eb79742c24a",
+      "poolId": "0xf572649606db4743d217a2fa6e8b8eb79742c24a000000000000000000000039",
+      "poolType": "composableStable",
+      "symbol": "test-bb-USD-MAI",
+      "name": "Test Boosted USD/MAI",
+      "tokens": [
+        {
+          "address": "0x9964b1bd3cc530e5c58ba564e45d45290f677be2",
+          "symbol": "test-bb-rf-a-USD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+          "symbol": "MAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf572649606db4743d217a2fa6e8b8eb79742c24a",
+          "symbol": "test-bb-USD-MAI",
+          "decimals": 18,
+          "isPhantomBpt": true
+        }
+      ]
+    },
+    {
+      "address": "0xf8be10127b47b532b7af1ac919e0d0cb46bcd294",
+      "poolId": "0xf8be10127b47b532b7af1ac919e0d0cb46bcd294000200000000000000000135",
+      "poolType": "weighted",
+      "symbol": "50USDC-50USDT",
+      "name": "50USDC-50USDT",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "symbol": "USDT",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xfe8c531ba9d4d9ccfd64167e389c15f47eb05fbe",
+      "poolId": "0xfe8c531ba9d4d9ccfd64167e389c15f47eb05fbe000200000000000000000122",
+      "poolType": "weighted",
+      "symbol": "50USDC-50WBTC",
+      "name": "50USDC-50WBTC",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xfedc53c698593e4283ab0b306d43daccd8914ef8",
+      "poolId": "0xfedc53c698593e4283ab0b306d43daccd8914ef8000200000000000000000127",
+      "poolType": "weighted",
+      "symbol": "50OP-50WBTC",
+      "name": "50OP-50WBTC",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xfef82dad4428471b8473c8c4c6f6ce2ac6b51c84",
+      "poolId": "0xfef82dad4428471b8473c8c4c6f6ce2ac6b51c84000100000000000000000145",
+      "poolType": "weighted",
+      "symbol": "33CRV-33SNX-33BAL",
+      "name": "33CRV-33SNX-33BAL",
+      "tokens": [
+        {
+          "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
+          "symbol": "CRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xffca204a8417c259555563e7da7ddc89437a374a",
+      "poolId": "0xffca204a8417c259555563e7da7ddc89437a374a00010000000000000000015e",
+      "poolType": "weighted",
+      "symbol": "13wstETH-13sBTC-25aOptSUSD-25sEUR-6SNX-6AAVE-6BAL-6CRV",
+      "name": "MicroPhone",
+      "tokens": [
+        {
+          "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
+          "symbol": "CRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x298b9b95708152ff6968aafd889c6586e9169f1d",
+          "symbol": "sBTC",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+          "symbol": "aOptSUSD",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278",
+          "symbol": "AAVE",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+          "symbol": "SNX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfbc4198702e81ae77c06d58f81b629bdf36f0a71",
+          "symbol": "sEUR",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+          "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    }
+  ],
+  "v3Pools": [
+    {
+      "address": "0x0854c8fa68cff2ac363b541f08f35181ca51b870",
+      "symbol": "bpt-50sfrxUSD-50waOptWETH",
+      "name": "Crossfade Connector",
+      "tokens": [
+        {
+          "address": "0x464b808c2c7e04b07e860fdf7a91870620246148",
+          "symbol": "waOptWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+          "symbol": "sfrxUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x08a8bba83af849e3755771a4070aec87c9d6b86e",
+      "symbol": "eclp-sfrxETH-waOptWETH",
+      "name": "Tight Harmony: Aave & Frax",
+      "tokens": [
+        {
+          "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+          "symbol": "sfrxETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x464b808c2c7e04b07e860fdf7a91870620246148",
+          "symbol": "waOptWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0dc0f78304e67b2fb7f401b1ca793a6268d94ffd",
+      "symbol": "stkETHindex",
+      "name": "STAKE SALAD",
+      "tokens": [
+        {
+          "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "symbol": "wstETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+          "symbol": "sfrxETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x645a7cda7c6770a1e45272a85445a42eac131d62",
+          "symbol": "stkETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4291b31b17511a26e4131da396145ef6a5f83875",
+      "symbol": "20WETH/80VLR",
+      "name": "20WETH/80VLR",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "symbol": "VLR",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x48be2c94d963e96933af3386351f0173b5f79563",
+      "symbol": "WETH-rETH",
+      "name": "WETH rETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x49e75c0df48ad09a0e20e8bbded07ee60dd8bc03",
+      "symbol": "ss-sfrxETH-rETH-wstETH",
+      "name": "The Triplet Encore",
+      "tokens": [
+        {
+          "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+          "symbol": "sfrxETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x8e6a81b9d541a0cea090818b62c4b2de7f2a2cf7",
+          "symbol": "waOptrETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xbaf95bb30cdab3d5b7a11b67edef5631bd62be86",
+          "symbol": "waOptwstETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x7d2a1ebb6ce9901ce5581c6feab5b7250220e7a0",
+      "symbol": "WETH-OP",
+      "name": "WETH / OP HN TEST",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x870c0af8a1af0b58b4b0bd31ce4fe72864ae45be",
+      "symbol": "Balancer rETH-Aave wETH",
+      "name": "Balancer rETH-Aave wETH",
+      "tokens": [
+        {
+          "address": "0x464b808c2c7e04b07e860fdf7a91870620246148",
+          "symbol": "waOptWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+          "symbol": "rETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x8f2f228ef6ae71fcfe523c2d584acd653286470c",
+      "symbol": "surge-waOptWETH-alETH",
+      "name": "Balancer surge waOptWETH-alETH",
+      "tokens": [
+        {
+          "address": "0x3e29d3a9316dab217754d13b28646b76607c5f04",
+          "symbol": "alETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x464b808c2c7e04b07e860fdf7a91870620246148",
+          "symbol": "waOptWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa4dd31a2725f74163b5826bbd1dfe7684215b104",
+      "symbol": "eclp-sfrxUSD-waOptUSDCn",
+      "name": "Duet in Yield Major",
+      "tokens": [
+        {
+          "address": "0x41b334e9f2c0ed1f30fd7c351874a6071c53a78e",
+          "symbol": "waOptUSDCn",
+          "decimals": 6
+        },
+        {
+          "address": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+          "symbol": "sfrxUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xb02ec44f5682163ba88de78245c42416d982a1fb",
+      "symbol": "OP-WETH",
+      "name": "OP / WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xb2ec475459429a3ccacfb7dceed23131e2109ed4",
+      "symbol": "bpt-50WFRAX-50sfrxUSD",
+      "name": "Just FRAX",
+      "tokens": [
+        {
+          "address": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+          "symbol": "sfrxUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+          "symbol": "WFRAX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xc3d3efc13478f7eaeac6081443c086d9dcc4e345",
+      "symbol": "WETH-USDC",
+      "name": "WETH USDC test",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xcee3c0b23b0f505efe4d8e56869230e154c8bc3d",
+      "symbol": "weETH-waOptwstETH",
+      "name": "Into the Ether",
+      "tokens": [
+        {
+          "address": "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
+          "symbol": "weETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xbaf95bb30cdab3d5b7a11b67edef5631bd62be86",
+          "symbol": "waOptwstETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xcf9c3480927cee119015841cd5d85d970ee83e56",
+      "symbol": "20WETH/80XYZ",
+      "name": "20WETH/80XYZ",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xa2781111f824ca1cd98454b2c9722baefc898e99",
+          "symbol": "XYZ",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdb4f26e5fd14a32551f417751c6b1701979ba63b",
+      "symbol": "WBTC-USDC",
+      "name": "WBTC USDC test",
+      "tokens": [
+        {
+          "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0xe0d0b607539fdb647c4e87eff89588c6bb669c03",
+      "symbol": "bpt-wrsETH-waOptWETH",
+      "name": "Waves & Reverbs in Aave Minor",
+      "tokens": [
+        {
+          "address": "0x464b808c2c7e04b07e860fdf7a91870620246148",
+          "symbol": "waOptWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
+          "symbol": "wrsETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xea6188e365fadbf826b59776e8ed9ac62764da0e",
+      "symbol": "BRO ` OP",
+      "name": "кирилические Мемы",
+      "tokens": [
+        {
+          "address": "0x2a2f3d4a3b1a62b0d04c3f1307f2210514d0b47b",
+          "symbol": "спсС",
+          "decimals": 18
+        },
+        {
+          "address": "0x2d7893c084611ad25b8be2a828247c59b80725ad",
+          "symbol": "вКЕФ",
+          "decimals": 18
+        },
+        {
+          "address": "0x667c4e3667f9c46b3f9c7ee8938f17afa61d55c7",
+          "symbol": "BRO",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xec48d9a2e33df6d003b5d1c4726a1196610a461a",
+      "symbol": "WBTC-WETH",
+      "name": "WBTC WETH test",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "symbol": "WBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0xfa421da7b4b32a328884d848e17bf1e51d3de163",
+      "symbol": "50-WETH-50-OP",
+      "name": "50% WETH / 50% OP",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0x4200000000000000000000000000000000000042",
+          "symbol": "OP",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xfe76069d2b3e4e286884f4a4910a8fe4adb8a835",
+      "symbol": "WLFI-WETH",
+      "name": "WLFI WETH",
+      "tokens": [
+        {
+          "address": "0x4200000000000000000000000000000000000006",
+          "symbol": "WETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xbd846e83f7dcfdf69dcdb339c05821a4eba476f0",
+          "symbol": "WLFI",
+          "decimals": 18
+        }
+      ]
+    }
+  ],
+  "gauges": [
+    {
+      "address": "0x00a2bd63529fd28d777155f5ed1726e9b9b781b4",
+      "lpToken": "0x39965c9dab5448482cf7e002f583c812ceb53046",
+      "symbol": "BPT-ROAD"
+    },
+    {
+      "address": "0x01de5e6ec37ab62a32afe956d70493e317b23479",
+      "lpToken": "0xc77e5645dbe48d54afc06655e39d3fe17eb76c1c",
+      "symbol": "BPT-LDO-WSTEH"
+    },
+    {
+      "address": "0x022e09393d1897ff4dda12b274174c630ff7ecb8",
+      "lpToken": "0xa4dd31a2725f74163b5826bbd1dfe7684215b104",
+      "symbol": "eclp-sfrxUSD-waOptUSDCn"
+    },
+    {
+      "address": "0x028591c6e8dfeb2e315ddc2647adbfc5a62b4f77",
+      "lpToken": "0xcb7d357c84b101e3d559ff4845cef63d7d0753ef",
+      "symbol": "bpt-wrseth-wsteth"
+    },
+    {
+      "address": "0x0290377d73c7cdf57e24945dfc4e2056434a8a11",
+      "lpToken": "0x250a1381f79593b96b462fb0d575c75795f80332",
+      "symbol": "weETH/wETH"
+    },
+    {
+      "address": "0x02ab6fe6b3af13b4f859001486dc75f2dac79026",
+      "lpToken": "0x1d95129c18a8c91c464111fdf7d0eb241b37a985",
+      "symbol": "BPT-RESERVE"
+    },
+    {
+      "address": "0x072e290b2eda352b5ab630b0d43d4435c297a41a",
+      "lpToken": "0x899f737750db562b88c1e412ee1902980d3a4844",
+      "symbol": "BPT-WSTETH-USDC"
+    },
+    {
+      "address": "0x07db07e3fdb6e071e22bf7ebd9bc18d5cef5b3a6",
+      "lpToken": "0x5028497af0c9a54ea8c6d42a054c0341b9fc6168",
+      "symbol": "BPT-LONG"
+    },
+    {
+      "address": "0x08bbfc60dbfc14a803d5bd2aaf1596116f581efb",
+      "lpToken": "0x0604d50e1a314e0b8963a8387713ec0b539920b3",
+      "symbol": "BPT-O70EE15"
+    },
+    {
+      "address": "0x0b9b6b5c0e4ca6107b41c461346242836dbec9f3",
+      "lpToken": "0x8f2f228ef6ae71fcfe523c2d584acd653286470c",
+      "symbol": "surge-waOptWETH-alETH"
+    },
+    {
+      "address": "0x0e5973d6bd0938216452e3a5502fa331b7ad63f7",
+      "lpToken": "0x9ff36e48edbf6cb910ebf9ef70f6aeba41391fce",
+      "symbol": "ECLP-WETH-USDC-dyn"
+    },
+    {
+      "address": "0x0fc7e27e4cb8e6fbcc5996444be301d26fc32f1a",
+      "lpToken": "0xc05ab1b0ad472ce802e2c8db6f23e4a2865fdca6",
+      "symbol": "bpt-steamounrhyt"
+    },
+    {
+      "address": "0x1bc536d34897603f562d94601d16f67b4d497ebc",
+      "lpToken": "0x1f131ec1175f023ee1534b16fa8ab237c00e2381",
+      "symbol": "bbrfaUSD-MAI"
+    },
+    {
+      "address": "0x1c438149e3e210233fce91eee1c097d34fd655c2",
+      "lpToken": "0x785f08fb77ec934c01736e30546f87b4daccbe50",
+      "symbol": "IBT-IBRETH"
+    },
+    {
+      "address": "0x1f2464f29ca077f3c76d5528ad2980f2ea62cbb8",
+      "lpToken": "0xd20f6f1d8a675cdca155cb07b5dc9042c467153f",
+      "symbol": "BPT-BOATH"
+    },
+    {
+      "address": "0x1fe76b47149a6b7f4c9216ea554bc1a3769693d5",
+      "lpToken": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a4",
+      "symbol": "bpt-onsteady"
+    },
+    {
+      "address": "0x208024d089801636d851c7fb060aa4c412ef0415",
+      "lpToken": "0x0604d50e1a314e0b8963a8387713ec0b539920b3",
+      "symbol": "BPT-O70EE15"
+    },
+    {
+      "address": "0x2d6743160ab3038af12c6a6b605c683bc9e4f0b6",
+      "lpToken": "0x5028497af0c9a54ea8c6d42a054c0341b9fc6168",
+      "symbol": "BPT-LONG"
+    },
+    {
+      "address": "0x2d801513d36aa8aa2579133507462f0de05a40ff",
+      "lpToken": "0x428e1cc3099cf461b87d124957a0d48273f334b1",
+      "symbol": "bbrfsoUSD"
+    },
+    {
+      "address": "0x2f617e73ee6c9f99368e72a1e4a187ec5ae8bd93",
+      "lpToken": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a4",
+      "symbol": "bpt-onsteady"
+    },
+    {
+      "address": "0x317e0451da949ee999aac2d7bc063737f5fe84e5",
+      "lpToken": "0x478980c67d53cd990f2b7bab311ddc9934324e7b",
+      "symbol": "bpt-allrdsfrx"
+    },
+    {
+      "address": "0x320da6adbc8ca573a41b9dfcb369b748753c6ebc",
+      "lpToken": "0x08a8bba83af849e3755771a4070aec87c9d6b86e",
+      "symbol": "eclp-sfrxETH-waOptWETH"
+    },
+    {
+      "address": "0x32441cb2da08a3f4c63e29834e155c0434d50e6a",
+      "lpToken": "0x23ca0306b21ea71552b148cf3c4db4fc85ae1929",
+      "symbol": "bbrfsoUSD"
+    },
+    {
+      "address": "0x3390775882d3e8636c0c112a10b34d234f34d7a9",
+      "lpToken": "0x8a2872fd28f42bd9f6559907235e83fbf4167f48",
+      "symbol": "bb-rf-triple"
+    },
+    {
+      "address": "0x3672884a609bfbb008ad9252a544f52df6451a03",
+      "lpToken": "0xefb0d9f51efd52d7589a9083a6d0ca4de416c249",
+      "symbol": "BPT-IBETH"
+    },
+    {
+      "address": "0x3840d1d193e9bad2d1363f6f296af3f4e168e59d",
+      "lpToken": "0x359ea8618c405023fc4b98dab1b01f373792a126",
+      "symbol": "bb-WONDER"
+    },
+    {
+      "address": "0x38f79beffc211c6c439b0a3d10a0a673ee63afb4",
+      "lpToken": "0x4fd63966879300cafafbb35d157dc5229278ed23",
+      "symbol": "BPT-rETH-ETH"
+    },
+    {
+      "address": "0x390e36102245eac08e5b3d4527b30b3a645f16d7",
+      "lpToken": "0x0244b0025264dc5f5c113d472d579c9c994a59ce",
+      "symbol": "BPT-OPARA"
+    },
+    {
+      "address": "0x3bbfb3bd4ce5764373e2f9bbbecc3113b0a42828",
+      "lpToken": "0x43da214fab3315aa6c02e0b8f2bfb7ef2e3c60a5",
+      "symbol": "BPT-overnight-II"
+    },
+    {
+      "address": "0x3ce5dd8d3c2df2bb599a94523509004d2af17516",
+      "lpToken": "0xb0de49429fbb80c635432bbad0b3965b28560177",
+      "symbol": "bb-HAPPY"
+    },
+    {
+      "address": "0x4496c59363397d655cbbbea2441c16c7b7e8c69b",
+      "lpToken": "0x4fd63966879300cafafbb35d157dc5229278ed23",
+      "symbol": "BPT-rETH-ETH"
+    },
+    {
+      "address": "0x46d703d3c88a327eeaecfcd9357a2f1ddec2ed56",
+      "lpToken": "0x7ed087afab0b2653c8137744916ed1aba97e2fa2",
+      "symbol": "BPT-OATHUSD"
+    },
+    {
+      "address": "0x4768753e2c42d456a1a1c2cbab93b4a2ab57e27b",
+      "lpToken": "0x49e75c0df48ad09a0e20e8bbded07ee60dd8bc03",
+      "symbol": "ss-sfrxETH-rETH-wstETH"
+    },
+    {
+      "address": "0x476f2dedf358eb87c4c22dfaf5e511f68e0272e0",
+      "lpToken": "0x0ccb0c34d4898dfa8de3ece9d814074e60adefd0",
+      "symbol": "bpt-ineth-wsteth"
+    },
+    {
+      "address": "0x47a063ae87c3c8c9bfbd81d55eefa6683543148a",
+      "lpToken": "0xd6e5824b54f64ce6f1161210bc17eebffc77e031",
+      "symbol": "BPT-LOVE"
+    },
+    {
+      "address": "0x48b0a702139cad717f760ebf55c817d545a415ca",
+      "lpToken": "0xc9eb4b8ce914ee451360b315ffd1d1af8df96be9",
+      "symbol": "bpt-insteth-wsteth"
+    },
+    {
+      "address": "0x4b07acbfc529b29a05c92690951438eb1ee8b94c",
+      "lpToken": "0x8b6d3aa69c1cf47677281691b1abf3831ba1329d",
+      "symbol": "bb-rf-SOTRI"
+    },
+    {
+      "address": "0x4eda46c9921c8e928e559f3f0b5b9d3ec3df8ae9",
+      "lpToken": "0x3dc09db8e571da76dd04e9176afc7feee0b89106",
+      "symbol": "BPT-FRAX-MAI"
+    },
+    {
+      "address": "0x51ae6873e488115275bd9df3719c2a287f38cc85",
+      "lpToken": "0xcd7b2232b7435595bbc7fd7962f1f352fc2cc61a",
+      "symbol": "bb-rf-usd"
+    },
+    {
+      "address": "0x53bff7a10181e4fa2a92011de9816220e0dadd41",
+      "lpToken": "0xc1f46ce83439886f0ea9c21512b36e7e67239d2c",
+      "symbol": "bpt-roabee"
+    },
+    {
+      "address": "0x5669fb0dcfa758bf69fb3adab14578ede14cc89a",
+      "lpToken": "0x5f8893506ddc4c271837187d14a9c87964a074dc",
+      "symbol": "bpt-ethtri"
+    },
+    {
+      "address": "0x5a861547ff6bc5c9aa72b5a4ab0103179939dbe8",
+      "lpToken": "0xdc125d09891c5b6b66061e3170e9a1e1c5cf9be4",
+      "symbol": "BPT-IB-RETH"
+    },
+    {
+      "address": "0x5cb64e0011365c1c771631c3caa7f08bc39e691b",
+      "lpToken": "0xf3420d479d8daa6ced1d48097aad67ef38a1fe1c",
+      "symbol": "BPT-GTRAIN"
+    },
+    {
+      "address": "0x5e0ead6739baa486039a3b0f0133af0f70182140",
+      "lpToken": "0xd20f6f1d8a675cdca155cb07b5dc9042c467153f",
+      "symbol": "BPT-BOATH"
+    },
+    {
+      "address": "0x6341b7472152d7b7f9af3158c6a42349a2ca6c72",
+      "lpToken": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2",
+      "symbol": "BPT-WSTETH-WETH"
+    },
+    {
+      "address": "0x66aa222ffb3181f79748aaf8e448969d175aae1a",
+      "lpToken": "0x3c74c4ed512050eb843d89fb9dcd5ebb4668eb6d",
+      "symbol": "bb-moo-exETHUSDC"
+    },
+    {
+      "address": "0x68d09494c9994fea91ce0fcc286f07b663f6fcda",
+      "lpToken": "0x373643b17cd80e37675c8c98ef774efe6ca0b4de",
+      "symbol": "BPT-STABEET"
+    },
+    {
+      "address": "0x6cd55305bf5b88c392ee3832a19dbc8c2234937f",
+      "lpToken": "0xdc125d09891c5b6b66061e3170e9a1e1c5cf9be4",
+      "symbol": "BPT-IB-RETH"
+    },
+    {
+      "address": "0x6da0597f0072428ea116f99047ba191afc66c533",
+      "lpToken": "0x58910d5bd045a20a37de147f8acea75b2d881f61",
+      "symbol": "ECLP-USDT-USDC"
+    },
+    {
+      "address": "0x6e7b42e32ba4bd6ca479e6e0ef5bf354c1e0e0ae",
+      "lpToken": "0x3f16f0301b62015b926c3b559b645a5a0e19d8aa",
+      "symbol": "BPT-MAISELF-I"
+    },
+    {
+      "address": "0x6ef729bd61dca1b9b52745db37d43503ae0916f9",
+      "lpToken": "0x8bb826afc0ff7d2c034a2883f4c461ffd238e1c3",
+      "symbol": "RSB"
+    },
+    {
+      "address": "0x70535841c362f83b4e1425066bfba9bf87e1b984",
+      "lpToken": "0x00b82bc5edea6e5e6c77635e31a1a25aad99f881",
+      "symbol": "80OVN/20wUSD+"
+    },
+    {
+      "address": "0x73b26229033c0d8141a2357dd90cededd5b50731",
+      "lpToken": "0x00b82bc5edea6e5e6c77635e31a1a25aad99f881",
+      "symbol": "80OVN/20wUSD+"
+    },
+    {
+      "address": "0x74aa3d1d937452e1611ce378feaca3c506943dc9",
+      "lpToken": "0xbec621c9ab4ceddcc2a157ca9b5c475fab65f6a4",
+      "symbol": "bpt-onsteady"
+    },
+    {
+      "address": "0x758d3297d9d9325efb6dd424a7b2edcab47e309e",
+      "lpToken": "0x2feb76966459d7841fa8a7ed0aa4bf574d6111bf",
+      "symbol": "bpt-yieldconcerto"
+    },
+    {
+      "address": "0x78d414ef057f6148bee2cefdda5de8323b5cfce6",
+      "lpToken": "0x7ed087afab0b2653c8137744916ed1aba97e2fa2",
+      "symbol": "BPT-OATHUSD"
+    },
+    {
+      "address": "0x7b561bacfc637319685fa9a2effa562625815e2f",
+      "lpToken": "0xd6e5824b54f64ce6f1161210bc17eebffc77e031",
+      "symbol": "BPT-LOVE"
+    },
+    {
+      "address": "0x7f49fd5bbae84ec46d604fbd5d650ca67c1b4185",
+      "lpToken": "0xb2ec475459429a3ccacfb7dceed23131e2109ed4",
+      "symbol": "bpt-50WFRAX-50sfrxUSD"
+    },
+    {
+      "address": "0x7f9e33c5b325a3a1017c18af81da20537ecc3612",
+      "lpToken": "0x7d6bff131b359da66d92f215fd4e186003bfaa42",
+      "symbol": "BPT-USD+"
+    },
+    {
+      "address": "0x80add8a1bf48ab726b96f19ae1bf27a39e3c9cbd",
+      "lpToken": "0x2a5139cd86c041aa3467e649f5ee0880a5de2f2f",
+      "symbol": "bpt-stadue"
+    },
+    {
+      "address": "0x81e8a3b56b20597f08b505afe9b0454d9b3de83f",
+      "lpToken": "0x870c0af8a1af0b58b4b0bd31ce4fe72864ae45be",
+      "symbol": "Balancer rETH-Aave wETH"
+    },
+    {
+      "address": "0x880d9b16398c161098d58f9ce77792eb35a24f88",
+      "lpToken": "0x098f32d98d0d64dba199fc1923d3bf4192e78719",
+      "symbol": "bb-rf-SOTRI"
+    },
+    {
+      "address": "0x88726ff53ee2dc7f55c17fbd93521b8b92519f49",
+      "lpToken": "0x23ca0306b21ea71552b148cf3c4db4fc85ae1929",
+      "symbol": "bbrfsoUSD"
+    },
+    {
+      "address": "0x8b27afe1cdf0bd5858b4b95815cde0c103030750",
+      "lpToken": "0x0244b0025264dc5f5c113d472d579c9c994a59ce",
+      "symbol": "BPT-OPARA"
+    },
+    {
+      "address": "0x92f714ae8c2150b7a7a75c6c97656bd4b348ca9e",
+      "lpToken": "0x39965c9dab5448482cf7e002f583c812ceb53046",
+      "symbol": "BPT-ROAD"
+    },
+    {
+      "address": "0x950fdbee03900487ebc3ac54daf4c988e7c02678",
+      "lpToken": "0xde45f101250f2ca1c0f8adfc172576d10c12072d",
+      "symbol": "bb-wstETH"
+    },
+    {
+      "address": "0x97ff1e71620b7638bf82204763e5c04a6d554a40",
+      "lpToken": "0x3f16f0301b62015b926c3b559b645a5a0e19d8aa",
+      "symbol": "BPT-MAISELF-I"
+    },
+    {
+      "address": "0x9f9f8d58496691d541c40dbc2b1b20f8c43e8d8c",
+      "lpToken": "0x7ca75bdea9dede97f8b13c6641b768650cb83782",
+      "symbol": "ECLP-wstETH-WETH"
+    },
+    {
+      "address": "0xa066243ba7dad6c779caa1f9417910a4ae83cf4d",
+      "lpToken": "0xb1c9ac57594e9b1ec0f3787d9f6744ef4cb0a024",
+      "symbol": "BPT-USD+"
+    },
+    {
+      "address": "0xa15c762974ba3ac59abc305fba097a0e564f7470",
+      "lpToken": "0x73a7fe27fe9545d53924e529acf11f3073841b9e",
+      "symbol": "wrsETH/wETH"
+    },
+    {
+      "address": "0xa30992b40a0cb4b2da081ddbd843f9cce25c2fe3",
+      "lpToken": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2",
+      "symbol": "BPT-WSTETH-WETH"
+    },
+    {
+      "address": "0xa522d1505e6dd499d8e034f34d9a3714b981e90d",
+      "lpToken": "0x098f32d98d0d64dba199fc1923d3bf4192e78719",
+      "symbol": "bb-rf-SOTRI"
+    },
+    {
+      "address": "0xa762c3fa717fcf3aa2e3f3e0b90ebb185ea524cc",
+      "lpToken": "0x102ba5c72e4bdf8e9243340425f0e523f8983d03",
+      "symbol": "BPT-WGRAIN"
+    },
+    {
+      "address": "0xa8c12e71265a24cf6bded60cb746db2d4798fb13",
+      "lpToken": "0xe94c45de980f914904fdcfa9fbbe7c4a0ffe6ac7",
+      "symbol": "bb-ern-usd"
+    },
+    {
+      "address": "0xbaf734f9c7afb2505298aff746be6c8d93c790a6",
+      "lpToken": "0x0854c8fa68cff2ac363b541f08f35181ca51b870",
+      "symbol": "bpt-50sfrxUSD-50waOptWETH"
+    },
+    {
+      "address": "0xbd54c9dbd7b4d82c80759790f8c566c3deaad6a5",
+      "lpToken": "0x981fb05b738e981ac532a99e77170ecb4bc27aef",
+      "symbol": "bb-YELLOW"
+    },
+    {
+      "address": "0xc19055c2ff199ba6190505ef776573c8b7cc676a",
+      "lpToken": "0x004700ba0a4f5f22e1e78a277fca55e36f47e09c",
+      "symbol": "bpt-ankrgalaharm"
+    },
+    {
+      "address": "0xc46ab6aa92f7c30b8fb1d445b4b957203ebbbd6e",
+      "lpToken": "0xa71021492a3966eec735ed1b505afa097c7cfe6f",
+      "symbol": "bpt-fraxethe"
+    },
+    {
+      "address": "0xc9073a432a062e9a637daaf36a244b199605bff3",
+      "lpToken": "0x362715c164d606682c4ea7e479633e419d9345eb",
+      "symbol": "bb-rf-triyie"
+    },
+    {
+      "address": "0xc9b49e2ae035de1cfa69b4d524a8b5cfedc1a340",
+      "lpToken": "0x876e0a21626c33bdab879330505eccc6091aa607",
+      "symbol": "GDSRH"
+    },
+    {
+      "address": "0xca64d546125852c00cb27eae3e1efe03d2439f03",
+      "lpToken": "0xacfe9b4782910a853b68abba60f3fd8049ffe638",
+      "symbol": "bpt-dolausdc"
+    },
+    {
+      "address": "0xcc2e1cb5d8dea77f08d19f875f381f34f997d96c",
+      "lpToken": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+      "symbol": "bpt-stablebeets"
+    },
+    {
+      "address": "0xcf69061c06e57ae8f284e6d2ee0e889bd671ab10",
+      "lpToken": "0x7ef99013e446ddce2486b8e04735b7019a115e6f",
+      "symbol": "BPT-8TRACK"
+    },
+    {
+      "address": "0xcf9ac400524831fc9640bb5e521e4c8083aad211",
+      "lpToken": "0xe0d0b607539fdb647c4e87eff89588c6bb669c03",
+      "symbol": "bpt-wrsETH-waOptWETH"
+    },
+    {
+      "address": "0xd253638e82ac3832aa1b8247fe366a797c954e98",
+      "lpToken": "0x43da214fab3315aa6c02e0b8f2bfb7ef2e3c60a5",
+      "symbol": "BPT-overnight-II"
+    },
+    {
+      "address": "0xd59cf6c351902f8154a533b333358dfeeb60f23b",
+      "lpToken": "0x7ad4f5536d903aea6f973f36e18f5b4610a7583e",
+      "symbol": "TEST-WEIGHTED"
+    },
+    {
+      "address": "0xdbf19344b5c981ead082830ec4c065b16f479b4f",
+      "lpToken": "0xdcd803c0ad8778662c0a53b4daed81ab9ef06834",
+      "symbol": "BPT-TEST2"
+    },
+    {
+      "address": "0xdc785bc8280d8fdb89aeb4980e061e34a34e71d4",
+      "lpToken": "0x6222ae1d2a9f6894da50aa25cb7b303497f9bebd",
+      "symbol": "bb-rf-aUSD"
+    },
+    {
+      "address": "0xe313a5f9efc0a9f7439ba3cbfa4471465ba350eb",
+      "lpToken": "0x62cf35db540152e94936de63efc90d880d4e241b",
+      "symbol": "bb-dolbil"
+    },
+    {
+      "address": "0xe7d2e422098d8b3af11695a734d347563ae160cb",
+      "lpToken": "0x05e7732bf9ae5592e6aa05afe8cd80f7ab0a7bea",
+      "symbol": "bb-STG-USD"
+    },
+    {
+      "address": "0xecfd1cdff5f9d2a2ff825efbade699a53c14cd8b",
+      "lpToken": "0xac9f52e656cee6097bd7b8a251b33529b5e30bd5",
+      "symbol": "ECLP-wUSDM-USDC-rh"
+    },
+    {
+      "address": "0xef47a07945d53ee3a511751375a1ed0b79d6232d",
+      "lpToken": "0x373643b17cd80e37675c8c98ef774efe6ca0b4de",
+      "symbol": "BPT-STABEET"
+    },
+    {
+      "address": "0xefba6c3d81737bc6641b848345f497268d2807ca",
+      "lpToken": "0xf3420d479d8daa6ced1d48097aad67ef38a1fe1c",
+      "symbol": "BPT-GTRAIN"
+    },
+    {
+      "address": "0xf27d53f21d024643d50de50183932f17638229f6",
+      "lpToken": "0x4fd63966879300cafafbb35d157dc5229278ed23",
+      "symbol": "BPT-rETH-ETH"
+    },
+    {
+      "address": "0xf3b314b1d2bd7d9afa8ec637716a9bb81dbc79e5",
+      "lpToken": "0x2bb4712247d5f451063b5e4f6948abdfb925d93d",
+      "symbol": "bpt-weethwsteth"
+    },
+    {
+      "address": "0xf496794778d49e6ce1af5cdbd3231ee3bd293ec0",
+      "lpToken": "0x1d95129c18a8c91c464111fdf7d0eb241b37a985",
+      "symbol": "BPT-RESERVE"
+    },
+    {
+      "address": "0xf5d49cca719dd06e12a7901cbd4180ed1d9ea260",
+      "lpToken": "0x479a7d1fcdd71ce0c2ed3184bfbe9d23b92e8337",
+      "symbol": "bb-rf-aUSD-asUSD"
+    },
+    {
+      "address": "0xf6b4ace2d69a0c6f966d44448692ca392f29029a",
+      "lpToken": "0xe906d4c4fc4c3fe96560de86b4bf7ed89af9a69a",
+      "symbol": "bpt-fraxsym"
+    },
+    {
+      "address": "0xf81ad13a64db335b3641649d229c53c14cff9eb8",
+      "lpToken": "0x102ba5c72e4bdf8e9243340425f0e523f8983d03",
+      "symbol": "BPT-WGRAIN"
+    },
+    {
+      "address": "0xfe1538a8efb7adcfc4ee0621f38e319d9e1cb302",
+      "lpToken": "0x8b6d3aa69c1cf47677281691b1abf3831ba1329d",
+      "symbol": "bb-rf-SOTRI"
+    }
+  ]
+}

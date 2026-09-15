@@ -1,7 +1,7 @@
 /**
  * One-off codegen: builds src/config/registry.json from sibling repos.
  * Addresses are machine-extracted (never hand-typed) from:
- *   - balancer-subgraph-v2/networks.json   (v2 vault + pool factories + start blocks)
+ *   - balancer-subgraph-v2/networks.yaml   (v2 vault + pool factories + start blocks)
  *   - balancer-subgraph-v3/networks.json   (v3 vault + start block)
  *   - gauges-subgraph/subgraph.<chain>.yaml (child-chain gauge factories)
  *   - backend/config/<chain>.ts            (chain id, rpc, queries, v3 router, multicall3)
@@ -17,7 +17,40 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const reposArg = process.argv.indexOf('--repos')
 const REPOS = reposArg > -1 ? process.argv[reposArg + 1] : join(__dirname, '..', '..')
 
-const V2_NETWORKS = JSON.parse(readFileSync(join(REPOS, 'balancer-subgraph-v2', 'networks.json'), 'utf8'))
+function parseFlatNetworksYaml(src) {
+  const networks = {}
+  let network = null
+  let contract = null
+
+  for (const rawLine of src.split(/\r?\n/)) {
+    const line = rawLine.replace(/\s+#.*$/, '')
+    let match
+    if ((match = line.match(/^([\w-]+):\s*$/))) {
+      network = match[1]
+      contract = null
+      networks[network] = {}
+    } else if (network && (match = line.match(/^  ([\w-]+):\s*$/))) {
+      contract = match[1]
+      networks[network][contract] = {}
+    } else if (network && contract && (match = line.match(/^    ([\w-]+):\s*(.+?)\s*$/))) {
+      const value = match[2].replace(/^['"]|['"]$/g, '')
+      networks[network][contract][match[1]] = /^\d+$/.test(value) ? Number(value) : value
+    } else if (network && (match = line.match(/^  ([\w-]+):\s*(.+?)\s*$/))) {
+      const value = match[2].replace(/^['"]|['"]$/g, '')
+      networks[network][match[1]] = /^\d+$/.test(value) ? Number(value) : value
+    }
+  }
+  return networks
+}
+
+function readV2Networks() {
+  const dir = join(REPOS, 'balancer-subgraph-v2')
+  const jsonPath = join(dir, 'networks.json')
+  if (existsSync(jsonPath)) return JSON.parse(readFileSync(jsonPath, 'utf8'))
+  return parseFlatNetworksYaml(readFileSync(join(dir, 'networks.yaml'), 'utf8'))
+}
+
+const V2_NETWORKS = readV2Networks()
 const V3_NETWORKS = JSON.parse(readFileSync(join(REPOS, 'balancer-subgraph-v3', 'networks.json'), 'utf8'))
 const GAUGES_DIR = join(REPOS, 'gauges-subgraph')
 const BACKEND_CONFIG = join(REPOS, 'backend', 'config')
@@ -35,7 +68,7 @@ const V1_MAINNET = {
 // Public RPC fallbacks for chains whose backend config uses env-keyed (dRPC) URLs
 const PUBLIC_RPC = {
   mainnet: 'https://ethereum-rpc.publicnode.com',
-  polygon: 'https://polygon-rpc.com',
+  polygon: 'https://polygon-bor-rpc.publicnode.com',
   arbitrum: 'https://arb1.arbitrum.io/rpc',
   gnosis: 'https://rpc.gnosischain.com',
   optimism: 'https://mainnet.optimism.io',
@@ -56,13 +89,13 @@ const CHAINS = {
   avalanche: { v2: 'avalanche', v3: 'avalanche', gauges: 'subgraph.avalanche.yaml', backend: 'avalanche.ts', name: 'Avalanche', explorer: 'https://snowtrace.io' },
   base:      { v2: 'base', v3: 'base', gauges: 'subgraph.base.yaml', backend: 'base.ts', name: 'Base', explorer: 'https://basescan.org' },
   zkevm:     { v2: 'polygon-zkevm', v3: null, gauges: 'subgraph.polygon-zkevm.yaml', backend: 'zkevm.ts', name: 'Polygon zkEVM', explorer: 'https://zkevm.polygonscan.com', deprecated: true, logsMaxRange: 1000 },
-  mode:      { v2: 'mode', v3: null, gauges: 'subgraph.mode.yaml', backend: 'mode.ts', name: 'Mode', explorer: 'https://explorer.mode.network', deprecated: true },
-  fraxtal:   { v2: 'frax', v3: null, gauges: 'subgraph.fraxtal.yaml', backend: 'fraxtal.ts', name: 'Fraxtal', explorer: 'https://fraxscan.com', deprecated: true },
+  mode:      { v2: 'mode', v2Manifest: 'subgraph.mode.yaml', v3: null, gauges: 'subgraph.mode.yaml', backend: 'mode.ts', name: 'Mode', explorer: 'https://explorer.mode.network', deprecated: true },
+  fraxtal:   { v2: 'frax', v2Manifest: 'subgraph.fraxtal.full.yaml', v3: null, gauges: null, gaugeFactories: [{ name: 'ChildChainLiquidityGaugeV2Factory', address: '0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68', startBlock: 4712390 }], backend: 'fraxtal.ts', name: 'Fraxtal', explorer: 'https://fraxscan.com', deprecated: true },
   hyperevm:  { v2: null, v3: 'hyperevm', gauges: null, backend: 'hyperevm.ts', name: 'HyperEVM', explorer: 'https://hyperevmscan.io' },
   plasma:    { v2: null, v3: 'plasma', gauges: null, backend: 'plasma.ts', name: 'Plasma', explorer: 'https://plasmascan.to' },
   xlayer:    { v2: null, v3: 'xlayer', gauges: null, backend: 'xlayer.ts', name: 'X Layer', explorer: 'https://www.oklink.com/xlayer' },
   monad:     { v2: null, v3: 'monad', gauges: null, backend: 'monad.ts', name: 'Monad', explorer: 'https://monadexplorer.com' },
-  sepolia:   { v2: 'sepolia', v3: 'sepolia', gauges: 'subgraph.sepolia.yaml', backend: 'sepolia.ts', name: 'Sepolia', explorer: 'https://sepolia.etherscan.io' },
+  sepolia:   { v2: 'sepolia', v3: 'sepolia', gauges: 'subgraph.sepolia.yaml', backend: 'sepolia.ts', name: 'Sepolia', explorer: 'https://sepolia.etherscan.io', enabled: false },
 }
 
 // factory contract name -> poolType (drives exit-kind selection in the app)
@@ -119,29 +152,47 @@ function extractGaugeFactories(manifest) {
   return out
 }
 
+// Retired networks can disappear from networks.yaml while their generated manifest remains.
+function extractV2NetworkFromManifest(manifest) {
+  if (!manifest) return null
+  const path = join(REPOS, 'balancer-subgraph-v2', manifest)
+  if (!existsSync(path)) return null
+  const src = readFileSync(path, 'utf8').split('\ntemplates:')[0]
+  const net = {}
+  const re =
+    /name: (\w+)\r?\n\s*network: [\w-]+\r?\n\s*source:\r?\n\s*address: '(0x[0-9a-fA-F]{40})'\r?\n\s*abi: \w+\r?\n\s*startBlock: (\d+)/g
+  let match
+  while ((match = re.exec(src))) {
+    net[match[1]] = { address: match[2], startBlock: Number(match[3]) }
+  }
+  return net.Vault ? net : null
+}
+
 const registry = {}
 for (const [key, meta] of Object.entries(CHAINS)) {
-  if (!existsSync(join(BACKEND_CONFIG, meta.backend))) {
+  if (meta.backend && !existsSync(join(BACKEND_CONFIG, meta.backend))) {
     console.warn(`skip ${key}: backend config missing`)
     continue
   }
-  const be = extractBackend(meta.backend)
+  const be = meta.backend ? extractBackend(meta.backend) : {}
   const entry = {
     key,
-    chainId: be.chainId,
+    chainId: meta.chainId ?? be.chainId,
     name: meta.name,
-    defaultRpcUrl: be.rpcUrl?.startsWith('https://') ? be.rpcUrl : PUBLIC_RPC[key],
+    defaultRpcUrl: meta.rpcUrl ?? (be.rpcUrl?.startsWith('https://') ? be.rpcUrl : PUBLIC_RPC[key]),
     explorerUrl: meta.explorer,
-    nativeSymbol: be.nativeSymbol,
-    multicall3: be.multicall3,
+    nativeSymbol: meta.nativeSymbol ?? be.nativeSymbol,
+    multicall3: meta.multicall3 ?? be.multicall3 ?? '0xca11bde05977b3631167028862be2a173976ca11',
     logsMaxRange: meta.logsMaxRange ?? Math.min(be.rpcMaxBlockRange, 10000),
     deprecated: meta.deprecated ?? false,
+    enabled: meta.enabled ?? true,
   }
 
   if (key === 'mainnet') entry.v1 = V1_MAINNET
 
-  if (meta.v2 && V2_NETWORKS[meta.v2]) {
-    const net = V2_NETWORKS[meta.v2]
+  if (meta.v2) {
+    const net = V2_NETWORKS[meta.v2] ?? extractV2NetworkFromManifest(meta.v2Manifest)
+    if (!net) throw new Error(`missing v2 network config for ${key} (${meta.v2})`)
     const factories = []
     for (const [cname, val] of Object.entries(net)) {
       if (cname === 'network' || !val?.address) continue
@@ -152,9 +203,9 @@ for (const [key, meta] of Object.entries(CHAINS)) {
     entry.v2 = {
       vault: net.Vault.address,
       startBlock: net.Vault.startBlock,
-      balancerQueries: be.balancerQueries,
+      balancerQueries: meta.balancerQueries ?? be.balancerQueries,
       factories,
-      gaugeFactories: meta.gauges ? extractGaugeFactories(meta.gauges) : [],
+      gaugeFactories: meta.gauges ? extractGaugeFactories(meta.gauges) : (meta.gaugeFactories ?? []),
     }
   }
 
