@@ -2,7 +2,7 @@
   "meta": {
     "chainKey": "optimism",
     "scannedAtBlock": 0,
-    "generatedAt": "2026-09-15T12:28:22.590Z",
+    "generatedAt": "2026-09-15T12:51:53.939Z",
     "source": "balancer-api"
   },
   "v1Pools": [],
@@ -4964,6 +4964,11 @@
       "symbol": "BPT-LDO-WSTEH"
     },
     {
+      "address": "0x022e09393d1897ff4dda12b274174c630ff7ecb8",
+      "lpToken": "0xa4dd31a2725f74163b5826bbd1dfe7684215b104",
+      "symbol": "eclp-sfrxUSD-waOptUSDCn"
+    },
+    {
       "address": "0x028591c6e8dfeb2e315ddc2647adbfc5a62b4f77",
       "lpToken": "0xcb7d357c84b101e3d559ff4845cef63d7d0753ef",
       "symbol": "bpt-wrseth-wsteth"
@@ -4992,6 +4997,11 @@
       "address": "0x08bbfc60dbfc14a803d5bd2aaf1596116f581efb",
       "lpToken": "0x0604d50e1a314e0b8963a8387713ec0b539920b3",
       "symbol": "BPT-O70EE15"
+    },
+    {
+      "address": "0x0b9b6b5c0e4ca6107b41c461346242836dbec9f3",
+      "lpToken": "0x8f2f228ef6ae71fcfe523c2d584acd653286470c",
+      "symbol": "surge-waOptWETH-alETH"
     },
     {
       "address": "0x0e5973d6bd0938216452e3a5502fa331b7ad63f7",
@@ -5049,6 +5059,11 @@
       "symbol": "bpt-allrdsfrx"
     },
     {
+      "address": "0x320da6adbc8ca573a41b9dfcb369b748753c6ebc",
+      "lpToken": "0x08a8bba83af849e3755771a4070aec87c9d6b86e",
+      "symbol": "eclp-sfrxETH-waOptWETH"
+    },
+    {
       "address": "0x32441cb2da08a3f4c63e29834e155c0434d50e6a",
       "lpToken": "0x23ca0306b21ea71552b148cf3c4db4fc85ae1929",
       "symbol": "bbrfsoUSD"
@@ -5097,6 +5112,11 @@
       "address": "0x46d703d3c88a327eeaecfcd9357a2f1ddec2ed56",
       "lpToken": "0x7ed087afab0b2653c8137744916ed1aba97e2fa2",
       "symbol": "BPT-OATHUSD"
+    },
+    {
+      "address": "0x4768753e2c42d456a1a1c2cbab93b4a2ab57e27b",
+      "lpToken": "0x49e75c0df48ad09a0e20e8bbded07ee60dd8bc03",
+      "symbol": "ss-sfrxETH-rETH-wstETH"
     },
     {
       "address": "0x476f2dedf358eb87c4c22dfaf5e511f68e0272e0",
@@ -5219,6 +5239,11 @@
       "symbol": "BPT-LOVE"
     },
     {
+      "address": "0x7f49fd5bbae84ec46d604fbd5d650ca67c1b4185",
+      "lpToken": "0xb2ec475459429a3ccacfb7dceed23131e2109ed4",
+      "symbol": "bpt-50WFRAX-50sfrxUSD"
+    },
+    {
       "address": "0x7f9e33c5b325a3a1017c18af81da20537ecc3612",
       "lpToken": "0x7d6bff131b359da66d92f215fd4e186003bfaa42",
       "symbol": "BPT-USD+"
@@ -5227,6 +5252,11 @@
       "address": "0x80add8a1bf48ab726b96f19ae1bf27a39e3c9cbd",
       "lpToken": "0x2a5139cd86c041aa3467e649f5ee0880a5de2f2f",
       "symbol": "bpt-stadue"
+    },
+    {
+      "address": "0x81e8a3b56b20597f08b505afe9b0454d9b3de83f",
+      "lpToken": "0x870c0af8a1af0b58b4b0bd31ce4fe72864ae45be",
+      "symbol": "Balancer rETH-Aave wETH"
     },
     {
       "address": "0x880d9b16398c161098d58f9ce77792eb35a24f88",
@@ -5294,6 +5324,11 @@
       "symbol": "bb-ern-usd"
     },
     {
+      "address": "0xbaf734f9c7afb2505298aff746be6c8d93c790a6",
+      "lpToken": "0x0854c8fa68cff2ac363b541f08f35181ca51b870",
+      "symbol": "bpt-50sfrxUSD-50waOptWETH"
+    },
+    {
       "address": "0xbd54c9dbd7b4d82c80759790f8c566c3deaad6a5",
       "lpToken": "0x981fb05b738e981ac532a99e77170ecb4bc27aef",
       "symbol": "bb-YELLOW"
@@ -5332,6 +5367,11 @@
       "address": "0xcf69061c06e57ae8f284e6d2ee0e889bd671ab10",
       "lpToken": "0x7ef99013e446ddce2486b8e04735b7019a115e6f",
       "symbol": "BPT-8TRACK"
+    },
+    {
+      "address": "0xcf9ac400524831fc9640bb5e521e4c8083aad211",
+      "lpToken": "0xe0d0b607539fdb647c4e87eff89588c6bb669c03",
+      "symbol": "bpt-wrsETH-waOptWETH"
     },
     {
       "address": "0xd253638e82ac3832aa1b8247fe366a797c954e98",

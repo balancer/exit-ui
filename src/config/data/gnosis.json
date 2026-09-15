@@ -2,7 +2,7 @@
   "meta": {
     "chainKey": "gnosis",
     "scannedAtBlock": 0,
-    "generatedAt": "2026-09-15T12:28:22.399Z",
+    "generatedAt": "2026-09-15T12:51:52.071Z",
     "source": "balancer-api"
   },
   "v1Pools": [],
@@ -28452,6 +28452,11 @@
       "symbol": "staBAL3"
     },
     {
+      "address": "0x0fce2d8428baca96b14f5d3d03d260940e11a066",
+      "lpToken": "0x6e6bb18449fcf15b79efa2cfa70acf7593088029",
+      "symbol": "waWstETH-waWETH"
+    },
+    {
       "address": "0x1350724a020b27c4f0e369bb00ae3127022d5465",
       "lpToken": "0x3220c83e953186f2b9ddfc0b5dd69483354edca2",
       "symbol": "osGNO/GNO-BPT"
@@ -28527,6 +28532,11 @@
       "symbol": "B-50sDAI-50wstETH"
     },
     {
+      "address": "0x534f3f3a270727d60d0c1444c88b468ecf05be52",
+      "lpToken": "0xe1204e7ca5b5ca0bfa07247b9ab3c46fa1d4001b",
+      "symbol": "sDAI-waUSDCe"
+    },
+    {
       "address": "0x5508d8872e91854d7c6056bc70e9eb5ed1443464",
       "lpToken": "0xad5fb05b2ade70b046e4cf2b5daf731e44347e4f",
       "symbol": "B-50wstETH-25BAL-25AURA"
@@ -28535,6 +28545,11 @@
       "address": "0x64cee2356f959e78db36a4c23a28f0454447c3df",
       "lpToken": "0x00df7f58e1cf932ebe5f54de5970fb2bdf0ef06d",
       "symbol": "B-50wstETH-25BAL-25AURA"
+    },
+    {
+      "address": "0x68b257da06829da78b4163396996e1c201f208fe",
+      "lpToken": "0xa91c3c043051e7e680b61d79b3a733d3e2c0fb5e",
+      "symbol": "BRLA-sDAI"
     },
     {
       "address": "0x793faf861a78b07c0c8c0ed1450d3919f3473226",
@@ -28577,6 +28592,11 @@
       "symbol": "2EUR (EURe)"
     },
     {
+      "address": "0xa76ed5da09209d6f2198d8d793005393327b736e",
+      "lpToken": "0xd1d7fa8871d84d0e77020fc28b7cd5718c446522",
+      "symbol": "aGNO/sDAI"
+    },
+    {
       "address": "0xad46e3c1c55241261afe5751384eedcf6db6e0a8",
       "lpToken": "0x2086f52651837600180de173b09470f54ef74910",
       "symbol": "staBAL3"
@@ -28610,6 +28630,11 @@
       "address": "0xc092e0a4f5a2adf3cf91e27cf4b7d7917d12ca2b",
       "lpToken": "0xa99fd9950b5d5dceeaf4939e221dca8ca9b938ab",
       "symbol": "25WETH-25BAL-25GNO-25wxDAI"
+    },
+    {
+      "address": "0xcbd87e4dad6a99506484e9adeec8ff84ce7bd399",
+      "lpToken": "0x272d6be442e30d7c87390edeb9b96f1e84cecd8d",
+      "symbol": "50waWstETH-50waGNO"
     },
     {
       "address": "0xce18a3d0d928ab8883f355b5009d2de07d5c1d83",

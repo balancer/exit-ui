@@ -2,7 +2,7 @@
   "meta": {
     "chainKey": "avalanche",
     "scannedAtBlock": 0,
-    "generatedAt": "2026-09-15T12:28:02.366Z",
+    "generatedAt": "2026-09-15T12:51:58.280Z",
     "source": "balancer-api"
   },
   "v1Pools": [],
@@ -2965,6 +2965,11 @@
       "symbol": "BPT"
     },
     {
+      "address": "0x0f5e81246d00d79389eaa465b42527d41bb00d3b",
+      "lpToken": "0x4fb43f38cbe27beb7d5750fc9e3459365ce8c0e6",
+      "symbol": "Surge UTY-K3 USDT"
+    },
+    {
       "address": "0x108c6c9c59e4dc3c6c75def35bad59f20e999d81",
       "lpToken": "0x383c46887a1d5f3867664091ae5d6ad3ad3369f5",
       "symbol": "LP-XSGD-USDC"
@@ -3000,6 +3005,11 @@
       "symbol": "ECLP-WAVAX-GYD"
     },
     {
+      "address": "0x2c3b46e1320d8b7de7f8bcb0997fba2b93797259",
+      "lpToken": "0x304e19e3029a6dbfde0d70d9e32ad9cc694a9b68",
+      "symbol": "eK3 weETH/aETH.e"
+    },
+    {
       "address": "0x301a121d1d0d72c4005b354854a842a55d23251f",
       "lpToken": "0xa154009870e9b6431305f19b09f9cfd7284d4e7a",
       "symbol": "sAVAX-bb-a-WAVAX-BPT"
@@ -3015,14 +3025,44 @@
       "symbol": "BPT"
     },
     {
+      "address": "0x3ca285558531543798b7158c046034ed6388d58a",
+      "lpToken": "0x345e9afe5dd68237541993e5e2b9a87367ed91b7",
+      "symbol": "xBTC-mevBTC"
+    },
+    {
+      "address": "0x408c08485af7cb4c1870b11794ff7b4429929a17",
+      "lpToken": "0x31ae873544658654ce767bde179fd1bbcb84850b",
+      "symbol": "Aave USDT/USDC/AUSD"
+    },
+    {
+      "address": "0x40f9a910685d2a41a66d13d56627505747117563",
+      "lpToken": "0xa4e1b0ddffc0e3aa63dbca462cf370e4f1dc9b8b",
+      "symbol": "Gyro AAVE WAVAX-USDC"
+    },
+    {
+      "address": "0x47c27a82f4eccab0720ab32462d4b808566bb7ee",
+      "lpToken": "0x22715161201922af61f4ca22e979ef0c6c20be13",
+      "symbol": "Surge eK3 savUSD-USDT"
+    },
+    {
       "address": "0x4989f0c73bf38701e608147161f12111c64fd79d",
       "lpToken": "0x670734d704eb7ef424d75321670f921fbf42e9cf",
       "symbol": "sAVAX-ankrAVAX-BPT"
     },
     {
+      "address": "0x4a3550d03f702ef61798bdfc2a57aaaa7b4ec19a",
+      "lpToken": "0x1c39ebe0ee53b52ab24d3945e9cde9e6c09d0851",
+      "symbol": "Aave wAVAX/wETH.e"
+    },
+    {
       "address": "0x5308e6fa8451bd12e8eb672124b6cf058d380c0e",
       "lpToken": "0xaa4eee23426bff1af8d79d6179e5a5c311f6adcc",
       "symbol": "KIMBOTECHCOQAVAXUSDC"
+    },
+    {
+      "address": "0x575f82bf474ec66e252ab6850f6d55c59b3a95c4",
+      "lpToken": "0xa6a20c2786bb7f79f3f4fd0a958ea1ab5658ddde",
+      "symbol": "eK3 weETH/Aave wETH.e"
     },
     {
       "address": "0x5a9dbaed7921538d16c96510489b16e62a6e79af",
@@ -3045,9 +3085,19 @@
       "symbol": "AFCC"
     },
     {
+      "address": "0x746db23a0b49e002697fad244c281a36b86b1b01",
+      "lpToken": "0x832f8e068e92d56b94205ea605e5cdaa7cded1f0",
+      "symbol": "tAVAX-waAvaSAVAX"
+    },
+    {
       "address": "0x74abfe305bc0d729f29a2da26c5b7ef0bd1e3a8c",
       "lpToken": "0xb26f0e66317846bd5fe0cbaa1d269f0efeb05c96",
       "symbol": "USDC-USDT-BPT"
+    },
+    {
+      "address": "0x8647a995cc10c6c529a680f446797849163be9e4",
+      "lpToken": "0x99a9a471dbe0dcc6855b4cd4bbabeccb1280f5e8",
+      "symbol": "aWAVAX-aSAVAX-ggAVAX"
     },
     {
       "address": "0x87ed7550f24051b6a9e95513bb9665242d8167a6",
@@ -3055,9 +3105,29 @@
       "symbol": "50BTC.b-50bb-a-USD"
     },
     {
+      "address": "0x890941a69a58fa4b180abde1d28b1b5da049abaf",
+      "lpToken": "0x51d286a07e037e553ea655cd9dc8c89f84dea088",
+      "symbol": "Surge yUTY-K3 USDT"
+    },
+    {
+      "address": "0x8e8c3d4313fd5c5051a02b9e580415691a0f7951",
+      "lpToken": "0xfcec3c8d86329defb548202fe1b86ff2188603a8",
+      "symbol": "Aave GHO/USDT/USDC"
+    },
+    {
       "address": "0x8fff0bd6cadebe9b36f42876727d9e30c76fba02",
       "lpToken": "0x296df277579b38db06fe5bdf179252f983672d6d",
       "symbol": "ECLP-ggAVAX-WAVAX-rh"
+    },
+    {
+      "address": "0x92b441e349d099d6b630cbf8ec09d5700e649fb5",
+      "lpToken": "0x832f8e068e92d56b94205ea605e5cdaa7cded1f0",
+      "symbol": "tAVAX-waAvaSAVAX"
+    },
+    {
+      "address": "0xa0d1dfe42ee4e99e973e51bc7e7c74b1bdc94f11",
+      "lpToken": "0x695a7f28c3628187c8264d2cdf7a617036ba8406",
+      "symbol": "upAUSD-savUSD-sdeUSD"
     },
     {
       "address": "0xa18d642af6fabfbb8b9b24d93ac12114768a2538",
@@ -3065,9 +3135,24 @@
       "symbol": "33VCHF-33sAVAX-33VEUR"
     },
     {
+      "address": "0xb4611396a59a46cb756c4097a14dbe3bf8147924",
+      "lpToken": "0x1fed8401c145f64da567881d272d0df233118dca",
+      "symbol": "USDp-gamiUSDC"
+    },
+    {
       "address": "0xb4efa48f32ba11deeaab9fcc0c2f29e91381705d",
       "lpToken": "0x82c0f5fe6bd04f2dce371d4e3f0689d1cfad1f5c",
       "symbol": "ECLP-sAVAX-WAVAX-rh"
+    },
+    {
+      "address": "0xb80c5b24c98714f0fd52a276d5da6c6f68821eb9",
+      "lpToken": "0x8750ccffcddbff81b63790dbcb1ffd8c7dc4c16d",
+      "symbol": "ReClamm WAVAX-USDC"
+    },
+    {
+      "address": "0xb9ca65c7fda939aad76bc286c95a1249d2c9ece1",
+      "lpToken": "0xc07f45ee39f3fa2abaeb2b3309543e69129e3c21",
+      "symbol": "Euler Re7 savUSD-AUSD-USDC"
     },
     {
       "address": "0xc1d68db49b7c0615252abc4ae86f224f75512ff4",
@@ -3085,6 +3170,16 @@
       "symbol": "yyAVAX-bb-a-WAVAX-BPT"
     },
     {
+      "address": "0xd6cf1adc6bf14634435b66deb2900b9441fb3739",
+      "lpToken": "0x58374fff35d1f3023bbfc646fb9ecd2b180ca0b0",
+      "symbol": "Aave wAVAX/BTC.b"
+    },
+    {
+      "address": "0xd8b74632ea90bd6eb51c8da0b4183748df62e638",
+      "lpToken": "0x4c6c0b3f11577aef4448b45838c7d7d379e9cc69",
+      "symbol": "SolvBTC-SolvBTC.AVAX-BTC.b"
+    },
+    {
       "address": "0xe41978aca73f93bf67c27b60232449f2f4a29168",
       "lpToken": "0x28f3a9e42667519c83cb090b5c4f6bd34e9f5569",
       "symbol": "LP-VEUR-USDC"
@@ -3098,6 +3193,11 @@
       "address": "0xeb96333b3e0efef18a45d40c6144b78b0dc70981",
       "lpToken": "0x0099111ed107bdf0b05162356aee433514aac440",
       "symbol": "LP-VCHF-USDC"
+    },
+    {
+      "address": "0xec4f410cd8e04d52846a20e160d300d76a911fc7",
+      "lpToken": "0x9dfdf58e1624cba507d0a38059e85eeab74f3b6b",
+      "symbol": "xUSD-mevUSDC"
     },
     {
       "address": "0xf9ae6d2d56f02304f72dcc61694ead0dc8db51f7",

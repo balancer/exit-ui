@@ -2,7 +2,7 @@
   "meta": {
     "chainKey": "base",
     "scannedAtBlock": 0,
-    "generatedAt": "2026-09-15T12:28:22.847Z",
+    "generatedAt": "2026-09-15T12:52:07.290Z",
     "source": "balancer-api"
   },
   "v1Pools": [],
@@ -19266,9 +19266,19 @@
       "symbol": " 50tBTC-50WETH"
     },
     {
+      "address": "0x10e76040da38d9f7ee33fa3b94f775f0d7cd07b1",
+      "lpToken": "0xb022debeab744867e5d54d8d9ab78bfece39df83",
+      "symbol": "yUSD-AaveUSDC"
+    },
+    {
       "address": "0x11a72ebfc318c977a6a1b9b6e4565e068f9b3c12",
       "lpToken": "0xfab10dd71e11d0ad403cc31418b45d816f2f9882",
       "symbol": "20WETH-80WELL"
+    },
+    {
+      "address": "0x1295bf0479f69eed08b549837ff8df5a9ccdfd38",
+      "lpToken": "0xd7af1601493b53cecff402985029345e568fb497",
+      "symbol": "tETH-waBaswstETH"
     },
     {
       "address": "0x141d87aabcbdb17fc0115cc66c0e2fe8c6bb5689",
@@ -19301,6 +19311,16 @@
       "symbol": "STG-USDbC-BPT"
     },
     {
+      "address": "0x23dd734a0ebc39bc2b936ae7260cbf84881c620b",
+      "lpToken": "0xa9c23ddfc77fae13855f1794bb5c29c7c666e0e7",
+      "symbol": "50-WETH-50-USDC"
+    },
+    {
+      "address": "0x23ea3f5ea00ab8b66b2e5b52df56ebc4aab493e8",
+      "lpToken": "0xb4161aea25bd6c5c8590ad50deb4ca752532f05d",
+      "symbol": "BTF:BMACRO"
+    },
+    {
       "address": "0x247775fc4046a648f01c4e4fdbf000b871501af2",
       "lpToken": "0xaff50d3bab005853bac6357618688c811d641e22",
       "symbol": "ECLP-cbBTC-WETH"
@@ -19309,6 +19329,11 @@
       "address": "0x2642ad3420cb6340a8a3e07e9260cce54c5e87d7",
       "lpToken": "0x0c555897accbad171ba664ef257ba5613c289500",
       "symbol": "ECLP-WETH-GYD"
+    },
+    {
+      "address": "0x292bac8ff96381b75aab0e338a94069597d04e7a",
+      "lpToken": "0xa58da6552e172ab5fabcaaaa9668fb30f20fdd06",
+      "symbol": "USDX-sUSDX-waBasUSDC"
     },
     {
       "address": "0x29804db13e6032f41fd926bebd2981c4a549fd18",
@@ -19351,14 +19376,34 @@
       "symbol": " 50tBTC-50USD"
     },
     {
+      "address": "0x43c49951b9ef25a0503c3719d592f104bdf36a98",
+      "lpToken": "0x4147d8aeecb75bc9f5c973c3b73d2dfc4dcce131",
+      "symbol": "smUSDC-sUSDS"
+    },
+    {
+      "address": "0x4838631eafeec926b14aaec06b3339e0d1cee069",
+      "lpToken": "0xd29886c8a2bb7d09e2e93f3f218ee5c79f46500f",
+      "symbol": "sUSDX-USDX-waBasUSDC"
+    },
+    {
       "address": "0x4fa25310abc1630692105c15ac26ec18205f8f8c",
       "lpToken": "0xb924561a57fc60041414b8471cbc99d3497097fa",
       "symbol": "ECLP-USR-GYD"
     },
     {
+      "address": "0x50355f3bb70317e518905664ce09333fa8b90645",
+      "lpToken": "0xb6a9a815d98cb98fd9f2353ec59de07b63f5b485",
+      "symbol": "Surge yUSD-Aave USDC"
+    },
+    {
       "address": "0x504da6f83a0b0a6c6c922becfa510cdd312ad050",
       "lpToken": "0xb5ea08a3cb962b50474f5edb3c38cb4b2715b90d",
       "symbol": "ECLP-USDT-GYD"
+    },
+    {
+      "address": "0x521156eabda83198f03a116236bc679e20c7b8bb",
+      "lpToken": "0xacba78d745faae7751c09489d5f15a26eb27f1ad",
+      "symbol": "Aave wstETH-wETH"
     },
     {
       "address": "0x5307fe148ccbd1522db44a566890a8055794355c",
@@ -19379,6 +19424,21 @@
       "address": "0x5810b3ee98a34eb93659a12b62788d00e8f23afe",
       "lpToken": "0x041986f9d0ab7e45b42d6a0e0345db4cb720b7ff",
       "symbol": "ECLP-WETH-USDT"
+    },
+    {
+      "address": "0x5b0ceddf480846b123a61732297aaa2e4388e93e",
+      "lpToken": "0x2be9d6899432e988a8b71eb80ee29a49521e2cba",
+      "symbol": "tETH-waBaswstETH"
+    },
+    {
+      "address": "0x5d2ca46c5ffd5cfc279cd05adcf2896436b6626e",
+      "lpToken": "0xb7b8b3afc010169779c5c2385ec0eb0477fe3347",
+      "symbol": "Balancer rETH-Aave wETH"
+    },
+    {
+      "address": "0x5d49fb47aef338a9f5ca554f59a875c17107457a",
+      "lpToken": "0xb5bfb5adb736ea852bd58fec71db3b356c2a3938",
+      "symbol": "Aave wstETH-ezETH"
     },
     {
       "address": "0x5ed3cd1d293cc96e15216f90d83aeeb00340e2f1",
@@ -19411,6 +19471,11 @@
       "symbol": "ECLP-WETH-USDC-dyn"
     },
     {
+      "address": "0x70db188e5953f67a4b16979a2cea26248b315401",
+      "lpToken": "0x7ab124ec4029316c2a42f713828ddf2a192b36db",
+      "symbol": "Aave USDC-Aave GHO"
+    },
+    {
       "address": "0x7733650c7aaf2074fd1fcf98f70cbc09138e1ea5",
       "lpToken": "0x2db50a0e0310723ef0c2a165cb9a9f80d772ba2f",
       "symbol": "BPT-50STABAL3-50WETH"
@@ -19426,6 +19491,11 @@
       "symbol": "ECLP-cbBTC-USDC-dyn"
     },
     {
+      "address": "0x7ac2f85069470959f5960b6054479ad46db4d818",
+      "lpToken": "0x424d19d482a891b2c5cb881d651fbc32b349cb3c",
+      "symbol": "Surge yUSD-Aave USDC"
+    },
+    {
       "address": "0x7b3ef4cad077d871499285a2a8a1cee0ee122137",
       "lpToken": "0xb328b50f1f7d97ee8ea391ab5096dd7657555f49",
       "symbol": "GOLD/BAL/USDC"
@@ -19436,6 +19506,11 @@
       "symbol": "ECLP-weETH-wstETH"
     },
     {
+      "address": "0x80db733644c60e891b3c7a96141430e4baaff028",
+      "lpToken": "0xd0bfa4784285acd49e06e12f302c2441c5923bfd",
+      "symbol": "50WETH-50USDC-MEVTAXD"
+    },
+    {
       "address": "0x87680d376235b9a6e3119977de027b459d8937d3",
       "lpToken": "0xc810e0f41a466a82215a3932c914732f3da76a10",
       "symbol": "ECLP-WETH-USDT-dyn"
@@ -19444,6 +19519,11 @@
       "address": "0x888ecb1be40323ac02a6b91aedc9e3ea291087fc",
       "lpToken": "0x303684098ffe8cc460ed86a1bd41a4e4dae71418",
       "symbol": "ECLP-GYFI-GYD"
+    },
+    {
+      "address": "0x893035a8aa67e0989ca433bc31d8024d65c32c10",
+      "lpToken": "0xe3a85e913f967406823cde9c390ae7bad9496367",
+      "symbol": "ExtraFi-exUSDC-exUSR"
     },
     {
       "address": "0x8d118063b521e0cb9947a934be90f7e32d02b158",
@@ -19489,6 +19569,11 @@
       "address": "0xa442c9cb6fafb6fb2a722a1baa54f9b8ff0a55d3",
       "lpToken": "0xa30ad556d10c829a67f41f60d41afdd4efa9286c",
       "symbol": "Friend Tech Index"
+    },
+    {
+      "address": "0xa6254d290344092433263308072c210a101fbd7a",
+      "lpToken": "0xdd5e47ab9bdb0601e35055bd39a66d5f07aaff8e",
+      "symbol": "30waBasUSDC-70FYNI"
     },
     {
       "address": "0xa7b9029f85ffd821b262f8dca4ea577bc215a2a0",
@@ -19541,6 +19626,11 @@
       "symbol": "BPT-stabal3"
     },
     {
+      "address": "0xca66072ca2d7c3af6f44f4d4d29eb9e088a2df79",
+      "lpToken": "0x19e3e19945e7fd2a7856824c595981c7fe450bb5",
+      "symbol": "80PRL-20WETH"
+    },
+    {
       "address": "0xcc378c3a65107414d2980d4d4bd73f8f0afef00e",
       "lpToken": "0x327fc10dd65c117a9cfc449f2a86613eb1265e91",
       "symbol": "ECLP-GYFI-GYD"
@@ -19551,14 +19641,29 @@
       "symbol": "ECLP-WETH-USDC-dyn"
     },
     {
+      "address": "0xd6a35d58de5fe7669af76b038b9af528580c95b3",
+      "lpToken": "0x4147d8aeecb75bc9f5c973c3b73d2dfc4dcce131",
+      "symbol": "smUSDC-sUSDS"
+    },
+    {
       "address": "0xd6f568817288309cb11e07867110f2fe256fc619",
       "lpToken": "0xb7cfed5e514f10b4ed1dc0cc793e96b9ec830782",
       "symbol": "ECLP-EURC-USDC"
     },
     {
+      "address": "0xd8376b72e609a410999398b70218f70ae9b310f5",
+      "lpToken": "0x9ab907fb3e098103ca048ad26e501bf7b3dfa3eb",
+      "symbol": "Surge Aave EURC-GHO"
+    },
+    {
       "address": "0xdae8ac766eb1c4bb76bc814fde22ac46f467c51b",
       "lpToken": "0x433f09ca08623e48bac7128b7105de678e37d988",
       "symbol": "50GOLD/25WETH/25USDC"
+    },
+    {
+      "address": "0xdce4bc2e445776a4cfa93bddc20b0e9d6aaf752d",
+      "lpToken": "0x39677db4db990af7bc3fcfb66704de7473aa19bd",
+      "symbol": "USDp-frxUSD"
     },
     {
       "address": "0xe2f2aed19fa245aff66342c2b849be6f411fb28f",
@@ -19569,6 +19674,21 @@
       "address": "0xe623980dd6cb46342b00587afe97ae797415b4a3",
       "lpToken": "0xcc63ae333c1fa68e97d99ffa8967e85cd12c18b7",
       "symbol": "ECLP-cbBTC-GYD-dyn"
+    },
+    {
+      "address": "0xe82f04593e34f3d51ca50ab84e164c778314a3c5",
+      "lpToken": "0x3bcf4e84c32d90bb309eab58d97b70372c84bc2c",
+      "symbol": "USDp-USDC"
+    },
+    {
+      "address": "0xec16621c9bd547d64b93c17b51838ff173bb6dd1",
+      "lpToken": "0x5b14ce8de84448e9a6f6af652af318472aa4fcaf",
+      "symbol": "Aave GHO-USR"
+    },
+    {
+      "address": "0xed5c5357c219e82bba8e0d56b966684b58becd74",
+      "lpToken": "0x4fbb7870dbe7a7ef4866a33c0eed73d395730dc0",
+      "symbol": "Akron waUSDC-waWETH"
     },
     {
       "address": "0xedea3e93b914e2654f8c7e0c2bb5e6205f9742b0",
@@ -19589,6 +19709,11 @@
       "address": "0xf13aabfa433f0e5ac662fd9cd05b1c00802470b8",
       "lpToken": "0x0dce7d1e1fbfc85c31bd04f890027738f00e580b",
       "symbol": "33WETH-33KABOSUCHAN-33DOG"
+    },
+    {
+      "address": "0xf63c00bead3a6bcb970b55864c8e0bab9a56bd47",
+      "lpToken": "0x9972c4f21b5ae6062233031314adbbdda7513ed2",
+      "symbol": "Surge Aave wstETH-fWETH"
     },
     {
       "address": "0xf7862a614ffea2bf8ef2d66a872be2df735d22e6",

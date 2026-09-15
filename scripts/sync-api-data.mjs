@@ -175,10 +175,10 @@ async function syncChain(chainKey) {
     }))
 
   const gauges = new Map()
-  const includedV2Pools = new Set(v2Pools.map((pool) => pool.address.toLowerCase()))
-  for (const pool of pools.filter(
-    (candidate) => candidate.protocolVersion === 2 && includedV2Pools.has(candidate.address.toLowerCase())
-  )) {
+  const includedPools = new Set(
+    [...v2Pools, ...v3Pools].map((pool) => pool.address.toLowerCase())
+  )
+  for (const pool of pools.filter((candidate) => includedPools.has(candidate.address.toLowerCase()))) {
     const gauge = pool.staking?.gauge
     for (const address of [gauge?.gaugeAddress, ...(gauge?.otherGauges ?? []).map((item) => item.gaugeAddress)]) {
       if (address) gauges.set(address.toLowerCase(), { address, lpToken: pool.address, symbol: pool.symbol })
