@@ -65,7 +65,12 @@ export function isDevMode(): boolean {
 /** Production chains shown in the selector, plus testnets in dev mode. */
 export function visibleChains(): ChainConfig[] {
   const all = Object.values(CHAINS)
-  return isDevMode() ? all : all.filter((c) => c.enabled)
+  const visible = isDevMode() ? all : all.filter((c) => c.enabled)
+  return visible.sort((a, b) => {
+    if (a.key === 'mainnet') return -1
+    if (b.key === 'mainnet') return 1
+    return a.name.localeCompare(b.name)
+  })
 }
 
 export function getChain(key: string): ChainConfig {
