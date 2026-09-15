@@ -1,0 +1,613 @@
+{
+  "meta": {
+    "chainKey": "hyperevm",
+    "scannedAtBlock": 0,
+    "generatedAt": "2026-09-15T12:28:23.361Z",
+    "source": "balancer-api"
+  },
+  "v1Pools": [],
+  "v2Pools": [],
+  "v3Pools": [
+    {
+      "address": "0x064fe2bb8e5fcdb1b3213489a3972a21393000fc",
+      "symbol": "UETH-undefined-LBP",
+      "name": "test small & big toggle Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        },
+        {
+          "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+          "symbol": "UETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0915824c3c5239928253548cd998a5f19668582a",
+      "symbol": "HYPED-WHYPE",
+      "name": "HyperDrive HYPED-WHYPE",
+      "tokens": [
+        {
+          "address": "0x4d0ff6a0dd9f7316b674fb37993a3ce28bea340e",
+          "symbol": "HYPED",
+          "decimals": 18
+        },
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0eebadb045574c0a99371846a87fe083968f0541",
+      "symbol": "AutoRange-WHYPE-USDC",
+      "name": "Balancer AutoRange WHYPE-USDC",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x12c3eadf46f81729ec2d32157c786b8f8ee7928d",
+      "symbol": "SURF-WHYPE-LBP",
+      "name": "Surf Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0x63a96d18103a040318fdbdf3fd6c623d806e7a2a",
+          "symbol": "SURF",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x131707fbcc247b12e235af154fd7f7558803c24e",
+      "symbol": "lstHYPE-mcHYPE",
+      "name": "Balancer lstHYPE-mcHYPE",
+      "tokens": [
+        {
+          "address": "0x81e064d0eb539de7c3170edf38c1a42cbd752a76",
+          "symbol": "lstHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xd19e3d00f8547f7d108abfd4bbb015486437b487",
+          "symbol": "mcHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1eafe4f5a09bd5a5c63bc01dc039afcf73e53478",
+      "symbol": "hbUSDT-MC_USDT0-gtUSDe",
+      "name": "Balancer hbUSDT-MC_USDT0-gtUSDe",
+      "tokens": [
+        {
+          "address": "0x3bcc0a5a66bb5bdceef5dd8a659a4ec75f3834d8",
+          "symbol": "MC_USDT0",
+          "decimals": 18
+        },
+        {
+          "address": "0x5e105266db42f78fa814322bce7f388b4c2e61eb",
+          "symbol": "hbUSDT",
+          "decimals": 18
+        },
+        {
+          "address": "0x5eec795d919fa97688fb9844eeb0072e6b846f9d",
+          "symbol": "gtUSDe",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x278e31550a3708fb20a7a33bed0cece79fe7ac00",
+      "symbol": "S-USDT-feUSD",
+      "name": "Stable USDT-feUSD",
+      "tokens": [
+        {
+          "address": "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70",
+          "symbol": "feUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x2cec78ae807f7d64280e74032b259d3460c99c61",
+      "symbol": "mcUSR-RLP",
+      "name": "Balancer mcUSR-RLP",
+      "tokens": [
+        {
+          "address": "0x0a3d8466f5de586fa5f6de117301e2f90bcc5c48",
+          "symbol": "RLP",
+          "decimals": 18
+        },
+        {
+          "address": "0xd3a9cb7312b9c29113290758f5adfe12304cd16a",
+          "symbol": "mcUSR",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x2dc02134ee3b2ee3da099d2854871404f968cf82",
+      "symbol": "LHYPE-stathHyperWHYPEv2",
+      "name": "Balancer LHYPE-stathHyperWHYPEv2",
+      "tokens": [
+        {
+          "address": "0x5748ae796ae46a4f1348a1693de4b50560485562",
+          "symbol": "LHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xd704254eb350e0d3baecd194d095862267897ae0",
+          "symbol": "hlHype",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x2f81d322aeef021f43020df4a45ca1087c7281ab",
+      "symbol": "UETH-USD₮0-LBP",
+      "name": "HyperEvm  Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        },
+        {
+          "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+          "symbol": "UETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3bd11140912bf4b8fdab32cd95ed3f89a2a4a98e",
+      "symbol": "feUSD-USD₮0",
+      "name": "feUSD USD₮0",
+      "tokens": [
+        {
+          "address": "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70",
+          "symbol": "feUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x3e914881614438eea85cf0e67c3624ba039b37b3",
+      "symbol": "WHLP-hUSD₮0",
+      "name": "Balancer WHLP-hUSD₮0",
+      "tokens": [
+        {
+          "address": "0x06fd9d03b3d0f18e4919919b72d30c582f0a97e5",
+          "symbol": "hUSD₮0(WHLP)",
+          "decimals": 6
+        },
+        {
+          "address": "0x1359b05241ca5076c9f59605214f4f84114c0de8",
+          "symbol": "WHLP",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x48213b747efe3f04fb472e3c871349532eba9189",
+      "symbol": "AVLT-USDC",
+      "name": "Balancer AVLT-USDC",
+      "tokens": [
+        {
+          "address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xd0ee0cf300dfb598270cd7f4d0c6e0d8f6e13f29",
+          "symbol": "AVLT",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x5557a7cbb2f35825eab8cf0781de0314546176dc",
+      "symbol": "WHYPE-USD₮0",
+      "name": "HypeSurge #2",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x6bd8de0fed17dc0c0a82b9fe5522b129ecaebdbd",
+      "symbol": "50mcHYPE-50gtuETH",
+      "name": "Balancer Weighted mcHYPE-gtuETH",
+      "tokens": [
+        {
+          "address": "0x0571362ba5ea9784a97605f57483f865a37dbeaa",
+          "symbol": "gtuETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xd19e3d00f8547f7d108abfd4bbb015486437b487",
+          "symbol": "mcHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6d2abfd5ad9eecdcc7bd6b2a9256e86266288931",
+      "symbol": "UETH-WHYPE-LBP",
+      "name": "test  Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+          "symbol": "UETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6f2a771f1190d0d5c757022932c278fe4d9a3453",
+      "symbol": "UETH-WHYPE-LBP",
+      "name": "test hype metadata save Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xbe6727b535545c67d5caa73dea54865b92cf7907",
+          "symbol": "UETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x7029f8637a9dcf42f7aeeb1461f059e3cad0a119",
+      "symbol": "stathyWHYPE-USDXL",
+      "name": "stathyWHYPE USDXL",
+      "tokens": [
+        {
+          "address": "0x3df418be6dad3f824d00a7c516dad3ea2a5a79c6",
+          "symbol": "stathyWHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+          "symbol": "USDXL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x7344f2d57402a03c07d47893fe9c045cdd3d0a6b",
+      "symbol": "WHYPE-USD₮0",
+      "name": "reCLAMM WHYPE-USD₮0",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x768e4f8219095d714bc7dcfd60a5ece67d32faf9",
+      "symbol": "hwHLP-hyUSDT0(hwHLP)",
+      "name": "hwHLP hyUSDT0(hwHLP)",
+      "tokens": [
+        {
+          "address": "0x2c910f67dbf81099e6f8e126e7265d7595dc20ad",
+          "symbol": "hyUSD₮0(hwHLP)-11",
+          "decimals": 6
+        },
+        {
+          "address": "0x9fd7466f987fd4c45a5bbde22ed8aba5bc8d72d1",
+          "symbol": "hwHLP",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x779e573851d184707fc92d637570db28ad14637f",
+      "symbol": "hyHYPE/USDXL",
+      "name": "hyHYPE/USDXL",
+      "tokens": [
+        {
+          "address": "0x3df418be6dad3f824d00a7c516dad3ea2a5a79c6",
+          "symbol": "stathyWHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+          "symbol": "USDXL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x793117aa151d87077dbcb23862fa9a38bce84946",
+      "symbol": "50MC_USDT0-50mcHYPE",
+      "name": "Balancer MC_USDT0-mcHYPE",
+      "tokens": [
+        {
+          "address": "0x3bcc0a5a66bb5bdceef5dd8a659a4ec75f3834d8",
+          "symbol": "MC_USDT0",
+          "decimals": 18
+        },
+        {
+          "address": "0xd19e3d00f8547f7d108abfd4bbb015486437b487",
+          "symbol": "mcHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x8207c7541ce31b38dbd46890f2a832cf1ef7c512",
+      "symbol": "mcUSR-MC_USDT0",
+      "name": "Balancer mcUSR-MC_USDT0",
+      "tokens": [
+        {
+          "address": "0x3bcc0a5a66bb5bdceef5dd8a659a4ec75f3834d8",
+          "symbol": "MC_USDT0",
+          "decimals": 18
+        },
+        {
+          "address": "0xd3a9cb7312b9c29113290758f5adfe12304cd16a",
+          "symbol": "mcUSR",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa120f5789f914766cb4b44b83b545925b443f642",
+      "symbol": "tHYPE-HyperLend kHYPE",
+      "name": "Balancer tHYPE-HyperLend kHYPE",
+      "tokens": [
+        {
+          "address": "0xb2a2104d9fc202a38d74d8f6c3c45da6eef8f5e0",
+          "symbol": "stathHyperEvmkHYPEv2",
+          "decimals": 18
+        },
+        {
+          "address": "0xb83d27f0f4133a7b0377a88089583131a903fdc7",
+          "symbol": "tHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa5bec44e681e8138dfd4925f3023a54eddc99ea2",
+      "symbol": "feUSDhl-feUSDT0",
+      "name": "Balancer feUSDhl-feUSDT0",
+      "tokens": [
+        {
+          "address": "0x9c59a9389d8f72de2cdaf1126f36ea4790e2275e",
+          "symbol": "feUSDhl",
+          "decimals": 18
+        },
+        {
+          "address": "0xfc5126377f0efc0041c0969ef9ba903ce67d151e",
+          "symbol": "feUSDT0",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xaab8f94ff503ade4a603566e093b68b720345f12",
+      "symbol": "50stathyWHYPE-50WHYPE",
+      "name": "50stathyWHYPE-50WHYPE",
+      "tokens": [
+        {
+          "address": "0x3df418be6dad3f824d00a7c516dad3ea2a5a79c6",
+          "symbol": "stathyWHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xba0163e18b8b6236d5046841e698f2f2d89bd4bd",
+      "symbol": "stathyUSD₮0-USDXL",
+      "name": "Balancer Stata hyUSD₮0-USDXL",
+      "tokens": [
+        {
+          "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+          "symbol": "USDXL",
+          "decimals": 18
+        },
+        {
+          "address": "0xdc6f4239c1d8d3b955c06cb8f1a6cf18effc5bfe",
+          "symbol": "stathyUSD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xc5619cfcce9fae18eda1d1e923aa1fdea42d93b7",
+      "symbol": "USDp-csbUSDC",
+      "name": "USDp-csbUSDC",
+      "tokens": [
+        {
+          "address": "0xbe65f0f410a72bec163dc65d46c83699e957d588",
+          "symbol": "USDp",
+          "decimals": 18
+        },
+        {
+          "address": "0xc200aab602cd7046389b5c8fb088884323f8dd0f",
+          "symbol": "eUSDC-3",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xca0dbc8355bec87496ab5563f5e00ba4ec270ee3",
+      "symbol": "hyHYPE/USDXL",
+      "name": "hyHYPE/USDXL",
+      "tokens": [
+        {
+          "address": "0x3df418be6dad3f824d00a7c516dad3ea2a5a79c6",
+          "symbol": "stathyWHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+          "symbol": "USDXL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd10d872997e45686d2543ccb62e8f259ab44cc65",
+      "symbol": "USDHL-LOOP",
+      "name": "reCLAMM USDHL-LOOP",
+      "tokens": [
+        {
+          "address": "0x00fdbc53719604d924226215bc871d55e40a1009",
+          "symbol": "LOOP",
+          "decimals": 18
+        },
+        {
+          "address": "0xb50a96253abdf803d85efcdce07ad8becbc52bd5",
+          "symbol": "USDHL",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xd9b183eb08d8b54ac366a6fad31228e9403e4906",
+      "symbol": "tHYPE-WHYPE",
+      "name": "Balancer tHYPE-WHYPE",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xb83d27f0f4133a7b0377a88089583131a903fdc7",
+          "symbol": "tHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdc5ca287d6a6d94eaa729c3e4ff19afaf299219e",
+      "symbol": "TOK-undefined-LBP",
+      "name": "Test Token Liquidity Bootstrapping Pool",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0x75d30a36f2d576add31b546fb2e40f61a15af0d4",
+          "symbol": "TOK",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xe0230147ebf010b40869e27c8fab6d38a6647472",
+      "symbol": "AutoRange-TREE-tHYPE",
+      "name": "Balancer AutoRange TREE-tHYPE",
+      "tokens": [
+        {
+          "address": "0x77146784315ba81904d654466968e3a7c196d1f3",
+          "symbol": "TREE",
+          "decimals": 18
+        },
+        {
+          "address": "0xb83d27f0f4133a7b0377a88089583131a903fdc7",
+          "symbol": "tHYPE",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xfa5faba5ec32c374b4b989ffef1ea90b681a6e95",
+      "symbol": "50USDXL-50WHYPE",
+      "name": "50USDXL 50WHYPE",
+      "tokens": [
+        {
+          "address": "0x5555555555555555555555555555555555555555",
+          "symbol": "WHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
+          "symbol": "USDXL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xff43d5f795c5cb3c864139b665463044c18923c9",
+      "symbol": "kHYPE-purrHYPE",
+      "name": "Kinetiq Surge kHYPE / purrHYPE",
+      "tokens": [
+        {
+          "address": "0xe8b10461ea0b04ff30f4cbfc3e93957cac00ded4",
+          "symbol": "purrHYPE",
+          "decimals": 18
+        },
+        {
+          "address": "0xfd739d4e423301ce9385c1fb8850539d657c296d",
+          "symbol": "kHYPE",
+          "decimals": 18
+        }
+      ]
+    }
+  ],
+  "gauges": []
+}

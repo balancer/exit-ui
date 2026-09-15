@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "chainKey": "xlayer",
+    "scannedAtBlock": 0,
+    "generatedAt": "2026-09-15T12:28:23.654Z",
+    "source": "balancer-api"
+  },
+  "v1Pools": [],
+  "v2Pools": [],
+  "v3Pools": [
+    {
+      "address": "0x089664b3b67ad603cd45659f21b51d2b3305a502",
+      "symbol": "W-USDT-xbtc",
+      "name": "Weighted USDT-xbtc",
+      "tokens": [
+        {
+          "address": "0x779ded0c9e1022225f8e0630b35a9b54be713736",
+          "symbol": "USD₮0",
+          "decimals": 6
+        },
+        {
+          "address": "0xb7c00000bcdeef966b20b3d884b98e64d2b06b4f",
+          "symbol": "xBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0x6a1e1a96d260672c71e6a5a3aeedc5a39c2d6573",
+      "symbol": "S-USDG-USDT",
+      "name": "Stable USDG-USDT",
+      "tokens": [
+        {
+          "address": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
+          "symbol": "USDG",
+          "decimals": 6
+        },
+        {
+          "address": "0x779ded0c9e1022225f8e0630b35a9b54be713736",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    }
+  ],
+  "gauges": []
+}

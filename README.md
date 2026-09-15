@@ -1,8 +1,13 @@
-# Balancer Legacy Exit UI
+# Balancer Exit UI
 
-Standalone static website for withdrawing legacy Balancer positions.
-Currently enabled: Balancer **v1 on Ethereum mainnet**, plus Balancer **v2/v3** on
-**Mode**, **Fraxtal**, and **Polygon zkEVM**.
+Standalone static website for withdrawing Balancer positions. It supports Balancer V1 on
+Ethereum and every configured production Balancer V2/V3 network except Sonic:
+
+- V2: Ethereum, Polygon, Arbitrum, Gnosis, Optimism, Avalanche, Base, Polygon zkEVM,
+  Mode, and Fraxtal
+- V3: Ethereum, Arbitrum, Gnosis, Optimism, Avalanche, Base, HyperEVM, Plasma, X Layer, and Monad
+
+Sepolia remains available in development mode only.
 
 - Connect an injected wallet (MetaMask, Rabby, ...) or watch any address read-only
 - Optionally configure a custom RPC URL per chain (persisted in localStorage)
@@ -31,7 +36,14 @@ Dependencies: react, react-dom, viem. That's all.
 ## How discovery works
 
 Positions are scanned against per-chain pool/gauge lists committed in `src/config/data/<chain>.json`.
-These lists are generated once (chains are deprecated; the lists don't change) by:
+Production snapshots can be refreshed quickly from the official Balancer API (the website still
+has no runtime API dependency):
+
+```bash
+npm run sync:data
+```
+
+For an authoritative direct on-chain scan, run:
 
 ```bash
 npm run discover -- --chain mode [--rpc <url>] [--to-block <n>]
@@ -58,7 +70,7 @@ Pools missing from a list can always be added in the UI by pasting the pool addr
 
 ## Chain registry
 
-`src/config/registry.json` holds config for **all** Balancer chains (Ethereum v1 factories,
+`src/config/registry.json` holds config for **all supported** Balancer chains (Ethereum v1 factories,
 v2 vault + pool factories +
 gauge factories + start blocks, v3 vault + router, BalancerQueries, Multicall3, default RPC).
 It is machine-generated from sibling repos — never hand-edit it; regenerate instead:
@@ -68,20 +80,21 @@ node tools/extract-registry.mjs --repos <dir containing the 4 repos below>
 ```
 
 Sources: the archived Balancer V1 address docs and V1 subgraph,
-`balancer-subgraph-v2/networks.json`, `balancer-subgraph-v3/networks.json`,
+`balancer-subgraph-v2/networks.yaml` (or legacy `networks.json`),
+`balancer-subgraph-v3/networks.json`,
 `gauges-subgraph/subgraph.<chain>.yaml`, `backend/config/<chain>.ts`.
 
-## Deprecating another chain
+## Adding or hiding a chain
 
 1. Regenerate the registry if factory lists changed: `node tools/extract-registry.mjs`
-2. Set `"deprecated": true` for the chain in `src/config/registry.json`
-   (or mark it in `tools/extract-registry.mjs` and regenerate)
+2. Add the source mapping in `tools/extract-registry.mjs`; set `enabled: false` there for a
+   development-only chain
 3. Run discovery: `npm run discover -- --chain <key>`
 4. Smoke test the exits: `node tools/smoke-test.mjs --chain <key>`
 5. Build and deploy
 
-Chains that are not deprecated are hidden in the UI but visible in dev mode
-(`npm run dev` or append `?dev=1` to the URL). Base is included as a v3 test chain.
+Disabled chains are hidden in production but visible in dev mode (`npm run dev` or append
+`?dev=1` to the URL).
 
 ## Verification tools
 
@@ -103,7 +116,7 @@ For end-to-end testing with real transactions, fork a chain with
 - V1 was deployed only on Ethereum mainnet. V1 has no gauge discovery or unstaking path here.
 - V1 discovery intentionally watches only `BFactory`, matching the V1 subgraph; `CRPFactory`
   is used to classify factory-event callers and recover the smart-pool share-token address.
-- No USD pricing — deprecated chains have no reliable price source; amounts are token quantities.
+- No USD pricing — amounts are token quantities.
 - Linear pools (zkEVM) can only exit while in recovery mode (they all are, post-deprecation);
   the UI blocks them otherwise instead of implementing batch swaps.
 - Nested/boosted pools (e.g. bb-o-USD on zkEVM) pay out the inner BPTs (linear pool tokens).
