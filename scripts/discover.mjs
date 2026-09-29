@@ -6,12 +6,19 @@
  *
  * Usage:
  *   node scripts/discover.mjs --chain mode [--protocol v1|v2|v3|all] [--rpc <url>] [--to-block <n>]
+ *   node scripts/discover.mjs --chain mode --incremental
+ *
+ * --incremental resumes from meta.scannedAtBlock of the existing data file, sweeps only the new
+ * blocks (up to 1000 blocks behind head) and merges new pools/gauges into the existing lists.
+ * A halted chain (head older than a day) is swept up to its head once, then left alone.
+ * If the RPC is unreachable it exits with EXIT_RPC_UNREACHABLE (75) so callers can skip it.
+ * RPCs can also be overridden via the DISCOVERY_RPC_URLS env var: {"<chain>": "<url>", ...}.
  *
  * All factories + the v3 vault are swept in ONE chunked eth_getLogs pass (address array +
  * topic0 array), so wall time is independent of the factory count. Chunks adapt: start
  * large, halve on RPC errors, floor at the chain's logsMaxRange (zkEVM caps at 1k blocks).
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createPublicClient, http, toEventSelector, getAddress } from 'viem'
@@ -38,12 +45,22 @@ if (!chainKey || !REGISTRY[chainKey]) {
   process.exit(1)
 }
 const chain = REGISTRY[chainKey]
-const rpcUrl = arg('rpc', chain.defaultRpcUrl)
+const rpcOverrides = JSON.parse(process.env.DISCOVERY_RPC_URLS || '{}')
+const rpcUrl = arg('rpc', rpcOverrides[chainKey] || chain.defaultRpcUrl)
 const protocol = arg('protocol', 'all')
 if (!['v1', 'v2', 'v3', 'all'].includes(protocol)) {
   console.error('--protocol must be one of: v1, v2, v3, all')
   process.exit(1)
 }
+const incremental = process.argv.includes('--incremental')
+// meta.scannedAtBlock is one cursor for all protocols, so it may only advance on a full sweep
+if (incremental && protocol !== 'all') {
+  console.error('--incremental requires --protocol all')
+  process.exit(1)
+}
+const outPath = join(__dirname, '..', 'src', 'config', 'data', `${chainKey}.json`)
+const existing = incremental && existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : null
+if (incremental && !existing) console.log(`no existing ${chainKey}.json, running a full scan`)
 const include = (version) => protocol === 'all' || protocol === version
 
 // Discovery has its own adaptive retry/range logic; transport-level retries would make a
@@ -209,7 +226,29 @@ async function getTokenMeta(addresses) {
   return addresses.map((a) => tokenMetaCache.get(a))
 }
 
-const latestBlock = arg('to-block') ? BigInt(arg('to-block')) : await client.getBlockNumber()
+// Incremental runs stay CONFIRMATIONS behind head so a reorg can't drop a pool behind the cursor.
+// Not the `finalized` tag: on winding-down chains it can stall far behind (zkEVM: ~5M blocks).
+// A halted chain can't reorg, so it is swept right up to its head.
+const CONFIRMATIONS = 1000n
+const HALTED_AFTER_SECONDS = 24n * 3600n
+const EXIT_RPC_UNREACHABLE = 75
+
+let head
+try {
+  head = await client.getBlock()
+} catch (e) {
+  if (!incremental) throw e
+  console.error(`RPC ${rpcUrl} unreachable: ${e.shortMessage ?? e.message}`)
+  process.exit(EXIT_RPC_UNREACHABLE)
+}
+const headAge = BigInt(Math.floor(Date.now() / 1000)) - head.timestamp
+const halted = headAge > HALTED_AFTER_SECONDS
+if (halted) console.log(`head block ${head.number} is ${headAge / 86400n} days old, chain appears halted`)
+const latestBlock = arg('to-block')
+  ? BigInt(arg('to-block'))
+  : incremental && !halted
+    ? head.number - CONFIRMATIONS
+    : head.number
 console.log(`chain=${chainKey} rpc=${rpcUrl} latest=${latestBlock}`)
 
 // Build the combined source list
@@ -240,7 +279,12 @@ if (!sources.length) {
   process.exit(1)
 }
 
-const fromBlock = Math.min(...sources.map((s) => s.startBlock))
+const firstSourceBlock = Math.min(...sources.map((s) => s.startBlock))
+const fromBlock = existing ? Math.max(existing.meta.scannedAtBlock + 1, firstSourceBlock) : firstSourceBlock
+if (BigInt(fromBlock) > latestBlock) {
+  console.log(`already scanned up to block ${existing?.meta.scannedAtBlock}, nothing to do`)
+  process.exit(0)
+}
 console.log(`sweeping ${sources.length} sources from block ${fromBlock}`)
 const events = await sweep(sources, fromBlock, latestBlock)
 
@@ -386,7 +430,9 @@ if (include('v2') && chain.v2?.gaugeFactories?.length) {
     console.log(`gauge ${gf.name}: ${gauges.length} gauges`)
     if (!gauges.length) continue
     const lpTokens = await multicall(gauges.map((g) => ({ address: g, abi: gaugeAbi, functionName: 'lp_token' })))
-    const poolSymbols = new Map(out.v2Pools.map((p) => [p.address.toLowerCase(), p.symbol]))
+    const poolSymbols = new Map(
+      [...(existing?.v2Pools ?? []), ...out.v2Pools].map((p) => [p.address.toLowerCase(), p.symbol])
+    )
     const unknownLps = gauges.map((_, i) => lpTokens[i]).filter((lp) => lp && !poolSymbols.has(lp.toLowerCase()))
     await getTokenMeta(unknownLps)
     gauges.forEach((g, i) => {
@@ -401,13 +447,23 @@ if (include('v2') && chain.v2?.gaugeFactories?.length) {
   }
 }
 
+if (existing) {
+  const added = []
+  for (const key of ['v1Pools', 'v2Pools', 'v3Pools', 'gauges']) {
+    const known = new Set((existing[key] ?? []).map((x) => x.address.toLowerCase()))
+    const fresh = out[key].filter((x) => !known.has(x.address.toLowerCase()))
+    if (fresh.length) added.push(`${fresh.length} ${key}`)
+    out[key] = [...(existing[key] ?? []), ...fresh]
+  }
+  console.log(`blocks ${fromBlock}..${latestBlock}: ${added.length ? `added ${added.join(', ')}` : 'nothing new'}`)
+}
+
 // deterministic output for clean diffs
 out.v1Pools.sort((a, b) => a.address.localeCompare(b.address))
 out.v2Pools.sort((a, b) => a.address.localeCompare(b.address))
 out.v3Pools.sort((a, b) => a.address.localeCompare(b.address))
 out.gauges.sort((a, b) => a.address.localeCompare(b.address))
 
-const outPath = join(__dirname, '..', 'src', 'config', 'data', `${chainKey}.json`)
 mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, JSON.stringify(out, null, 2) + '\n')
 console.log(
