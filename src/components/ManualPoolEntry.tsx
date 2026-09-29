@@ -66,6 +66,7 @@ export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => voi
             tokens: await tokenMeta(v1.tokens),
             balance,
             inRecoveryMode: false,
+            paused: false,
           })
           setInput('')
           return
@@ -90,6 +91,7 @@ export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => voi
             tokens: await tokenMeta(v2.tokens),
             balance,
             inRecoveryMode: v2.inRecoveryMode,
+            paused: v2.paused,
           })
           setInput('')
           return
@@ -107,6 +109,7 @@ export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => voi
           tokens: await tokenMeta(v3.tokens),
           balance,
           inRecoveryMode: v3.inRecoveryMode,
+          paused: v3.paused,
         })
         setInput('')
         return

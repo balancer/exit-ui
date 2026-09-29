@@ -149,23 +149,60 @@ export async function executeV3Exit(
   })
 }
 
+/**
+ * A paused v3 pool rejects proportional exits, but the Vault lets anyone enable recovery mode
+ * while the pool (or the Vault) is paused, which unlocks removeLiquidityRecovery.
+ */
+export async function enableV3RecoveryMode(
+  walletClient: WalletClient,
+  chain: ChainConfig,
+  pool: Address,
+  user: Address
+): Promise<Hash> {
+  return walletClient.writeContract({
+    chain: walletClient.chain,
+    account: user,
+    address: chain.v3!.vault,
+    abi: vaultV3Abi,
+    functionName: 'enableRecoveryMode',
+    args: [pool],
+  })
+}
+
+export async function isV3PoolInRecoveryMode(
+  client: PublicClient,
+  chain: ChainConfig,
+  pool: Address
+): Promise<boolean> {
+  return client.readContract({
+    address: chain.v3!.vault,
+    abi: vaultV3Abi,
+    functionName: 'isPoolInRecoveryMode',
+    args: [pool],
+  })
+}
+
 /** For manual pool entry: resolve a v3 pool from its address. */
 export async function resolveV3Pool(
   client: PublicClient,
   chain: ChainConfig,
   poolAddress: Address
-): Promise<{ tokens: Address[]; inRecoveryMode: boolean }> {
+): Promise<{ tokens: Address[]; inRecoveryMode: boolean; paused: boolean }> {
   const tokens = await client.readContract({
     address: chain.v3!.vault,
     abi: vaultV3Abi,
     functionName: 'getPoolTokens',
     args: [poolAddress],
   })
-  const inRecoveryMode = await client.readContract({
-    address: chain.v3!.vault,
-    abi: vaultV3Abi,
-    functionName: 'isPoolInRecoveryMode',
-    args: [poolAddress],
-  })
-  return { tokens: [...tokens], inRecoveryMode }
+  const [inRecoveryMode, poolPaused, vaultPaused] = await Promise.all([
+    isV3PoolInRecoveryMode(client, chain, poolAddress),
+    client.readContract({
+      address: chain.v3!.vault,
+      abi: vaultV3Abi,
+      functionName: 'isPoolPaused',
+      args: [poolAddress],
+    }),
+    client.readContract({ address: chain.v3!.vault, abi: vaultV3Abi, functionName: 'isVaultPaused' }),
+  ])
+  return { tokens: [...tokens], inRecoveryMode, paused: poolPaused || vaultPaused }
 }

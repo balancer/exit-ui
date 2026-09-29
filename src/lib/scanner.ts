@@ -89,6 +89,21 @@ export async function scanPositions(
   ]
   const recovery = recoveryCalls.length ? await multicall(client, chain, recoveryCalls) : []
 
+  const pausedCalls = [
+    ...v2Hits.map((x) => ({ address: x.pool.address, abi: basePoolV2Abi, functionName: 'getPausedState' })),
+    ...v3Hits.map((x) => ({
+      address: chain.v3!.vault,
+      abi: vaultV3Abi,
+      functionName: 'isPoolPaused',
+      args: [x.pool.address],
+    })),
+    ...(v3Hits.length ? [{ address: chain.v3!.vault, abi: vaultV3Abi, functionName: 'isVaultPaused' }] : []),
+  ]
+  const pausedResults = pausedCalls.length ? await multicall(client, chain, pausedCalls) : []
+  const v2Paused = (i: number) => (pausedResults[i] as readonly [boolean, bigint, bigint] | null)?.[0] === true
+  const v3VaultPaused = pausedResults[v2Hits.length + v3Hits.length] === true
+  const v3Paused = (i: number) => v3VaultPaused || pausedResults[v2Hits.length + i] === true
+
   const pools: PoolPosition[] = [
     ...v1Hits.map((x) => ({
       protocolVersion: 1 as const,
@@ -100,6 +115,7 @@ export async function scanPositions(
       tokens: x.pool.tokens,
       balance: x.balance!,
       inRecoveryMode: false,
+      paused: false,
     })),
     ...v2Hits.map((x, i) => ({
       protocolVersion: 2 as const,
@@ -111,6 +127,7 @@ export async function scanPositions(
       tokens: x.pool.tokens,
       balance: x.balance!,
       inRecoveryMode: recovery[i] === true,
+      paused: v2Paused(i),
     })),
     ...v3Hits.map((x, i) => ({
       protocolVersion: 3 as const,
@@ -120,6 +137,7 @@ export async function scanPositions(
       tokens: x.pool.tokens,
       balance: x.balance!,
       inRecoveryMode: recovery[v2Hits.length + i] === true,
+      paused: v3Paused(i),
     })),
   ]
 

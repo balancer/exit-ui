@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { maxUint256 } from 'viem'
 import { useApp } from '../contexts/AppContext'
 import { useTransaction } from '../hooks/useTransaction'
@@ -10,15 +10,17 @@ import { emergencyV2Quote, executeV2Exit, queryV2Exit, v2ExitMode, type V2ExitQu
 import {
   approveV3Router,
   emergencyV3Quote,
+  enableV3RecoveryMode,
   executeV3Exit,
   getV3Allowance,
+  isV3PoolInRecoveryMode,
   queryV3Exit,
   type V3ExitQuote,
 } from '../lib/v3'
 import { TxStatusView } from './TxStatusView'
 
 export function PoolPositionCard({
-  position,
+  position: scanned,
   onExited,
 }: {
   position: PoolPosition
@@ -36,6 +38,11 @@ export function PoolPositionCard({
   const [allowance, setAllowance] = useState<bigint | null>(null)
   const debounceRef = useRef<number>()
 
+  // v3 recovery mode can be enabled from this card; track it locally so no rescan is needed
+  const [inRecoveryMode, setInRecoveryMode] = useState(scanned.inRecoveryMode)
+  useEffect(() => setInRecoveryMode(scanned.inRecoveryMode), [scanned.inRecoveryMode])
+  const position = useMemo(() => ({ ...scanned, inRecoveryMode }), [scanned, inRecoveryMode])
+
   const isV1 = position.protocolVersion === 1
   const isV2 = position.protocolVersion === 2
   const isV3 = position.protocolVersion === 3
@@ -45,13 +52,15 @@ export function PoolPositionCard({
       ? v2ExitMode(position)
       : position.inRecoveryMode
         ? 'recovery'
-        : 'proportional'
+        : position.paused
+          ? 'needsRecovery'
+          : 'proportional'
   const bptIn = amountInput ? parseAmount(amountInput, 18) : position.balance
   const validAmount = bptIn !== null && bptIn > 0n && bptIn <= position.balance
   const slippagePct = Number(slippage) >= 0 ? Number(slippage) : 1
 
   const refreshQuote = useCallback(async () => {
-    if (!validAmount || !scanTarget || mode === 'unsupported') return
+    if (!validAmount || !scanTarget || (mode !== 'proportional' && mode !== 'recovery')) return
     setQuoting(true)
     setQuoteError('')
     try {
@@ -90,8 +99,18 @@ export function PoolPositionCard({
     if (ok) setAllowance(await getV3Allowance(publicClient, chain, position.address, account))
   }
 
+  async function onEnableRecovery() {
+    if (!account) return
+    const walletClient = makeWalletClient(chain, account)
+    const ok = await send('Enable recovery mode', () =>
+      enableV3RecoveryMode(walletClient, chain, position.address, account)
+    )
+    if (ok) setInRecoveryMode(await isV3PoolInRecoveryMode(publicClient, chain, position.address))
+  }
+
   async function onExit() {
     if (!account || !validAmount) return
+    if (mode !== 'proportional' && mode !== 'recovery') return
     if (!quote && !emergency) return
     // simulation failed -> emergency-only path with zero mins
     const effectiveQuote =
@@ -131,6 +150,7 @@ export function PoolPositionCard({
           <span className="badge">v{position.protocolVersion}</span>{' '}
           {position.v1PoolKind && <span className="badge">{position.v1PoolKind}</span>}{' '}
           {position.poolType && <span className="badge">{position.poolType}</span>}{' '}
+          {position.paused && <span className="badge badge-orange">paused</span>}{' '}
           {position.inRecoveryMode && <span className="badge badge-orange">recovery mode</span>}
           <div className="muted">{position.name}</div>
         </div>
@@ -151,6 +171,30 @@ export function PoolPositionCard({
         <div className="warning-box" style={{ marginTop: 12 }}>
           This {position.poolType} pool only supports exits while in recovery mode, and it is not in
           recovery mode. Proportional exit is not possible here.
+        </div>
+      ) : mode === 'paused' ? (
+        <div className="error-box" style={{ marginTop: 12 }}>
+          This pool is paused and not in recovery mode. Exits (including emergency exits) revert
+          until Balancer governance enables recovery mode for it — on v2 this is a permissioned
+          action and cannot be triggered from here.
+        </div>
+      ) : mode === 'needsRecovery' ? (
+        <div className="card-inner" style={{ marginTop: 12 }}>
+          <div className="warning-box">
+            This pool is paused and not in recovery mode, so proportional exits revert. While the pool
+            is paused, anyone can enable recovery mode, which unlocks a proportional recovery exit.
+          </div>
+          <div className="row" style={{ marginTop: 12, flexWrap: 'wrap' }}>
+            <button
+              className="btn-primary"
+              disabled={readOnly || !account || status.state === 'pending' || status.state === 'confirming'}
+              onClick={onEnableRecovery}
+            >
+              Enable recovery mode
+            </button>
+            {readOnly && <span className="muted">watch mode — actions disabled</span>}
+          </div>
+          <TxStatusView status={status} />
         </div>
       ) : (
         <div className="card-inner" style={{ marginTop: 12 }}>
