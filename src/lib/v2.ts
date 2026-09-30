@@ -26,15 +26,23 @@ const PROPORTIONAL_EXIT_KIND: Partial<Record<PoolType, bigint>> = {
   // linear / phantomStable: recovery-mode exit only
 }
 
-export type V2ExitMode = 'recovery' | 'proportional' | 'unsupported'
+// 'paused': pool paused and not in recovery mode. Non-recovery exits revert in BasePool, and
+// enabling recovery mode is permissioned on v2, so there is no exit path until governance acts.
+export type V2ExitMode = 'recovery' | 'proportional' | 'unsupported' | 'paused'
 
 export function v2ExitMode(position: PoolPosition): V2ExitMode {
   if (position.inRecoveryMode) return 'recovery'
+  if (position.paused) return 'paused'
   if (PROPORTIONAL_EXIT_KIND[position.poolType!] !== undefined) return 'proportional'
   return 'unsupported'
 }
 
-function encodeUserData(mode: V2ExitMode, poolType: PoolType, bptIn: bigint): `0x${string}` {
+function assertExitable(mode: V2ExitMode): asserts mode is 'recovery' | 'proportional' {
+  if (mode === 'unsupported') throw new Error('Pool type supports recovery-mode exits only')
+  if (mode === 'paused') throw new Error('Pool is paused and not in recovery mode')
+}
+
+function encodeUserData(mode: 'recovery' | 'proportional', poolType: PoolType, bptIn: bigint): `0x${string}` {
   const kind = mode === 'recovery' ? 255n : PROPORTIONAL_EXIT_KIND[poolType]!
   return encodeAbiParameters(
     [{ type: 'uint256' }, { type: 'uint256' }],
@@ -50,7 +58,7 @@ export interface V2ExitQuote {
 
 /** Fallback quote when queryExit reverts: zero expectations, used for emergency exits only. */
 export function emergencyV2Quote(position: PoolPosition, bptIn: bigint, mode: V2ExitMode): V2ExitQuote {
-  if (mode === 'unsupported') throw new Error('Pool type supports recovery-mode exits only')
+  assertExitable(mode)
   return {
     amountsOut: position.tokens.map(() => 0n),
     userData: encodeUserData(mode, position.poolType!, bptIn),
@@ -109,7 +117,7 @@ export async function queryV2Exit(
   bptIn: bigint,
   mode: V2ExitMode
 ): Promise<V2ExitQuote> {
-  if (mode === 'unsupported') throw new Error('Pool type supports recovery-mode exits only')
+  assertExitable(mode)
   const userData = encodeUserData(mode, position.poolType!, bptIn)
   if (mode === 'recovery') {
     const amountsOut = await quoteRecoveryExit(client, chain, position, bptIn)
@@ -175,7 +183,7 @@ export async function resolveV2Pool(
   client: PublicClient,
   chain: ChainConfig,
   poolAddress: Address
-): Promise<{ poolId: `0x${string}`; tokens: Address[]; inRecoveryMode: boolean }> {
+): Promise<{ poolId: `0x${string}`; tokens: Address[]; inRecoveryMode: boolean; paused: boolean }> {
   const poolId = await client.readContract({
     address: poolAddress,
     abi: basePoolV2Abi,
@@ -197,5 +205,8 @@ export async function resolveV2Pool(
   } catch {
     // very old pools (pre-recovery-mode) don't implement it
   }
-  return { poolId, tokens: [...tokens], inRecoveryMode }
+  const [paused] = await client
+    .readContract({ address: poolAddress, abi: basePoolV2Abi, functionName: 'getPausedState' })
+    .catch(() => [false] as const)
+  return { poolId, tokens: [...tokens], inRecoveryMode, paused }
 }

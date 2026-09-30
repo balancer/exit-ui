@@ -59,6 +59,8 @@ export interface PoolPosition {
   tokens: TokenInfo[]
   balance: bigint
   inRecoveryMode: boolean
+  /** v2: pool paused. v3: pool or Vault paused. Non-recovery exits revert while paused. */
+  paused: boolean
 }
 
 export interface RewardInfo {
