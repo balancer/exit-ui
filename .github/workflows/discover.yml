@@ -1,0 +1,75 @@
+name: Daily pool discovery
+
+# Sweeps every chain marked "deprecated" in src/config/registry.json for pools/gauges created
+# since meta.scannedAtBlock of its src/config/data/<chain>.json, merges them in and pushes the
+# updated lists to main. The advanced cursor is committed even when nothing new was found.
+# Halted chains (e.g. zkEVM) are swept to their final block once and are no-ops afterwards.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Discover new pools
+        # Optional RPC overrides: DISCOVERY_RPC_URLS secret holding {"<chain>": "<url>", ...};
+        # chains without an entry use the registry's defaultRpcUrl
+        env:
+          DISCOVERY_RPC_URLS: ${{ secrets.DISCOVERY_RPC_URLS }}
+        run: |
+          chains=$(node -e "
+            const r = require('./src/config/registry.json')
+            console.log(Object.keys(r).filter((k) => r[k].deprecated).join(' '))")
+          failed=""
+          for chain in $chains; do
+            echo "::group::$chain"
+            code=0
+            node scripts/discover.mjs --chain "$chain" --incremental || code=$?
+            echo "::endgroup::"
+            # 75: RPC unreachable (e.g. a shut-down chain) -> warn only; the cursor catches up next run
+            case $code in
+              0) ;;
+              75) echo "::warning::$chain: RPC unreachable, skipped" ;;
+              *) failed="$failed $chain" ;;
+            esac
+          done
+          echo "FAILED=$failed" >> "$GITHUB_ENV"
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet -- src/config/data; then
+            echo "No changes"
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add src/config/data
+            git commit -m "chore(data): daily pool discovery"
+            git push
+          fi
+
+      # Successful chains are still committed above; fail the run so broken RPCs get noticed
+      - name: Report failed chains
+        if: env.FAILED != ''
+        run: |
+          echo "::error::Discovery failed for:$FAILED"
+          exit 1
