@@ -1,9 +1,10 @@
 {
   "meta": {
     "chainKey": "zkevm",
-    "scannedAtBlock": 32774707,
-    "generatedAt": "2026-06-10T15:09:02.721Z"
+    "scannedAtBlock": 33391890,
+    "generatedAt": "2026-09-30T08:00:32.844Z"
   },
+  "v1Pools": [],
   "v2Pools": [
     {
       "address": "0x01e4464604aD0167D9dCCDA63ecd471B0cA0f0Ef",

@@ -1,9 +1,10 @@
 {
   "meta": {
     "chainKey": "fraxtal",
-    "scannedAtBlock": 37145720,
-    "generatedAt": "2026-06-10T14:35:51.818Z"
+    "scannedAtBlock": 41971261,
+    "generatedAt": "2026-09-30T08:00:35.496Z"
   },
+  "v1Pools": [],
   "v2Pools": [
     {
       "address": "0x1570315476480fA80ceC1FFF07A20c1df1aDfD53",
