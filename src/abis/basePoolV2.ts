@@ -13,4 +13,16 @@ export const basePoolV2Abi = [
     inputs: [],
     outputs: [{ type: 'bool' }],
   },
+  {
+    // TemporarilyPausable: `paused` is the effective state (false once the buffer period ends)
+    type: 'function',
+    name: 'getPausedState',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [
+      { name: 'paused', type: 'bool' },
+      { name: 'pauseWindowEndTime', type: 'uint256' },
+      { name: 'bufferPeriodEndTime', type: 'uint256' },
+    ],
+  },
 ] as const

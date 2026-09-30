@@ -49,6 +49,14 @@ For an authoritative direct on-chain scan, run:
 npm run discover -- --chain mode [--rpc <url>] [--to-block <n>]
 ```
 
+A daily GitHub Action (`.github/workflows/discover.yml`) keeps them current. It runs
+`--incremental`, which resumes from `meta.scannedAtBlock`, sweeps only newer blocks (up to 1000
+blocks behind head), merges new pools/gauges in and pushes the result to `main`. It covers every chain marked
+`"deprecated": true` in the registry. Halted chains (head older than a day, e.g. zkEVM) are
+swept to their final block once and skipped afterwards; an unreachable RPC is a warning, not a
+failure. RPCs can be overridden with a `DISCOVERY_RPC_URLS` repository secret
+(`{"mode": "https://..."}`).
+
 The script enumerates:
 - v1 pools: `LOG_NEW_POOL` events from the Ethereum `BFactory`. Like the official V1 subgraph,
   it classifies `event.caller` with `CRPFactory.isCrp`: a recognized caller is the user-facing
@@ -89,7 +97,7 @@ Sources: the archived Balancer V1 address docs and V1 subgraph,
 1. Regenerate the registry if factory lists changed: `node tools/extract-registry.mjs`
 2. Add the source mapping in `tools/extract-registry.mjs`; set `enabled: false` there for a
    development-only chain
-3. Run discovery: `npm run discover -- --chain <key>`
+3. Run discovery: `npm run discover -- --chain <key>` (the daily workflow picks it up from then on)
 4. Smoke test the exits: `node tools/smoke-test.mjs --chain <key>`
 5. Build and deploy
 
