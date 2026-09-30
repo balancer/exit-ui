@@ -48,20 +48,20 @@ const PUBLIC_RPC = {
 
 // chain key -> source keys + static metadata
 const CHAINS = {
-  mainnet:   { v2: 'mainnet', v3: 'mainnet', gauges: 'subgraph.yaml', backend: 'mainnet.ts', name: 'Ethereum', explorer: 'https://etherscan.io' },
-  polygon:   { v2: 'polygon', v3: null, gauges: 'subgraph.polygon.yaml', backend: 'polygon.ts', name: 'Polygon', explorer: 'https://polygonscan.com' },
-  arbitrum:  { v2: 'arbitrum', v3: 'arbitrum-one', gauges: 'subgraph.arbitrum.yaml', backend: 'arbitrum.ts', name: 'Arbitrum', explorer: 'https://arbiscan.io' },
-  gnosis:    { v2: 'gnosis', v3: 'gnosis', gauges: 'subgraph.gnosis.yaml', backend: 'gnosis.ts', name: 'Gnosis', explorer: 'https://gnosisscan.io' },
-  optimism:  { v2: 'optimism', v3: 'optimism', gauges: 'subgraph.optimism.yaml', backend: 'optimism.ts', name: 'Optimism', explorer: 'https://optimistic.etherscan.io' },
-  avalanche: { v2: 'avalanche', v3: 'avalanche', gauges: 'subgraph.avalanche.yaml', backend: 'avalanche.ts', name: 'Avalanche', explorer: 'https://snowtrace.io' },
-  base:      { v2: 'base', v3: 'base', gauges: 'subgraph.base.yaml', backend: 'base.ts', name: 'Base', explorer: 'https://basescan.org' },
+  mainnet:   { v2: 'mainnet', v3: 'mainnet', gauges: 'subgraph.yaml', backend: 'mainnet.ts', name: 'Ethereum', explorer: 'https://etherscan.io', deprecated: true },
+  polygon:   { v2: 'polygon', v3: null, gauges: 'subgraph.polygon.yaml', backend: 'polygon.ts', name: 'Polygon', explorer: 'https://polygonscan.com', deprecated: true },
+  arbitrum:  { v2: 'arbitrum', v3: 'arbitrum-one', gauges: 'subgraph.arbitrum.yaml', backend: 'arbitrum.ts', name: 'Arbitrum', explorer: 'https://arbiscan.io', deprecated: true },
+  gnosis:    { v2: 'gnosis', v3: 'gnosis', gauges: 'subgraph.gnosis.yaml', backend: 'gnosis.ts', name: 'Gnosis', explorer: 'https://gnosisscan.io', deprecated: true },
+  optimism:  { v2: 'optimism', v3: 'optimism', gauges: 'subgraph.optimism.yaml', backend: 'optimism.ts', name: 'Optimism', explorer: 'https://optimistic.etherscan.io', deprecated: true },
+  avalanche: { v2: 'avalanche', v3: 'avalanche', gauges: 'subgraph.avalanche.yaml', backend: 'avalanche.ts', name: 'Avalanche', explorer: 'https://snowtrace.io', deprecated: true },
+  base:      { v2: 'base', v3: 'base', gauges: 'subgraph.base.yaml', backend: 'base.ts', name: 'Base', explorer: 'https://basescan.org', deprecated: true },
   zkevm:     { v2: 'polygon-zkevm', v3: null, gauges: 'subgraph.polygon-zkevm.yaml', backend: 'zkevm.ts', name: 'Polygon zkEVM', explorer: 'https://zkevm.polygonscan.com', deprecated: true, logsMaxRange: 1000 },
   mode:      { v2: 'mode', v3: null, gauges: 'subgraph.mode.yaml', backend: 'mode.ts', name: 'Mode', explorer: 'https://explorer.mode.network', deprecated: true },
   fraxtal:   { v2: 'frax', v3: null, gauges: 'subgraph.fraxtal.yaml', backend: 'fraxtal.ts', name: 'Fraxtal', explorer: 'https://fraxscan.com', deprecated: true },
-  hyperevm:  { v2: null, v3: 'hyperevm', gauges: null, backend: 'hyperevm.ts', name: 'HyperEVM', explorer: 'https://hyperevmscan.io' },
-  plasma:    { v2: null, v3: 'plasma', gauges: null, backend: 'plasma.ts', name: 'Plasma', explorer: 'https://plasmascan.to' },
-  xlayer:    { v2: null, v3: 'xlayer', gauges: null, backend: 'xlayer.ts', name: 'X Layer', explorer: 'https://www.oklink.com/xlayer' },
-  monad:     { v2: null, v3: 'monad', gauges: null, backend: 'monad.ts', name: 'Monad', explorer: 'https://monadexplorer.com' },
+  hyperevm:  { v2: null, v3: 'hyperevm', gauges: null, backend: 'hyperevm.ts', name: 'HyperEVM', explorer: 'https://hyperevmscan.io', deprecated: true },
+  plasma:    { v2: null, v3: 'plasma', gauges: null, backend: 'plasma.ts', name: 'Plasma', explorer: 'https://plasmascan.to', deprecated: true },
+  xlayer:    { v2: null, v3: 'xlayer', gauges: null, backend: 'xlayer.ts', name: 'X Layer', explorer: 'https://www.oklink.com/xlayer', deprecated: true },
+  monad:     { v2: null, v3: 'monad', gauges: null, backend: 'monad.ts', name: 'Monad', explorer: 'https://monadexplorer.com', deprecated: true },
   sepolia:   { v2: 'sepolia', v3: 'sepolia', gauges: 'subgraph.sepolia.yaml', backend: 'sepolia.ts', name: 'Sepolia', explorer: 'https://sepolia.etherscan.io' },
 }
 

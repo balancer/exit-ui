@@ -61,10 +61,10 @@ export function isDevMode(): boolean {
   return import.meta.env.DEV || new URLSearchParams(window.location.search).has('dev')
 }
 
-/** Chains shown in the selector: legacy-exit chains, plus everything in dev mode. */
+/** Chains shown in the selector: deprecated chains, plus everything in dev mode. */
 export function visibleChains(): ChainConfig[] {
   const all = Object.values(CHAINS)
-  const visible = isDevMode() ? all : all.filter((c) => c.deprecated || Boolean(c.v1))
+  const visible = isDevMode() ? all : all.filter((c) => c.deprecated)
   return visible.sort((a, b) => {
     if (a.key === 'mainnet') return -1
     if (b.key === 'mainnet') return 1
