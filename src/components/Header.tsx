@@ -3,10 +3,24 @@ import { useApp } from '../contexts/AppContext'
 import { shortAddr } from '../lib/format'
 
 export function Header() {
-  const { chain, chains, selectChain, account, connect, hasWallet, rpcUrl, setRpcUrl } = useApp()
+  const {
+    chain,
+    chains,
+    selectChain,
+    account,
+    connect,
+    disconnect,
+    hasWallet,
+    rpcUrl,
+    setRpcUrl,
+  } = useApp()
   const [showRpc, setShowRpc] = useState(false)
   const [rpcInput, setRpcInput] = useState('')
   const [connectError, setConnectError] = useState('')
+
+  // Ethereum is listed for its v1 pools only; no v2/v3 pool lists are bundled for it
+  const protocolLabel = (c: (typeof chains)[number]) =>
+    c.v1 ? 'v1 only' : [c.v2 && 'v2', c.v3 && 'v3'].filter(Boolean).join('/')
 
   return (
     <header style={{ padding: '24px 0 8px' }}>
@@ -21,8 +35,7 @@ export function Header() {
           <select value={chain.key} onChange={(e) => selectChain(e.target.value)}>
             {chains.map((c) => (
               <option key={c.key} value={c.key}>
-                {c.v1 ? `${c.name} (v1 only)` : c.name}
-                {c.deprecated || c.v1 ? '' : ' (dev)'}
+                {c.name} ({protocolLabel(c)}){c.deprecated || c.v1 ? '' : ' (dev)'}
               </option>
             ))}
           </select>
@@ -30,15 +43,27 @@ export function Header() {
             RPC
           </button>
           {account ? (
-            <span className="badge badge-blue mono">{shortAddr(account)}</span>
+            <>
+              <span className="badge badge-blue mono">{shortAddr(account)}</span>
+              <button
+                className="btn-secondary"
+                onClick={() => {
+                  disconnect()
+                  setConnectError('')
+                }}
+              >
+                Disconnect
+              </button>
+            </>
           ) : (
             <button
               className="btn-primary"
               disabled={!hasWallet}
               title={hasWallet ? '' : 'No injected wallet detected'}
-              onClick={() =>
+              onClick={() => {
+                setConnectError('')
                 connect().catch((e) => setConnectError(String(e.shortMessage ?? e.message)))
-              }
+              }}
             >
               Connect wallet
             </button>

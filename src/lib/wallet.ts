@@ -11,8 +11,30 @@ export function hasInjectedWallet(): boolean {
   return Boolean((window as any).ethereum)
 }
 
-export async function requestAccounts(): Promise<Address[]> {
-  return ethereum().request({ method: 'eth_requestAccounts' })
+function isUnsupportedMethod(error: unknown): boolean {
+  const code = (error as { code?: number })?.code
+  return (
+    code === 4200 ||
+    code === -32601 ||
+    /not supported|unsupported method/i.test(String((error as Error)?.message))
+  )
+}
+
+export async function requestAccounts(selectAccount = false): Promise<Address[]> {
+  const eth = ethereum()
+  if (selectAccount) {
+    try {
+      await eth.request({
+        method: 'wallet_requestPermissions',
+        params: [{ eth_accounts: {} }],
+      })
+    } catch (error) {
+      // Not every injected wallet implements EIP-2255. In that case its regular
+      // connection flow is still the best available fallback.
+      if (!isUnsupportedMethod(error)) throw error
+    }
+  }
+  return eth.request({ method: 'eth_requestAccounts' })
 }
 
 export async function getWalletChainId(): Promise<number> {

@@ -22,6 +22,7 @@ interface AppContextValue {
 
   account: Address | null
   connect: () => Promise<void>
+  disconnect: () => void
   hasWallet: boolean
 
   /** Address being scanned: connected account or watch address. */
@@ -38,6 +39,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [chainKey, setChainKey] = useState(chains[0]?.key ?? 'mode')
   const [rpcVersion, setRpcVersion] = useState(0)
   const [account, setAccount] = useState<Address | null>(null)
+  const [selectAccountOnConnect, setSelectAccountOnConnect] = useState(false)
   const [watchAddress, setWatchAddress] = useState<Address | null>(null)
 
   const chain = useMemo(() => getChain(chainKey), [chainKey])
@@ -55,13 +57,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
   )
 
   const connect = useCallback(async () => {
-    const accounts = await requestAccounts()
+    const accounts = await requestAccounts(selectAccountOnConnect)
     setAccount(accounts[0] ?? null)
+    setSelectAccountOnConnect(false)
+  }, [selectAccountOnConnect])
+
+  const disconnect = useCallback(() => {
+    setAccount(null)
+    setSelectAccountOnConnect(true)
   }, [])
 
   useEffect(() => {
     return onWalletEvents({
-      accountsChanged: (accounts) => setAccount(accounts[0] ?? null),
+      accountsChanged: (accounts) => {
+        setAccount(accounts[0] ?? null)
+        setSelectAccountOnConnect(accounts.length === 0)
+      },
     })
   }, [])
 
@@ -76,6 +87,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setRpcUrl,
     account,
     connect,
+    disconnect,
     hasWallet: hasInjectedWallet(),
     watchAddress,
     setWatchAddress,
