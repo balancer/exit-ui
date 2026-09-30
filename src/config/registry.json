@@ -8,7 +8,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
-    "deprecated": false,
+    "deprecated": true,
     "v1": {
       "startBlock": 9562480,
       "factory": "0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd",
@@ -286,7 +286,7 @@
     "nativeSymbol": "POL",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 15832990,
@@ -526,7 +526,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 222832,
@@ -741,7 +741,7 @@
     "nativeSymbol": "xDAI",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 24821598,
@@ -872,7 +872,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 7003431,
@@ -1069,7 +1069,7 @@
     "nativeSymbol": "AVAX",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 26386141,
@@ -1165,7 +1165,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 1196036,
@@ -1425,7 +1425,7 @@
     "nativeSymbol": "HYPE",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 6132445,
@@ -1441,7 +1441,7 @@
     "nativeSymbol": "XPL",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 780207,
@@ -1457,7 +1457,7 @@
     "nativeSymbol": "OKB",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 100,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 43082760,
@@ -1473,7 +1473,7 @@
     "nativeSymbol": "MON",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 22091249,

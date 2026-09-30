@@ -37,6 +37,10 @@ jobs:
         env:
           DISCOVERY_RPC_URLS: ${{ secrets.DISCOVERY_RPC_URLS }}
         run: |
+          # GitHub masks the secret as a whole, not the URLs (with API keys) inside it
+          node -e "
+            const urls = JSON.parse(process.env.DISCOVERY_RPC_URLS || '{}')
+            for (const url of Object.values(urls)) console.log('::add-mask::' + url)"
           chains=$(node -e "
             const r = require('./src/config/registry.json')
             console.log(Object.keys(r).filter((k) => r[k].deprecated).join(' '))")
@@ -44,7 +48,8 @@ jobs:
           for chain in $chains; do
             echo "::group::$chain"
             code=0
-            node scripts/discover.mjs --chain "$chain" --incremental || code=$?
+            # 10k-block requests: larger eth_getLogs ranges were seen to silently drop logs on dRPC
+            node scripts/discover.mjs --chain "$chain" --incremental --max-range 10000 || code=$?
             echo "::endgroup::"
             # 75: RPC unreachable (e.g. a shut-down chain) -> warn only; the cursor catches up next run
             case $code in

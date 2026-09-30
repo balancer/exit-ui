@@ -1,0 +1,352 @@
+{
+  "meta": {
+    "chainKey": "xlayer",
+    "scannedAtBlock": 71990166,
+    "generatedAt": "2026-09-30T09:24:25.474Z"
+  },
+  "v1Pools": [],
+  "v2Pools": [],
+  "v3Pools": [
+    {
+      "address": "0x00BdB4933CD3E3943368732d4F8010d1492D4779",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x089664b3B67ad603cD45659F21B51d2B3305A502",
+      "symbol": "W-USDT-xbtc",
+      "name": "Weighted USDT-xbtc",
+      "tokens": [
+        {
+          "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+          "symbol": "USD₮0",
+          "decimals": 6
+        },
+        {
+          "address": "0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+          "symbol": "xBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0x09FDF368e2febE461F916Fe311e6d43f3C2A5Ca3",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock ReClamm Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3103f111426288815C5A8DD52509D752E1B02cF8",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x32C14494eB327e06F8fE843b82b56092e64F34A1",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock ReClamm Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x37c8416a055232afCB86fd776a684C8870f571fb",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro ECLP Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4CF75fA72AA391aB2342B38E18566681Bacf9862",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Fixed Price LBP",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x599D2905094FA689099BeE62cEAA7144cd30dBA0",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LBP",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x5f892Aa933bBdd41DCf81e6aDD30Aa0CB9DE8617",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6a1e1a96d260672c71e6a5a3AeEdc5a39C2d6573",
+      "symbol": "S-USDG-USDT",
+      "name": "Stable USDG-USDT",
+      "tokens": [
+        {
+          "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+          "symbol": "USDG",
+          "decimals": 6
+        },
+        {
+          "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+          "symbol": "USD₮0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x6f1d82D701045E280a27Af62Ea826D1C83100BD2",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x889d315dBC01056e89C9c98CC46B8D109FCA8a87",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Surge Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xA6fB3e57e5153f5a773d1ADa23aA899384cf2047",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xa8ec402dC875A8BC1243329C1e1Ab8c45895F23D",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro ECLP Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xC9Dfcdf676791F0d1Eb12443c2a875017aFd0Ed2",
+      "symbol": "WOKB-USD₮0-test",
+      "name": "WOKB-USD₮0-test",
+      "tokens": [
+        {
+          "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+          "symbol": "USD₮0",
+          "decimals": 6
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xcaC63acA56244832AAD5c92995455caFc55A7c33",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Surge Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xcD82A5014890E36A95194b35Ef1bea2BB0759c4a",
+      "symbol": "S-USDG-USDT",
+      "name": "Stable USDG-USDT",
+      "tokens": [
+        {
+          "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+          "symbol": "USDG",
+          "decimals": 6
+        },
+        {
+          "address": "0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+          "symbol": "xBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0xd20e7e2D16cDDE480CBd626C944C2697DA98dE48",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LBP",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdA6d7E949309EEB3cfed8779AD934bfB2889EaCC",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LBP",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xF3e1D7216E297F8A937Ac3BfF0804e8E0b923D28",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Pool",
+      "tokens": [
+        {
+          "address": "0x4132f7AcC9dB7A6cF7BE2Dd3A9DC8b30C7E6E6c8",
+          "symbol": "BAL",
+          "decimals": 18
+        },
+        {
+          "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+          "symbol": "WOKB",
+          "decimals": 18
+        }
+      ]
+    }
+  ],
+  "gauges": []
+}

@@ -1,0 +1,1348 @@
+{
+  "meta": {
+    "description": "Balancer v2 pools that exist on deprecated chains but are not supported by this app: their factories are not in the registry and their exits need a pool-specific userData format. Kept as a reference for adding support later. tvlUsd/holders are a Balancer API snapshot (may be stale).",
+    "source": "api-v3.balancer.fi",
+    "generatedAt": "2026-09-30T10:54:34.977Z"
+  },
+  "factories": [
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "pools": 26,
+      "inRegistry": false
+    },
+    {
+      "chain": "arbitrum",
+      "type": "FX",
+      "address": "0x0bd5EC16658346eeCd5dE8c704a38Efe02B5DA69",
+      "pools": 1,
+      "inRegistry": false
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "pools": 5,
+      "inRegistry": false
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "pools": 3,
+      "inRegistry": false
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0xfb23Bc0D2629268442CD6521CF4170698967105f",
+      "pools": 3,
+      "inRegistry": false
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "pools": 2,
+      "inRegistry": false
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "pools": 6,
+      "inRegistry": false
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "pools": 8,
+      "inRegistry": false
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+      "pools": 4,
+      "inRegistry": false
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xeFA1A53ea939013017e654beEdfC6f80E64ffC2d",
+      "pools": 1,
+      "inRegistry": false
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x19Ad20dA5f24671BFC7486FC8c119dD80CD09EfD",
+      "pools": 1,
+      "inRegistry": false
+    }
+  ],
+  "pools": [
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x90CA5cEf5B29342b229Fb8AE2DB5d8f4F894D652",
+      "poolId": "0x90ca5cef5b29342b229fb8ae2db5d8f4f894d6520002000000000000000000b5",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvUSDC-17DEC21",
+      "tokens": [
+        {
+          "address": "0x76a34D72b9CF97d972fB0e390eB053A37F211c74",
+          "symbol": "ePyvUSDC-17DEC21"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 38669.05,
+      "holders": "765"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x10a2F8bd81Ee2898D7eD18fb8f114034a549FA59",
+      "poolId": "0x10a2f8bd81ee2898d7ed18fb8f114034a549fa59000200000000000000000090",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvUSDC-28JAN22",
+      "tokens": [
+        {
+          "address": "0x8a2228705ec979961F0e16df311dEbcf097A2766",
+          "symbol": "ePyvUSDC-28JAN22"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 36843.92,
+      "holders": "2309"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x7Edde0CB05ED19e03A9a47CD5E53fC57FDe1c80c",
+      "poolId": "0x7edde0cb05ed19e03a9a47cd5e53fc57fde1c80c0002000000000000000000c8",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvUSDC-29APR22",
+      "tokens": [
+        {
+          "address": "0x52C9886d5D87B0f06EbACBEff750B5Ffad5d17d9",
+          "symbol": "ePyvUSDC-29APR22"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 16657.86,
+      "holders": "2833"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x893B30574BF183d69413717f30b17062eC9DFD8b",
+      "poolId": "0x893b30574bf183d69413717f30b17062ec9dfd8b000200000000000000000061",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurveLUSD-27DEC21",
+      "tokens": [
+        {
+          "address": "0xa2b3d083AA1eaa8453BfB477f062A208Ed85cBBF",
+          "symbol": "ePyvCurveLUSD-27DEC21"
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f"
+        }
+      ],
+      "tvlUsd": 16156.46,
+      "holders": "991"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xA47D1251CF21AD42685Cc6B8B3a186a73Dbd06cf",
+      "poolId": "0xa47d1251cf21ad42685cc6b8b3a186a73dbd06cf000200000000000000000097",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvDAI-28JAN22",
+      "tokens": [
+        {
+          "address": "0x449D7C2e096E9f867339078535b15440d42F78E8",
+          "symbol": "ePyvDAI-28JAN22"
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI"
+        }
+      ],
+      "tvlUsd": 14225.09,
+      "holders": "1023"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x787546Bf2c05e3e19e2b6BDE57A203da7f682efF",
+      "poolId": "0x787546bf2c05e3e19e2b6bde57a203da7f682eff00020000000000000000007c",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvUSDC-29OCT21",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xf38c3E836Be9cD35072055Ff6a9Ba570e0B70797",
+          "symbol": "ePyvUSDC-29OCT21"
+        }
+      ],
+      "tvlUsd": 11071.62,
+      "holders": "1033"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x4Db9024fc9F477134e00Da0DA3c77DE98d9836aC",
+      "poolId": "0x4db9024fc9f477134e00da0da3c77de98d9836ac000200000000000000000086",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvWBTC-26NOV21",
+      "tokens": [
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "symbol": "WBTC"
+        },
+        {
+          "address": "0x6BF924137E769C0A5c443dcE6eC885552d31D579",
+          "symbol": "ePyvWBTC-26NOV21"
+        }
+      ],
+      "tvlUsd": 9328.17,
+      "holders": "153"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xEdf085f65b4F6c155e13155502Ef925c9a756003",
+      "poolId": "0xedf085f65b4f6c155e13155502ef925c9a756003000200000000000000000123",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvDAI-29APR22",
+      "tokens": [
+        {
+          "address": "0x2c72692E94E757679289aC85d3556b2c0f717E0E",
+          "symbol": "ePyvDAI-29APR22"
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI"
+        }
+      ],
+      "tvlUsd": 2929.4,
+      "holders": "211"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x4bd6D86dEBdB9F5413e631Ad386c4427DC9D01B2",
+      "poolId": "0x4bd6d86debdb9f5413e631ad386c4427dc9d01b20002000000000000000000ec",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvWBTC-29APR22",
+      "tokens": [
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "symbol": "WBTC"
+        },
+        {
+          "address": "0x49e9e169f0B661Ea0A883f490564F4CC275123Ed",
+          "symbol": "ePyvWBTC-29APR22"
+        }
+      ],
+      "tvlUsd": 1494.67,
+      "holders": "55"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xA8D4433BAdAa1A35506804B43657B0694deA928d",
+      "poolId": "0xa8d4433badaa1a35506804b43657b0694dea928d00020000000000000000005e",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurveLUSD-28SEP21",
+      "tokens": [
+        {
+          "address": "0x9b44Ed798a10Df31dee52C5256Dcb4754BCf097E",
+          "symbol": "ePyvCurveLUSD-28SEP21"
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f"
+        }
+      ],
+      "tvlUsd": 1389.26,
+      "holders": "760"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x71628c66C502F988Fbb9e17081F2bD14e361FAF4",
+      "poolId": "0x71628c66c502f988fbb9e17081f2bd14e361faf4000200000000000000000078",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvDAI-16OCT21",
+      "tokens": [
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI"
+        },
+        {
+          "address": "0xb1cc77e701de60FE246607565CF7eDC9D9b6b963",
+          "symbol": "ePyvDAI-16OCT21"
+        }
+      ],
+      "tvlUsd": 507.22,
+      "holders": "245"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x56F30398d13F111401d6e7ffE758254a0946687d",
+      "poolId": "0x56f30398d13f111401d6e7ffe758254a0946687d000200000000000000000105",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurveLUSD-29APR22",
+      "tokens": [
+        {
+          "address": "0x0740A6CfB9468B8b53070C0B327099293DCCB82d",
+          "symbol": "ePyvCurveLUSD-29APR22"
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f"
+        }
+      ],
+      "tvlUsd": 177.07,
+      "holders": "35"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x22939E40Cf467DE8F5Db4F05A4027e5D4c1C658c",
+      "poolId": "0x22939e40cf467de8f5db4f05a4027e5d4c1c658c000200000000000000000059",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurveLUSD-30JUN21",
+      "tokens": [
+        {
+          "address": "0xD44bF95Bf21C83B46049BF9E34633F3300B280F6",
+          "symbol": "ePyvCurveLUSD-30JUN21"
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f"
+        }
+      ],
+      "tvlUsd": 0.57,
+      "holders": "4"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x85DCA8667D020e694FDfF06E7eE85e0c5C7C61a4",
+      "poolId": "0x85dca8667d020e694fdff06e7ee85e0c5c7c61a4000200000000000000000076",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvDAI-08DEC23",
+      "tokens": [
+        {
+          "address": "0x46a6c6aa64c148386af77C76a4666da961f8c65c",
+          "symbol": "ePyvDAI-08DEC23"
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI"
+        }
+      ],
+      "tvlUsd": 0.26,
+      "holders": "1"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x09b1b33BaD0e87454ff05696b1151BFbD208a43F",
+      "poolId": "0x09b1b33bad0e87454ff05696b1151bfbd208a43f0002000000000000000000a6",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-MIM-11FEB22",
+      "tokens": [
+        {
+          "address": "0x418De6227499181B045CAdf554030722E460881a",
+          "symbol": "ePyvCurve-MIM-11FEB22"
+        },
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "59"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x544c823194218f0640daE8291c1f59752d25faE3",
+      "poolId": "0x544c823194218f0640dae8291c1f59752d25fae3000200000000000000000093",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvcrvSTETH-28JAN22",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV"
+        },
+        {
+          "address": "0x720465A4AE6547348056885060EEB51F9CAdb571",
+          "symbol": "ePyvcrvSTETH-28JAN22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "114"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x63E9B50DD3eB63BfBF93B26F57b9EFB574e59576",
+      "poolId": "0x63e9b50dd3eb63bfbf93b26f57b9efb574e595760002000000000000000000cf",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-alUSD-29APR22",
+      "tokens": [
+        {
+          "address": "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
+          "symbol": "alUSD3CRV-f"
+        },
+        {
+          "address": "0xEaa1cBA8CC3CF01a92E9E853E90277B5B8A23e07",
+          "symbol": "ePyvCurve-alUSD-29APR22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "13"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x6AC02eCD0c2A23B11f9AFb3b3Aaf237169475cac",
+      "poolId": "0x6ac02ecd0c2a23b11f9afb3b3aaf237169475cac0002000000000000000000a8",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-EURS-11FEB22",
+      "tokens": [
+        {
+          "address": "0x194eBd173F6cDacE046C53eACcE9B953F28411d1",
+          "symbol": "eursCRV"
+        },
+        {
+          "address": "0x2A8f5649DE50462fF9699Ccc75A2Fb0b53447503",
+          "symbol": "ePyvCurve-EURS-11FEB22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "26"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x6Dd0F7c8F4793ed2531c0df4fEA8633a21fDcFf4",
+      "poolId": "0x6dd0f7c8f4793ed2531c0df4fea8633a21fdcff40002000000000000000000b7",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvcrv3crypto-29APR22",
+      "tokens": [
+        {
+          "address": "0x285328906D0D33cb757c1E471F5e2176683247c2",
+          "symbol": "ePyvcrv3crypto-29APR22"
+        },
+        {
+          "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+          "symbol": "crv3crypto"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "33"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x3A693EB97b500008d4Bb6258906f7Bbca1D09Cc5",
+      "poolId": "0x3a693eb97b500008d4bb6258906f7bbca1d09cc5000200000000000000000065",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCrvTriCrypto-15AUG21",
+      "tokens": [
+        {
+          "address": "0x237535Da7e2f0aBa1b68262ABCf7C4e60B42600C",
+          "symbol": "ePyvCrvTriCrypto-15AUG21"
+        },
+        {
+          "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
+          "symbol": "crvTricrypto"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "51"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x94C476E4675FAaC1Bf60211c5E39486bCF720cBD",
+      "poolId": "0x94c476e4675faac1bf60211c5e39486bcf720cbd0002000000000000000000a3",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-MIM-11FEB22",
+      "tokens": [
+        {
+          "address": "0x418De6227499181B045CAdf554030722E460881a",
+          "symbol": "ePyvCurve-MIM-11FEB22"
+        },
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "3"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xb03C6B351A283bc1Cd26b9cf6d7B0c4556013bDb",
+      "poolId": "0xb03c6b351a283bc1cd26b9cf6d7b0c4556013bdb0002000000000000000000ab",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvcrvSTETH-15APR22",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV"
+        },
+        {
+          "address": "0x2361102893CCabFb543bc55AC4cC8d6d0824A67E",
+          "symbol": "ePyvcrvSTETH-15APR22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "106"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xC9AD279994980F8DF348b526901006972509677F",
+      "poolId": "0xc9ad279994980f8df348b526901006972509677f00020000000000000000009e",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-alUSD-28JAN22",
+      "tokens": [
+        {
+          "address": "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
+          "symbol": "alUSD3CRV-f"
+        },
+        {
+          "address": "0x55096A35Bf827919B3Bb0A5e6b5E2af8095F3D4d",
+          "symbol": "ePyvCurve-alUSD-28JAN22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "124"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xce16E7ed7654a3453E8FaF748f2c82E57069278f",
+      "poolId": "0xce16e7ed7654a3453e8faf748f2c82e57069278f00020000000000000000006d",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvcrvSTETH-15OCT21",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV"
+        },
+        {
+          "address": "0x26941C63F4587796aBE199348ecd3d7C44F9aE0C",
+          "symbol": "ePyvcrvSTETH-15OCT21"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "43"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0x14792d3F6FcF2661795d1E08ef818bf612708BbF",
+      "poolId": "0x14792d3f6fcf2661795d1e08ef818bf612708bbf0002000000000000000000be",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvCurve-MIM-29APR22",
+      "tokens": [
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f"
+        },
+        {
+          "address": "0xC63958D9D01eFA6B8266b1df3862c6323CbDb52B",
+          "symbol": "ePyvCurve-MIM-29APR22"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "23"
+    },
+    {
+      "chain": "mainnet",
+      "type": "ELEMENT",
+      "address": "0xF6dc4640D2783654BeF88E0dF3fb0F051f0DfC1A",
+      "poolId": "0xf6dc4640d2783654bef88e0df3fb0f051f0dfc1a00020000000000000000007e",
+      "factory": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+      "protocolVersion": 2,
+      "symbol": "LPePyvcrv3crypto-12NOV21",
+      "tokens": [
+        {
+          "address": "0x9CF2AB51aC93711Ec2fa32Ec861349568A16c729",
+          "symbol": "ePyvcrv3crypto-12NOV21"
+        },
+        {
+          "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+          "symbol": "crv3crypto"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "49"
+    },
+    {
+      "chain": "arbitrum",
+      "type": "FX",
+      "address": "0x6E384C23253E2459b3D0F6c19f5532515643B120",
+      "poolId": "0x6e384c23253e2459b3d0f6c19f5532515643b12000020000000000000000050b",
+      "factory": "0x0bd5EC16658346eeCd5dE8c704a38Efe02B5DA69",
+      "protocolVersion": 2,
+      "symbol": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xe42827D98C053b6e9c97E39BE8b611102E8c1805",
+          "symbol": "EURS"
+        }
+      ],
+      "tvlUsd": 5.5,
+      "holders": "1"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x0099111Ed107BDF0B05162356aEe433514AaC440",
+      "poolId": "0x0099111ed107bdf0b05162356aee433514aac44000020000000000000000002f",
+      "factory": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "protocolVersion": 2,
+      "symbol": "LP-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x228a48df6819CCc2eCa01e2192ebAFfFdAD56c19",
+          "symbol": "VCHF"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 3631.32,
+      "holders": "5"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x7A1A919c033eBc0d9F23cBF2Aa41c24AEf826ca2",
+      "poolId": "0x7a1a919c033ebc0d9f23cbf2aa41c24aef826ca200020000000000000000002e",
+      "factory": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "protocolVersion": 2,
+      "symbol": "LP-EURC-USDC",
+      "tokens": [
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
+          "symbol": "EUROC"
+        }
+      ],
+      "tvlUsd": 3178.51,
+      "holders": "96"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x28F3a9e42667519c83cB090b5c4f6bd34e9F5569",
+      "poolId": "0x28f3a9e42667519c83cb090b5c4f6bd34e9f5569000200000000000000000031",
+      "factory": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "protocolVersion": 2,
+      "symbol": "LP-VEUR-USDC",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2Bfd1d0aAF9fd93355E5Fa0b",
+          "symbol": "VEUR"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 2472.77,
+      "holders": "7"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x383C46887a1d5f3867664091aE5D6aD3Ad3369F5",
+      "poolId": "0x383c46887a1d5f3867664091ae5d6ad3ad3369f5000200000000000000000051",
+      "factory": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "protocolVersion": 2,
+      "symbol": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0xb2F85b7AB3c2b6f62DF06dE6aE7D09c010a5096E",
+          "symbol": "XSGD"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 1289.71,
+      "holders": "3"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x55bEC22f8f6C69137cEAf284d9B441Db1B9bFedc",
+      "poolId": "0x55bec22f8f6c69137ceaf284d9b441db1b9bfedc000200000000000000000011",
+      "factory": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xC891EB4cbdEFf6e073e859e987815Ed1505c2ACD",
+          "symbol": "EUROC"
+        }
+      ],
+      "tvlUsd": 385.84,
+      "holders": "24"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0x66bB9D104c55861feb3Ec3559433F01f6373c966",
+      "poolId": "0x66bb9d104c55861feb3ec3559433f01f6373c96600020000000000000000002a",
+      "factory": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x228a48df6819CCc2eCa01e2192ebAFfFdAD56c19",
+          "symbol": "VCHF"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 52.43,
+      "holders": "3"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0xAd0e5e0778cAC28f1ff459602b31351871B5754a",
+      "poolId": "0xad0e5e0778cac28f1ff459602b31351871b5754a000200000000000000000029",
+      "factory": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2Bfd1d0aAF9fd93355E5Fa0b",
+          "symbol": "VEUR"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 17.52,
+      "holders": "4"
+    },
+    {
+      "chain": "avalanche",
+      "type": "FX",
+      "address": "0xa759Ef6699A7a10DDC734e5Ba1957fB79D3D248C",
+      "poolId": "0xa759ef6699a7a10ddc734e5ba1957fb79d3d248c000200000000000000000030",
+      "factory": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+      "protocolVersion": 2,
+      "symbol": "LP-VEUR-USDC",
+      "tokens": [
+        {
+          "address": "0x7678e162f38ec9ef2Bfd1d0aAF9fd93355E5Fa0b",
+          "symbol": "VEUR"
+        },
+        {
+          "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 5.98,
+      "holders": "2"
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0x5F8B11995D7F95faA59cA6fD5fFA1C0dbBe0EC7b",
+      "poolId": "0x5f8b11995d7f95faa59ca6fd5ffa1c0dbbe0ec7b000200000000000000000630",
+      "factory": "0xfb23Bc0D2629268442CD6521CF4170698967105f",
+      "protocolVersion": 2,
+      "symbol": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xdB25f211AB05b1c97D595516F45794528a807ad8",
+          "symbol": "EURS"
+        }
+      ],
+      "tvlUsd": 809.92,
+      "holders": "2"
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0xAd0e5e0778cAC28f1ff459602b31351871B5754a",
+      "poolId": "0xad0e5e0778cac28f1ff459602b31351871b5754a0002000000000000000003ce",
+      "factory": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xdB25f211AB05b1c97D595516F45794528a807ad8",
+          "symbol": "EURS"
+        }
+      ],
+      "tvlUsd": 169.48,
+      "holders": "6"
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0x73f8E7A9A19E284a9Ac85704Af58454cFe75f059",
+      "poolId": "0x73f8e7a9a19e284a9ac85704af58454cfe75f059000200000000000000000631",
+      "factory": "0xfb23Bc0D2629268442CD6521CF4170698967105f",
+      "protocolVersion": 2,
+      "symbol": "LP-GBPT-USDC",
+      "tokens": [
+        {
+          "address": "0x86B4dBE5D203e634a12364C0e428fa242A3FbA98",
+          "symbol": "GBPT"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 26.53,
+      "holders": "3"
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0xC58150838855a5605C9030398c6D22afd5Bb09EE",
+      "poolId": "0xc58150838855a5605c9030398c6d22afd5bb09ee00020000000000000000061b",
+      "factory": "0xfb23Bc0D2629268442CD6521CF4170698967105f",
+      "protocolVersion": 2,
+      "symbol": "LP-GBPT-USDC",
+      "tokens": [
+        {
+          "address": "0x86B4dBE5D203e634a12364C0e428fa242A3FbA98",
+          "symbol": "GBPT"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 14.29,
+      "holders": "2"
+    },
+    {
+      "chain": "mainnet",
+      "type": "FX",
+      "address": "0x66bB9D104c55861feb3Ec3559433F01f6373c966",
+      "poolId": "0x66bb9d104c55861feb3ec3559433f01f6373c9660002000000000000000003cf",
+      "factory": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI"
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 1.25,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xE6D8FcD23eD4e417d7e9D1195eDf2cA634684e0E",
+      "poolId": "0xe6d8fcd23ed4e417d7e9d1195edf2ca634684e0e000200000000000000000caf",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD"
+        }
+      ],
+      "tvlUsd": 12679.61,
+      "holders": "6"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x9D4d778575160653e331f1597138A71C7C9A2595",
+      "poolId": "0x9d4d778575160653e331f1597138a71c7c9a2595000200000000000000000f13",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-PHT-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT"
+        }
+      ],
+      "tvlUsd": 9789.39,
+      "holders": "2"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xD2eA83f95e3E3aa0D7ef1bD08f7267EDDb49728d",
+      "poolId": "0xd2ea83f95e3e3aa0d7ef1bd08f7267eddb49728d000200000000000000000e40",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD"
+        }
+      ],
+      "tvlUsd": 9554.2,
+      "holders": "2"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x726E324c29a1e49309672b244bdC4Ff62A270407",
+      "poolId": "0x726e324c29a1e49309672b244bdc4ff62a270407000200000000000000000702",
+      "factory": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD"
+        }
+      ],
+      "tvlUsd": 4999.79,
+      "holders": "16"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xd4Cc1Afe3430C6C227F8F640D022bf5747538F53",
+      "poolId": "0xd4cc1afe3430c6c227f8f640d022bf5747538f53000200000000000000000ebb",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-COPM-USDC",
+      "tokens": [
+        {
+          "address": "0x12050c705152931cFEe3DD56c52Fb09Dea816C23",
+          "symbol": "COPM"
+        },
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        }
+      ],
+      "tvlUsd": 3387.76,
+      "holders": "5"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xA5B235fB345B5744cC285045C8118A92F4aeF58B",
+      "poolId": "0xa5b235fb345b5744cc285045c8118a92f4aef58b000200000000000000000e15",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC"
+        }
+      ],
+      "tvlUsd": 296.55,
+      "holders": "3"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x8630Bd161689403AEA635f830E9eF5496e7E0bC1",
+      "poolId": "0x8630bd161689403aea635f830e9ef5496e7e0bc1000200000000000000000c35",
+      "factory": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
+          "symbol": "BRLA"
+        }
+      ],
+      "tvlUsd": 125.96,
+      "holders": "3"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x98F9220f128Eed5e853cd3D23A2C33E1F98F8311",
+      "poolId": "0x98f9220f128eed5e853cd3d23a2c33e1f98f8311000200000000000000000e55",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-TXAU-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xA6da8C8999c094432c77E7d318951D34019AF24B",
+          "symbol": "TXAU"
+        }
+      ],
+      "tvlUsd": 120.29,
+      "holders": "7"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x31ac27805b0665695071b640BF2Abfbe0736c02E",
+      "poolId": "0x31ac27805b0665695071b640bf2abfbe0736c02e000200000000000000000e56",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-TXAG-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0x57fCbd6503C8BE3B1AbAD191Bc7799ef414A5b31",
+          "symbol": "TXAG"
+        }
+      ],
+      "tvlUsd": 95.62,
+      "holders": "4"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xfb4b247658e64Ad6E98D1BF98f7BeE88A3A60199",
+      "poolId": "0xfb4b247658e64ad6e98d1bf98f7bee88a3a60199000200000000000000000e44",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-USDGLO-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0x4F604735c1cF31399C6E711D5962b2B3E0225AD3",
+          "symbol": "USDGLO"
+        }
+      ],
+      "tvlUsd": 80.04,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xE93F9dD10b0ba38831CBa4D5a9D092E22Db130eC",
+      "poolId": "0xe93f9dd10b0ba38831cba4d5a9d092e22db130ec000200000000000000000c44",
+      "factory": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xC8bB8eDa94931cA2F20EF43eA7dBD58E68400400",
+          "symbol": "VNXAU"
+        }
+      ],
+      "tvlUsd": 21.93,
+      "holders": "3"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x7E8c6D9db2D1B522f32d050257DF0dC524593A07",
+      "poolId": "0x7e8c6d9db2d1b522f32d050257df0dc524593a07000200000000000000000c4e",
+      "factory": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+      "protocolVersion": 2,
+      "symbol": "BPT",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xCdB3867935247049e87c38eA270edD305D84c9AE",
+          "symbol": "VCHF"
+        }
+      ],
+      "tvlUsd": 18.1,
+      "holders": "3"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x427333B9F9D8Bd0B67fd5fC2213371DB0Ef178e1",
+      "poolId": "0x427333b9f9d8bd0b67fd5fc2213371db0ef178e1000200000000000000000cb0",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-BRLA-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
+          "symbol": "BRLA"
+        }
+      ],
+      "tvlUsd": 12.95,
+      "holders": "2"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xeB513017f1D25595225Fea7f606A2894401D7a99",
+      "poolId": "0xeb513017f1d25595225fea7f606a2894401d7a99000200000000000000000ece",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC"
+        }
+      ],
+      "tvlUsd": 5,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x6Bf004BeE6346852a29239B386aB4239FfbD66dE",
+      "poolId": "0x6bf004bee6346852a29239b386ab4239ffbd66de000200000000000000000cb5",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-VNXAU-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xC8bB8eDa94931cA2F20EF43eA7dBD58E68400400",
+          "symbol": "VNXAU"
+        }
+      ],
+      "tvlUsd": 2.74,
+      "holders": "2"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x42D8d4cFb3F2B7fDD4F829A85dE4F235Bc560bF7",
+      "poolId": "0x42d8d4cfb3f2b7fdd4f829a85de4f235bc560bf7000200000000000000000f11",
+      "factory": "0xeFA1A53ea939013017e654beEdfC6f80E64ffC2d",
+      "protocolVersion": 2,
+      "symbol": "LP-PHT-XSGD",
+      "tokens": [
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD"
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT"
+        }
+      ],
+      "tvlUsd": 0.5,
+      "holders": "2"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x3C29C729a00654fcd4438C9601f07F04Fd576c2C",
+      "poolId": "0x3c29c729a00654fcd4438c9601f07f04fd576c2c000200000000000000000f12",
+      "factory": "0x19Ad20dA5f24671BFC7486FC8c119dD80CD09EfD",
+      "protocolVersion": 2,
+      "symbol": "LP-PHT-USDT",
+      "tokens": [
+        {
+          "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+          "symbol": "USDT"
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT"
+        }
+      ],
+      "tvlUsd": 0.25,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x7aC5472be6E82fe5630bCD2C18a4f5096b05e652",
+      "poolId": "0x7ac5472be6e82fe5630bcd2c18a4f5096b05e652000200000000000000000e5c",
+      "factory": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+      "protocolVersion": 2,
+      "symbol": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xE111178A87A3BFf0c8d18DECBa5798827539Ae99",
+          "symbol": "EURS"
+        }
+      ],
+      "tvlUsd": 0.02,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0x32cc63fFECCb7C0508d64E4d37145313cC053B27",
+      "poolId": "0x32cc63ffeccb7c0508d64e4d37145313cc053b27000200000000000000000cb4",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xCdB3867935247049e87c38eA270edD305D84c9AE",
+          "symbol": "VCHF"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "1"
+    },
+    {
+      "chain": "polygon",
+      "type": "FX",
+      "address": "0xd7523ef67460C88d79eE4a7b135C05b1AF249822",
+      "poolId": "0xd7523ef67460c88d79ee4a7b135c05b1af249822000200000000000000000e12",
+      "factory": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+      "protocolVersion": 2,
+      "symbol": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC"
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC"
+        }
+      ],
+      "tvlUsd": 0,
+      "holders": "1"
+    }
+  ]
+}

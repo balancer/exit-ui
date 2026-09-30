@@ -78,15 +78,21 @@ export interface GaugePosition {
   rewards: RewardInfo[]
 }
 
-// All committed discovery outputs, keyed by chain key.
-const dataModules = import.meta.glob('../config/data/*.json', { eager: true }) as Record<
+// All committed discovery outputs, keyed by chain key. Loaded lazily: together they are several MB.
+const dataModules = import.meta.glob('../config/data/*.json') as Record<
   string,
-  { default: ChainData }
+  () => Promise<{ default: ChainData }>
 >
 
-export function getChainData(chainKey: string): ChainData | null {
-  for (const [path, mod] of Object.entries(dataModules)) {
-    if (path.endsWith(`/${chainKey}.json`)) return mod.default
-  }
-  return null
+function dataLoader(chainKey: string) {
+  return Object.entries(dataModules).find(([path]) => path.endsWith(`/${chainKey}.json`))?.[1]
+}
+
+export function hasChainData(chainKey: string): boolean {
+  return Boolean(dataLoader(chainKey))
+}
+
+export async function loadChainData(chainKey: string): Promise<ChainData | null> {
+  const load = dataLoader(chainKey)
+  return load ? (await load()).default : null
 }
