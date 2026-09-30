@@ -18,8 +18,9 @@ export function Header() {
   const [rpcInput, setRpcInput] = useState('')
   const [connectError, setConnectError] = useState('')
 
+  // Ethereum is listed for its v1 pools only; no v2/v3 pool lists are bundled for it
   const protocolLabel = (c: (typeof chains)[number]) =>
-    [c.v1 && 'v1', c.v2 && 'v2', c.v3 && 'v3'].filter(Boolean).join('/')
+    c.v1 ? 'v1 only' : [c.v2 && 'v2', c.v3 && 'v3'].filter(Boolean).join('/')
 
   return (
     <header style={{ padding: '24px 0 8px' }}>
@@ -28,13 +29,13 @@ export function Header() {
           <h1 className="gradient-text" style={{ margin: 0, fontSize: 28 }}>
             Balancer Exit
           </h1>
-          <div className="muted">Withdraw Balancer pool & gauge positions</div>
+          <div className="muted">Withdraw legacy Balancer pool & gauge positions</div>
         </div>
         <div className="row" style={{ flexWrap: 'wrap' }}>
           <select value={chain.key} onChange={(e) => selectChain(e.target.value)}>
             {chains.map((c) => (
               <option key={c.key} value={c.key}>
-                {c.name} ({protocolLabel(c)}){c.enabled ? '' : ' (dev)'}
+                {c.name} ({protocolLabel(c)}){c.deprecated || c.v1 ? '' : ' (dev)'}
               </option>
             ))}
           </select>

@@ -36,7 +36,6 @@ export interface ChainConfig {
   multicall3: Address
   logsMaxRange: number
   deprecated: boolean
-  enabled: boolean
   v1?: {
     startBlock: number
     factory: Address
@@ -62,10 +61,10 @@ export function isDevMode(): boolean {
   return import.meta.env.DEV || new URLSearchParams(window.location.search).has('dev')
 }
 
-/** Production chains shown in the selector, plus testnets in dev mode. */
+/** Chains shown in the selector: legacy-exit chains, plus everything in dev mode. */
 export function visibleChains(): ChainConfig[] {
   const all = Object.values(CHAINS)
-  const visible = isDevMode() ? all : all.filter((c) => c.enabled)
+  const visible = isDevMode() ? all : all.filter((c) => c.deprecated || Boolean(c.v1))
   return visible.sort((a, b) => {
     if (a.key === 'mainnet') return -1
     if (b.key === 'mainnet') return 1

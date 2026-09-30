@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 import { useApp } from '../contexts/AppContext'
-import { hasChainData, loadChainData, type GaugePosition, type PoolPosition } from '../lib/positions'
+import { getChainData, type GaugePosition, type PoolPosition } from '../lib/positions'
 import { scanPositions } from '../lib/scanner'
 
 export function usePositions() {
@@ -12,15 +12,13 @@ export function usePositions() {
   const [error, setError] = useState('')
   const [scanned, setScanned] = useState(false)
 
-  const hasData = hasChainData(chain.key)
+  const data = getChainData(chain.key)
 
   const scan = useCallback(async () => {
-    if (!scanTarget || !hasData) return
+    if (!scanTarget || !data) return
     setScanning(true)
     setError('')
     try {
-      const data = await loadChainData(chain.key)
-      if (!data) throw new Error(`No pool list bundled for ${chain.name}`)
       const result = await scanPositions(publicClient, chain, data, scanTarget, setProgress)
       setPools(result.pools)
       setGauges(result.gauges)
@@ -31,7 +29,7 @@ export function usePositions() {
       setScanning(false)
       setProgress('')
     }
-  }, [publicClient, chain, hasData, scanTarget])
+  }, [publicClient, chain, data, scanTarget])
 
   const addManualPool = useCallback((position: PoolPosition) => {
     setPools((prev) => {
@@ -48,5 +46,5 @@ export function usePositions() {
     setError('')
   }, [])
 
-  return { pools, gauges, scanning, progress, error, scanned, scan, addManualPool, reset, hasData }
+  return { pools, gauges, scanning, progress, error, scanned, scan, addManualPool, reset, hasData: !!data }
 }
