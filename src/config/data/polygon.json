@@ -19522,6 +19522,27 @@
       ]
     },
     {
+      "address": "0x31ac27805b0665695071b640BF2Abfbe0736c02E",
+      "poolId": "0x31ac27805b0665695071b640bf2abfbe0736c02e000200000000000000000e56",
+      "poolType": "fx",
+      "symbol": "LP-TXAG-USDC",
+      "name": "LP-TXAG-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x57fCbd6503C8BE3B1AbAD191Bc7799ef414A5b31",
+          "symbol": "TXAG",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x31Ae87f187c12e8025b85b4AF8F68D302748fEAa",
       "poolId": "0x31ae87f187c12e8025b85b4af8f68d302748feaa000200000000000000000280",
       "poolType": "weighted",
@@ -19936,6 +19957,27 @@
         {
           "address": "0x7fC9E0Aa043787BFad28e29632AdA302C790Ce33",
           "symbol": "tetuBAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x32cc63fFECCb7C0508d64E4d37145313cC053B27",
+      "poolId": "0x32cc63ffeccb7c0508d64e4d37145313cc053b27000200000000000000000cb4",
+      "poolType": "fx",
+      "symbol": "LP-VCHF-USDC",
+      "name": "LP-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xCdB3867935247049e87c38eA270edD305D84c9AE",
+          "symbol": "VCHF",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -23566,6 +23608,27 @@
       ]
     },
     {
+      "address": "0x3C29C729a00654fcd4438C9601f07F04Fd576c2C",
+      "poolId": "0x3c29c729a00654fcd4438c9601f07f04fd576c2c000200000000000000000f12",
+      "poolType": "fx",
+      "symbol": "LP-PHT-USDT",
+      "name": "LP-PHT-USDT",
+      "tokens": [
+        {
+          "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+          "symbol": "USDT0",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x3c2f277EEDac899f67116aD598664F0f91Bac210",
       "poolId": "0x3c2f277eedac899f67116ad598664f0f91bac210000100000000000000000bcd",
       "poolType": "weighted",
@@ -25840,6 +25903,27 @@
       ]
     },
     {
+      "address": "0x427333B9F9D8Bd0B67fd5fC2213371DB0Ef178e1",
+      "poolId": "0x427333b9f9d8bd0b67fd5fc2213371db0ef178e1000200000000000000000cb0",
+      "poolType": "fx",
+      "symbol": "LP-BRLA-USDC",
+      "name": "LP-BRLA-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
+          "symbol": "BRLA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x42942cDeC85078Cf0e28e9CB5ACd40CB53997Ed6",
       "poolId": "0x42942cdec85078cf0e28e9cb5acd40cb53997ed6000000000000000000000bea",
       "poolType": "composableStable",
@@ -25936,6 +26020,27 @@
         {
           "address": "0xd106fb0cFB6a3B6a8E9B08C19F8f4d39e4B4cda1",
           "symbol": "CRV Miner-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x42D8d4cFb3F2B7fDD4F829A85dE4F235Bc560bF7",
+      "poolId": "0x42d8d4cfb3f2b7fdd4f829a85de4f235bc560bf7000200000000000000000f11",
+      "poolType": "fx",
+      "symbol": "LP-PHT-XSGD",
+      "name": "LP-PHT-XSGD",
+      "tokens": [
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -43000,6 +43105,27 @@
       ]
     },
     {
+      "address": "0x6Bf004BeE6346852a29239B386aB4239FfbD66dE",
+      "poolId": "0x6bf004bee6346852a29239b386ab4239ffbd66de000200000000000000000cb5",
+      "poolType": "fx",
+      "symbol": "LP-VNXAU-USDC",
+      "name": "LP-VNXAU-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xC8bB8eDa94931cA2F20EF43eA7dBD58E68400400",
+          "symbol": "VNXAU",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x6bFa86C1cC246B291488DbbB4d9810e15f148309",
       "poolId": "0x6bfa86c1cc246b291488dbbb4d9810e15f148309000200000000000000000396",
       "poolType": "weighted",
@@ -45686,6 +45812,27 @@
           "address": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
           "symbol": "WETH",
           "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x726E324c29a1e49309672b244bdC4Ff62A270407",
+      "poolId": "0x726e324c29a1e49309672b244bdc4ff62a270407000200000000000000000702",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD",
+          "decimals": 6,
           "isPhantomBpt": false
         }
       ]
@@ -49273,6 +49420,27 @@
       ]
     },
     {
+      "address": "0x7aC5472be6E82fe5630bCD2C18a4f5096b05e652",
+      "poolId": "0x7ac5472be6e82fe5630bcd2c18a4f5096b05e652000200000000000000000e5c",
+      "poolType": "fx",
+      "symbol": "LP-EURS-USDC",
+      "name": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xE111178A87A3BFf0c8d18DECBa5798827539Ae99",
+          "symbol": "EURS",
+          "decimals": 2,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x7aED69aDA97ada50ccE945e75Db005e7B0d9b4E0",
       "poolId": "0x7aed69ada97ada50cce945e75db005e7b0d9b4e0000200000000000000000bb3",
       "poolType": "weighted",
@@ -50584,6 +50752,27 @@
         {
           "address": "0xf287D97B6345bad3D88856b26Fb7c0ab3F2C7976",
           "symbol": "MATIC2x-FLI-P",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x7E8c6D9db2D1B522f32d050257DF0dC524593A07",
+      "poolId": "0x7e8c6d9db2d1b522f32d050257df0dc524593a07000200000000000000000c4e",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-VCHF-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xCdB3867935247049e87c38eA270edD305D84c9AE",
+          "symbol": "VCHF",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -54151,6 +54340,27 @@
         {
           "address": "0xC8fc7E7E7B4D94FA02751B8719F5BbBb4C1413Cf",
           "symbol": "ETH-SS",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x8630Bd161689403AEA635f830E9eF5496e7E0bC1",
+      "poolId": "0x8630bd161689403aea635f830e9ef5496e7e0bc1000200000000000000000c35",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-BRLA-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xE6A537a407488807F0bbeb0038B79004f19DDDFb",
+          "symbol": "BRLA",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -61615,6 +61825,27 @@
       ]
     },
     {
+      "address": "0x98F9220f128Eed5e853cd3D23A2C33E1F98F8311",
+      "poolId": "0x98f9220f128eed5e853cd3d23a2c33e1f98f8311000200000000000000000e55",
+      "poolType": "fx",
+      "symbol": "LP-TXAU-USDC",
+      "name": "LP-TXAU-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA6da8C8999c094432c77E7d318951D34019AF24B",
+          "symbol": "TXAU",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x99063737fDAc74aAeD39B64589811332FDA315bf",
       "poolId": "0x99063737fdac74aaed39b64589811332fda315bf000200000000000000000a2e",
       "poolType": "lbp",
@@ -63391,6 +63622,27 @@
         {
           "address": "0xBbba073C31bF03b8ACf7c28EF0738DeCF3695683",
           "symbol": "SAND",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x9D4d778575160653e331f1597138A71C7C9A2595",
+      "poolId": "0x9d4d778575160653e331f1597138a71c7c9a2595000200000000000000000f13",
+      "poolType": "fx",
+      "symbol": "LP-PHT-USDC",
+      "name": "LP-PHT-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe75220cB014Dfb2D354bb59be26d7458bB8d0706",
+          "symbol": "PHT",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -66940,6 +67192,27 @@
         {
           "address": "0xC8A5BCb5D53CD824497b5381b592Bb747d6D27b3",
           "symbol": "GAX",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xA5B235fB345B5744cC285045C8118A92F4aeF58B",
+      "poolId": "0xa5b235fb345b5744cc285045c8118a92f4aef58b000200000000000000000e15",
+      "poolType": "fx",
+      "symbol": "LP-SBC-USDC",
+      "name": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -84940,6 +85213,27 @@
       ]
     },
     {
+      "address": "0xD2eA83f95e3E3aa0D7ef1bD08f7267EDDb49728d",
+      "poolId": "0xd2ea83f95e3e3aa0d7ef1bd08f7267eddb49728d000200000000000000000e40",
+      "poolType": "fx",
+      "symbol": "LP-XSGD-USDC",
+      "name": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0xD2f3B9E67C69762dd1c88F1D3dADD1649a190761",
       "poolId": "0xd2f3b9e67c69762dd1c88f1d3dadd1649a190761000200000000000000000bf7",
       "poolType": "weighted",
@@ -85436,6 +85730,27 @@
           "address": "0x767058F11800FBA6A682E73A6e79ec5eB74Fac8c",
           "symbol": "jGBP",
           "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd4Cc1Afe3430C6C227F8F640D022bf5747538F53",
+      "poolId": "0xd4cc1afe3430c6c227f8f640d022bf5747538f53000200000000000000000ebb",
+      "poolType": "fx",
+      "symbol": "LP-COPM-USDC",
+      "name": "LP-COPM-USDC",
+      "tokens": [
+        {
+          "address": "0x12050c705152931cFEe3DD56c52Fb09Dea816C23",
+          "symbol": "COPM",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
           "isPhantomBpt": false
         }
       ]
@@ -86368,6 +86683,27 @@
         {
           "address": "0x24834BBEc7E39ef42f4a75EAF8E5B6486d3F0e57",
           "symbol": "LUNA",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xd7523ef67460C88d79eE4a7b135C05b1AF249822",
+      "poolId": "0xd7523ef67460c88d79ee4a7b135c05b1af249822000200000000000000000e12",
+      "poolType": "fx",
+      "symbol": "LP-SBC-USDC",
+      "name": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -93127,6 +93463,27 @@
       ]
     },
     {
+      "address": "0xE6D8FcD23eD4e417d7e9D1195eDf2cA634684e0E",
+      "poolId": "0xe6d8fcd23ed4e417d7e9d1195edf2ca634684e0e000200000000000000000caf",
+      "poolType": "fx",
+      "symbol": "LP-XSGD-USDC",
+      "name": "LP-XSGD-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xDC3326e71D45186F113a2F448984CA0e8D201995",
+          "symbol": "XSGD",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0xE6dF54Ed316A77E611e3469CE4cc36379F955b91",
       "poolId": "0xe6df54ed316a77e611e3469ce4cc36379f955b9100010000000000000000093a",
       "poolType": "weighted",
@@ -94069,6 +94426,27 @@
       ]
     },
     {
+      "address": "0xE93F9dD10b0ba38831CBa4D5a9D092E22Db130eC",
+      "poolId": "0xe93f9dd10b0ba38831cba4d5a9d092e22db130ec000200000000000000000c44",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-VNXAU-USDC",
+      "tokens": [
+        {
+          "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xC8bB8eDa94931cA2F20EF43eA7dBD58E68400400",
+          "symbol": "VNXAU",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0xE966B412d124A75E7AE4Bd98169f028F13962990",
       "poolId": "0xe966b412d124a75e7ae4bd98169f028f1396299000010000000000000000060e",
       "poolType": "weighted",
@@ -94861,6 +95239,27 @@
         {
           "address": "0xCaAF554900E33ae5DBc66ae9f8ADc3049B7D31dB",
           "symbol": "liveRetro",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xeB513017f1D25595225Fea7f606A2894401D7a99",
+      "poolId": "0xeb513017f1d25595225fea7f606a2894401d7a99000200000000000000000ece",
+      "poolType": "fx",
+      "symbol": "LP-SBC-USDC",
+      "name": "LP-SBC-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xfdcC3dd6671eaB0709A4C0f3F53De9a333d80798",
+          "symbol": "SBC",
           "decimals": 18,
           "isPhantomBpt": false
         }
@@ -101587,6 +101986,27 @@
         {
           "address": "0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3",
           "symbol": "BAL",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0xfb4b247658e64Ad6E98D1BF98f7BeE88A3A60199",
+      "poolId": "0xfb4b247658e64ad6e98d1bf98f7bee88a3a60199000200000000000000000e44",
+      "poolType": "fx",
+      "symbol": "LP-USDGLO-USDC",
+      "name": "LP-USDGLO-USDC",
+      "tokens": [
+        {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x4F604735c1cF31399C6E711D5962b2B3E0225AD3",
+          "symbol": "USDGLO",
           "decimals": 18,
           "isPhantomBpt": false
         }

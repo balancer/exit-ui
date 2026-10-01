@@ -10,12 +10,18 @@ export type PoolType =
   | 'gyro'
   | 'lbp'
   | 'managed'
+  | 'fx' // Xave FXPool: custom exit userData (bptIn, assets)
+  | 'element' // Element ConvergentCurvePool: custom exit userData (amountsOut)
 
 export interface FactoryConfig {
   name: string
   address: Address
   startBlock: number
   poolType: PoolType
+  /** Creation event when it is not PoolCreated(address), e.g. FX factories' NewFXPool */
+  event?: string
+  /** Topic holding the pool address in `event` (default 1) */
+  poolTopicIndex?: number
 }
 
 export interface GaugeFactoryConfig {

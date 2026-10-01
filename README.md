@@ -11,6 +11,11 @@ Polygon zkEVM, Mode, Fraxtal, HyperEVM, Plasma, X Layer, Monad).
 - Unstake from gauges (`withdraw(amount, claim_rewards=true)`) and claim rewards
 - Proportionally exit v1 core and smart pools (`BPool.exitPool` / `CRP.exitPool`)
 - Proportionally exit v2 pools (`Vault.exitPool`) and v3 pools (`Router.removeLiquidityProportional`)
+- Exit Xave FX and Element pools, which use their own `userData` and have no `queryExit` support:
+  FX takes `(bptIn, assets[])` and is previewed with the pool's `viewWithdraw`; Element takes the
+  amounts out and burns the matching BPT from the recipient (the holder). Both exits are simulated
+  from the user's address. Matured Element principal tokens (ePyv…) are found by the scan and can be
+  redeemed for the underlying (`Tranche.withdrawPrincipal`).
 - Exits are simulated first; minimum amounts = expected − slippage (default 1%).
   An opt-in **emergency mode** submits with zero minimums.
 - Recovery-mode pools (incl. paused and linear pools) exit via the recovery path automatically;
@@ -119,9 +124,9 @@ For end-to-end testing with real transactions, fork a chain with
 - V1 discovery intentionally watches only `BFactory`, matching the V1 subgraph; `CRPFactory`
   is used to classify factory-event callers and recover the smart-pool share-token address.
 - No USD pricing — amounts are token quantities.
-- FX (Xave) and ELEMENT pools are not supported: their factories are not in the registry and their
-  exits need a pool-specific `userData`. `src/config/unsupported-pools.json` lists them (60 pools,
-  11 factories) with a TVL/holder snapshot, as a starting point for adding support.
+- FX pools convert amounts through price-oracle assimilators: a dead oracle feed would block exits.
+- Pools pasted into the manual entry are checked for FX (`derivatives`) and Element (`bond`) getters,
+  so they never get the standard `(exitKind, bptIn)` userData. On FX that encoding would burn 1 wei.
 - Linear pools can only exit while in recovery mode; the UI blocks them otherwise instead of
   implementing batch swaps.
 - Nested/boosted pools (e.g. bb-o-USD on zkEVM) pay out the inner BPTs (linear pool tokens).

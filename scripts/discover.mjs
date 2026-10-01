@@ -247,6 +247,9 @@ const erc20Abi = [
 const erc20Bytes32Abi = [
   { type: 'function', name: 'symbol', stateMutability: 'view', inputs: [], outputs: [{ type: 'bytes32' }] },
 ]
+const elementPoolAbi = [
+  { type: 'function', name: 'bond', stateMutability: 'view', inputs: [], outputs: [{ type: 'address' }] },
+]
 const poolAbi = [
   { type: 'function', name: 'getPoolId', stateMutability: 'view', inputs: [], outputs: [{ type: 'bytes32' }] },
 ]
@@ -342,7 +345,14 @@ if (include('v1') && chain.v1) {
 }
 if (include('v2') && chain.v2) {
   for (const f of chain.v2.factories) {
-    sources.push({ address: f.address, topic0: POOL_CREATED, key: `v2:${f.name}`, startBlock: f.startBlock })
+    sources.push({
+      address: f.address,
+      // e.g. FX factories emit NewFXPool(caller, id, fxpool) instead of PoolCreated(pool)
+      topic0: f.event ? toEventSelector(f.event) : POOL_CREATED,
+      topicIndex: f.poolTopicIndex ?? 1,
+      key: `v2:${f.name}`,
+      startBlock: f.startBlock,
+    })
   }
   for (const gf of chain.v2.gaugeFactories) {
     for (const topic0 of GAUGE_CREATED_TOPICS) {
@@ -455,6 +465,12 @@ if (include('v2') && chain.v2) {
     const allTokens = tokenLists.flatMap((t) => (t ? t[0] : []))
     await getTokenMeta(allTokens)
 
+    // Element pools trade a principal token (the tranche); needed to offer its redemption
+    const bonds =
+      factory.poolType === 'element'
+        ? await multicall(valid.map((p) => ({ address: p.address, abi: elementPoolAbi, functionName: 'bond' })))
+        : []
+
     const unregistered = tokenLists.filter((t) => !t).length
     if (unregistered) console.log(`  skipped ${unregistered} pools not registered with the vault`)
     valid.forEach((p, i) => {
@@ -472,6 +488,7 @@ if (include('v2') && chain.v2) {
         symbol: symbols[i] ?? '',
         name: names[i] ?? '',
         tokens,
+        ...(bonds[i] ? { elementBond: bonds[i] } : {}),
       })
     })
   }
