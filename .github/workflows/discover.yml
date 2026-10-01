@@ -48,8 +48,7 @@ jobs:
           for chain in $chains; do
             echo "::group::$chain"
             code=0
-            # 10k-block requests: larger eth_getLogs ranges were seen to silently drop logs on dRPC
-            node scripts/discover.mjs --chain "$chain" --incremental --max-range 10000 || code=$?
+            node scripts/discover.mjs --chain "$chain" --incremental || code=$?
             echo "::endgroup::"
             # 75: RPC unreachable (e.g. a shut-down chain) -> warn only; the cursor catches up next run
             case $code in

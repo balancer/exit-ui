@@ -7,8 +7,6 @@
  * Usage:
  *   node scripts/discover.mjs --chain mode [--protocol v1|v2|v3|all] [--rpc <url>] [--to-block <n>]
  *   node scripts/discover.mjs --chain mode --incremental
- *   add --concurrency <n> to run n eth_getLogs workers in parallel
- *   add --max-range <n> to cap the eth_getLogs block range per request (default 1,000,000)
  *
  * --incremental resumes from meta.scannedAtBlock of the existing data file, sweeps only the new
  * blocks (up to 1000 blocks behind head) and merges new pools/gauges into the existing lists.
@@ -17,8 +15,8 @@
  * RPCs can also be overridden via the DISCOVERY_RPC_URLS env var: {"<chain>": "<url>", ...}.
  *
  * All factories + the v3 vault are swept in ONE chunked eth_getLogs pass (address array +
- * topic0 array), so wall time is independent of the factory count. Chunks adapt: start
- * large, halve on RPC errors, floor at the chain's logsMaxRange (zkEVM caps at 1k blocks).
+ * topic0 array), so wall time is independent of the factory count. Requests cover at most
+ * MAX_RANGE blocks and halve on RPC range errors, down to the chain's logsMaxRange.
  */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -70,19 +68,9 @@ const outPath = join(__dirname, '..', 'src', 'config', 'data', `${chainKey}.json
 const existing = incremental && existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : null
 if (incremental && !existing) console.log(`no existing ${chainKey}.json, running a full scan`)
 const include = (version) => protocol === 'all' || protocol === version
-// parallel eth_getLogs workers; useful for long initial sweeps on RPCs with small range limits
-const concurrency = Number(arg('concurrency', '1'))
-if (!Number.isInteger(concurrency) || concurrency < 1) {
-  console.error('--concurrency must be a positive integer')
-  process.exit(1)
-}
-// Largest eth_getLogs block range per request. Some RPCs (seen on dRPC) accept large ranges but
-// silently drop logs from the answer, so keep this at a range the RPC answers completely.
-const maxRange = BigInt(arg('max-range', '1000000'))
-if (maxRange < 1n) {
-  console.error('--max-range must be a positive integer')
-  process.exit(1)
-}
+// Largest eth_getLogs block range per request. Some RPCs (seen on dRPC) accept larger ranges but
+// silently drop logs from the answer (100k-1M blocks); 10k ranges came back complete.
+const MAX_RANGE = 10_000n
 
 // Discovery has its own adaptive retry/range logic; transport-level retries would make a
 // rejected historical range stall several times before the script can shrink it.
@@ -103,112 +91,84 @@ async function sweep(sources, fromBlock, toBlock) {
   const addresses = sources.map((s) => s.address)
   const topics = [[...new Set(sources.map((s) => s.topic0))]]
 
-  const ceiling = maxRange
+  const ceiling = MAX_RANGE
   const floor = BigInt(chain.logsMaxRange) < ceiling ? BigInt(chain.logsMaxRange) : ceiling
+  // consecutive failures at the smallest chunk; load-balanced RPCs often succeed on a retry
+  // (e.g. dRPC routing a historical request to a pruned backend)
   const MAX_FAILURES = 8
-  const MIN_TIMEOUT_CHUNK = floor < 1000n ? floor : 1000n
-  // lowered for the rest of the sweep (all workers) once a range size has timed out
-  let timeoutCap = ceiling
+  let failures = 0
+  let chunk = ceiling
+  let from = BigInt(fromBlock)
+  const to = BigInt(toBlock)
   let total = 0
   let mismatches = 0
-  let scanned = 0n
-  const span = BigInt(toBlock) - BigInt(fromBlock) + 1n
 
-  // Sweeps [from, to], shrinking the chunk on errors and growing it back up to `ceiling`
-  async function sweepSegment(from, to) {
-    let chunk = timeoutCap
-    // consecutive failures at the smallest chunk; load-balanced RPCs often succeed on a retry
-    // (e.g. dRPC routing a historical request to a pruned backend)
-    let failures = 0
-    while (from <= to) {
-      const until = from + chunk - 1n > to ? to : from + chunk - 1n
-      try {
-        const getLogs = () =>
-          client.request({
-            method: 'eth_getLogs',
-            params: [
-              {
-                address: addresses,
-                topics,
-                fromBlock: `0x${from.toString(16)}`,
-                toBlock: `0x${until.toString(16)}`,
-              },
-            ],
-          })
-        // Load-balanced RPCs can silently answer a range from a backend that misses logs. Ask twice
-        // (likely different backends), and a third time if they disagree; keep the union.
-        let [logs, again] = await Promise.all([getLogs(), getLogs()])
-        if (logs.length !== again.length) {
-          mismatches++
-          logs = [...logs, ...again, ...(await getLogs())]
-        }
-        for (const log of logs) {
-          const source = byAddrTopic.get(`${log.address.toLowerCase()}:${log.topics[0]}`)
-          if (source === undefined) continue
-          const topic = log.topics[source.topicIndex ?? 1]
-          if (!topic) continue
-          const address = getAddress('0x' + topic.slice(26))
-          found.get(source.key).push(address)
-          if (source.callerTopicIndex !== undefined) {
-            const callerTopic = log.topics[source.callerTopicIndex]
-            if (callerTopic) {
-              callers.set(`${source.key}:${address.toLowerCase()}`, getAddress('0x' + callerTopic.slice(26)))
-            }
-          }
-          total++
-        }
-        scanned += until - from + 1n
-        from = until + 1n
-        failures = 0
-        if (chunk < timeoutCap) chunk = chunk * 2n < timeoutCap ? chunk * 2n : timeoutCap // recover after shrink
-        process.stdout.write(`\r  blocks ${scanned}/${span} (chunk ${chunk}) — ${total} events        `)
-        await sleep(60)
-      } catch (e) {
-        const msg = [e.shortMessage, e.details, e.message, e.cause?.message].filter(Boolean).join(' | ')
-        const isRangeError = /range|too large|too many (logs|results)|response size|exceed/i.test(msg)
-        if (isRangeError && chunk > floor) {
-          chunk = chunk / 2n > floor ? chunk / 2n : floor
-          continue
-        }
-        // A timeout usually means the range is too heavy for the node (busy chains): go smaller,
-        // below the chain's usual floor if needed, before treating it as a transient overload
-        const isTimeout = /timeout|timed out|took too long/i.test(msg)
-        if (isTimeout && chunk > MIN_TIMEOUT_CHUNK) {
-          chunk = chunk / 2n > MIN_TIMEOUT_CHUNK ? chunk / 2n : MIN_TIMEOUT_CHUNK
-          if (chunk < timeoutCap) timeoutCap = chunk
-          continue
-        }
-        if (isTimeout || /rate|429|over rate|busy|503/i.test(msg)) {
-          process.stdout.write(`\r  rate limited, backing off...                    `)
-          await sleep(4000)
-          continue
-        }
-        if (chunk > floor) {
-          chunk = chunk / 2n > floor ? chunk / 2n : floor
-          continue
-        }
-        if (++failures < MAX_FAILURES) {
-          process.stdout.write(`\r  request failed (${failures}/${MAX_FAILURES}), retrying...           `)
-          await sleep(2000 * failures)
-          continue
-        }
-        throw e
+  while (from <= to) {
+    const until = from + chunk - 1n > to ? to : from + chunk - 1n
+    try {
+      const getLogs = () =>
+        client.request({
+          method: 'eth_getLogs',
+          params: [
+            {
+              address: addresses,
+              topics,
+              fromBlock: `0x${from.toString(16)}`,
+              toBlock: `0x${until.toString(16)}`,
+            },
+          ],
+        })
+      // Load-balanced RPCs can silently answer a range from a backend that misses logs (seen for
+      // the most recent blocks). Ask twice, a third time if they disagree, and keep the union.
+      let [logs, again] = await Promise.all([getLogs(), getLogs()])
+      if (logs.length !== again.length) {
+        mismatches++
+        logs = [...logs, ...again, ...(await getLogs())]
       }
+      for (const log of logs) {
+        const source = byAddrTopic.get(`${log.address.toLowerCase()}:${log.topics[0]}`)
+        if (source === undefined) continue
+        const topic = log.topics[source.topicIndex ?? 1]
+        if (!topic) continue
+        const address = getAddress('0x' + topic.slice(26))
+        found.get(source.key).push(address)
+        if (source.callerTopicIndex !== undefined) {
+          const callerTopic = log.topics[source.callerTopicIndex]
+          if (callerTopic) {
+            callers.set(`${source.key}:${address.toLowerCase()}`, getAddress('0x' + callerTopic.slice(26)))
+          }
+        }
+        total++
+      }
+      from = until + 1n
+      failures = 0
+      if (chunk < ceiling) chunk *= 2n // recover after shrink
+      process.stdout.write(`\r  blocks ${from}/${to} (chunk ${chunk}) — ${total} events        `)
+      await sleep(60)
+    } catch (e) {
+      const msg = [e.shortMessage, e.details, e.message, e.cause?.message].filter(Boolean).join(' | ')
+      const isRangeError = /range|too large|too many (logs|results)|response size|exceed/i.test(msg)
+      if (isRangeError && chunk > floor) {
+        chunk = chunk / 2n > floor ? chunk / 2n : floor
+        continue
+      }
+      if (/rate|429|over rate|timeout|timed out|took too long|busy|503/i.test(msg)) {
+        process.stdout.write(`\r  rate limited, backing off...                    `)
+        await sleep(4000)
+        continue
+      }
+      if (chunk > floor) {
+        chunk = chunk / 2n > floor ? chunk / 2n : floor
+        continue
+      }
+      if (++failures < MAX_FAILURES) {
+        process.stdout.write(`\r  request failed (${failures}/${MAX_FAILURES}), retrying...           `)
+        await sleep(2000 * failures)
+        continue
+      }
+      throw e
     }
   }
-
-  // Workers claim the next `ceiling`-sized range from a shared cursor, so they finish together
-  let next = BigInt(fromBlock)
-  const end = BigInt(toBlock)
-  async function worker() {
-    while (next <= end) {
-      const from = next
-      const to = from + ceiling - 1n > end ? end : from + ceiling - 1n
-      next = to + 1n
-      await sweepSegment(from, to)
-    }
-  }
-  await Promise.all(Array.from({ length: concurrency }, worker))
   process.stdout.write('\n')
   if (mismatches) console.log(`  ${mismatches} chunks returned different logs per request (union kept)`)
   for (const [k, v] of found) found.set(k, [...new Set(v)])
