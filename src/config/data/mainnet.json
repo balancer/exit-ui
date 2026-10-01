@@ -73046,6 +73046,28 @@
       ]
     },
     {
+      "address": "0x09b1b33BaD0e87454ff05696b1151BFbD208a43F",
+      "poolId": "0x09b1b33bad0e87454ff05696b1151bfbd208a43f0002000000000000000000a6",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-MIM-11FEB22",
+      "name": "LP Element Principal Token yvCurve-MIM-11FEB22",
+      "tokens": [
+        {
+          "address": "0x418De6227499181B045CAdf554030722E460881a",
+          "symbol": "ePyvCurve-MIM-11FEB22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x418De6227499181B045CAdf554030722E460881a"
+    },
+    {
       "address": "0x0A0aaca26aFE68a04745Be1052ef04B534cC77e2",
       "poolId": "0x0a0aaca26afe68a04745be1052ef04b534cc77e20002000000000000000001a8",
       "poolType": "lbp",
@@ -74039,6 +74061,28 @@
       ]
     },
     {
+      "address": "0x10a2F8bd81Ee2898D7eD18fb8f114034a549FA59",
+      "poolId": "0x10a2f8bd81ee2898d7ed18fb8f114034a549fa59000200000000000000000090",
+      "poolType": "element",
+      "symbol": "LPePyvUSDC-28JAN22",
+      "name": "LP Element Principal Token yvUSDC-28JAN22",
+      "tokens": [
+        {
+          "address": "0x8a2228705ec979961F0e16df311dEbcf097A2766",
+          "symbol": "ePyvUSDC-28JAN22",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x8a2228705ec979961F0e16df311dEbcf097A2766"
+    },
+    {
       "address": "0x10bBFe344Ad647a3944e7a8Ff5dF335077dD9173",
       "poolId": "0x10bbfe344ad647a3944e7a8ff5df335077dd917300020000000000000000022c",
       "poolType": "lbp",
@@ -74619,6 +74663,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x14792d3F6FcF2661795d1E08ef818bf612708BbF",
+      "poolId": "0x14792d3f6fcf2661795d1e08ef818bf612708bbf0002000000000000000000be",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-MIM-29APR22",
+      "name": "LP Element Principal Token yvCurve-MIM-29APR22",
+      "tokens": [
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xC63958D9D01eFA6B8266b1df3862c6323CbDb52B",
+          "symbol": "ePyvCurve-MIM-29APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xC63958D9D01eFA6B8266b1df3862c6323CbDb52B"
     },
     {
       "address": "0x148CE9b50bE946a96e94A4f5479b771bAB9B1c59",
@@ -76590,6 +76656,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x22939E40Cf467DE8F5Db4F05A4027e5D4c1C658c",
+      "poolId": "0x22939e40cf467de8f5db4f05a4027e5d4c1c658c000200000000000000000059",
+      "poolType": "element",
+      "symbol": "LPePyvCurveLUSD-30JUN21",
+      "name": "LP Element Principal Token yvCurveLUSD-30JUN21",
+      "tokens": [
+        {
+          "address": "0xD44bF95Bf21C83B46049BF9E34633F3300B280F6",
+          "symbol": "ePyvCurveLUSD-30JUN21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xD44bF95Bf21C83B46049BF9E34633F3300B280F6"
     },
     {
       "address": "0x231E687C9961d3A27e6E266Ac5C433Ce4F8253E4",
@@ -79991,6 +80079,28 @@
       ]
     },
     {
+      "address": "0x3A693EB97b500008d4Bb6258906f7Bbca1D09Cc5",
+      "poolId": "0x3a693eb97b500008d4bb6258906f7bbca1d09cc5000200000000000000000065",
+      "poolType": "element",
+      "symbol": "LPePyvCrvTriCrypto-15AUG21",
+      "name": "LP Element Principal Token yvCrvTriCrypto-15AUG21",
+      "tokens": [
+        {
+          "address": "0x237535Da7e2f0aBa1b68262ABCf7C4e60B42600C",
+          "symbol": "ePyvCrvTriCrypto-15AUG21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
+          "symbol": "crvTricrypto",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x237535Da7e2f0aBa1b68262ABCf7C4e60B42600C"
+    },
+    {
       "address": "0x3AC294fEb87d2f52237249Fa2e8B19Ee6Ed5D7e3",
       "poolId": "0x3ac294feb87d2f52237249fa2e8b19ee6ed5d7e30002000000000000000005fb",
       "poolType": "lbp",
@@ -82718,6 +82828,28 @@
       ]
     },
     {
+      "address": "0x4bd6D86dEBdB9F5413e631Ad386c4427DC9D01B2",
+      "poolId": "0x4bd6d86debdb9f5413e631ad386c4427dc9d01b20002000000000000000000ec",
+      "poolType": "element",
+      "symbol": "LPePyvWBTC-29APR22",
+      "name": "LP Element Principal Token yvWBTC-29APR22",
+      "tokens": [
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x49e9e169f0B661Ea0A883f490564F4CC275123Ed",
+          "symbol": "ePyvWBTC-29APR22",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x49e9e169f0B661Ea0A883f490564F4CC275123Ed"
+    },
+    {
       "address": "0x4bddF01CbC15f3A2E78570c5bed14C67a16327f6",
       "poolId": "0x4bddf01cbc15f3a2e78570c5bed14c67a16327f6000200000000000000000700",
       "poolType": "weighted",
@@ -82950,6 +83082,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x4Db9024fc9F477134e00Da0DA3c77DE98d9836aC",
+      "poolId": "0x4db9024fc9f477134e00da0da3c77de98d9836ac000200000000000000000086",
+      "poolType": "element",
+      "symbol": "LPePyvWBTC-26NOV21",
+      "name": "LP Element Principal Token yvWBTC-26NOV21",
+      "tokens": [
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6BF924137E769C0A5c443dcE6eC885552d31D579",
+          "symbol": "ePyvWBTC-26NOV21",
+          "decimals": 8,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x6BF924137E769C0A5c443dcE6eC885552d31D579"
     },
     {
       "address": "0x4dd7517dE8065A688dd0e398ed031B6e469f9F0F",
@@ -84149,6 +84303,28 @@
       ]
     },
     {
+      "address": "0x544c823194218f0640daE8291c1f59752d25faE3",
+      "poolId": "0x544c823194218f0640dae8291c1f59752d25fae3000200000000000000000093",
+      "poolType": "element",
+      "symbol": "LPePyvcrvSTETH-28JAN22",
+      "name": "LP Element Principal Token yvcrvSTETH-28JAN22",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x720465A4AE6547348056885060EEB51F9CAdb571",
+          "symbol": "ePyvcrvSTETH-28JAN22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x720465A4AE6547348056885060EEB51F9CAdb571"
+    },
+    {
       "address": "0x54a1B55cE2Aa5AdB0C55dE5A142e20Fc4242411D",
       "poolId": "0x54a1b55ce2aa5adb0c55de5a142e20fc4242411d0002000000000000000004cf",
       "poolType": "lbp",
@@ -84501,6 +84677,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x56F30398d13F111401d6e7ffE758254a0946687d",
+      "poolId": "0x56f30398d13f111401d6e7ffe758254a0946687d000200000000000000000105",
+      "poolType": "element",
+      "symbol": "LPePyvCurveLUSD-29APR22",
+      "name": "LP Element Principal Token yvCurveLUSD-29APR22",
+      "tokens": [
+        {
+          "address": "0x0740A6CfB9468B8b53070C0B327099293DCCB82d",
+          "symbol": "ePyvCurveLUSD-29APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x0740A6CfB9468B8b53070C0B327099293DCCB82d"
     },
     {
       "address": "0x56Ff560cDca4F90fe8935b9E169Cd95e0D08ee89",
@@ -86273,6 +86471,27 @@
       ]
     },
     {
+      "address": "0x5F8B11995D7F95faA59cA6fD5fFA1C0dbBe0EC7b",
+      "poolId": "0x5f8b11995d7f95faa59ca6fd5ffa1c0dbbe0ec7b000200000000000000000630",
+      "poolType": "fx",
+      "symbol": "LP-EURS-USDC",
+      "name": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdB25f211AB05b1c97D595516F45794528a807ad8",
+          "symbol": "EURS",
+          "decimals": 2,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x5fA3ce1fB47bC8A29B5C02e2e7167799BBAf5F41",
       "poolId": "0x5fa3ce1fb47bc8a29b5c02e2e7167799bbaf5f410002000000000000000000a7",
       "poolType": "weighted",
@@ -87002,6 +87221,28 @@
       ]
     },
     {
+      "address": "0x63E9B50DD3eB63BfBF93B26F57b9EFB574e59576",
+      "poolId": "0x63e9b50dd3eb63bfbf93b26f57b9efb574e595760002000000000000000000cf",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-alUSD-29APR22",
+      "name": "LP Element Principal Token yvCurve-alUSD-29APR22",
+      "tokens": [
+        {
+          "address": "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
+          "symbol": "alUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xEaa1cBA8CC3CF01a92E9E853E90277B5B8A23e07",
+          "symbol": "ePyvCurve-alUSD-29APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xEaa1cBA8CC3CF01a92E9E853E90277B5B8A23e07"
+    },
+    {
       "address": "0x63f040B8AF2B53f3c251de960f2AeEA88f5f3275",
       "poolId": "0x63f040b8af2b53f3c251de960f2aeea88f5f32750002000000000000000004f4",
       "poolType": "lbp",
@@ -87591,6 +87832,27 @@
           "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "symbol": "WETH",
           "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x66bB9D104c55861feb3Ec3559433F01f6373c966",
+      "poolId": "0x66bb9d104c55861feb3ec3559433f01f6373c9660002000000000000000003cf",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-DAI-USDC",
+      "tokens": [
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
           "isPhantomBpt": false
         }
       ]
@@ -88412,6 +88674,28 @@
       ]
     },
     {
+      "address": "0x6AC02eCD0c2A23B11f9AFb3b3Aaf237169475cac",
+      "poolId": "0x6ac02ecd0c2a23b11f9afb3b3aaf237169475cac0002000000000000000000a8",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-EURS-11FEB22",
+      "name": "LP Element Principal Token yvCurve-EURS-11FEB22",
+      "tokens": [
+        {
+          "address": "0x194eBd173F6cDacE046C53eACcE9B953F28411d1",
+          "symbol": "eursCRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2A8f5649DE50462fF9699Ccc75A2Fb0b53447503",
+          "symbol": "ePyvCurve-EURS-11FEB22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x2A8f5649DE50462fF9699Ccc75A2Fb0b53447503"
+    },
+    {
       "address": "0x6Ae5a7857aAd26722cB02CC168e38c52E0e4e45d",
       "poolId": "0x6ae5a7857aad26722cb02cc168e38c52e0e4e45d0000000000000000000005dd",
       "poolType": "composableStable",
@@ -88704,6 +88988,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x6Dd0F7c8F4793ed2531c0df4fEA8633a21fDcFf4",
+      "poolId": "0x6dd0f7c8f4793ed2531c0df4fea8633a21fdcff40002000000000000000000b7",
+      "poolType": "element",
+      "symbol": "LPePyvcrv3crypto-29APR22",
+      "name": "LP Element Principal Token yvcrv3crypto-29APR22",
+      "tokens": [
+        {
+          "address": "0x285328906D0D33cb757c1E471F5e2176683247c2",
+          "symbol": "ePyvcrv3crypto-29APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+          "symbol": "crv3crypto",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x285328906D0D33cb757c1E471F5e2176683247c2"
     },
     {
       "address": "0x6DE6AD95285A6122FcEb51424f6278569109705c",
@@ -89477,6 +89783,28 @@
       ]
     },
     {
+      "address": "0x71628c66C502F988Fbb9e17081F2bD14e361FAF4",
+      "poolId": "0x71628c66c502f988fbb9e17081f2bd14e361faf4000200000000000000000078",
+      "poolType": "element",
+      "symbol": "LPePyvDAI-16OCT21",
+      "name": "LP Element Principal Token yvDAI-16OCT21",
+      "tokens": [
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xb1cc77e701de60FE246607565CF7eDC9D9b6b963",
+          "symbol": "ePyvDAI-16OCT21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xb1cc77e701de60FE246607565CF7eDC9D9b6b963"
+    },
+    {
       "address": "0x7173b184525feAD2fFbde5FBe6FCB65Ea8246eE7",
       "poolId": "0x7173b184525fead2ffbde5fbe6fcb65ea8246ee70002000000000000000000c7",
       "poolType": "weighted",
@@ -89984,6 +90312,27 @@
         {
           "address": "0x21fC7E70b85Cba3995d5eafE5049F3e1405C9b73",
           "symbol": "HUB",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
+      "address": "0x73f8E7A9A19E284a9Ac85704Af58454cFe75f059",
+      "poolId": "0x73f8e7a9a19e284a9ac85704af58454cfe75f059000200000000000000000631",
+      "poolType": "fx",
+      "symbol": "LP-GBPT-USDC",
+      "name": "LP-GBPT-USDC",
+      "tokens": [
+        {
+          "address": "0x86B4dBE5D203e634a12364C0e428fa242A3FbA98",
+          "symbol": "1GBP",
           "decimals": 18,
           "isPhantomBpt": false
         },
@@ -90714,6 +91063,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x787546Bf2c05e3e19e2b6BDE57A203da7f682efF",
+      "poolId": "0x787546bf2c05e3e19e2b6bde57a203da7f682eff00020000000000000000007c",
+      "poolType": "element",
+      "symbol": "LPePyvUSDC-29OCT21",
+      "name": "LP Element Principal Token yvUSDC-29OCT21",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xf38c3E836Be9cD35072055Ff6a9Ba570e0B70797",
+          "symbol": "ePyvUSDC-29OCT21",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xf38c3E836Be9cD35072055Ff6a9Ba570e0B70797"
     },
     {
       "address": "0x78bA4FBd299A78049D9DF86dDf591f415B5E6f30",
@@ -91671,6 +92042,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x7Edde0CB05ED19e03A9a47CD5E53fC57FDe1c80c",
+      "poolId": "0x7edde0cb05ed19e03a9a47cd5e53fc57fde1c80c0002000000000000000000c8",
+      "poolType": "element",
+      "symbol": "LPePyvUSDC-29APR22",
+      "name": "LP Element Principal Token yvUSDC-29APR22",
+      "tokens": [
+        {
+          "address": "0x52C9886d5D87B0f06EbACBEff750B5Ffad5d17d9",
+          "symbol": "ePyvUSDC-29APR22",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x52C9886d5D87B0f06EbACBEff750B5Ffad5d17d9"
     },
     {
       "address": "0x7F0c39e7728f65efe87752b26591006C49d1c200",
@@ -92849,6 +93242,28 @@
       ]
     },
     {
+      "address": "0x85DCA8667D020e694FDfF06E7eE85e0c5C7C61a4",
+      "poolId": "0x85dca8667d020e694fdff06e7ee85e0c5c7c61a4000200000000000000000076",
+      "poolType": "element",
+      "symbol": "LPePyvDAI-08DEC23",
+      "name": "LP Element Principal Token yvDAI-08DEC23",
+      "tokens": [
+        {
+          "address": "0x46a6c6aa64c148386af77C76a4666da961f8c65c",
+          "symbol": "ePyvDAI-08DEC23",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x46a6c6aa64c148386af77C76a4666da961f8c65c"
+    },
+    {
       "address": "0x85Ff4879CFD6a3143233C2c83703912F84809858",
       "poolId": "0x85ff4879cfd6a3143233c2c83703912f84809858000200000000000000000233",
       "poolType": "lbp",
@@ -93210,6 +93625,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x893B30574BF183d69413717f30b17062eC9DFD8b",
+      "poolId": "0x893b30574bf183d69413717f30b17062ec9dfd8b000200000000000000000061",
+      "poolType": "element",
+      "symbol": "LPePyvCurveLUSD-27DEC21",
+      "name": "LP Element Principal Token yvCurveLUSD-27DEC21",
+      "tokens": [
+        {
+          "address": "0xa2b3d083AA1eaa8453BfB477f062A208Ed85cBBF",
+          "symbol": "ePyvCurveLUSD-27DEC21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0xa2b3d083AA1eaa8453BfB477f062A208Ed85cBBF"
     },
     {
       "address": "0x8950E720eB51AF9709A86941345844134517bcF4",
@@ -94469,6 +94906,28 @@
       ]
     },
     {
+      "address": "0x90CA5cEf5B29342b229Fb8AE2DB5d8f4F894D652",
+      "poolId": "0x90ca5cef5b29342b229fb8ae2db5d8f4f894d6520002000000000000000000b5",
+      "poolType": "element",
+      "symbol": "LPePyvUSDC-17DEC21",
+      "name": "LP Element Principal Token yvUSDC-17DEC21",
+      "tokens": [
+        {
+          "address": "0x76a34D72b9CF97d972fB0e390eB053A37F211c74",
+          "symbol": "ePyvUSDC-17DEC21",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x76a34D72b9CF97d972fB0e390eB053A37F211c74"
+    },
+    {
       "address": "0x90dDE666DFF0a2fAbEFE4d6E861c541703502b02",
       "poolId": "0x90dde666dff0a2fabefe4d6e861c541703502b02000200000000000000000258",
       "poolType": "lbp",
@@ -95046,6 +95505,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0x94C476E4675FAaC1Bf60211c5E39486bCF720cBD",
+      "poolId": "0x94c476e4675faac1bf60211c5e39486bcf720cbd0002000000000000000000a3",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-MIM-11FEB22",
+      "name": "LP Element Principal Token yvCurve-MIM-11FEB22",
+      "tokens": [
+        {
+          "address": "0x418De6227499181B045CAdf554030722E460881a",
+          "symbol": "ePyvCurve-MIM-11FEB22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+          "symbol": "MIM-3LP3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x418De6227499181B045CAdf554030722E460881a"
     },
     {
       "address": "0x94Ce642f78ef731a3748DD058C084458af1b5630",
@@ -97637,6 +98118,28 @@
       ]
     },
     {
+      "address": "0xA47D1251CF21AD42685Cc6B8B3a186a73Dbd06cf",
+      "poolId": "0xa47d1251cf21ad42685cc6b8b3a186a73dbd06cf000200000000000000000097",
+      "poolType": "element",
+      "symbol": "LPePyvDAI-28JAN22",
+      "name": "LP Element Principal Token yvDAI-28JAN22",
+      "tokens": [
+        {
+          "address": "0x449D7C2e096E9f867339078535b15440d42F78E8",
+          "symbol": "ePyvDAI-28JAN22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x449D7C2e096E9f867339078535b15440d42F78E8"
+    },
+    {
       "address": "0xa47dc2eC2960E6AB4442Bf1838E35FDcf4FE724A",
       "poolId": "0xa47dc2ec2960e6ab4442bf1838e35fdcf4fe724a000200000000000000000364",
       "poolType": "lbp",
@@ -98151,6 +98654,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0xA8D4433BAdAa1A35506804B43657B0694deA928d",
+      "poolId": "0xa8d4433badaa1a35506804b43657b0694dea928d00020000000000000000005e",
+      "poolType": "element",
+      "symbol": "LPePyvCurveLUSD-28SEP21",
+      "name": "LP Element Principal Token yvCurveLUSD-28SEP21",
+      "tokens": [
+        {
+          "address": "0x9b44Ed798a10Df31dee52C5256Dcb4754BCf097E",
+          "symbol": "ePyvCurveLUSD-28SEP21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
+          "symbol": "LUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x9b44Ed798a10Df31dee52C5256Dcb4754BCf097E"
     },
     {
       "address": "0xa9Dd57145ca13a2F05199d85e3f2739Af6478427",
@@ -98717,6 +99242,27 @@
       ]
     },
     {
+      "address": "0xAd0e5e0778cAC28f1ff459602b31351871B5754a",
+      "poolId": "0xad0e5e0778cac28f1ff459602b31351871b5754a0002000000000000000003ce",
+      "poolType": "fx",
+      "symbol": "BPT",
+      "name": "BPT-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xdB25f211AB05b1c97D595516F45794528a807ad8",
+          "symbol": "EURS",
+          "decimals": 2,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0xad302e620FEDb60078B33514757335545ba05c6D",
       "poolId": "0xad302e620fedb60078b33514757335545ba05c6d00020000000000000000004e",
       "poolType": "weighted",
@@ -99135,6 +99681,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0xb03C6B351A283bc1Cd26b9cf6d7B0c4556013bDb",
+      "poolId": "0xb03c6b351a283bc1cd26b9cf6d7b0c4556013bdb0002000000000000000000ab",
+      "poolType": "element",
+      "symbol": "LPePyvcrvSTETH-15APR22",
+      "name": "LP Element Principal Token yvcrvSTETH-15APR22",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x2361102893CCabFb543bc55AC4cC8d6d0824A67E",
+          "symbol": "ePyvcrvSTETH-15APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x2361102893CCabFb543bc55AC4cC8d6d0824A67E"
     },
     {
       "address": "0xB0401Ab1108BD26C85A07243dFDF09F4821D76a2",
@@ -102386,6 +102954,27 @@
       ]
     },
     {
+      "address": "0xC58150838855a5605C9030398c6D22afd5Bb09EE",
+      "poolId": "0xc58150838855a5605c9030398c6d22afd5bb09ee00020000000000000000061b",
+      "poolType": "fx",
+      "symbol": "LP-GBPT-USDC",
+      "name": "LP-GBPT-USDC",
+      "tokens": [
+        {
+          "address": "0x86B4dBE5D203e634a12364C0e428fa242A3FbA98",
+          "symbol": "1GBP",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0xC5afabC9964316F9b87b839fD382109b24cd571D",
       "poolId": "0xc5afabc9964316f9b87b839fd382109b24cd571d000000000000000000000531",
       "poolType": "composableStable",
@@ -102998,6 +103587,28 @@
       ]
     },
     {
+      "address": "0xC9AD279994980F8DF348b526901006972509677F",
+      "poolId": "0xc9ad279994980f8df348b526901006972509677f00020000000000000000009e",
+      "poolType": "element",
+      "symbol": "LPePyvCurve-alUSD-28JAN22",
+      "name": "LP Element Principal Token yvCurve-alUSD-28JAN22",
+      "tokens": [
+        {
+          "address": "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
+          "symbol": "alUSD3CRV-f",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x55096A35Bf827919B3Bb0A5e6b5E2af8095F3D4d",
+          "symbol": "ePyvCurve-alUSD-28JAN22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x55096A35Bf827919B3Bb0A5e6b5E2af8095F3D4d"
+    },
+    {
       "address": "0xC9C5Ff67bB2Fae526aE2467C359609D6BCb4c532",
       "poolId": "0xc9c5ff67bb2fae526ae2467c359609d6bcb4c5320000000000000000000003cc",
       "poolType": "composableStable",
@@ -103467,6 +104078,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0xce16E7ed7654a3453E8FaF748f2c82E57069278f",
+      "poolId": "0xce16e7ed7654a3453e8faf748f2c82e57069278f00020000000000000000006d",
+      "poolType": "element",
+      "symbol": "LPePyvcrvSTETH-15OCT21",
+      "name": "LP Element Principal Token yvcrvSTETH-15OCT21",
+      "tokens": [
+        {
+          "address": "0x06325440D014e39736583c165C2963BA99fAf14E",
+          "symbol": "steCRV",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x26941C63F4587796aBE199348ecd3d7C44F9aE0C",
+          "symbol": "ePyvcrvSTETH-15OCT21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x26941C63F4587796aBE199348ecd3d7C44F9aE0C"
     },
     {
       "address": "0xce6369C7a219846C4464A914A40da6a7CC639079",
@@ -108629,6 +109262,28 @@
       ]
     },
     {
+      "address": "0xEdf085f65b4F6c155e13155502Ef925c9a756003",
+      "poolId": "0xedf085f65b4f6c155e13155502ef925c9a756003000200000000000000000123",
+      "poolType": "element",
+      "symbol": "LPePyvDAI-29APR22",
+      "name": "LP Element Principal Token yvDAI-29APR22",
+      "tokens": [
+        {
+          "address": "0x2c72692E94E757679289aC85d3556b2c0f717E0E",
+          "symbol": "ePyvDAI-29APR22",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+          "symbol": "DAI",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x2c72692E94E757679289aC85d3556b2c0f717E0E"
+    },
+    {
       "address": "0xEe094FCc47A64c7C74c6324054F0f76c278D7086",
       "poolId": "0xee094fcc47a64c7c74c6324054f0f76c278d708600020000000000000000025c",
       "poolType": "lbp",
@@ -110136,6 +110791,28 @@
           "isPhantomBpt": false
         }
       ]
+    },
+    {
+      "address": "0xF6dc4640D2783654BeF88E0dF3fb0F051f0DfC1A",
+      "poolId": "0xf6dc4640d2783654bef88e0df3fb0f051f0dfc1a00020000000000000000007e",
+      "poolType": "element",
+      "symbol": "LPePyvcrv3crypto-12NOV21",
+      "name": "LP Element Principal Token yvcrv3crypto-12NOV21",
+      "tokens": [
+        {
+          "address": "0x9CF2AB51aC93711Ec2fa32Ec861349568A16c729",
+          "symbol": "ePyvcrv3crypto-12NOV21",
+          "decimals": 18,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+          "symbol": "crv3crypto",
+          "decimals": 18,
+          "isPhantomBpt": false
+        }
+      ],
+      "elementBond": "0x9CF2AB51aC93711Ec2fa32Ec861349568A16c729"
     },
     {
       "address": "0xF6E4996697521F23b551C3bc2DeAAfF59198bD3E",

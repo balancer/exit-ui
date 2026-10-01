@@ -3,13 +3,14 @@ import { GaugePositionCard } from './components/GaugePositionCard'
 import { Header } from './components/Header'
 import { ManualPoolEntry } from './components/ManualPoolEntry'
 import { PoolPositionCard } from './components/PoolPositionCard'
+import { PrincipalTokenCard } from './components/PrincipalTokenCard'
 import { ScanPanel } from './components/ScanPanel'
 import { useApp } from './contexts/AppContext'
 import { usePositions } from './hooks/usePositions'
 
 export default function App() {
   const { chain, scanTarget } = useApp()
-  const { pools, gauges, scanning, progress, error, scanned, scan, addManualPool, reset, hasData } =
+  const { pools, gauges, principals, scanning, progress, error, scanned, scan, addManualPool, reset, hasData } =
     usePositions()
 
   // chain or target switched -> stale results
@@ -50,6 +51,17 @@ export default function App() {
           {pools.map((p) => (
             <PoolPositionCard key={p.address} position={p} onExited={scan} />
           ))}
+
+          {principals.length > 0 && (
+            <>
+              <h2 style={{ fontSize: 18 }}>
+                Element principal tokens <span className="badge">{principals.length}</span>
+              </h2>
+              {principals.map((p) => (
+                <PrincipalTokenCard key={p.tranche} position={p} onRedeemed={scan} />
+              ))}
+            </>
+          )}
         </>
       )}
 

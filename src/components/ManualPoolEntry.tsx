@@ -4,7 +4,7 @@ import { erc20Abi, erc20Bytes32MetadataAbi } from '../abis/erc20'
 import { useApp } from '../contexts/AppContext'
 import type { PoolPosition } from '../lib/positions'
 import { resolveV1Pool } from '../lib/v1'
-import { resolveV2Pool } from '../lib/v2'
+import { detectCustomPoolType, resolveV2Pool } from '../lib/v2'
 import { resolveV3Pool } from '../lib/v3'
 
 /**
@@ -78,14 +78,19 @@ export function ManualPoolEntry({ onFound }: { onFound: (p: PoolPosition) => voi
       if (chain.v2) {
         try {
           const v2 = await resolveV2Pool(publicClient, chain, poolAddress)
+          const custom = await detectCustomPoolType(publicClient, poolAddress)
           onFound({
             protocolVersion: 2,
             address: poolAddress,
             poolId: v2.poolId,
-            // unknown factory: assume composable when the pool holds its own BPT, else weighted-style
-            poolType: v2.tokens.some((t) => t.toLowerCase() === poolAddress.toLowerCase())
-              ? 'composableStable'
-              : 'weighted',
+            // unknown factory: FX/Element by their getters, else composable when the pool holds its
+            // own BPT, else weighted-style
+            poolType:
+              custom?.poolType ??
+              (v2.tokens.some((t) => t.toLowerCase() === poolAddress.toLowerCase())
+                ? 'composableStable'
+                : 'weighted'),
+            elementBond: custom?.elementBond,
             symbol,
             name,
             tokens: await tokenMeta(v2.tokens),

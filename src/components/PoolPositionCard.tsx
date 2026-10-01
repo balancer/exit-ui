@@ -58,6 +58,8 @@ export function PoolPositionCard({
   const bptIn = amountInput ? parseAmount(amountInput, 18) : position.balance
   const validAmount = bptIn !== null && bptIn > 0n && bptIn <= position.balance
   const slippagePct = Number(slippage) >= 0 ? Number(slippage) : 1
+  // Element exits encode the quoted amounts themselves, so there is no zero-minimum fallback
+  const quoteRequired = position.poolType === 'element'
 
   const refreshQuote = useCallback(async () => {
     if (!validAmount || !scanTarget || (mode !== 'proportional' && mode !== 'recovery')) return
@@ -111,7 +113,7 @@ export function PoolPositionCard({
   async function onExit() {
     if (!account || !validAmount) return
     if (mode !== 'proportional' && mode !== 'recovery') return
-    if (!quote && !emergency) return
+    if (!quote && (!emergency || quoteRequired)) return
     // simulation failed -> emergency-only path with zero mins
     const effectiveQuote =
       quote ??
@@ -235,7 +237,9 @@ export function PoolPositionCard({
             <div className="warning-box" style={{ marginTop: 8 }}>
               Exit simulation failed: {quoteError}
               <br />
-              You can still try an emergency exit (no minimum amounts).
+              {quoteRequired
+                ? 'This pool type can only exit with a successful simulation.'
+                : 'You can still try an emergency exit (no minimum amounts).'}
             </div>
           )}
 
@@ -293,7 +297,7 @@ export function PoolPositionCard({
                 readOnly ||
                 !account ||
                 !validAmount ||
-                (!quote && !emergency) ||
+                (!quote && (!emergency || quoteRequired)) ||
                 Boolean(needsApproval) ||
                 status.state === 'pending' ||
                 status.state === 'confirming'
@@ -317,6 +321,8 @@ export function PoolPositionCard({
       <div className="muted" style={{ marginTop: 8 }}>
         Tokens: {displayTokens.map((t) => t.symbol).join(', ')} — withdrawals are proportional; you
         receive wrapped native tokens (no auto-unwrap).
+        {position.poolType === 'element' &&
+          ' The principal token (ePyv…) you receive has matured: rescan after exiting to redeem it for the underlying.'}
       </div>
     </div>
   )

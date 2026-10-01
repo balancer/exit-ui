@@ -1,12 +1,19 @@
 import { useCallback, useState } from 'react'
 import { useApp } from '../contexts/AppContext'
-import { hasChainData, loadChainData, type GaugePosition, type PoolPosition } from '../lib/positions'
+import {
+  hasChainData,
+  loadChainData,
+  type GaugePosition,
+  type PoolPosition,
+  type PrincipalPosition,
+} from '../lib/positions'
 import { scanPositions } from '../lib/scanner'
 
 export function usePositions() {
   const { chain, publicClient, scanTarget } = useApp()
   const [pools, setPools] = useState<PoolPosition[]>([])
   const [gauges, setGauges] = useState<GaugePosition[]>([])
+  const [principals, setPrincipals] = useState<PrincipalPosition[]>([])
   const [scanning, setScanning] = useState(false)
   const [progress, setProgress] = useState('')
   const [error, setError] = useState('')
@@ -24,6 +31,7 @@ export function usePositions() {
       const result = await scanPositions(publicClient, chain, data, scanTarget, setProgress)
       setPools(result.pools)
       setGauges(result.gauges)
+      setPrincipals(result.principals)
       setScanned(true)
     } catch (e: any) {
       setError(String(e.shortMessage ?? e.message ?? e))
@@ -44,9 +52,10 @@ export function usePositions() {
   const reset = useCallback(() => {
     setPools([])
     setGauges([])
+    setPrincipals([])
     setScanned(false)
     setError('')
   }, [])
 
-  return { pools, gauges, scanning, progress, error, scanned, scan, addManualPool, reset, hasData }
+  return { pools, gauges, principals, scanning, progress, error, scanned, scan, addManualPool, reset, hasData }
 }
