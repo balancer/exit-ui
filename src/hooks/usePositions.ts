@@ -1,27 +1,37 @@
 import { useCallback, useState } from 'react'
 import { useApp } from '../contexts/AppContext'
-import { getChainData, type GaugePosition, type PoolPosition } from '../lib/positions'
+import {
+  hasChainData,
+  loadChainData,
+  type GaugePosition,
+  type PoolPosition,
+  type PrincipalPosition,
+} from '../lib/positions'
 import { scanPositions } from '../lib/scanner'
 
 export function usePositions() {
   const { chain, publicClient, scanTarget } = useApp()
   const [pools, setPools] = useState<PoolPosition[]>([])
   const [gauges, setGauges] = useState<GaugePosition[]>([])
+  const [principals, setPrincipals] = useState<PrincipalPosition[]>([])
   const [scanning, setScanning] = useState(false)
   const [progress, setProgress] = useState('')
   const [error, setError] = useState('')
   const [scanned, setScanned] = useState(false)
 
-  const data = getChainData(chain.key)
+  const hasData = hasChainData(chain.key)
 
   const scan = useCallback(async () => {
-    if (!scanTarget || !data) return
+    if (!scanTarget || !hasData) return
     setScanning(true)
     setError('')
     try {
+      const data = await loadChainData(chain.key)
+      if (!data) throw new Error(`No pool list bundled for ${chain.name}`)
       const result = await scanPositions(publicClient, chain, data, scanTarget, setProgress)
       setPools(result.pools)
       setGauges(result.gauges)
+      setPrincipals(result.principals)
       setScanned(true)
     } catch (e: any) {
       setError(String(e.shortMessage ?? e.message ?? e))
@@ -29,7 +39,7 @@ export function usePositions() {
       setScanning(false)
       setProgress('')
     }
-  }, [publicClient, chain, data, scanTarget])
+  }, [publicClient, chain, hasData, scanTarget])
 
   const addManualPool = useCallback((position: PoolPosition) => {
     setPools((prev) => {
@@ -42,9 +52,10 @@ export function usePositions() {
   const reset = useCallback(() => {
     setPools([])
     setGauges([])
+    setPrincipals([])
     setScanned(false)
     setError('')
   }, [])
 
-  return { pools, gauges, scanning, progress, error, scanned, scan, addManualPool, reset, hasData: !!data }
+  return { pools, gauges, principals, scanning, progress, error, scanned, scan, addManualPool, reset, hasData }
 }

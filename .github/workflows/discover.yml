@@ -37,6 +37,10 @@ jobs:
         env:
           DISCOVERY_RPC_URLS: ${{ secrets.DISCOVERY_RPC_URLS }}
         run: |
+          # GitHub masks the secret as a whole, not the URLs (with API keys) inside it
+          node -e "
+            const urls = JSON.parse(process.env.DISCOVERY_RPC_URLS || '{}')
+            for (const url of Object.values(urls)) console.log('::add-mask::' + url)"
           chains=$(node -e "
             const r = require('./src/config/registry.json')
             console.log(Object.keys(r).filter((k) => r[k].deprecated).join(' '))")

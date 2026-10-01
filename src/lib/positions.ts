@@ -15,6 +15,7 @@ export interface V2PoolData {
   symbol: string
   name: string
   tokens: TokenInfo[]
+  elementBond?: Address // element pools: the Element Tranche (principal token) traded in the pool
 }
 
 export interface V1PoolData {
@@ -54,6 +55,7 @@ export interface PoolPosition {
   v1UnderlyingPool?: Address // smart-pool backing BPool
   poolId?: `0x${string}` // v2 only
   poolType?: PoolType // v2 only
+  elementBond?: Address // v2 element pools only
   symbol: string
   name: string
   tokens: TokenInfo[]
@@ -61,6 +63,15 @@ export interface PoolPosition {
   inRecoveryMode: boolean
   /** v2: pool paused. v3: pool or Vault paused. Non-recovery exits revert while paused. */
   paused: boolean
+}
+
+/** Element principal tokens (ePyv…) held by the user; matured, redeemable 1:1 for the underlying. */
+export interface PrincipalPosition {
+  tranche: Address
+  symbol: string
+  decimals: number
+  balance: bigint
+  underlyingSymbol: string
 }
 
 export interface RewardInfo {
@@ -78,15 +89,21 @@ export interface GaugePosition {
   rewards: RewardInfo[]
 }
 
-// All committed discovery outputs, keyed by chain key.
-const dataModules = import.meta.glob('../config/data/*.json', { eager: true }) as Record<
+// All committed discovery outputs, keyed by chain key. Loaded lazily: together they are several MB.
+const dataModules = import.meta.glob('../config/data/*.json') as Record<
   string,
-  { default: ChainData }
+  () => Promise<{ default: ChainData }>
 >
 
-export function getChainData(chainKey: string): ChainData | null {
-  for (const [path, mod] of Object.entries(dataModules)) {
-    if (path.endsWith(`/${chainKey}.json`)) return mod.default
-  }
-  return null
+function dataLoader(chainKey: string) {
+  return Object.entries(dataModules).find(([path]) => path.endsWith(`/${chainKey}.json`))?.[1]
+}
+
+export function hasChainData(chainKey: string): boolean {
+  return Boolean(dataLoader(chainKey))
+}
+
+export async function loadChainData(chainKey: string): Promise<ChainData | null> {
+  const load = dataLoader(chainKey)
+  return load ? (await load()).default : null
 }

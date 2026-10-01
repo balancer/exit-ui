@@ -4,7 +4,7 @@ import { basePoolV2Abi } from '../abis/basePoolV2'
 import { vaultV3Abi } from '../abis/vaultV3'
 import { childChainGaugeV2Abi } from '../abis/childChainGaugeV2'
 import type { ChainConfig } from '../config/chains'
-import type { ChainData, GaugePosition, PoolPosition, RewardInfo } from './positions'
+import type { ChainData, GaugePosition, PoolPosition, PrincipalPosition, RewardInfo } from './positions'
 
 const CHUNK = 150
 
@@ -28,6 +28,46 @@ async function multicall(
 export interface ScanResult {
   pools: PoolPosition[]
   gauges: GaugePosition[]
+  principals: PrincipalPosition[]
+}
+
+/**
+ * Element principal tokens (ePyv…) the user holds: what an Element pool exit pays out, and also
+ * what users who exited through Element's own UI may still hold unredeemed.
+ */
+async function scanPrincipals(
+  client: PublicClient,
+  chain: ChainConfig,
+  data: ChainData,
+  user: Address
+): Promise<PrincipalPosition[]> {
+  const byTranche = new Map<string, PrincipalPosition>()
+  for (const pool of data.v2Pools) {
+    if (!pool.elementBond || byTranche.has(pool.elementBond.toLowerCase())) continue
+    const bond = pool.tokens.find((t) => t.address.toLowerCase() === pool.elementBond!.toLowerCase())
+    const underlying = pool.tokens.find((t) => t.address.toLowerCase() !== pool.elementBond!.toLowerCase())
+    if (!bond || !underlying) continue
+    byTranche.set(pool.elementBond.toLowerCase(), {
+      tranche: pool.elementBond,
+      symbol: bond.symbol,
+      decimals: bond.decimals,
+      balance: 0n,
+      underlyingSymbol: underlying.symbol,
+    })
+  }
+  const tranches = [...byTranche.values()]
+  if (!tranches.length) return []
+  const balances = await multicall(
+    client,
+    chain,
+    tranches.map((t) => ({ address: t.tranche, abi: erc20Abi, functionName: 'balanceOf', args: [user] }))
+  )
+  // below 0.0001 tokens is rounding dust from exits: worthless, and withdrawPrincipal reverts on it
+  // ("Not enough underlying") because it rounds to zero shares
+  const dust = (decimals: number) => 10n ** BigInt(Math.max(decimals - 4, 0))
+  return tranches
+    .map((t, i) => ({ ...t, balance: (balances[i] as bigint | null) ?? 0n }))
+    .filter((t) => t.balance >= dust(t.decimals))
 }
 
 export async function scanPositions(
@@ -122,6 +162,7 @@ export async function scanPositions(
       address: x.pool.address,
       poolId: x.pool.poolId,
       poolType: x.pool.poolType,
+      elementBond: x.pool.elementBond,
       symbol: x.pool.symbol,
       name: x.pool.name,
       tokens: x.pool.tokens,
@@ -214,5 +255,7 @@ export async function scanPositions(
     })
   }
 
-  return { pools, gauges }
+  const principals = await scanPrincipals(client, chain, data, user)
+
+  return { pools, gauges, principals }
 }

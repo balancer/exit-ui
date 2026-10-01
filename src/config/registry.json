@@ -8,7 +8,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
-    "deprecated": false,
+    "deprecated": true,
     "v1": {
       "startBlock": 9562480,
       "factory": "0x9424B1412450D0f8Fc2255FAf6046b98213B76Bd",
@@ -246,6 +246,28 @@
           "address": "0x579653927BF509B361F6e3813f5D4B95331d98c9",
           "startBlock": 18577307,
           "poolType": "gyro"
+        },
+        {
+          "name": "ElementConvergentCurvePoolFactory",
+          "address": "0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD",
+          "startBlock": 12686198,
+          "poolType": "element"
+        },
+        {
+          "name": "FXPoolFactory81fE",
+          "address": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+          "startBlock": 15981805,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactoryfb23",
+          "address": "0xfb23Bc0D2629268442CD6521CF4170698967105f",
+          "startBlock": 18469426,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
         }
       ],
       "gaugeFactories": [
@@ -281,12 +303,12 @@
     "key": "polygon",
     "chainId": 137,
     "name": "Polygon",
-    "defaultRpcUrl": "https://polygon-rpc.com",
+    "defaultRpcUrl": "https://polygon.drpc.org",
     "explorerUrl": "https://polygonscan.com",
     "nativeSymbol": "POL",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 15832990,
@@ -501,6 +523,46 @@
           "address": "0x1a79A24Db0F73e9087205287761fC9C5C305926b",
           "startBlock": 41209677,
           "poolType": "gyro"
+        },
+        {
+          "name": "FXPoolFactory627D",
+          "address": "0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71",
+          "startBlock": 32054794,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactoryF169",
+          "address": "0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3",
+          "startBlock": 49368322,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactory1716",
+          "address": "0x171665A8D7e7306869a43E8EfD312dfeE6027352",
+          "startBlock": 54636843,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactoryeFA1",
+          "address": "0xeFA1A53ea939013017e654beEdfC6f80E64ffC2d",
+          "startBlock": 72630821,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactory19Ad",
+          "address": "0x19Ad20dA5f24671BFC7486FC8c119dD80CD09EfD",
+          "startBlock": 72703991,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
         }
       ],
       "gaugeFactories": [
@@ -526,7 +588,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 222832,
@@ -711,6 +773,14 @@
           "address": "0x7a36527A02d96693b0AF2b70421F952816a4a088",
           "startBlock": 194366254,
           "poolType": "gyro"
+        },
+        {
+          "name": "FXPoolFactory0bd5",
+          "address": "0x0bd5EC16658346eeCd5dE8c704a38Efe02B5DA69",
+          "startBlock": 183603903,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
         }
       ],
       "gaugeFactories": [
@@ -741,7 +811,7 @@
     "nativeSymbol": "xDAI",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 5000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 24821598,
@@ -872,7 +942,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 7003431,
@@ -1069,7 +1139,7 @@
     "nativeSymbol": "AVAX",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 26386141,
@@ -1140,6 +1210,22 @@
           "address": "0x41e9ac0bfed353c2de21a980da0ebb8a464d946a",
           "startBlock": 50484541,
           "poolType": "gyro"
+        },
+        {
+          "name": "FXPoolFactory81fE",
+          "address": "0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134",
+          "startBlock": 32585313,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
+        },
+        {
+          "name": "FXPoolFactory4042",
+          "address": "0x4042dC4110Ea9500338737605A60065c3de152C6",
+          "startBlock": 37150794,
+          "poolType": "fx",
+          "event": "NewFXPool(address,bytes32,address)",
+          "poolTopicIndex": 3
         }
       ],
       "gaugeFactories": [
@@ -1165,7 +1251,7 @@
     "nativeSymbol": "ETH",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 10000,
-    "deprecated": false,
+    "deprecated": true,
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 1196036,
@@ -1425,7 +1511,7 @@
     "nativeSymbol": "HYPE",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 6132445,
@@ -1441,7 +1527,7 @@
     "nativeSymbol": "XPL",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 780207,
@@ -1457,7 +1543,7 @@
     "nativeSymbol": "OKB",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 100,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 43082760,
@@ -1473,7 +1559,7 @@
     "nativeSymbol": "MON",
     "multicall3": "0xca11bde05977b3631167028862be2a173976ca11",
     "logsMaxRange": 1000,
-    "deprecated": false,
+    "deprecated": true,
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 22091249,

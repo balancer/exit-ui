@@ -1,0 +1,2402 @@
+{
+  "meta": {
+    "chainKey": "monad",
+    "scannedAtBlock": 109302111,
+    "generatedAt": "2026-09-30T10:53:09.352Z"
+  },
+  "v1Pools": [],
+  "v2Pools": [],
+  "v3Pools": [
+    {
+      "address": "0x0061CE8CEdabF4BDB14B1616A215160a60ab64aC",
+      "symbol": "USDC-WMON-USDT0-CHAOS",
+      "name": "surge USDC-WMON-USDT0-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x02b34a02db24179Ac2D77Ae20AA6215C7153E7f8",
+      "symbol": "wnSMON-wnWMON",
+      "name": "Kintsu Surge wnSMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0x08139339dd9A480CEB84D9C7CcE48BE436dB20b3",
+          "symbol": "wnSMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x04ee91C1E4e7fAbEC2a90d5bF9Ce11eEbD04f7D0",
+      "symbol": "WMON-CHAOS",
+      "name": "Balancer WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x05a17b6D87Af42E711defaaFadd4Fb1231b1BE97",
+      "symbol": "STABLE CHAOS",
+      "name": "STABLE CHAOS",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x0626c7bCD2fd1f6072044b7FF2050301D9f7d6B3",
+      "symbol": "syzUSD-csUSDC",
+      "name": "Yuzu syzUSD-ClearstarUSDC",
+      "tokens": [
+        {
+          "address": "0x484be0540aD49f351eaa04eeB35dF0f937D4E73f",
+          "symbol": "syzUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xE1BcA19baA63894D374578320551633320436523",
+          "symbol": "CSUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x067AbD928147282Fb06475a09f6BE22Cee933EA3",
+      "symbol": "AutoRange-WMON-WETH",
+      "name": "Balancer AutoRange WMON-WETH",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0955d00258383d2886a5b27Cae547297eD21251E",
+      "symbol": "23USDCHAOS",
+      "name": "23USDCHAOS",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x0fE056f9C4bAE1d5C8d8e8A8423596E8a2Dd1383",
+      "symbol": "WMON-CHAOS",
+      "name": "Balancer WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x133e5a1AAd2B2750C233bcD8e16ECadD65776E01",
+      "symbol": "Neverland WBTC-cbBTC",
+      "name": "Neverland WBTC-cbBTC",
+      "tokens": [
+        {
+          "address": "0x8959f4E6ED1f4567a464959793d5f8f6f33C1C8B",
+          "symbol": "wnWBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x98a297e6424787E57Af119949d7E00b721F832BB",
+          "symbol": "wnCBBTC",
+          "decimals": 8
+        }
+      ]
+    },
+    {
+      "address": "0x150360c0eFd098A6426060Ee0Cc4a0444c4b4b68",
+      "symbol": "shMON-wnWMON",
+      "name": "Fastlane Surge shMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0x1B68626dCa36c7fE922fD2d55E4f631d962dE19c",
+          "symbol": "shMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x158d9Dc39a3bE0f2cE759DeAdBF18bAE20dCf9d9",
+      "symbol": "aBIL-USDC",
+      "name": "Anchored aBIL-USDC",
+      "tokens": [
+        {
+          "address": "0x4FC5B9f8933597D3ecf84d0611687E1Dc8DD576f",
+          "symbol": "aBIL",
+          "decimals": 18
+        },
+        {
+          "address": "0xC554aFfE2f581F5E0811e0D42D484ECaC5c6B8e2",
+          "symbol": "waMonUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x168a594b361B288781FF3C3DB5D1829592c1c0CB",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x173EF24A525eDbB93BF39674A2ddEC87b4B426Bd",
+      "symbol": "shMON-cWMON",
+      "name": "Fastlane Surge shMON / cWMON",
+      "tokens": [
+        {
+          "address": "0x0fcEd51b526BfA5619F83d97b54a57e3327eB183",
+          "symbol": "cWMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x1B68626dCa36c7fE922fD2d55E4f631d962dE19c",
+          "symbol": "shMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x18d74bffe7BFa7C144917Ca11e688f082ca612a1",
+      "symbol": "surge-USDC-WMON-CHAOS",
+      "name": "Balancer surge USDC-WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1B72FDC4aA5Fd3A75fA396E04BE20AB880Fe8007",
+      "symbol": "WMON-USDC-STABLE",
+      "name": "WMON USDC Stable",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x1c0959d2aFf4ecc1db8af53054e00f4016fe4fDe",
+      "symbol": "WMON-CHAOS",
+      "name": "Balancer WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1D11915897B38aF8b1dB21061A851425dc39a46A",
+      "symbol": "10WMON-90CHAOS",
+      "name": "Balancer 10WMON-90CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x1E170c076779cff943765D4afcD3EDf7d734e848",
+      "symbol": "weETH-wnWETH",
+      "name": "Balancer weETH-wnWETH",
+      "tokens": [
+        {
+          "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+          "symbol": "weETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xB3b850ac62B89fe9f4eFB652b516108a8aEb8848",
+          "symbol": "wnWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x200e7b741Ff4ed01e423B87064B8009a298253D0",
+      "symbol": "surge-CHAOS-USDC-USDT0",
+      "name": "Balancer surge CHAOS-USDC-USDT0",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x202eE4Dff5D3396944b6EDd09BB84d87Fdf4D186",
+      "symbol": "40CHAOS-30USDT0-30USDC",
+      "name": "Balancer 40CHAOS-30USDT0-30USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x21Dc4296461c0952094F6a18EA079EBd90E35B40",
+      "symbol": "50CHAOS-50WMON",
+      "name": "Balancer 50CHAOS-50WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x232B36669AE528a54E4ba2d45bc25cD7934643CB",
+      "symbol": "80CHAOS-10WETH-10WMON",
+      "name": "Balancer 80CHAOS-10WETH-10WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x234B49e87A7Fff921A060c21D2C013291BBD7fF1",
+      "symbol": "avUSD-AUSD",
+      "name": "Avant avUSD-AUSD",
+      "tokens": [
+        {
+          "address": "0x0D9D741FE423Cd5419e4BCb6cB2FfA87AFa93bA4",
+          "symbol": "avUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x9e1AcC5BFbf34e2E579763cE14042d957719fE76",
+          "symbol": "waMonAUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x23b7B5F9416de66dc6c299a771544306F9BB6a2f",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Surge Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x2532D150c81ee8cDFcc301e417A5D129735A895d",
+      "symbol": "reCLAMM-WMON-AUSD",
+      "name": "reCLAMM WMON/AUSD",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x2564b367B91260519E40B34b40f17Fd9cBd64E5D",
+      "symbol": "TDVP",
+      "name": "Time Decay Volatile Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xA3227C5969757783154C60bF0bC1944180ed81B9",
+          "symbol": "sMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x270fB7f6F4f9Aa64A61Cf95bDdEb2C3671D1A233",
+      "symbol": "Saturn USDat-USDC",
+      "name": "Saturn USDat-USDC",
+      "tokens": [
+        {
+          "address": "0x0Bb150DFa86EA5d7742F07FEfCD8E8edA81D64eF",
+          "symbol": "USDat",
+          "decimals": 6
+        },
+        {
+          "address": "0xC554aFfE2f581F5E0811e0D42D484ECaC5c6B8e2",
+          "symbol": "waMonUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x27da8a34579fBC99319Af1C1a0f0D51065084576",
+      "symbol": "AutoRange-DUST-USDC",
+      "name": "Balancer AutoRange DUST-USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x2B687A7E4FEA8159173D99BD3fb1350103202FE7",
+      "symbol": "USDC-wnAUSD",
+      "name": "Balancer USDC-wnAUSD",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x2DAA146dfB7EAef0038F9F15B2EC1e4DE003f72b",
+      "symbol": "wnAUSD-wnUSDC-wnUSDT0",
+      "name": "wnAUSD / wnUSDC / wnUSDT0",
+      "tokens": [
+        {
+          "address": "0x4e8aaecCE10ad9394e96fE5f2bd4e587A7B04298",
+          "symbol": "wnUSDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x8d5c2Df3Eef09088Fcccf3376D8EcD0Dd505f642",
+          "symbol": "wnUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x30AC51001dDc10d7caDA5Aa4D695a6f89057a40a",
+      "symbol": "syzUSD-cAUSD",
+      "name": "Yuzu Boosted syzUSD / cAUSD",
+      "tokens": [
+        {
+          "address": "0x484be0540aD49f351eaa04eeB35dF0f937D4E73f",
+          "symbol": "syzUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x8E94704607E857eB3E10Bd21D90bf8C1Ecba0452",
+          "symbol": "cAUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x312aA366013F4be6972499f482E592641f184dd9",
+      "symbol": "test USDC-WMON",
+      "name": "test USDC/WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x32C5924f83dD8a8044F7432CA9483EB1FE55A9f9",
+      "symbol": "surge-SOL-WMON",
+      "name": "Balancer surge SOL-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xea17E5a9efEBf1477dB45082d67010E2245217f1",
+          "symbol": "SOL",
+          "decimals": 9
+        }
+      ]
+    },
+    {
+      "address": "0x340Fa62AE58e90473da64b0af622cdd6113106Cb",
+      "symbol": "wnSHMON-wnWMON",
+      "name": "Fastlane Surge wnSHMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0x5e073494678fB7FA4a05bB17d45941Dd9Dc469c1",
+          "symbol": "wnSHMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3419E22D27E502B1b54c0C1Fe50669706e03FbD3",
+      "symbol": "surge-WMON-CHAOS-WETH-WBTC",
+      "name": "surge WMON-CHAOS-WETH-WBTC",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3475Ea1c3451a9a10Aeb51bd8836312175B88BAc",
+      "symbol": "sMON-wnWMON",
+      "name": "Kintsu Surge sMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0xA3227C5969757783154C60bF0bC1944180ed81B9",
+          "symbol": "sMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x36DA07624FC02b34042770EbE505e844C7B529FF",
+      "symbol": "DUST-USDC",
+      "name": "reCLAMM DUST / USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3845b2a6CfA33D82D7D18D5e4B370fFa5a9De5DE",
+      "symbol": "gMON-cWMON",
+      "name": "Magma Surge gMON / cWMON",
+      "tokens": [
+        {
+          "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+          "symbol": "gMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf473568b26B8C5aadCa9fbC0eA17E1728d5ec925",
+          "symbol": "cWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x38f66f8CCDdfCd64e348Ad1d8fD7B85b38F54f27",
+      "symbol": "WMON-USDC",
+      "name": "Balancer WMON-USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x39BD1F6a55f6b37427425e699CA7d6A6e687a670",
+      "symbol": "77CHAOMON",
+      "name": "77CHAOMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3dD13406D81Dbe497ff92d9E43E8F286fB5CAA53",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock ReClamm Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3df01b4d2f8648Be1Be53a105d06d0e978A92E6C",
+      "symbol": "80DUST-20wnUSDC",
+      "name": "Balancer 80DUST-20wnUSDC",
+      "tokens": [
+        {
+          "address": "0x8d5c2Df3Eef09088Fcccf3376D8EcD0Dd505f642",
+          "symbol": "wnUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x3E0db2834ff0Fbce5B1fF0aDA21093E256E925e5",
+      "symbol": "USDC-AUSD",
+      "name": "USDC / AUSD",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x40D6d59641352099DC81799e817745E87cbC2B64",
+      "symbol": "surge-SOL-WMON",
+      "name": "Balancer surge SOL-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xea17E5a9efEBf1477dB45082d67010E2245217f1",
+          "symbol": "SOL",
+          "decimals": 9
+        }
+      ]
+    },
+    {
+      "address": "0x42cBAFA76C381c3420BE78262141Ec1A83399490",
+      "symbol": "50WMON-50CHAOS",
+      "name": "Balancer 50WMON-50CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x430589B4aEEE87e21721d657865D942F92d80f2f",
+      "symbol": "syzUSD-CSUSDC",
+      "name": "Balancer syzUSD-CSUSDC",
+      "tokens": [
+        {
+          "address": "0x484be0540aD49f351eaa04eeB35dF0f937D4E73f",
+          "symbol": "syzUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0xE1BcA19baA63894D374578320551633320436523",
+          "symbol": "CSUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x43287ecd072476c9Ebf6AfE63b87603A33541485",
+      "symbol": "50-WMON-50-wnUSDT0",
+      "name": "50% WMON / 50% wnUSDT0",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x4e8aaecCE10ad9394e96fE5f2bd4e587A7B04298",
+          "symbol": "wnUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x43aeEf39a675Bdd2A692e9c54D5A6B88B4B1a291",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock ReClamm Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x455Bd02C88CD0b9a631d9dc684a89C99feFbE8C3",
+      "symbol": "CMG - 6 way",
+      "name": "CMG - 6 WAY",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x46590fE267495E902265E6FeB1A4f6C882e9970D",
+      "symbol": "avUSD-savUSD",
+      "name": "Avant avUSD-savUSD",
+      "tokens": [
+        {
+          "address": "0x0D9D741FE423Cd5419e4BCb6cB2FfA87AFa93bA4",
+          "symbol": "avUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x9648dB94F1e6B19e7D755585542981F97dc806c6",
+          "symbol": "savUSD",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x47A4aaf5bbE897C4558C5780B150535EeE6aA58b",
+      "symbol": "Curvance-AUSD-USDC",
+      "name": "Curvance AUSD-USDC",
+      "tokens": [
+        {
+          "address": "0x215394B5677Cb7a18B6fA8cc2cD155C024ee6b2E",
+          "symbol": "blbUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xC2ddc1004CA0d6cC4bFd1dCD03Dcf855bED8E670",
+          "symbol": "blbAUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x48Bf6F7C9A89c09594b27a3b8B4b4e09B567254a",
+      "symbol": "CHAOS-USDT0",
+      "name": "Balancer CHAOS-USDT0",
+      "tokens": [
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x48EB3C322950348344063eE4bF6Aae202d1E9807",
+      "symbol": "23CHAOS-77WMON",
+      "name": "Balancer 23CHAOS-77WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x4aF4eD3D9f750b6647d77c8206a2dee13E8343bE",
+      "symbol": "W-wbtc-weth",
+      "name": "Weighted wbtc-weth",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x506cb09bAcaC612C79869d567f08497349435C78",
+      "symbol": "AutoRange-WMON-USDC",
+      "name": "AutoRange WMON-USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x542312631ef65Cc0d8a5c72726190AA987d0E599",
+      "symbol": "50-KTB-50-wnUSDC",
+      "name": "DFB KTB / wnUSDC",
+      "tokens": [
+        {
+          "address": "0x8d5c2Df3Eef09088Fcccf3376D8EcD0Dd505f642",
+          "symbol": "wnUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xe9c082921dc3564e10196c5cc15dB1250AC7d5C6",
+          "symbol": "KTB",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x60563350dd2D449658F0C63F5A31b84d86424c93",
+      "symbol": "50CHAOS-50USDC",
+      "name": "Balancer 50CHAOS-50USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x6333D66d842Bda8cABAe5eBf2626B790d98b1E6F",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Surge Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x63E91807063AaecfF05960Bf7f4Eb7A6A03Cf304",
+      "symbol": "USDC-CHAOS",
+      "name": "Balancer USDC-CHAOS",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x66172A83B3bD984fe72871431EB38ce9005236B7",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x66b7b2389ccedF5f0F5217b7811741344b34b4fA",
+      "symbol": "50-gMON-50-WMON",
+      "name": "50% gMON / 50% WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+          "symbol": "gMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x696e219bc37954154291EbcD66b40BA0b1A26148",
+      "symbol": "AutoRange-WMON-USDC",
+      "name": "Balancer AutoRange WMON-USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x6b7e080eB7E6A2fdA4F64BF2de9bE162d52D3cD4",
+      "symbol": "surge-USDT0-CHAOS-WMON",
+      "name": "Balancer surge USDT0-CHAOS-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x6f3aa217d06A01024C39dAE1f2Fb59608C7e6878",
+      "symbol": "50-KTB-50-USDC",
+      "name": "KTB / USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xe9c082921dc3564e10196c5cc15dB1250AC7d5C6",
+          "symbol": "KTB",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x7346F502ee02a29A866cBd8EF4edaB1802643EDd",
+      "symbol": "gMON-WMON",
+      "name": "reCLAMM gMON /  WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+          "symbol": "gMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x770133233a092Dd26934d15699d9F6c1538C74e6",
+      "symbol": "50-AUSD-50-WMON",
+      "name": "50% AUSD / 50% WMON",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x785577A6281Cd90d08f949Fef89B132c71E64BC4",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x7F970621AfE76cDf4f68bC1d2aEf4fE6C45A2bf5",
+      "symbol": "WMON-CHAOS",
+      "name": "Balancer WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x872f005ac9cd9D64928D655a3EE0fdFD4c63FF67",
+      "symbol": "50CHAOS-50WMON",
+      "name": "Balancer 50CHAOS-50WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x87F438EAf18cb8d0e4F1B08080acF225AB7AA0F3",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Weighted Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x88045D07E96D53e155647dfc801833b9963D50B8",
+      "symbol": "50-All USDC/USDT/AZND/AUSD",
+      "name": "50% all USDC/USDT/AZND/AUSD",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x4917a5ec9fCb5e10f47CBB197aBe6aB63be81fE8",
+          "symbol": "AZND",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x88DE4a093391d5118D63E68920958A8c780c8aED",
+      "symbol": "USDCHAOS",
+      "name": "USDCHAOS",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x89154af620a9d60AaAEBdB0Ca5a75e78493bE155",
+      "symbol": "CHAOS-WMON",
+      "name": "Balancer CHAOS-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x8F3E35dB5178C649E6F02539C748af9B3dFf19C0",
+      "symbol": "USDCMG",
+      "name": "USDCMG",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x8f4fb1985Eb6D28b9E3f4aD116a6FFF087b55F43",
+      "symbol": "80-DUST-20-wnAUSD",
+      "name": "80% DUST / 20% wnAUSD",
+      "tokens": [
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x915DF8494695844cC5117CaDeE04f9E44aa09841",
+      "symbol": "GYROCHAO",
+      "name": "GYROCHAO",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9542c76cE516AC694D9608949622BA65bCAA185D",
+      "symbol": "gyrochaos",
+      "name": "gyrochaos",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x963B93c2A8c8F4dB243dE6ec360f528A8E1540D5",
+      "symbol": "waMonsUSDe-waMonUSDT0",
+      "name": "Aave sUSDe - USDT0",
+      "tokens": [
+        {
+          "address": "0x4eC854a6fDF52Eb64F8CabF87FafD3B1f1743a00",
+          "symbol": "waMonsUSDe",
+          "decimals": 18
+        },
+        {
+          "address": "0x5E7109A755fD2b86361F95065cDE07FbAb50CA1D",
+          "symbol": "waMonUSDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0x9741c895d91f2E0781190751e78B84C962ebADBE",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Fixed Price LBP",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x99DACc270d85d4Af4ba3AFfcA5D6ABa79A45343d",
+      "symbol": "1WETH-99CHAOS",
+      "name": "Balancer 1WETH-99CHAOS",
+      "tokens": [
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9a43c57A6574946c8985a5faD548561eFBaB0940",
+      "symbol": "WETH-WMON",
+      "name": "Balancer WETH-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9e8605446C5a1Cea033Eb01b5d16842a7F4eD249",
+      "symbol": "50-wnSHMON-50-sMON",
+      "name": "50% wnSHMON / 50% sMON",
+      "tokens": [
+        {
+          "address": "0x5e073494678fB7FA4a05bB17d45941Dd9Dc469c1",
+          "symbol": "wnSHMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xA3227C5969757783154C60bF0bC1944180ed81B9",
+          "symbol": "sMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0x9f45656d118f7a154Fe52bB4585093AE7e0A2267",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro ECLP Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xA64696c12c51352F1C88Df84835fd527963086d5",
+      "symbol": "Maple x Aave syrupUSDC",
+      "name": "Maple x Aave syrupUSDC-USDC",
+      "tokens": [
+        {
+          "address": "0x6f2cdF03c8343E1eA608668812Fb094E46C41C80",
+          "symbol": "waMonsyrupUSDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xC554aFfE2f581F5E0811e0D42D484ECaC5c6B8e2",
+          "symbol": "waMonUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xA765EF3A7d07c142F57A26Ae11CBb6d9E43Eac18",
+      "symbol": "USDC-WMON",
+      "name": "Balancer USDC-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xa9d3537B7E9672e90a6B38a0c473c909f17C2B64",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Stable Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xAA01E144Af3c49f479BF75cCBb7f84A18c864748",
+      "symbol": "CHAOS MAGICK GROUP (CMG)",
+      "name": "CHAOS MAGICK GROUP (CMG)",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xACdDd7bA3a304E29E875a348d2b2ED6eE6063A29",
+      "symbol": "99XXX-1WMON",
+      "name": "Balancer 99XXX-1WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xeeCfB61a2DC465606993B7C429c7E04609e99229",
+          "symbol": "XXX",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xAD4779c425FeFdf8c0FddF72EC53BE34BAe0809d",
+      "symbol": "AutoRange-WMON-WBTC",
+      "name": "Balancer AutoRange WMON-WBTC",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xaf9c565A6c85b34c372Ff552eB0652070981eEF6",
+      "symbol": "surge-WMON-WBTC",
+      "name": "Balancer surge WMON-WBTC",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xb0e35E520A50F443eE2b42BCDd4b89aa544d3198",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro ECLP Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xB121734bD471A19743fB44433C58babCBE281467",
+      "symbol": "gMON-wnWMON",
+      "name": "Magma Surge gMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+          "symbol": "gMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xB416D1Da16729a894db917429E8cF3af0e3f696C",
+      "symbol": "surge-WETH-USDC-CHAOS-WMON",
+      "name": "surge WETH-USDC-CHAOS-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xB4B32a6f63edEE32Aef5958CE52dEDe1DB5B57f2",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LBP",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xb5FA788558b00058EaE8F26eCf2c36eC5387E22F",
+      "symbol": "50-WMON-50-wnUSDC",
+      "name": "50% WMON / 50% wnUSDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x8d5c2Df3Eef09088Fcccf3376D8EcD0Dd505f642",
+          "symbol": "wnUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xb8AD1813e43DE04174003957005795509F945264",
+      "symbol": "50-loAZND-50-WMON",
+      "name": "50% loAZND / 50% WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x9c82eB49B51F7Dc61e22Ff347931CA32aDc6cd90",
+          "symbol": "loAZND",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xbca5F29505e103f75faa8657b4cDD5cd9189dA64",
+      "symbol": "WMON-USDC-STABLE",
+      "name": "WMON USDC Stable",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xbddb004A6c393C3F83BCCCF7F07eE9d409b214dE",
+      "symbol": "wnLOAZND-AZND-wnAUSD",
+      "name": "Mu Digital wnLOAZND/AZND/wnAUSD",
+      "tokens": [
+        {
+          "address": "0x4917a5ec9fCb5e10f47CBB197aBe6aB63be81fE8",
+          "symbol": "AZND",
+          "decimals": 18
+        },
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xD786F7569C39A9F64E6A54Eb77db21364E90F279",
+          "symbol": "wnLOAZND",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xBF30CBDEA179330683B4865AB7348cA8E05B9c6E",
+      "symbol": "gMON-cWMON",
+      "name": "Magma gMON / cWMON",
+      "tokens": [
+        {
+          "address": "0x8498312A6B3CbD158bf0c93AbdCF29E6e4F55081",
+          "symbol": "gMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf473568b26B8C5aadCa9fbC0eA17E1728d5ec925",
+          "symbol": "cWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xc0ABfAa62331DB4BEE1d3904B86310C5D120E045",
+      "symbol": "wnGMON-wnWMON",
+      "name": "Magma Surge wnGMON / wnWMON",
+      "tokens": [
+        {
+          "address": "0x29D2075E5151B1A6863bDC40EA86bD5e8aFd1705",
+          "symbol": "wnGMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdB39A9D4a1f1b4e93A5684d602207628aD60613C",
+          "symbol": "wnWMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xC1Bf53c72cf0383ef38c176e3B684d02e2791941",
+      "symbol": "WMON-CHAOS",
+      "name": "Balancer WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xc4E1815a3E16B497A06EAbbc4323B4986E0F1c41",
+      "symbol": "34WMON-33WBTC-33WETH",
+      "name": "Trifecta-Wmon-Wbtc-Weth",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xC71C30914bc7790218B1adEE782ba307b7867B08",
+      "symbol": "syzUSD-wnAUSD",
+      "name": "Yuzu Surge syzUSD / wnAUSD",
+      "tokens": [
+        {
+          "address": "0x484be0540aD49f351eaa04eeB35dF0f937D4E73f",
+          "symbol": "syzUSD",
+          "decimals": 18
+        },
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xC7DFf2dC33bBc9ea887B0a09810E4C79e206130b",
+      "symbol": "surge-WMON-LVMON",
+      "name": "Balancer surge WMON-LVMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x91b81bfbe3A747230F0529Aa28d8b2Bc898E6D56",
+          "symbol": "LVMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xCD7Eb78b60d693079167bDf56C4e5272a6B900D2",
+      "symbol": "WMON-USDC-STABLE",
+      "name": "WMON USDC Stable",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xCE10eD2b9d0443C8ef526FdBC9bcF80C003fe582",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock Gyro Pool",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xcE6dD385138c3f88417c1d8b5f65AE39d11f9072",
+      "symbol": "USDT0-WMON",
+      "name": "Balancer USDT0-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xCEeaaA79222DB3bE51d82FAE9A32A1A04e7b3884",
+      "symbol": "TEST",
+      "name": "DO NOT USE - Mock LBP",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
+          "symbol": "BAL",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xCf0f5c79060f86bb7130Ff4Ae0D387768aD79dE8",
+      "symbol": "80CHAOS-20USDT0",
+      "name": "Balancer 80CHAOS-20USDT0",
+      "tokens": [
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xD328E74AdD15Ac98275737a7C1C884ddc951f4D3",
+      "symbol": "wnLOAZND-AZND-wnAUSD",
+      "name": "wnLOAZND / AZND / wnAUSD",
+      "tokens": [
+        {
+          "address": "0x4917a5ec9fCb5e10f47CBB197aBe6aB63be81fE8",
+          "symbol": "AZND",
+          "decimals": 18
+        },
+        {
+          "address": "0x82c370ba90E38ef6Acd8b1b078d34fD86FC6bAC9",
+          "symbol": "wnAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xD786F7569C39A9F64E6A54Eb77db21364E90F279",
+          "symbol": "wnLOAZND",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xD6381ac822d6B5F02cA673dABC91c3ca416b6973",
+      "symbol": "wstETH-wnWETH",
+      "name": "Balancer wstETH-wnWETH",
+      "tokens": [
+        {
+          "address": "0x10Aeaf63194db8d453d4D85a06E5eFE1dd0b5417",
+          "symbol": "wstETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xB3b850ac62B89fe9f4eFB652b516108a8aEb8848",
+          "symbol": "wnWETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xd6BeBF919c7865C3E1f5Ffa072f7c5CF7c801D71",
+      "symbol": "DUST-WMON",
+      "name": "Balancer DUST-WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xDa3fBf429C1963Ea64357FE566170fA1A5d9F9DE",
+      "symbol": "1-DUST-99-USDC",
+      "name": "1% DUST / 99% USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xAD96C3dffCD6374294e2573A7fBBA96097CC8d7c",
+          "symbol": "DUST",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xDAaE80492fdA633B5D0375b22EEDC5c7B422fb4C",
+      "symbol": "Aave 3-pool",
+      "name": "Aave 3-pool",
+      "tokens": [
+        {
+          "address": "0x5E7109A755fD2b86361F95065cDE07FbAb50CA1D",
+          "symbol": "waMonUSDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0x9e1AcC5BFbf34e2E579763cE14042d957719fE76",
+          "symbol": "waMonAUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0xC554aFfE2f581F5E0811e0D42D484ECaC5c6B8e2",
+          "symbol": "waMonUSDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xdDA2c37903184B103177B71C1ed44DC55C77c48C",
+      "symbol": "60CHAOS-20WMON-20USDC",
+      "name": "Balancer 60CHAOS-20WMON-20USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xdFB2D59EA1C27Cec95bB43D57ca6C490a315B29f",
+      "symbol": "WMON-USDC",
+      "name": "Balancer WMON-USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xE7B6478Af28EB2D6f7e74DaC299BBE4103D25901",
+      "symbol": "25chaos",
+      "name": "25chaos",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xe8639c236109B57581d0284533b14e1AfC30659B",
+      "symbol": "CHAOS-WETH-WBTC-USDC-WMON",
+      "name": "surge CHAOS-WETH-WBTC-USDC-WMON",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xeb330e381749c458a2Ed2d35596dcA9C17038A21",
+      "symbol": "WMON-USDC",
+      "name": "Balancer WMON-USDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xef63e23c6BFb9c6E334ddAc484F836eB21481eEf",
+      "symbol": "WMON-USDC-STABLE",
+      "name": "WMON USDC Stable",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xf10A8CF648dBc209Cb53116b54e30B0F4A740892",
+      "symbol": "WMON-AUSD",
+      "name": "WMON / AUSD",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf2056029eCdA3134c4EE167D7E0FFdaCc8838428",
+      "symbol": "USDCHAO",
+      "name": "USDCHAO",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf27Bb7a80641A4cb10A29E75d099c44B531eb21D",
+      "symbol": "90CHAOS-10USDC",
+      "name": "Balancer 90CHAOS-10USDC",
+      "tokens": [
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf3bb2bE1193FC786C89CE43C5c2F0546F53D5469",
+      "symbol": "S-AUSD-USDC",
+      "name": "Stable AUSD-USDC",
+      "tokens": [
+        {
+          "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+          "symbol": "AUSD",
+          "decimals": 6
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xf40A707Ab16c9BA7a72FAA3F282EcEbf7fEA1559",
+      "symbol": "Aave-USDe-USDT0",
+      "name": "Aave USDe-USDT0",
+      "tokens": [
+        {
+          "address": "0x5E7109A755fD2b86361F95065cDE07FbAb50CA1D",
+          "symbol": "waMonUSDT0",
+          "decimals": 6
+        },
+        {
+          "address": "0xDc00342D80de85a8b843Dab1f29bb407B3abeB64",
+          "symbol": "waMonUSDe",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xf65a690ea911525AC86C1582DCf413Ca073237Db",
+      "symbol": "surge-USDT0-WMON-CHAOS",
+      "name": "Balancer surge USDT0-WMON-CHAOS",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        },
+        {
+          "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+          "symbol": "USDT0",
+          "decimals": 6
+        }
+      ]
+    },
+    {
+      "address": "0xF9b4D95DF8cce203453B4C3664C2671B74FbbA6F",
+      "symbol": "CHAOMONUSDC",
+      "name": "CHAOMONUSDC",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+          "symbol": "USDC",
+          "decimals": 6
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xF9EF2c9AFDAB82c4675c5BC8fA164257e01D777C",
+      "symbol": "rETH-wnWETH",
+      "name": "Balancer rETH-wnWETH",
+      "tokens": [
+        {
+          "address": "0xB3b850ac62B89fe9f4eFB652b516108a8aEb8848",
+          "symbol": "wnWETH",
+          "decimals": 18
+        },
+        {
+          "address": "0xC50f2e735eDd9dCD8Ccd41EcFE9894E679e3195f",
+          "symbol": "rETH",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xFa2110f6d72E4e8BD5d9D216Ce34c4F5B10C867b",
+      "symbol": "50CHAOS-50WMON",
+      "name": "Balancer 50CHAOS-50WMON",
+      "tokens": [
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xdcd8114f42fd40Db1914De241c75adC9e3C1722E",
+          "symbol": "CHAOS",
+          "decimals": 18
+        }
+      ]
+    },
+    {
+      "address": "0xfB777881B0550B83e74d5CB90fAb1b09445427F5",
+      "symbol": "25WMON-25SOL-25WETH-25WBTC",
+      "name": "25WMON-25SOL-25WETH-25WBTC",
+      "tokens": [
+        {
+          "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+          "symbol": "WBTC",
+          "decimals": 8
+        },
+        {
+          "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+          "symbol": "WMON",
+          "decimals": 18
+        },
+        {
+          "address": "0xea17E5a9efEBf1477dB45082d67010E2245217f1",
+          "symbol": "SOL",
+          "decimals": 9
+        },
+        {
+          "address": "0xEE8c0E9f1BFFb4Eb878d8f15f368A02a35481242",
+          "symbol": "WETH",
+          "decimals": 18
+        }
+      ]
+    }
+  ],
+  "gauges": []
+}

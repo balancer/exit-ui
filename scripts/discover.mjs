@@ -15,8 +15,8 @@
  * RPCs can also be overridden via the DISCOVERY_RPC_URLS env var: {"<chain>": "<url>", ...}.
  *
  * All factories + the v3 vault are swept in ONE chunked eth_getLogs pass (address array +
- * topic0 array), so wall time is independent of the factory count. Chunks adapt: start
- * large, halve on RPC errors, floor at the chain's logsMaxRange (zkEVM caps at 1k blocks).
+ * topic0 array), so wall time is independent of the factory count. Requests cover at most
+ * MAX_RANGE blocks and halve on RPC range errors, down to the chain's logsMaxRange.
  */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -27,7 +27,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const REGISTRY = JSON.parse(readFileSync(join(__dirname, '..', 'src', 'config', 'registry.json'), 'utf8'))
 
 const POOL_CREATED = toEventSelector('PoolCreated(address)')
-const GAUGE_CREATED = toEventSelector('GaugeCreated(address)')
+// The gauge is the first indexed topic in all of these. Older factories emit the longer forms:
+// mainnet LiquidityGaugeFactory v1 and the L2 ChildChainLiquidityGaugeFactory (RewardsOnlyGauge).
+const GAUGE_CREATED_TOPICS = [
+  toEventSelector('GaugeCreated(address)'),
+  toEventSelector('GaugeCreated(address,address)'),
+  toEventSelector('RewardsOnlyGaugeCreated(address,address,address)'),
+]
 const V1_CORE_POOL_CREATED = toEventSelector('LOG_NEW_POOL(address,address)')
 // v3 Vault.PoolRegistered — signature from balancer-subgraph-v3/subgraphs/v3-vault manifests
 const POOL_REGISTERED = toEventSelector(
@@ -62,6 +68,9 @@ const outPath = join(__dirname, '..', 'src', 'config', 'data', `${chainKey}.json
 const existing = incremental && existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : null
 if (incremental && !existing) console.log(`no existing ${chainKey}.json, running a full scan`)
 const include = (version) => protocol === 'all' || protocol === version
+// Largest eth_getLogs block range per request. Some RPCs (seen on dRPC) accept larger ranges but
+// silently drop logs from the answer (100k-1M blocks); 10k ranges came back complete.
+const MAX_RANGE = 10_000n
 
 // Discovery has its own adaptive retry/range logic; transport-level retries would make a
 // rejected historical range stall several times before the script can shrink it.
@@ -82,27 +91,40 @@ async function sweep(sources, fromBlock, toBlock) {
   const addresses = sources.map((s) => s.address)
   const topics = [[...new Set(sources.map((s) => s.topic0))]]
 
-  const floor = BigInt(chain.logsMaxRange)
-  const ceiling = 1_000_000n > floor ? 1_000_000n : floor
+  const ceiling = MAX_RANGE
+  const floor = BigInt(chain.logsMaxRange) < ceiling ? BigInt(chain.logsMaxRange) : ceiling
+  // consecutive failures at the smallest chunk; load-balanced RPCs often succeed on a retry
+  // (e.g. dRPC routing a historical request to a pruned backend)
+  const MAX_FAILURES = 8
+  let failures = 0
   let chunk = ceiling
   let from = BigInt(fromBlock)
   const to = BigInt(toBlock)
   let total = 0
+  let mismatches = 0
 
   while (from <= to) {
     const until = from + chunk - 1n > to ? to : from + chunk - 1n
     try {
-      const logs = await client.request({
-        method: 'eth_getLogs',
-        params: [
-          {
-            address: addresses,
-            topics,
-            fromBlock: `0x${from.toString(16)}`,
-            toBlock: `0x${until.toString(16)}`,
-          },
-        ],
-      })
+      const getLogs = () =>
+        client.request({
+          method: 'eth_getLogs',
+          params: [
+            {
+              address: addresses,
+              topics,
+              fromBlock: `0x${from.toString(16)}`,
+              toBlock: `0x${until.toString(16)}`,
+            },
+          ],
+        })
+      // Load-balanced RPCs can silently answer a range from a backend that misses logs (seen for
+      // the most recent blocks). Ask twice, a third time if they disagree, and keep the union.
+      let [logs, again] = await Promise.all([getLogs(), getLogs()])
+      if (logs.length !== again.length) {
+        mismatches++
+        logs = [...logs, ...again, ...(await getLogs())]
+      }
       for (const log of logs) {
         const source = byAddrTopic.get(`${log.address.toLowerCase()}:${log.topics[0]}`)
         if (source === undefined) continue
@@ -119,6 +141,7 @@ async function sweep(sources, fromBlock, toBlock) {
         total++
       }
       from = until + 1n
+      failures = 0
       if (chunk < ceiling) chunk *= 2n // recover after shrink
       process.stdout.write(`\r  blocks ${from}/${to} (chunk ${chunk}) — ${total} events        `)
       await sleep(60)
@@ -129,7 +152,7 @@ async function sweep(sources, fromBlock, toBlock) {
         chunk = chunk / 2n > floor ? chunk / 2n : floor
         continue
       }
-      if (/rate|429|over rate|timeout|busy|503/i.test(msg)) {
+      if (/rate|429|over rate|timeout|timed out|took too long|busy|503/i.test(msg)) {
         process.stdout.write(`\r  rate limited, backing off...                    `)
         await sleep(4000)
         continue
@@ -138,10 +161,16 @@ async function sweep(sources, fromBlock, toBlock) {
         chunk = chunk / 2n > floor ? chunk / 2n : floor
         continue
       }
+      if (++failures < MAX_FAILURES) {
+        process.stdout.write(`\r  request failed (${failures}/${MAX_FAILURES}), retrying...           `)
+        await sleep(2000 * failures)
+        continue
+      }
       throw e
     }
   }
   process.stdout.write('\n')
+  if (mismatches) console.log(`  ${mismatches} chunks returned different logs per request (union kept)`)
   for (const [k, v] of found) found.set(k, [...new Set(v)])
   return { found, callers }
 }
@@ -160,7 +189,14 @@ async function multicall(calls) {
     )
     await sleep(60)
   }
-  return results.map((r) => (r.status === 'success' ? r.result : null))
+  const values = results.map((r) => (r.status === 'success' ? r.result : null))
+  // A failed entry is not necessarily a revert: some RPC backends cap eth_call gas, so the tail of
+  // a large batch runs out of gas. Retry failures one by one; only real reverts stay null.
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] !== null) continue
+    values[i] = await client.readContract(calls[i]).catch(() => null)
+  }
+  return values
 }
 
 const erc20Abi = [
@@ -170,6 +206,9 @@ const erc20Abi = [
 ]
 const erc20Bytes32Abi = [
   { type: 'function', name: 'symbol', stateMutability: 'view', inputs: [], outputs: [{ type: 'bytes32' }] },
+]
+const elementPoolAbi = [
+  { type: 'function', name: 'bond', stateMutability: 'view', inputs: [], outputs: [{ type: 'address' }] },
 ]
 const poolAbi = [
   { type: 'function', name: 'getPoolId', stateMutability: 'view', inputs: [], outputs: [{ type: 'bytes32' }] },
@@ -238,7 +277,7 @@ try {
   head = await client.getBlock()
 } catch (e) {
   if (!incremental) throw e
-  console.error(`RPC ${rpcUrl} unreachable: ${e.shortMessage ?? e.message}`)
+  console.error(`RPC ${new URL(rpcUrl).host} unreachable: ${e.shortMessage ?? e.message}`)
   process.exit(EXIT_RPC_UNREACHABLE)
 }
 const headAge = BigInt(Math.floor(Date.now() / 1000)) - head.timestamp
@@ -249,7 +288,8 @@ const latestBlock = arg('to-block')
   : incremental && !halted
     ? head.number - CONFIRMATIONS
     : head.number
-console.log(`chain=${chainKey} rpc=${rpcUrl} latest=${latestBlock}`)
+// host only: RPC URLs often embed an API key, and a key inside the JSON secret isn't masked in CI logs
+console.log(`chain=${chainKey} rpc=${new URL(rpcUrl).host} latest=${latestBlock}`)
 
 // Build the combined source list
 const sources = []
@@ -265,10 +305,19 @@ if (include('v1') && chain.v1) {
 }
 if (include('v2') && chain.v2) {
   for (const f of chain.v2.factories) {
-    sources.push({ address: f.address, topic0: POOL_CREATED, key: `v2:${f.name}`, startBlock: f.startBlock })
+    sources.push({
+      address: f.address,
+      // e.g. FX factories emit NewFXPool(caller, id, fxpool) instead of PoolCreated(pool)
+      topic0: f.event ? toEventSelector(f.event) : POOL_CREATED,
+      topicIndex: f.poolTopicIndex ?? 1,
+      key: `v2:${f.name}`,
+      startBlock: f.startBlock,
+    })
   }
   for (const gf of chain.v2.gaugeFactories) {
-    sources.push({ address: gf.address, topic0: GAUGE_CREATED, key: `gauge:${gf.name}`, startBlock: gf.startBlock })
+    for (const topic0 of GAUGE_CREATED_TOPICS) {
+      sources.push({ address: gf.address, topic0, key: `gauge:${gf.name}`, startBlock: gf.startBlock })
+    }
   }
 }
 if (include('v3') && chain.v3) {
@@ -326,6 +375,8 @@ if (include('v1') && chain.v1) {
     const allTokens = tokenLists.flatMap((tokens) => tokens ?? [])
     await getTokenMeta(allTokens)
 
+    const noTokens = pools.filter((_, i) => !tokenLists[i]?.length || !shareTokens[i]).length
+    if (noTokens) console.log(`  skipped ${noTokens} pools without tokens`)
     pools.forEach((backingPool, i) => {
       if (!tokenLists[i]?.length || !shareTokens[i]) return
       const smart = isCrps[i] === true
@@ -374,6 +425,14 @@ if (include('v2') && chain.v2) {
     const allTokens = tokenLists.flatMap((t) => (t ? t[0] : []))
     await getTokenMeta(allTokens)
 
+    // Element pools trade a principal token (the tranche); needed to offer its redemption
+    const bonds =
+      factory.poolType === 'element'
+        ? await multicall(valid.map((p) => ({ address: p.address, abi: elementPoolAbi, functionName: 'bond' })))
+        : []
+
+    const unregistered = tokenLists.filter((t) => !t).length
+    if (unregistered) console.log(`  skipped ${unregistered} pools not registered with the vault`)
     valid.forEach((p, i) => {
       if (!tokenLists[i]) return // not registered with vault
       const tokens = tokenLists[i][0].map((addr) => ({
@@ -389,6 +448,7 @@ if (include('v2') && chain.v2) {
         symbol: symbols[i] ?? '',
         name: names[i] ?? '',
         tokens,
+        ...(bonds[i] ? { elementBond: bonds[i] } : {}),
       })
     })
   }
@@ -407,6 +467,8 @@ if (include('v3') && chain.v3) {
     const allTokens = tokenLists.flatMap((t) => t ?? [])
     await getTokenMeta(allTokens)
 
+    const noTokens = tokenLists.filter((t) => !t).length
+    if (noTokens) console.log(`  skipped ${noTokens} pools whose tokens could not be read`)
     pools.forEach((p, i) => {
       if (!tokenLists[i]) return
       out.v3Pools.push({
@@ -435,6 +497,8 @@ if (include('v2') && chain.v2?.gaugeFactories?.length) {
     )
     const unknownLps = gauges.map((_, i) => lpTokens[i]).filter((lp) => lp && !poolSymbols.has(lp.toLowerCase()))
     await getTokenMeta(unknownLps)
+    const noLp = lpTokens.filter((lp) => !lp).length
+    if (noLp) console.log(`  skipped ${noLp} gauges without lp_token()`)
     gauges.forEach((g, i) => {
       const lp = lpTokens[i]
       if (!lp) return
@@ -451,9 +515,11 @@ if (existing) {
   const added = []
   for (const key of ['v1Pools', 'v2Pools', 'v3Pools', 'gauges']) {
     const known = new Set((existing[key] ?? []).map((x) => x.address.toLowerCase()))
+    const scanned = new Set(out[key].map((x) => x.address.toLowerCase()))
     const fresh = out[key].filter((x) => !known.has(x.address.toLowerCase()))
     if (fresh.length) added.push(`${fresh.length} ${key}`)
-    out[key] = [...(existing[key] ?? []), ...fresh]
+    // entries read in this run replace stored ones (fresher metadata); the rest are kept
+    out[key] = [...(existing[key] ?? []).filter((x) => !scanned.has(x.address.toLowerCase())), ...out[key]]
   }
   console.log(`blocks ${fromBlock}..${latestBlock}: ${added.length ? `added ${added.join(', ')}` : 'nothing new'}`)
 }

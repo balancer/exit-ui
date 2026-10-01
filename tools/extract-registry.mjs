@@ -35,7 +35,7 @@ const V1_MAINNET = {
 // Public RPC fallbacks for chains whose backend config uses env-keyed (dRPC) URLs
 const PUBLIC_RPC = {
   mainnet: 'https://ethereum-rpc.publicnode.com',
-  polygon: 'https://polygon-rpc.com',
+  polygon: 'https://polygon.drpc.org', // polygon-rpc.com rejects keyless requests; publicnode is ~20s per multicall
   arbitrum: 'https://arb1.arbitrum.io/rpc',
   gnosis: 'https://rpc.gnosischain.com',
   optimism: 'https://mainnet.optimism.io',
@@ -48,21 +48,46 @@ const PUBLIC_RPC = {
 
 // chain key -> source keys + static metadata
 const CHAINS = {
-  mainnet:   { v2: 'mainnet', v3: 'mainnet', gauges: 'subgraph.yaml', backend: 'mainnet.ts', name: 'Ethereum', explorer: 'https://etherscan.io' },
-  polygon:   { v2: 'polygon', v3: null, gauges: 'subgraph.polygon.yaml', backend: 'polygon.ts', name: 'Polygon', explorer: 'https://polygonscan.com' },
-  arbitrum:  { v2: 'arbitrum', v3: 'arbitrum-one', gauges: 'subgraph.arbitrum.yaml', backend: 'arbitrum.ts', name: 'Arbitrum', explorer: 'https://arbiscan.io' },
-  gnosis:    { v2: 'gnosis', v3: 'gnosis', gauges: 'subgraph.gnosis.yaml', backend: 'gnosis.ts', name: 'Gnosis', explorer: 'https://gnosisscan.io' },
-  optimism:  { v2: 'optimism', v3: 'optimism', gauges: 'subgraph.optimism.yaml', backend: 'optimism.ts', name: 'Optimism', explorer: 'https://optimistic.etherscan.io' },
-  avalanche: { v2: 'avalanche', v3: 'avalanche', gauges: 'subgraph.avalanche.yaml', backend: 'avalanche.ts', name: 'Avalanche', explorer: 'https://snowtrace.io' },
-  base:      { v2: 'base', v3: 'base', gauges: 'subgraph.base.yaml', backend: 'base.ts', name: 'Base', explorer: 'https://basescan.org' },
+  mainnet:   { v2: 'mainnet', v3: 'mainnet', gauges: 'subgraph.yaml', backend: 'mainnet.ts', name: 'Ethereum', explorer: 'https://etherscan.io', deprecated: true },
+  polygon:   { v2: 'polygon', v3: null, gauges: 'subgraph.polygon.yaml', backend: 'polygon.ts', name: 'Polygon', explorer: 'https://polygonscan.com', deprecated: true },
+  arbitrum:  { v2: 'arbitrum', v3: 'arbitrum-one', gauges: 'subgraph.arbitrum.yaml', backend: 'arbitrum.ts', name: 'Arbitrum', explorer: 'https://arbiscan.io', deprecated: true },
+  gnosis:    { v2: 'gnosis', v3: 'gnosis', gauges: 'subgraph.gnosis.yaml', backend: 'gnosis.ts', name: 'Gnosis', explorer: 'https://gnosisscan.io', deprecated: true },
+  optimism:  { v2: 'optimism', v3: 'optimism', gauges: 'subgraph.optimism.yaml', backend: 'optimism.ts', name: 'Optimism', explorer: 'https://optimistic.etherscan.io', deprecated: true },
+  avalanche: { v2: 'avalanche', v3: 'avalanche', gauges: 'subgraph.avalanche.yaml', backend: 'avalanche.ts', name: 'Avalanche', explorer: 'https://snowtrace.io', deprecated: true },
+  base:      { v2: 'base', v3: 'base', gauges: 'subgraph.base.yaml', backend: 'base.ts', name: 'Base', explorer: 'https://basescan.org', deprecated: true },
   zkevm:     { v2: 'polygon-zkevm', v3: null, gauges: 'subgraph.polygon-zkevm.yaml', backend: 'zkevm.ts', name: 'Polygon zkEVM', explorer: 'https://zkevm.polygonscan.com', deprecated: true, logsMaxRange: 1000 },
   mode:      { v2: 'mode', v3: null, gauges: 'subgraph.mode.yaml', backend: 'mode.ts', name: 'Mode', explorer: 'https://explorer.mode.network', deprecated: true },
   fraxtal:   { v2: 'frax', v3: null, gauges: 'subgraph.fraxtal.yaml', backend: 'fraxtal.ts', name: 'Fraxtal', explorer: 'https://fraxscan.com', deprecated: true },
-  hyperevm:  { v2: null, v3: 'hyperevm', gauges: null, backend: 'hyperevm.ts', name: 'HyperEVM', explorer: 'https://hyperevmscan.io' },
-  plasma:    { v2: null, v3: 'plasma', gauges: null, backend: 'plasma.ts', name: 'Plasma', explorer: 'https://plasmascan.to' },
-  xlayer:    { v2: null, v3: 'xlayer', gauges: null, backend: 'xlayer.ts', name: 'X Layer', explorer: 'https://www.oklink.com/xlayer' },
-  monad:     { v2: null, v3: 'monad', gauges: null, backend: 'monad.ts', name: 'Monad', explorer: 'https://monadexplorer.com' },
+  hyperevm:  { v2: null, v3: 'hyperevm', gauges: null, backend: 'hyperevm.ts', name: 'HyperEVM', explorer: 'https://hyperevmscan.io', deprecated: true },
+  plasma:    { v2: null, v3: 'plasma', gauges: null, backend: 'plasma.ts', name: 'Plasma', explorer: 'https://plasmascan.to', deprecated: true },
+  xlayer:    { v2: null, v3: 'xlayer', gauges: null, backend: 'xlayer.ts', name: 'X Layer', explorer: 'https://www.oklink.com/xlayer', deprecated: true },
+  monad:     { v2: null, v3: 'monad', gauges: null, backend: 'monad.ts', name: 'Monad', explorer: 'https://monadexplorer.com', deprecated: true },
   sepolia:   { v2: 'sepolia', v3: 'sepolia', gauges: 'subgraph.sepolia.yaml', backend: 'sepolia.ts', name: 'Sepolia', explorer: 'https://sepolia.etherscan.io' },
+}
+
+// v2 factories the subgraph sources don't list: pool types with their own exit encoding.
+// FX factories emit NewFXPool(caller, id, fxpool) instead of PoolCreated(pool).
+const FX_EVENT = { event: 'NewFXPool(address,bytes32,address)', poolTopicIndex: 3 }
+const EXTRA_V2_FACTORIES = {
+  mainnet: [
+    { name: 'ElementConvergentCurvePoolFactory', address: '0xb7561f547F3207eDb42A6AfA42170Cd47ADD17BD', startBlock: 12686198, poolType: 'element' },
+    { name: 'FXPoolFactory81fE', address: '0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134', startBlock: 15981805, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactoryfb23', address: '0xfb23Bc0D2629268442CD6521CF4170698967105f', startBlock: 18469426, poolType: 'fx', ...FX_EVENT },
+  ],
+  polygon: [
+    { name: 'FXPoolFactory627D', address: '0x627D759314D5c4007b461A74eBaFA7EBC5dFeD71', startBlock: 32054794, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactoryF169', address: '0xF169c1Ae8De24Da43a3dC5c5F05De412b4848bD3', startBlock: 49368322, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactory1716', address: '0x171665A8D7e7306869a43E8EfD312dfeE6027352', startBlock: 54636843, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactoryeFA1', address: '0xeFA1A53ea939013017e654beEdfC6f80E64ffC2d', startBlock: 72630821, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactory19Ad', address: '0x19Ad20dA5f24671BFC7486FC8c119dD80CD09EfD', startBlock: 72703991, poolType: 'fx', ...FX_EVENT },
+  ],
+  avalanche: [
+    { name: 'FXPoolFactory81fE', address: '0x81fE9e5B28dA92aE949b705DfDB225f7a7cc5134', startBlock: 32585313, poolType: 'fx', ...FX_EVENT },
+    { name: 'FXPoolFactory4042', address: '0x4042dC4110Ea9500338737605A60065c3de152C6', startBlock: 37150794, poolType: 'fx', ...FX_EVENT },
+  ],
+  arbitrum: [
+    { name: 'FXPoolFactory0bd5', address: '0x0bd5EC16658346eeCd5dE8c704a38Efe02B5DA69', startBlock: 183603903, poolType: 'fx', ...FX_EVENT },
+  ],
 }
 
 // factory contract name -> poolType (drives exit-kind selection in the app)
@@ -149,6 +174,7 @@ for (const [key, meta] of Object.entries(CHAINS)) {
       if (!poolType) continue
       factories.push({ name: cname, address: val.address, startBlock: val.startBlock, poolType })
     }
+    factories.push(...(EXTRA_V2_FACTORIES[key] ?? []))
     entry.v2 = {
       vault: net.Vault.address,
       startBlock: net.Vault.startBlock,

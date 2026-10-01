@@ -10,12 +10,18 @@ export type PoolType =
   | 'gyro'
   | 'lbp'
   | 'managed'
+  | 'fx' // Xave FXPool: custom exit userData (bptIn, assets)
+  | 'element' // Element ConvergentCurvePool: custom exit userData (amountsOut)
 
 export interface FactoryConfig {
   name: string
   address: Address
   startBlock: number
   poolType: PoolType
+  /** Creation event when it is not PoolCreated(address), e.g. FX factories' NewFXPool */
+  event?: string
+  /** Topic holding the pool address in `event` (default 1) */
+  poolTopicIndex?: number
 }
 
 export interface GaugeFactoryConfig {
@@ -61,10 +67,10 @@ export function isDevMode(): boolean {
   return import.meta.env.DEV || new URLSearchParams(window.location.search).has('dev')
 }
 
-/** Chains shown in the selector: legacy-exit chains, plus everything in dev mode. */
+/** Chains shown in the selector: deprecated chains, plus everything in dev mode. */
 export function visibleChains(): ChainConfig[] {
   const all = Object.values(CHAINS)
-  const visible = isDevMode() ? all : all.filter((c) => c.deprecated || Boolean(c.v1))
+  const visible = isDevMode() ? all : all.filter((c) => c.deprecated)
   return visible.sort((a, b) => {
     if (a.key === 'mainnet') return -1
     if (b.key === 'mainnet') return 1
