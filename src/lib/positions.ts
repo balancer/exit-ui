@@ -15,6 +15,7 @@ export interface V2PoolData {
   symbol: string
   name: string
   tokens: TokenInfo[]
+  elementBond?: Address // element pools: the Element Tranche (principal token) traded in the pool
 }
 
 export interface V1PoolData {
@@ -54,6 +55,7 @@ export interface PoolPosition {
   v1UnderlyingPool?: Address // smart-pool backing BPool
   poolId?: `0x${string}` // v2 only
   poolType?: PoolType // v2 only
+  elementBond?: Address // v2 element pools only
   symbol: string
   name: string
   tokens: TokenInfo[]
@@ -61,6 +63,15 @@ export interface PoolPosition {
   inRecoveryMode: boolean
   /** v2: pool paused. v3: pool or Vault paused. Non-recovery exits revert while paused. */
   paused: boolean
+}
+
+/** Element principal tokens (ePyv…) held by the user; matured, redeemable 1:1 for the underlying. */
+export interface PrincipalPosition {
+  tranche: Address
+  symbol: string
+  decimals: number
+  balance: bigint
+  underlyingSymbol: string
 }
 
 export interface RewardInfo {

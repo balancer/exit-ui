@@ -16933,6 +16933,27 @@
       ]
     },
     {
+      "address": "0x6E384C23253E2459b3D0F6c19f5532515643B120",
+      "poolId": "0x6e384c23253e2459b3d0f6c19f5532515643b12000020000000000000000050b",
+      "poolType": "fx",
+      "symbol": "LP-EURS-USDC",
+      "name": "LP-EURS-USDC",
+      "tokens": [
+        {
+          "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+          "symbol": "USDC",
+          "decimals": 6,
+          "isPhantomBpt": false
+        },
+        {
+          "address": "0xe42827D98C053b6e9c97E39BE8b611102E8c1805",
+          "symbol": "EURS",
+          "decimals": 2,
+          "isPhantomBpt": false
+        }
+      ]
+    },
+    {
       "address": "0x6E7B9A1746a7eD4b23edFf0975B726E5aA673E21",
       "poolId": "0x6e7b9a1746a7ed4b23edff0975b726e5aa673e210002000000000000000003f1",
       "poolType": "weighted",

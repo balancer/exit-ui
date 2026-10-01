@@ -62,6 +62,11 @@ for (const gauge of data.gauges) {
     console.log(`gauge ${gauge.address}: lpToken not in pool list (${gauge.lpToken})`)
     continue
   }
+  if (pool.poolType === 'fx' || pool.poolType === 'element') {
+    // custom userData and no queryExit; their exits are simulated in the app from the holder
+    console.log(`${pool.symbol}: ${pool.poolType} pool, not covered by this smoke test`)
+    continue
+  }
   // the gauge holds all staked BPT
   const balance = await client.readContract({
     address: pool.address,
