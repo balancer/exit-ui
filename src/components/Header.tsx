@@ -29,6 +29,12 @@ export function Header() {
             Balancer Exit
           </h1>
           <div className="muted">Withdraw legacy Balancer pool & gauge positions</div>
+          <div className="muted" style={{ marginTop: 4 }}>
+            Looking for veBAL?{' '}
+            <a href="https://vebal.balancer.fi/" target="_blank" rel="noreferrer">
+              Use the veBAL exit UI
+            </a>
+          </div>
         </div>
         <div className="row" style={{ flexWrap: 'wrap' }}>
           <select value={chain.key} onChange={(e) => selectChain(e.target.value)}>
