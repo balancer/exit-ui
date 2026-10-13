@@ -24,6 +24,9 @@ Polygon zkEVM, Mode, Fraxtal, HyperEVM, Plasma, X Layer, Monad).
 
 The site is fully static: no backend, no subgraph — it only talks to the RPC you configure.
 
+No UI? [MANUAL_EXIT.md](MANUAL_EXIT.md) documents every exit as raw contract calls (explorer, `cast`,
+Solidity) and `@balancer/sdk` snippets, plus how to identify what you hold.
+
 ## Run locally
 
 ```bash
