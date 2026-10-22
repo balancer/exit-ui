@@ -182,35 +182,51 @@ export async function scanPositions(
     })),
   ]
 
-  // Gauge rewards: reward_count -> reward_tokens -> claimable_reward + token metadata
+  // Gauge rewards: reward_count -> reward_tokens -> claimable_reward + token metadata,
+  // plus BAL emissions (claimable_tokens + minter) for gauge types that mint BAL separately.
   const gauges: GaugePosition[] = []
   if (gaugeHits.length) {
-    const counts = await multicall(
+    const gaugeCall = (x: { gauge: { address: Address } }, functionName: string, args?: any[]) => ({
+      address: x.gauge.address,
+      abi: childChainGaugeV2Abi,
+      functionName,
+      args,
+    })
+    const [counts, pseudoMinters] = await Promise.all([
+      multicall(client, chain, gaugeHits.map((x) => gaugeCall(x, 'reward_count'))),
+      // only ChildChainGauge (L2, 2023+) answers; LiquidityGaugeV5 and RewardsOnlyGauge revert
+      multicall(client, chain, gaugeHits.map((x) => gaugeCall(x, 'bal_pseudo_minter'))),
+    ])
+    const balMinters = gaugeHits.map(
+      (_, gi) => (pseudoMinters[gi] as Address | null) ?? chain.v2?.balancerMinter ?? null
+    )
+    const claimableBal = await multicall(
       client,
       chain,
-      gaugeHits.map((x) => ({ address: x.gauge.address, abi: childChainGaugeV2Abi, functionName: 'reward_count' }))
+      gaugeHits.map((x, gi) => (balMinters[gi] ? gaugeCall(x, 'claimable_tokens', [user]) : null)).filter(Boolean) as any[]
     )
+    let balIdx = 0
+    const claimableBalByGauge = balMinters.map((m) => (m ? ((claimableBal[balIdx++] as bigint | null) ?? 0n) : 0n))
+
     const tokenCalls: { address: Address; abi: any; functionName: string; args?: any[] }[] = []
     const tokenCallOwner: number[] = []
     gaugeHits.forEach((x, gi) => {
-      const count = Number(counts[gi] ?? 0n)
+      // RewardsOnlyGauge has no reward_count(): probe its fixed 8-slot reward_tokens array instead
+      const count = counts[gi] === null ? 8 : Number(counts[gi])
       for (let r = 0; r < count; r++) {
-        tokenCalls.push({
-          address: x.gauge.address,
-          abi: childChainGaugeV2Abi,
-          functionName: 'reward_tokens',
-          args: [BigInt(r)],
-        })
+        tokenCalls.push(gaugeCall(x, 'reward_tokens', [BigInt(r)]))
         tokenCallOwner.push(gi)
       }
     })
-    const rewardTokens = tokenCalls.length ? await multicall(client, chain, tokenCalls) : []
+    const rewardTokens = (tokenCalls.length ? await multicall(client, chain, tokenCalls) : []).map((t) =>
+      t === '0x0000000000000000000000000000000000000000' ? null : t
+    )
 
     const claimableCalls = rewardTokens.map((token, i) => ({
       address: gaugeHits[tokenCallOwner[i]].gauge.address,
       abi: childChainGaugeV2Abi,
       functionName: 'claimable_reward',
-      args: [user, token],
+      args: [user, token ?? '0x0000000000000000000000000000000000000000'],
     }))
     const claimables = claimableCalls.length ? await multicall(client, chain, claimableCalls) : []
 
@@ -251,6 +267,9 @@ export async function scanPositions(
         symbol: x.gauge.symbol,
         balance: x.balance!,
         rewards: rewardsByGauge[gi],
+        isChildChainGauge: pseudoMinters[gi] !== null,
+        balMinter: balMinters[gi],
+        claimableBal: claimableBalByGauge[gi],
       })
     })
   }

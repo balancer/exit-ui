@@ -196,6 +196,36 @@ for (const [key, meta] of Object.entries(CHAINS)) {
   registry[key] = entry
 }
 
+// Corrections to the upstream sources, verified against balancer-deployments and on chain (Oct 2026):
+//  - avalanche BalancerQueries: backend config had VeBoostV2 (20230525-l2-veboost-v2)
+//  - v3 router: backend config had Router v1 (20241205-v3-router, superseded) on these chains
+//  - mode ManagedPoolV2Factory: subgraph networks.json had BalancerPoolDataQueries
+//  - avalanche: first ChildChainGauge factory (20230316-avax-child-chain-gauge-factory-v2, deprecated)
+//    is missing from the gauges subgraph
+//  - mainnet BalancerMinter (20220325-gauge-controller task) for gauge BAL claims
+//  - zero-address factory entries are dropped
+const OVERRIDES = {
+  mainnet: { v2: { balancerMinter: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b' }, v3: { router: '0xAE563E3f8219521950555F5962419C8919758Ea2' } },
+  arbitrum: { v3: { router: '0xEAedc32a51c510d35ebC11088fD5fF2b47aACF2E' } },
+  base: { v3: { router: '0x3f170631ed9821Ca51A59D996aB095162438DC10' } },
+  gnosis: { v3: { router: '0x4eff2d77D9fFbAeFB4b141A3e494c085b3FF4Cb5' } },
+  avalanche: { v2: { balancerQueries: '0xC128468b7Ce63eA702C1f104D55A2566b13D3ABD' } },
+}
+const FACTORY_ADDRESS_FIXES = { mode: { ManagedPoolV2Factory: '0x043A2daD730d585C44FB79D2614F295D2d625412' } }
+const EXTRA_GAUGE_FACTORIES = {
+  avalanche: [{ name: 'ChildChainLiquidityGaugeV2FactoryDeprecated', address: '0x161f4014C27773840ccb4EC1957113e6DD028846', startBlock: 29338806 }],
+}
+for (const [key, entry] of Object.entries(registry)) {
+  for (const [section, fields] of Object.entries(OVERRIDES[key] ?? {})) if (entry[section]) Object.assign(entry[section], fields)
+  if (entry.v2) {
+    entry.v2.factories = entry.v2.factories
+      .filter((f) => !/^0x0{40}$/.test(f.address))
+      .map((f) => ({ ...f, address: FACTORY_ADDRESS_FIXES[key]?.[f.name] ?? f.address }))
+    const extra = (EXTRA_GAUGE_FACTORIES[key] ?? []).filter((g) => !entry.v2.gaugeFactories.some((e) => e.address.toLowerCase() === g.address.toLowerCase()))
+    entry.v2.gaugeFactories = [...extra, ...entry.v2.gaugeFactories]
+  }
+}
+
 const outPath = join(__dirname, '..', 'src', 'config', 'registry.json')
 mkdirSync(dirname(outPath), { recursive: true })
 writeFileSync(outPath, JSON.stringify(registry, null, 2) + '\n')

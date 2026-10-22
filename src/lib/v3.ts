@@ -9,8 +9,6 @@ import { applySlippage } from './format'
 export interface V3ExitQuote {
   amountsOut: bigint[] // aligned with position.tokens (registration order)
   recovery: boolean
-  /** Older router deployments only have removeLiquidityRecovery(pool, bptIn) without mins. */
-  legacyRecoverySignature: boolean
 }
 
 /** Fallback quote when the router query reverts: zero expectations, emergency exits only. */
@@ -18,9 +16,11 @@ export function emergencyV3Quote(position: PoolPosition): V3ExitQuote {
   return {
     amountsOut: position.tokens.map(() => 0n),
     recovery: position.inRecoveryMode,
-    legacyRecoverySignature: false,
   }
 }
+
+/** Router queries must be eth_called from the zero address (the Vault's query-mode guard). */
+const QUERY_SENDER = '0x0000000000000000000000000000000000000000'
 
 export async function queryV3Exit(
   client: PublicClient,
@@ -37,34 +37,19 @@ export async function queryV3Exit(
       abi: routerV3Abi,
       functionName: 'queryRemoveLiquidityRecovery',
       args: [position.address, bptIn],
+      account: QUERY_SENDER,
     })
-    // Detect which removeLiquidityRecovery signature this router supports
-    let legacy = false
-    try {
-      await client.simulateContract({
-        address: router,
-        abi: routerV3Abi,
-        functionName: 'removeLiquidityRecovery',
-        args: [position.address, bptIn, result.map(() => 0n)],
-        account: '0x0000000000000000000000000000000000000000',
-      })
-    } catch (e: any) {
-      const msg = String(e.shortMessage ?? e.message ?? '')
-      if (/function|selector|not found|0x[0-9a-f]{8}/i.test(msg) && !/revert/i.test(msg)) {
-        legacy = true
-      }
-      // other reverts (e.g. zero-address sender checks) tell us the selector exists
-    }
-    return { amountsOut: [...result], recovery: true, legacyRecoverySignature: legacy }
+    return { amountsOut: [...result], recovery: true }
   }
 
   const { result } = await client.simulateContract({
     address: router,
     abi: routerV3Abi,
     functionName: 'queryRemoveLiquidityProportional',
-    args: [position.address, bptIn, '0x'],
+    args: [position.address, bptIn, QUERY_SENDER, '0x'],
+    account: QUERY_SENDER,
   })
-  return { amountsOut: [...result], recovery: false, legacyRecoverySignature: false }
+  return { amountsOut: [...result], recovery: false }
 }
 
 /** v3 removes BPT through the Router, which needs a standard ERC20 allowance on the BPT. */
@@ -113,22 +98,6 @@ export async function executeV3Exit(
   const minAmountsOut = quote.amountsOut.map((a) => (emergency ? 0n : applySlippage(a, slippagePct)))
 
   if (quote.recovery) {
-    if (quote.legacyRecoverySignature) {
-      // old router: no minAmountsOut parameter -> only allowed in emergency mode
-      if (!emergency) {
-        throw new Error(
-          'This router only supports recovery exits without slippage protection. Enable emergency mode to proceed.'
-        )
-      }
-      return walletClient.writeContract({
-        chain: walletClient.chain,
-        account: user,
-        address: router,
-        abi: routerV3Abi,
-        functionName: 'removeLiquidityRecovery',
-        args: [position.address, bptIn],
-      })
-    }
     return walletClient.writeContract({
       chain: walletClient.chain,
       account: user,

@@ -86,7 +86,13 @@ export interface GaugePosition {
   lpToken: Address
   symbol: string
   balance: bigint
+  /** Extra reward tokens (claim_rewards). On RewardsOnlyGauge this includes BAL. */
   rewards: RewardInfo[]
+  /** ChildChainGauge (L2, 2023+): withdraw(uint256) only, no claim flag. */
+  isChildChainGauge: boolean
+  /** Where BAL emissions are minted from (BalancerMinter / L2BalancerPseudoMinter), if any. */
+  balMinter: Address | null
+  claimableBal: bigint
 }
 
 // All committed discovery outputs, keyed by chain key. Loaded lazily: together they are several MB.

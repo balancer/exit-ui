@@ -8,7 +8,11 @@ Polygon zkEVM, Mode, Fraxtal, HyperEVM, Plasma, X Layer, Monad).
 - Connect an injected wallet (MetaMask, Rabby, ...) or watch any address read-only
 - Optionally configure a custom RPC URL per chain (persisted in localStorage)
 - Scan for pool (BPT) and gauge (staked) positions via Multicall3 against a bundled pool list
-- Unstake from gauges (`withdraw(amount, claim_rewards=true)`) and claim rewards
+- Unstake from gauges and claim rewards + BAL. The gauge type is detected per gauge
+  (`bal_pseudo_minter()` answers only on `ChildChainGauge`): `LiquidityGaugeV5` / `RewardsOnlyGauge`
+  use `withdraw(amount, claim_rewards=true)`, `ChildChainGauge` only has `withdraw(amount)`, so
+  reward tokens (`claim_rewards`) and BAL (`L2BalancerPseudoMinter.mint(gauge)`) are claimed in
+  separate transactions before unstaking. Ethereum BAL is minted via `BalancerMinter.mint(gauge)`.
 - Proportionally exit v1 core and smart pools (`BPool.exitPool` / `CRP.exitPool`)
 - Proportionally exit v2 pools (`Vault.exitPool`) and v3 pools (`Router.removeLiquidityProportional`)
 - Exit Xave FX and Element pools, which use their own `userData` and have no `queryExit` support:
@@ -25,7 +29,7 @@ Polygon zkEVM, Mode, Fraxtal, HyperEVM, Plasma, X Layer, Monad).
 The site is fully static: no backend, no subgraph — it only talks to the RPC you configure.
 
 No UI? [MANUAL_EXIT.md](MANUAL_EXIT.md) documents every exit as raw contract calls (explorer, `cast`,
-Solidity) and `@balancer/sdk` snippets, plus how to identify what you hold.
+Foundry scripts) and `@balancer/sdk` snippets, plus how to identify what you hold.
 
 ## Run locally
 
@@ -82,8 +86,8 @@ Pools missing from a list can always be added in the UI by pasting the pool addr
 
 `src/config/registry.json` holds config for **all** Balancer chains (Ethereum v1 factories,
 v2 vault + pool factories +
-gauge factories + start blocks, v3 vault + router, BalancerQueries, Multicall3, default RPC).
-It is machine-generated from sibling repos — never hand-edit it; regenerate instead:
+gauge factories + start blocks, v3 vault + router, BalancerQueries, BalancerMinter, Multicall3,
+default RPC). It is machine-generated from sibling repos — never hand-edit it; regenerate instead:
 
 ```bash
 node tools/extract-registry.mjs --repos <dir containing the 4 repos below>
@@ -92,6 +96,12 @@ node tools/extract-registry.mjs --repos <dir containing the 4 repos below>
 Sources: the archived Balancer V1 address docs and V1 subgraph,
 `balancer-subgraph-v2/networks.json`, `balancer-subgraph-v3/networks.json`,
 `gauges-subgraph/subgraph.<chain>.yaml`, `backend/config/<chain>.ts`.
+
+The upstream sources carry a few wrong or missing addresses (Avalanche BalancerQueries was the
+veBoost contract, Mode `ManagedPoolV2Factory` was `BalancerPoolDataQueries`, superseded v3 Router v1,
+a zero-address factory, a missing Avalanche gauge factory). The extractor applies verified
+corrections from its `OVERRIDES` block on top; when adding one, verify the address against
+`balancer-deployments` and an on-chain read (`vault()`, `getVault()`, `version()`).
 
 ## Deprecating another chain
 
@@ -134,5 +144,10 @@ For end-to-end testing with real transactions, fork a chain with
 - Nested/boosted pools (e.g. bb-o-USD on zkEVM) pay out the inner BPTs (linear pool tokens).
   Rescan after exiting — the inner BPTs show up as new positions and exit via the recovery path.
 - v3 exits require a one-time BPT approval to the v3 Router (plain ERC20 approve, no permit2).
-- Child-chain BAL rewards are distributed as regular gauge reward tokens and are included in
-  `claim_rewards`.
+  The registry points at Router v2 (`20250307-v3-router-v2`); exit quotes use
+  `queryRemoveLiquidityProportional(pool, bptIn, sender, userData)` /
+  `queryRemoveLiquidityRecovery(pool, bptIn)` called from the zero address.
+- Child-chain BAL: on `ChildChainGauge` (2023+ factories) BAL is **not** a reward token; it accrues
+  as `claimable_tokens(user)` and is minted from the chain's `L2BalancerPseudoMinter`
+  (`bal_pseudo_minter()` on the gauge). Only the 2022 `RewardsOnlyGauge` had BAL as a regular
+  reward token.

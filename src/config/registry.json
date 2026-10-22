@@ -18,6 +18,7 @@
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 12272146,
       "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "balancerMinter": "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",
       "factories": [
         {
           "name": "WeightedPoolFactory",
@@ -130,12 +131,6 @@
         {
           "name": "ManagedPoolV2Factory",
           "address": "0xBF904F9F340745B4f0c4702c7B6Ab1e808eA6b93",
-          "startBlock": 17046230,
-          "poolType": "managed"
-        },
-        {
-          "name": "ManagedKassandraPoolControllerFactory",
-          "address": "0x0000000000000000000000000000000000000000",
           "startBlock": 17046230,
           "poolType": "managed"
         },
@@ -296,7 +291,7 @@
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 21332121,
-      "router": "0x5c6fb490bdfd3246eb0bb062c168decaf4bd9fdd"
+      "router": "0xAE563E3f8219521950555F5962419C8919758Ea2"
     }
   },
   "polygon": {
@@ -799,7 +794,7 @@
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 297810187,
-      "router": "0x0f08eef2c785aa5e7539684af04755dec1347b7c"
+      "router": "0xEAedc32a51c510d35ebC11088fD5fF2b47aACF2E"
     }
   },
   "gnosis": {
@@ -930,7 +925,7 @@
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 37360338,
-      "router": "0x84813aa3e079a665c0b80f944427ee83cba63617"
+      "router": "0x4eff2d77D9fFbAeFB4b141A3e494c085b3FF4Cb5"
     }
   },
   "optimism": {
@@ -1143,7 +1138,7 @@
     "v2": {
       "vault": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       "startBlock": 26386141,
-      "balancerQueries": "0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5",
+      "balancerQueries": "0xC128468b7Ce63eA702C1f104D55A2566b13D3ABD",
       "factories": [
         {
           "name": "ComposableStablePoolV4Factory",
@@ -1230,6 +1225,11 @@
       ],
       "gaugeFactories": [
         {
+          "name": "ChildChainLiquidityGaugeV2FactoryDeprecated",
+          "address": "0x161f4014C27773840ccb4EC1957113e6DD028846",
+          "startBlock": 29338806
+        },
+        {
           "name": "ChildChainLiquidityGaugeV2Factory",
           "address": "0xf23b4DB826DbA14c0e857029dfF076b1c0264843",
           "startBlock": 32558551
@@ -1304,7 +1304,7 @@
     "v3": {
       "vault": "0xbA1333333333a1BA1108E8412f11850A5C319bA9",
       "startBlock": 25343854,
-      "router": "0x76578ecf9a141296ec657847fb45b0585bcda3a6"
+      "router": "0x3f170631ed9821Ca51A59D996aB095162438DC10"
     }
   },
   "zkevm": {
@@ -1439,7 +1439,7 @@
         },
         {
           "name": "ManagedPoolV2Factory",
-          "address": "0x7A2535f5fB47b8e44c02Ef5D9990588313fe8F05",
+          "address": "0x043A2daD730d585C44FB79D2614F295D2d625412",
           "startBlock": 8115674,
           "poolType": "managed"
         }

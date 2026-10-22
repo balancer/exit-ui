@@ -136,14 +136,26 @@ always gets `minAmountsOut = 0` and receives nothing.
 
 | Version | Read call                                                          | Meaning                                                                                   |
 | ------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| v2      | `pool.inRecoveryMode()`                                            | `true` → use the recovery exit ([E](#e-v2-recovery-mode-exit-any-pool-type-required-for-linear-and-stablephantom)). Very old pools lack the function → not in recovery mode. |
+| v2      | `pool.inRecoveryMode()`                                            | `true` → use the recovery exit ([E](#e-v2-recovery-mode-exit-any-pool-type-required-for-linear-and-stablephantom)). Pools from 2021/early 2022 lack the function → they have **no recovery mode at all**, only their standard exits. |
 | v2      | `pool.getPausedState()` → `paused`                                 | `true` and not in recovery mode → **no exit path** until governance enables recovery mode. |
 | v3      | `Vault.isPoolInRecoveryMode(pool)`                                 | `true` → `Router.removeLiquidityRecovery`.                                                |
 | v3      | `Vault.isPoolPaused(pool)`, `Vault.isVaultPaused()`                | paused → anyone may call `Vault.enableRecoveryMode(pool)`, then recovery exit ([H](#h-v3-pools)). |
 
 Linear and StablePhantom pools **only** exit in recovery mode (they have no proportional exit kind).
-All deprecated ones are in recovery mode; if you find one that is not, it cannot be exited
-proportionally.
+The 2022+ generations are all in recovery mode. The first generation (Ethereum, Dec 2021 to early
+2022) has no recovery mode at all and therefore **no exit path**: `bb-a-USDT` `0x2BBf681c…`,
+`bb-a-USDC` `0x652D486B…` / `0x9210F120…`, `bb-a-DAI` `0x804CdB91…` / `0xA3823e50…`,
+`bb-a-USDT` `0xe6bCC79f…`, `bb-f-DAI` `0x8f406344…`, `bb-f-LUSD` `0xb0F75E97…`, `bb-f-FEI`
+`0xc8C79fCD…`, and the StablePhantom `bb-a-USD` `0x4Fd63966…` / `0x7B507753…`, `bb-f-USD`
+`0xD997f35c…`. Circulating supply is dust except `bb-a-USD` `0x7B507753…`.
+
+**Other dead ends today** (Ethereum, as of October 2026; reads, re-check before relying on them):
+
+- Paused and not in recovery mode, so neither exit kind works until governance enables recovery
+  mode: ComposableStable `Affine Tripool` `0x402B3983…` and `syrupUSDC/sDAI` `0x48a5bFB5…`.
+- 13 Gyroscope **GYD E-CLPs** (e.g. `ECLP-GYD-sUSDS` `0xc8398FEE…`) report `getPausedState().paused`
+  and have no `inRecoveryMode()`; their pause windows run to 2033-2036. Pause and token are
+  Gyroscope's, not Balancer governance's.
 
 ### 1.6 Decision table
 
@@ -165,7 +177,8 @@ proportionally.
 All from [`src/config/registry.json`](src/config/registry.json) (machine-generated from the official
 Balancer subgraph/backend configs). Verify there before use.
 
-**Same on every chain**
+**Same address on every chain where that version is deployed** (v2: not on HyperEVM, Monad,
+Plasma, X Layer; v3: not on Polygon, zkEVM, Mode, Fraxtal)
 
 | Contract                | Address                                      |
 | ----------------------- | -------------------------------------------- |
@@ -173,7 +186,7 @@ Balancer subgraph/backend configs). Verify there before use.
 | v3 Vault                | `0xbA1333333333a1BA1108E8412f11850A5C319bA9` |
 | Multicall3              | `0xcA11bde05977b3631167028862bE2a173976CA11` |
 
-**Ethereum only (v1)**
+**Ethereum only**
 
 | Contract                | Address                                      |
 | ----------------------- | -------------------------------------------- |
@@ -181,24 +194,26 @@ Balancer subgraph/backend configs). Verify there before use.
 | v1 CRPFactory           | `0xed52D8E202401645eDAD1c0AA21e872498ce47D0` |
 | BalancerMinter (BAL emissions for Ethereum gauges) | `0x239e55F427D44C3cc793f49bFB507ebe76638a2b` |
 
-**Per chain**
+**Per chain.** The v3 Router is Router v2 (`20250307-v3-router-v2`); the older Router v1 still
+works but is superseded. The L2BalancerPseudoMinter pays BAL for `ChildChainGauge` stakes
+(recipe A); the gauge also reports it via `bal_pseudo_minter()`.
 
-| Chain         | v2 BalancerQueries                           | v3 Router                                    |
-| ------------- | -------------------------------------------- | -------------------------------------------- |
-| Ethereum      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0x5c6fb490bdfd3246eb0bb062c168decaf4bd9fdd` |
-| Arbitrum      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0x0f08eef2c785aa5e7539684af04755dec1347b7c` |
-| Avalanche     | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0xf39ca6ede9bf7820a952b52f3c94af526bab9015` |
-| Base          | `0x300ab2038eac391f26d9f895dc61f8f66a548833` | `0x76578ecf9a141296ec657847fb45b0585bcda3a6` |
-| Fraxtal       | `0x4132f7acc9db7a6cf7be2dd3a9dc8b30c7e6e6c8` | –                                            |
-| Gnosis        | `0x0f3e0c4218b7b0108a3643cfe9d3ec0d4f57c54e` | `0x84813aa3e079a665c0b80f944427ee83cba63617` |
-| HyperEVM      | –                                            | `0xa8920455934da4d853faac1f94fe7bef72943ef1` |
-| Mode          | `0x36cac20dd805d128c1a6dd16eea845c574b5a17c` | –                                            |
-| Monad         | –                                            | `0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c` |
-| Optimism      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0xe2fa4e1d17725e72dcdafe943ecf45df4b9e285b` |
-| Plasma        | –                                            | `0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c` |
-| Polygon       | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | –                                            |
-| Polygon zkEVM | `0x809b79b53f18e9bc08a961ed4678b901ac93213a` | –                                            |
-| X Layer       | –                                            | `0xc3ccace87f6d3a81724075adcb5ddd85a8a1bb68` |
+| Chain         | v2 BalancerQueries                           | v3 Router                                    | L2BalancerPseudoMinter                       |
+| ------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| Ethereum      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0xAE563E3f8219521950555F5962419C8919758Ea2` | – (BalancerMinter above)                     |
+| Arbitrum      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0xEAedc32a51c510d35ebC11088fD5fF2b47aACF2E` | `0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68` |
+| Avalanche     | `0xC128468b7Ce63eA702C1f104D55A2566b13D3ABD` | `0xf39ca6ede9bf7820a952b52f3c94af526bab9015` | `0x85a80afee867aDf27B50BdB7b76DA70f1E853062` |
+| Base          | `0x300ab2038eac391f26d9f895dc61f8f66a548833` | `0x3f170631ed9821Ca51A59D996aB095162438DC10` | `0x0c5538098EBe88175078972F514C9e101D325D4F` |
+| Fraxtal       | `0x4132f7acc9db7a6cf7be2dd3a9dc8b30c7e6e6c8` | –                                            | `0x9805dcfD25e6De36bad8fe9D3Fe2c9b44B764102` |
+| Gnosis        | `0x0f3e0c4218b7b0108a3643cfe9d3ec0d4f57c54e` | `0x4eff2d77D9fFbAeFB4b141A3e494c085b3FF4Cb5` | `0xA8920455934Da4D853faac1f94Fe7bEf72943eF1` |
+| HyperEVM      | –                                            | `0xa8920455934da4d853faac1f94fe7bef72943ef1` | –                                            |
+| Mode          | `0x36cac20dd805d128c1a6dd16eea845c574b5a17c` | –                                            | `0x5cF4928a3205728bd12830E1840F7DB85c62a4B9` |
+| Monad         | –                                            | `0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c` | –                                            |
+| Optimism      | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | `0xe2fa4e1d17725e72dcdafe943ecf45df4b9e285b` | `0x4fb47126Fa83A8734991E41B942Ac29A3266C968` |
+| Plasma        | –                                            | `0x9da18982a33fd0c7051b19f0d7c76f2d5e7e017c` | –                                            |
+| Polygon       | `0xe39b5e3b6d74016b2f6a9673d7d7493b6df549d5` | –                                            | `0x47B489bf5836f83ABD928C316F8e39bC0587B020` |
+| Polygon zkEVM | `0x809b79b53f18e9bc08a961ed4678b901ac93213a` | –                                            | `0x475D18169BE8a89357A9ee3Ab00ca386d20fA229` |
+| X Layer       | –                                            | `0xc3ccace87f6d3a81724075adcb5ddd85a8a1bb68` | –                                            |
 
 ---
 
@@ -228,6 +243,20 @@ cast send  $ADDR "sig(types)" args --rpc-url $RPC --ledger            # or --pri
 cast abi-encode "f(uint256,uint256)" 1 1500000000000000000            # build userData
 ```
 
+**Foundry scripts (Solidity).** Each recipe has a `forge script` example. Inside
+`vm.startBroadcast()` every external call the script makes is sent as a transaction **from your
+address** (`--sender $YOU` plus `--ledger` / `--private-key`), so the Vault, gauge or router sees
+you as `msg.sender` exactly as with the explorer. Do not wrap these calls in a helper contract: the
+Vault would then see the helper as the sender (`BAL#401`), a gauge would withdraw the helper's
+(empty) balance, and the exit tokens would end up inside the helper. Setup:
+
+```bash
+forge init exit && cd exit && rm -rf src test script && mkdir script     # forge-std is installed by forge init
+# save the recipe's script as script/<Name>.s.sol, then:
+forge script script/<Name>.s.sol --sig "run(...)" <args> --rpc-url $RPC --sender $YOU            # dry run
+forge script script/<Name>.s.sol --sig "run(...)" <args> --rpc-url $RPC --sender $YOU --ledger --broadcast
+```
+
 **viem** (`npm i viem`) is what the UI uses; all ABIs are in [`src/abis`](src/abis) and the call
 sequences in [`src/lib`](src/lib). Any snippet there can be copied into a script.
 
@@ -240,56 +269,90 @@ pre-minted-BPT slot (if any) to `0`.
 
 ### A. Gauges: unstake and claim
 
-Applies to Ethereum `LiquidityGaugeV5` gauges and child-chain `ChildChainGauge` /
-`RewardsOnlyGauge` gauges alike. Unstaking returns the BPT to your wallet; it does **not** exit the
-pool.
+Unstaking returns the BPT to your wallet; it does **not** exit the pool. There are three gauge
+types with two different `withdraw` signatures. Tell them apart with one read:
+`bal_pseudo_minter()` answers only on `ChildChainGauge`.
+
+| Gauge type (explorer name)                 | Where                        | Unstake                          | Reward tokens                       | BAL emissions                                   |
+| ------------------------------------------ | ---------------------------- | -------------------------------- | ----------------------------------- | ----------------------------------------------- |
+| `LiquidityGaugeV5`                         | Ethereum                     | `withdraw(uint256,bool)`         | `withdraw(amount, true)` claims     | `BalancerMinter.mint(gauge)`                    |
+| `RewardsOnlyGauge` (first L2 factory, 2022) | Arbitrum, Polygon, Optimism, Gnosis | `withdraw(uint256,bool)` | `withdraw(amount, true)` claims, BAL is one of them | – (it is a reward token)          |
+| `ChildChainGauge` (`version()` = 2, 2023+) | all L2s                      | **`withdraw(uint256)`** only     | `claim_rewards(you)`, separate call | `L2BalancerPseudoMinter.mint(gauge)` (Part 2, or `bal_pseudo_minter()`) |
+
+`ChildChainGauge.withdraw` has no claim flag: its optional second argument is `_user`, so
+`withdraw(uint256,bool)` **reverts** there. BAL is not in its `reward_tokens` list either
+(`add_reward` forbids it); the gauge only accrues `claimable_tokens(you)` and the pseudo-minter pays
+it. Claims can be made before or after unstaking; unstaking does not forfeit accrued rewards or BAL.
 
 ```
-withdraw(uint256 _value, bool _claim_rewards)   // _value = gauge balanceOf(you); true = also claim reward tokens
-claim_rewards(address _addr)                     // claim reward tokens only
-balanceOf(address), lp_token(), reward_count(), reward_tokens(uint256), claimable_reward(address,address)
+balanceOf(address), lp_token()                         // all types
+withdraw(uint256 _value, bool _claim_rewards)          // LiquidityGaugeV5, RewardsOnlyGauge
+withdraw(uint256 _value)                               // ChildChainGauge
+claim_rewards(address _addr)                           // reward tokens (all types)
+reward_count(), reward_tokens(uint256), claimable_reward(address,address)   // RewardsOnlyGauge has no reward_count(); its reward_tokens(i) has 8 slots, read until the zero address
+claimable_tokens(address), bal_pseudo_minter()         // ChildChainGauge (claimable_tokens also on LiquidityGaugeV5)
+Minter.mint(address gauge)                             // BalancerMinter (Ethereum) / L2BalancerPseudoMinter
 ```
 
-On **Ethereum**, BAL emissions are *not* a gauge reward token; mint them from the BalancerMinter:
-`BalancerMinter.mint(address gauge)` (`0x239e55F427D44C3cc793f49bFB507ebe76638a2b`). Claim before
-or after unstaking; unstaking does not forfeit accrued BAL. On other chains BAL is a regular reward
-token and `withdraw(amount, true)` claims it.
+**Explorer:** gauge → Read Contract → `balanceOf(you)`, `lp_token()` (must be your BPT),
+`bal_pseudo_minter()` (present → `ChildChainGauge`). Then Write Contract:
 
-**Explorer:** gauge → Read Contract → `balanceOf(you)`, `lp_token()` (must be your BPT) → Write
-Contract → `withdraw(_value = balance, _claim_rewards = true)`. Then Ethereum: BalancerMinter →
-`mint(gauge)`.
+- `LiquidityGaugeV5` / `RewardsOnlyGauge`: `withdraw(_value = balance, _claim_rewards = true)`.
+  Ethereum: BalancerMinter → `mint(gauge)` for BAL.
+- `ChildChainGauge`: `claim_rewards(you)` (if `claimable_reward` > 0), pseudo-minter →
+  `mint(gauge)` (if `claimable_tokens(you)` > 0), then `withdraw(_value = balance)`.
 
 **cast**
 
 ```bash
 cast call $GAUGE "balanceOf(address)(uint256)" $YOU --rpc-url $RPC
 cast call $GAUGE "lp_token()(address)" --rpc-url $RPC
+cast call $GAUGE "bal_pseudo_minter()(address)" --rpc-url $RPC          # reverts -> V5 / RewardsOnly; address -> ChildChainGauge
+# LiquidityGaugeV5 / RewardsOnlyGauge
 cast send $GAUGE "withdraw(uint256,bool)" <balance> true --rpc-url $RPC --ledger
 cast send 0x239e55F427D44C3cc793f49bFB507ebe76638a2b "mint(address)" $GAUGE --rpc-url $RPC --ledger   # Ethereum only
+# ChildChainGauge
+cast send $GAUGE "claim_rewards(address)" $YOU --rpc-url $RPC --ledger
+cast send $PSEUDO_MINTER "mint(address)" $GAUGE --rpc-url $RPC --ledger
+cast send $GAUGE "withdraw(uint256)" <balance> --rpc-url $RPC --ledger
 ```
 
-**Solidity**
+**Foundry script** (see Part 3 for setup; `--sig "run(address)" $GAUGE`)
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "forge-std/Script.sol";
 
-interface ILiquidityGauge {
+interface IGauge {
     function balanceOf(address) external view returns (uint256);
-    function lp_token() external view returns (address);
-    function withdraw(uint256 _value, bool _claim_rewards) external;
+    function withdraw(uint256 _value, bool _claim_rewards) external; // LiquidityGaugeV5, RewardsOnlyGauge
+    function withdraw(uint256 _value) external;                      // ChildChainGauge (L2, 2023+)
     function claim_rewards(address _addr) external;
 }
 
-interface IBalancerMinter {
-    function mint(address gauge) external returns (uint256);
+interface IBalMinter {
+    function mint(address gauge) external returns (uint256);         // BalancerMinter / L2BalancerPseudoMinter
 }
 
-// Call from the EOA that staked, e.g. via a Foundry script using vm.startBroadcast().
-contract UnstakeExample {
-    function unstakeAll(ILiquidityGauge gauge) external {
-        uint256 bal = gauge.balanceOf(msg.sender);
-        gauge.withdraw(bal, true); // returns BPT + reward tokens to msg.sender
+// forge script Unstake.s.sol --sig "run(address)" $GAUGE --rpc-url $RPC --sender $YOU --ledger --broadcast
+contract Unstake is Script {
+    address constant BALANCER_MINTER = 0x239e55F427D44C3cc793f49bFB507ebe76638a2b; // Ethereum
+
+    function run(address gauge) external {
+        vm.startBroadcast(); // every call below is sent as a transaction from --sender
+        uint256 staked = IGauge(gauge).balanceOf(msg.sender);
+        (bool isChildChain, bytes memory minter) = gauge.staticcall(abi.encodeWithSignature("bal_pseudo_minter()"));
+        if (isChildChain) {
+            // ChildChainGauge: withdraw has no claim flag, BAL comes from the pseudo-minter
+            IGauge(gauge).claim_rewards(msg.sender);
+            IBalMinter(abi.decode(minter, (address))).mint(gauge);
+            IGauge(gauge).withdraw(staked);
+        } else {
+            IGauge(gauge).withdraw(staked, true); // also pays reward tokens (BAL included on RewardsOnlyGauge)
+            if (block.chainid == 1) IBalMinter(BALANCER_MINTER).mint(gauge);
+        }
+        vm.stopBroadcast();
     }
 }
 ```
@@ -322,6 +385,10 @@ BPool / ConfigurableRightsPool:
 
 `minAmountsOut` must be in `getCurrentTokens()` order. Exit fee is zero on factory pools.
 
+`BPool.exitPool` keeps at least `MIN_BALANCE = 1e6` wei of every token in the pool. If you hold
+(almost) the whole supply, a 100 % exit reverts with `ERR_MIN_BALANCE`: exit a bit less (e.g. 99 %,
+or half, then the rest minus dust) so each token balance stays above `1e6` wei.
+
 **Explorer**
 
 1. Pool → Read Contract: `getCurrentTokens()`, `getBalance(token)` for each, `totalSupply()`.
@@ -339,47 +406,44 @@ cast call $POOL "exitPool(uint256,uint256[])" $BPT_IN "[$MIN0,$MIN1]" --from $YO
 cast send $POOL "exitPool(uint256,uint256[])" $BPT_IN "[$MIN0,$MIN1]" --rpc-url $RPC --ledger
 ```
 
-**Solidity**
+**Foundry script** (`--sig "run(address,uint256)" $POOL 100`; 100 bps = 1 % slippage)
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "forge-std/Script.sol";
 
 interface IBPool {
+    function balanceOf(address) external view returns (uint256);
+    function totalSupply() external view returns (uint256);
     function getCurrentTokens() external view returns (address[] memory);
     function getBalance(address token) external view returns (uint256);
-    function totalSupply() external view returns (uint256);
     function exitPool(uint256 poolAmountIn, uint256[] calldata minAmountsOut) external;
 }
 
-interface ICRP is IBPool {
-    function bPool() external view returns (IBPool);
-}
+// forge script V1Exit.s.sol --sig "run(address,uint256)" $POOL 100 --rpc-url $RPC --sender $YOU --ledger --broadcast
+contract V1Exit is Script {
+    /// @param pool BPool or ConfigurableRightsPool (the share token you hold)
+    /// @param slippageBps 100 = 1 %
+    function run(address pool, uint256 slippageBps) external {
+        vm.startBroadcast();
+        uint256 bptIn = IBPool(pool).balanceOf(msg.sender);
+        uint256 supply = IBPool(pool).totalSupply();
 
-contract V1ExitExample {
-    /// @dev Call from the BPT holder (Foundry script + vm.startBroadcast). Burns `bptIn` and
-    ///      sends the underlying tokens to msg.sender.
-    function exitCore(IBPool pool, uint256 bptIn, uint256 slippageBps) external {
-        address[] memory tokens = pool.getCurrentTokens();
-        uint256 supply = pool.totalSupply();
-        uint256[] memory mins = new uint256[](tokens.length);
-        for (uint256 i; i < tokens.length; i++) {
-            uint256 expected = pool.getBalance(tokens[i]) * bptIn / supply;
-            mins[i] = expected * (10_000 - slippageBps) / 10_000;
-        }
-        pool.exitPool(bptIn, mins);
-    }
+        // smart pools (CRP) hold their tokens in a backing BPool and round differently
+        (bool isCrp, bytes memory data) = pool.staticcall(abi.encodeWithSignature("bPool()"));
+        IBPool backing = isCrp ? IBPool(abi.decode(data, (address))) : IBPool(pool);
 
-    function exitSmart(ICRP crp, uint256 bptIn, uint256 slippageBps) external {
-        IBPool backing = crp.bPool();
         address[] memory tokens = backing.getCurrentTokens();
-        uint256 supply = crp.totalSupply();
         uint256[] memory mins = new uint256[](tokens.length);
         for (uint256 i; i < tokens.length; i++) {
-            uint256 expected = (backing.getBalance(tokens[i]) - 1) * bptIn / (supply + 1);
+            uint256 expected = isCrp
+                ? (backing.getBalance(tokens[i]) - 1) * bptIn / (supply + 1)
+                : backing.getBalance(tokens[i]) * bptIn / supply;
             mins[i] = expected * (10_000 - slippageBps) / 10_000;
         }
-        crp.exitPool(bptIn, mins);
+        IBPool(pool).exitPool(bptIn, mins);
+        vm.stopBroadcast();
     }
 }
 ```
@@ -414,9 +478,22 @@ struct ExitPoolRequest {
 
 (ManagedPool v2 pools list their own BPT in `assets`; give that slot `minAmountsOut = 0`.)
 
-**Expected amounts:** `amount_i = balance_i × bptIn / totalSupply`, with `balances` from
-`Vault.getPoolTokens(poolId)` and `totalSupply()` from the pool. Or simulate with
-`BalancerQueries.queryExit(poolId, you, you, request)` → `(bptIn, amountsOut[])`.
+**Expected amounts:** simulate with `BalancerQueries.queryExit(poolId, you, you, request)` →
+`(bptIn, amountsOut[])`; this is what the pool will actually pay. The formula
+`amount_i = balance_i × bptIn / totalSupply` (`balances` from `Vault.getPoolTokens(poolId)`,
+`totalSupply()` from the pool) is exact on most pools but **too high** on some, so use it only when
+the query is unavailable, and lower it on `BAL#505` (`EXIT_BELOW_MIN`):
+
+- Weighted pools from the first factory (2021) and `InvestmentPool`s settle accrued protocol fees in
+  one token on exit; that token can pay several percent less than the formula.
+- ManagedPool v2 pre-mints its BPT: use `getActualSupply()` instead of `totalSupply()` (same as
+  recipe D).
+
+**A paused token blocks the whole exit.** If one pool token's own contract rejects transfers (e.g.
+`ERC20Pausable: token transfer while paused`), exit with `toInternalBalance = true`: the Vault then
+credits all tokens to your internal balance without transferring. Afterwards withdraw each working
+token with `Vault.manageUserBalance([(kind = 1 /* WITHDRAW_INTERNAL */, token, amount, you, you)])`;
+the stuck token stays in your internal balance until it unpauses.
 
 **Explorer**
 
@@ -442,11 +519,19 @@ cast send $VAULT "exitPool(bytes32,address,address,(address[],uint256[],bytes,bo
   $POOL_ID $YOU $YOU "([$T0,$T1],[$MIN0,$MIN1],$USERDATA,false)" --rpc-url $RPC --ledger
 ```
 
-**Solidity**
+**Foundry script** (`--sig "run(address,uint256,uint256)" $POOL 1 100`: pool, exit kind, slippage
+bps). One script covers recipes C, D (kind `2`) and E (kind `255`); the FX and Element variants
+in F and G share its `V2Base`.
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "forge-std/Script.sol";
+
+interface IERC20 {
+    function balanceOf(address) external view returns (uint256);
+    function totalSupply() external view returns (uint256);
+}
 
 interface IVaultV2 {
     struct ExitPoolRequest { address[] assets; uint256[] minAmountsOut; bytes userData; bool toInternalBalance; }
@@ -454,33 +539,57 @@ interface IVaultV2 {
     function exitPool(bytes32 poolId, address sender, address payable recipient, ExitPoolRequest calldata request) external;
 }
 
-interface IBasePoolV2 {
+interface IPoolV2 {
     function getPoolId() external view returns (bytes32);
-    function totalSupply() external view returns (uint256);
+    function derivatives(uint256) external view returns (address);                      // FX
+    function viewWithdraw(uint256 tokensToBurn) external view returns (uint256[] memory); // FX, derivatives order
+    function bond() external view returns (address);                                     // Element
 }
 
-contract V2ExitExample {
+interface ITranche {
+    function withdrawPrincipal(uint256 amount, address destination) external returns (uint256);
+}
+
+abstract contract V2Base is Script {
     IVaultV2 constant VAULT = IVaultV2(0xBA12222222228d8Ba445958a75a0704d566BF2C8);
 
-    /// @dev msg.sender must hold the BPT. The Vault burns it from `sender`; a contract may only
-    ///      pass sender == itself (or be approved as a relayer), so run this from the holder.
-    function exitProportional(address pool, uint256 bptIn, uint256 slippageBps) external {
-        bytes32 poolId = IBasePoolV2(pool).getPoolId();
-        (address[] memory tokens, uint256[] memory balances, ) = VAULT.getPoolTokens(poolId);
-        uint256 supply = IBasePoolV2(pool).totalSupply();
+    function exit(address pool, address[] memory tokens, uint256[] memory mins, bytes memory userData) internal {
+        VAULT.exitPool(IPoolV2(pool).getPoolId(), msg.sender, payable(msg.sender),
+            IVaultV2.ExitPoolRequest({ assets: tokens, minAmountsOut: mins, userData: userData, toInternalBalance: false }));
+    }
+}
+
+// Recipes C, D, E.
+// forge script V2Exit.s.sol:V2Exit --sig "run(address,uint256,uint256)" $POOL 1 100 --rpc-url $RPC --sender $YOU --ledger --broadcast
+contract V2Exit is V2Base {
+    /// @param kind 1 = Weighted/Stable/MetaStable/LBP/Managed/Gyro, 2 = ComposableStable, 255 = recovery mode
+    /// @param slippageBps 100 = 1 %. The minimums come from the formula: on BAL#505 lower them (or use queryExit).
+    function run(address pool, uint256 kind, uint256 slippageBps) external {
+        vm.startBroadcast();
+        (address[] memory tokens, uint256[] memory balances, ) = VAULT.getPoolTokens(IPoolV2(pool).getPoolId());
+        uint256 bptIn = IERC20(pool).balanceOf(msg.sender);
+        uint256 supply = circulatingSupply(pool, tokens, balances, kind);
 
         uint256[] memory mins = new uint256[](tokens.length);
         for (uint256 i; i < tokens.length; i++) {
-            if (tokens[i] == pool) continue; // pre-minted BPT slot (ManagedPool v2): min 0
+            if (tokens[i] == pool) continue; // pre-minted BPT slot stays 0
             mins[i] = balances[i] * bptIn / supply * (10_000 - slippageBps) / 10_000;
         }
+        exit(pool, tokens, mins, abi.encode(kind, bptIn));
+        vm.stopBroadcast();
+    }
 
-        VAULT.exitPool(poolId, msg.sender, payable(msg.sender), IVaultV2.ExitPoolRequest({
-            assets: tokens,
-            minAmountsOut: mins,
-            userData: abi.encode(uint256(1), bptIn), // EXACT_BPT_IN_FOR_TOKENS_OUT
-            toInternalBalance: false
-        }));
+    /// Pools that hold their own BPT (ComposableStable, ManagedPool v2) pay out of the circulating supply:
+    /// getActualSupply() for normal exits, totalSupply minus the pre-minted BPT for recovery exits.
+    function circulatingSupply(address pool, address[] memory tokens, uint256[] memory balances, uint256 kind)
+        internal view returns (uint256 supply)
+    {
+        if (kind != 255) {
+            (bool ok, bytes memory data) = pool.staticcall(abi.encodeWithSignature("getActualSupply()"));
+            if (ok) return abi.decode(data, (uint256));
+        }
+        supply = IERC20(pool).totalSupply();
+        for (uint256 i; i < tokens.length; i++) if (tokens[i] == pool) supply -= balances[i];
     }
 }
 ```
@@ -511,9 +620,9 @@ Same as C with two differences:
 ComposableStable factory version only has `getVirtualSupply()`, use that instead). Or
 `BalancerQueries.queryExit`.
 
-Everything else (explorer steps, cast, Solidity) is identical to C with `1` → `2` and
-`totalSupply()` → `getActualSupply()`. If the pool is in recovery mode, recipe E applies and uses
-kind 255 instead.
+Everything else (explorer steps, cast) is identical to C with `1` → `2` and
+`totalSupply()` → `getActualSupply()`; the Foundry script in C takes `kind = 2`. If the pool is in
+recovery mode, recipe E applies and uses kind 255 instead.
 
 **SDK:** supported (`PoolType.ComposableStable`), see Part 5.
 
@@ -532,7 +641,9 @@ recovery mode. Linear and StablePhantom pools have **no other** exit kind.
 00000000000000000000000000000000000000000000000014d1120d7b160000   ← bptIn
 ```
 
-**Expected amounts** (`BalancerQueries.queryExit` reverts on paused pools, so compute by hand):
+**Expected amounts.** `BalancerQueries.queryExit` **never** works for kind 255 (it runs the pool's
+normal exit hook, which does not know the recovery kind; it reverts with `BAL#001`, `BAL#998`,
+"Not implemented" or the pause error), so compute by hand. The formula is exact:
 
 ```
 virtualSupply = totalSupply − balances[bptIndex]     (if the pool holds its own BPT; else totalSupply)
@@ -540,17 +651,17 @@ amount_i      = balances[i] × bptIn / virtualSupply  (0 for the BPT slot)
 ```
 
 `balances` from `Vault.getPoolTokens(poolId)` are the "cash" balances the recovery exit pays from.
+To dry-run the real call: `cast call $VAULT "exitPool(...)" ... --from $YOU` as in recipe F.
 
-Explorer / cast / Solidity: same as C with exitKind `255` and the formula above. The Solidity
-example in C becomes:
-
-```solidity
-userData: abi.encode(uint256(255), bptIn) // RECOVERY_MODE_EXIT_KIND
-// and compute mins with virtualSupply = supply - balances[bptIndex]
-```
+Explorer / cast: same as C with exitKind `255` and the formula above. Foundry: the script in C with
+`kind = 255`.
 
 Nested/boosted pools (e.g. `bb-a-USD`) pay out the inner **linear-pool BPTs**. Those are new
 positions: repeat recipe E on each inner pool (they are all in recovery mode) to get the underlying.
+Linear pools in turn pay a **wrapped** token (e.g. Aave `waUSDC` / static aTokens, Euler `eUSDC`,
+ERC-4626 vault shares) next to the main token; unwrap it on the wrapper's own contract (ERC-4626:
+`redeem(shares, you, you)`; Aave static aTokens: `withdraw(you, amount, true)`; check the wrapper's
+*Write Contract* tab).
 
 **SDK:** `RemoveLiquidityKind.Recovery` is supported for the SDK pool types (Weighted, Stable,
 MetaStable, Gyro, ComposableStable). Linear / StablePhantom are not SDK pool types: use the
@@ -592,33 +703,26 @@ cast send $VAULT "exitPool(bytes32,address,address,(address[],uint256[],bytes,bo
   $POOL_ID $YOU $YOU "([$T0,$T1],[$MIN0,$MIN1],$USERDATA,false)" --rpc-url $RPC --ledger
 ```
 
-**Solidity** (uses `IVaultV2` from recipe C)
+**Foundry script** (append to the `V2Exit.s.sol` file from recipe C; `--sig "run(address,uint256)" $POOL 100`)
 
 ```solidity
-interface IFXPool {
-    function getPoolId() external view returns (bytes32);
-    function derivatives(uint256) external view returns (address);
-    function viewWithdraw(uint256 tokensToBurn) external view returns (uint256[] memory); // derivatives order
-}
+// Recipe F. forge script V2Exit.s.sol:FxExit --sig "run(address,uint256)" $POOL 100 ...
+contract FxExit is V2Base {
+    function run(address pool, uint256 slippageBps) external {
+        vm.startBroadcast();
+        (address[] memory tokens, , ) = VAULT.getPoolTokens(IPoolV2(pool).getPoolId());
+        uint256 bptIn = IERC20(pool).balanceOf(msg.sender);
+        uint256[] memory preview = IPoolV2(pool).viewWithdraw(bptIn); // derivatives(0), derivatives(1) order
+        address d0 = IPoolV2(pool).derivatives(0);
 
-function exitFx(IFXPool pool, uint256 bptIn, uint256 slippageBps) external {
-    bytes32 poolId = pool.getPoolId();
-    (address[] memory tokens, , ) = VAULT.getPoolTokens(poolId);
-    uint256[] memory preview = pool.viewWithdraw(bptIn);
-    address d0 = pool.derivatives(0);
-
-    uint256[] memory mins = new uint256[](tokens.length);
-    for (uint256 i; i < tokens.length; i++) {
-        uint256 expected = tokens[i] == d0 ? preview[0] : preview[1];
-        mins[i] = expected * (10_000 - slippageBps) / 10_000;
+        uint256[] memory mins = new uint256[](tokens.length);
+        for (uint256 i; i < tokens.length; i++) {
+            uint256 expected = tokens[i] == d0 ? preview[0] : preview[1];
+            mins[i] = expected * (10_000 - slippageBps) / 10_000;
+        }
+        exit(pool, tokens, mins, abi.encode(bptIn, tokens)); // FX: (bptIn, assets), NOT (exitKind, bptIn)
+        vm.stopBroadcast();
     }
-
-    VAULT.exitPool(poolId, msg.sender, payable(msg.sender), IVaultV2.ExitPoolRequest({
-        assets: tokens,
-        minAmountsOut: mins,
-        userData: abi.encode(bptIn, tokens), // FX: (bptIn, assets), NOT (exitKind, bptIn)
-        toInternalBalance: false
-    }));
 }
 ```
 
@@ -641,8 +745,14 @@ matured and redeem 1:1 for the underlying via their Tranche contract (the `ePyv�
 - Expected amounts: `amount_i = balance_i × bptIn / totalSupply` (`balances` from
   `Vault.getPoolTokens`, `totalSupply` from the pool). Use these as `amountsOut` in `userData`; if
   you ask for slightly less than proportional, the pool burns correspondingly less BPT.
+- **Ask for ~99 % of your share, not 100 %.** The pool's rounding computes slightly more BPT than
+  the proportional amounts are worth; with a large share (tens of percent of the supply) a 100 %
+  request reverts with `BAL#406` (`INSUFFICIENT_BALANCE`). Lower the request on `BAL#406` (99 %,
+  then 95 %) and accept ~1 % of BPT left as dust.
 - `minAmountsOut` can equal `amountsOut` (the pool pays exactly what the userData asks or reverts).
 - No `queryExit` support: dry-run with `cast call --from $YOU` before sending.
+- Curve-based Element pools (`…Curve…` in the symbol) pay a **Curve LP token** as the underlying
+  (e.g. `ePyvCurve-MIM` → `MIM-3LP3CRV-f`), which then needs a Curve exit.
 
 ```bash
 USERDATA=$(cast abi-encode "f(uint256[])" "[$AMOUNT0,$AMOUNT1]")
@@ -675,24 +785,28 @@ cast send $TRANCHE "withdrawPrincipal(uint256,address)" $AMOUNT $YOU --rpc-url $
 
 Explorer: `ePyv…` token → Write Contract → `withdrawPrincipal(_amount = balance, _destination = you)`.
 
-**Solidity** (uses `IVaultV2` from recipe C)
+**Foundry script** (append to the `V2Exit.s.sol` file from recipe C; `--sig "run(address,uint256)" $POOL 99`)
 
 ```solidity
-interface IElementPool { function getPoolId() external view returns (bytes32); function totalSupply() external view returns (uint256); function bond() external view returns (address); }
-interface ITranche { function withdrawPrincipal(uint256 amount, address destination) external returns (uint256); }
+// Recipe G. forge script V2Exit.s.sol:ElementExit --sig "run(address,uint256)" $POOL 99 ...
+contract ElementExit is V2Base {
+    /// @param pct share of your BPT to burn, e.g. 99. Asking for 100 reverts with BAL#406 for large holders.
+    function run(address pool, uint256 pct) external {
+        vm.startBroadcast();
+        (address[] memory tokens, uint256[] memory balances, ) = VAULT.getPoolTokens(IPoolV2(pool).getPoolId());
+        uint256 bptIn = IERC20(pool).balanceOf(msg.sender) * pct / 100;
+        uint256 supply = IERC20(pool).totalSupply();
 
-function exitElement(IElementPool pool, uint256 bptIn) external {
-    bytes32 poolId = pool.getPoolId();
-    (address[] memory tokens, uint256[] memory balances, ) = VAULT.getPoolTokens(poolId);
-    uint256 supply = pool.totalSupply();
-    uint256[] memory amounts = new uint256[](tokens.length);
-    for (uint256 i; i < tokens.length; i++) amounts[i] = balances[i] * bptIn / supply;
+        uint256[] memory amounts = new uint256[](tokens.length);
+        for (uint256 i; i < tokens.length; i++) amounts[i] = balances[i] * bptIn / supply;
+        // the pool burns the BPT matching `amounts` from recipient (= msg.sender)
+        exit(pool, tokens, amounts, abi.encode(amounts));
 
-    // recipient must be the BPT holder: the pool burns the BPT it computes from `amounts` there
-    VAULT.exitPool(poolId, msg.sender, payable(msg.sender), IVaultV2.ExitPoolRequest({
-        assets: tokens, minAmountsOut: amounts, userData: abi.encode(amounts), toInternalBalance: false
-    }));
-    // then, from the holder: ITranche(pool.bond()).withdrawPrincipal(balance, holder);
+        // redeem the principal token (ePyv...) 1:1 for its underlying
+        address bond = IPoolV2(pool).bond();
+        ITranche(bond).withdrawPrincipal(IERC20(bond).balanceOf(msg.sender), msg.sender);
+        vm.stopBroadcast();
+    }
 }
 ```
 
@@ -709,25 +823,31 @@ SDK can use a permit signature instead).
 
 ```
 Router.removeLiquidityProportional(address pool, uint256 exactBptAmountIn, uint256[] minAmountsOut, bool wethIsEth, bytes userData) → amountsOut
-Router.removeLiquidityRecovery(address pool, uint256 exactBptAmountIn, uint256[] minAmountsOut) → amountsOut   // pool in recovery mode
-Router.queryRemoveLiquidityProportional(address pool, uint256 exactBptAmountIn, bytes userData) → amountsOut   // eth_call only
-Router.queryRemoveLiquidityRecovery(address pool, uint256 exactBptAmountIn) → amountsOut                       // eth_call only
+Router.removeLiquidityRecovery(address pool, uint256 exactBptAmountIn, uint256[] minAmountsOut) → amountsOut            // pool in recovery mode
+Router.queryRemoveLiquidityProportional(address pool, uint256 exactBptAmountIn, address sender, bytes userData) → amountsOut   // eth_call only
+Router.queryRemoveLiquidityRecovery(address pool, uint256 exactBptAmountIn) → amountsOut                                // eth_call only
 Vault.getPoolTokens(pool), Vault.isPoolInRecoveryMode(pool), Vault.isPoolPaused(pool), Vault.isVaultPaused()
 Vault.enableRecoveryMode(pool)   // permissionless while the pool or the Vault is paused
 ```
 
-Token order = `Vault.getPoolTokens(pool)`. `wethIsEth = false` pays WETH. `userData = 0x`.
+Token order = `Vault.getPoolTokens(pool)`. `wethIsEth = false` pays WETH. `userData = 0x`. The
+query's `sender` is only passed to pool hooks; the zero address is fine. Both deployed routers
+(v1 and v2) have exactly these signatures.
 
 **Which call?**
 
 | State                                     | Call                                                                                   |
 | ----------------------------------------- | -------------------------------------------------------------------------------------- |
 | normal                                    | `removeLiquidityProportional`                                                          |
-| `isPoolInRecoveryMode == true`            | `removeLiquidityRecovery` (a few early routers only have the 2-arg form without mins)  |
+| `isPoolInRecoveryMode == true`            | `removeLiquidityRecovery`                                                              |
 | paused and not in recovery mode           | `Vault.enableRecoveryMode(pool)` (anyone), then `removeLiquidityRecovery`              |
 
 **Expected amounts:** v3 queries must be `eth_call`ed with `from = 0x000…000`, or compute
 `amount_i = balance_i × bptIn / totalSupply()` from `Vault.getPoolTokenInfo(pool)` balances.
+
+**Boosted pools pay wrapped tokens.** Aave-boosted v3 pools (e.g. `waEthUSDT`, `waEthUSDC`) pay
+the ERC-4626 wrapper, not the underlying. Unwrap on the wrapper: `redeem(shares, you, you)`
+(works even while the Balancer Vault is paused).
 
 **Explorer**
 
@@ -745,8 +865,10 @@ cast call $VAULT3 "getPoolTokens(address)(address[])" $POOL --rpc-url $RPC
 cast call $VAULT3 "isPoolInRecoveryMode(address)(bool)" $POOL --rpc-url $RPC
 cast call $VAULT3 "isPoolPaused(address)(bool)" $POOL --rpc-url $RPC
 # query (must come from the zero address)
-cast call $ROUTER "queryRemoveLiquidityProportional(address,uint256,bytes)(uint256[])" $POOL $BPT_IN 0x \
+cast call $ROUTER "queryRemoveLiquidityProportional(address,uint256,address,bytes)(uint256[])" $POOL $BPT_IN 0x0000000000000000000000000000000000000000 0x \
   --from 0x0000000000000000000000000000000000000000 --rpc-url $RPC
+cast call $ROUTER "queryRemoveLiquidityRecovery(address,uint256)(uint256[])" $POOL $BPT_IN \
+  --from 0x0000000000000000000000000000000000000000 --rpc-url $RPC                        # recovery mode
 # approve + exit
 cast send $POOL   "approve(address,uint256)" $ROUTER $BPT_IN --rpc-url $RPC --ledger
 cast send $ROUTER "removeLiquidityProportional(address,uint256,uint256[],bool,bytes)" \
@@ -756,20 +878,25 @@ cast send $VAULT3 "enableRecoveryMode(address)" $POOL --rpc-url $RPC --ledger   
 cast send $ROUTER "removeLiquidityRecovery(address,uint256,uint256[])" $POOL $BPT_IN "[$MIN0,$MIN1]" --rpc-url $RPC --ledger
 ```
 
-**Solidity**
+**Foundry script** (`--sig "run(address,address,uint256)" $ROUTER $POOL 100`)
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+import "forge-std/Script.sol";
 
-interface IERC20 { function approve(address, uint256) external returns (bool); function balanceOf(address) external view returns (uint256); function totalSupply() external view returns (uint256); }
+interface IERC20 {
+    function approve(address, uint256) external returns (bool);
+    function balanceOf(address) external view returns (uint256);
+    function totalSupply() external view returns (uint256);
+}
 
 interface IVaultV3 {
-    function getPoolTokens(address pool) external view returns (address[] memory);
     struct TokenInfo { uint8 tokenType; address rateProvider; bool paysYieldFees; }
     function getPoolTokenInfo(address pool) external view returns (address[] memory tokens, TokenInfo[] memory tokenInfo, uint256[] memory balancesRaw, uint256[] memory lastBalancesLiveScaled18);
     function isPoolInRecoveryMode(address pool) external view returns (bool);
     function isPoolPaused(address pool) external view returns (bool);
+    function isVaultPaused() external view returns (bool);
     function enableRecoveryMode(address pool) external;
 }
 
@@ -778,11 +905,13 @@ interface IRouterV3 {
     function removeLiquidityRecovery(address pool, uint256 exactBptAmountIn, uint256[] memory minAmountsOut) external payable returns (uint256[] memory);
 }
 
-contract V3ExitExample {
+// forge script V3Exit.s.sol --sig "run(address,address,uint256)" $ROUTER $POOL 100 --rpc-url $RPC --sender $YOU --ledger --broadcast
+contract V3Exit is Script {
     IVaultV3 constant VAULT = IVaultV3(0xbA1333333333a1BA1108E8412f11850A5C319bA9);
 
-    /// @dev Run from the BPT holder (Foundry script): the Router pulls BPT from msg.sender.
-    function exit(IRouterV3 router, address pool, uint256 bptIn, uint256 slippageBps) external {
+    function run(IRouterV3 router, address pool, uint256 slippageBps) external {
+        vm.startBroadcast();
+        uint256 bptIn = IERC20(pool).balanceOf(msg.sender);
         (, , uint256[] memory balances, ) = VAULT.getPoolTokenInfo(pool);
         uint256 supply = IERC20(pool).totalSupply();
         uint256[] memory mins = new uint256[](balances.length);
@@ -790,16 +919,17 @@ contract V3ExitExample {
             mins[i] = balances[i] * bptIn / supply * (10_000 - slippageBps) / 10_000;
         }
 
-        IERC20(pool).approve(address(router), bptIn);
+        IERC20(pool).approve(address(router), bptIn); // the Router pulls BPT from msg.sender
 
         if (VAULT.isPoolInRecoveryMode(pool)) {
             router.removeLiquidityRecovery(pool, bptIn, mins);
-        } else if (VAULT.isPoolPaused(pool)) {
+        } else if (VAULT.isPoolPaused(pool) || VAULT.isVaultPaused()) {
             VAULT.enableRecoveryMode(pool); // permissionless while paused
             router.removeLiquidityRecovery(pool, bptIn, mins);
         } else {
             router.removeLiquidityProportional(pool, bptIn, mins, false, "");
         }
+        vm.stopBroadcast();
     }
 }
 ```
@@ -902,7 +1032,6 @@ back to the recipes in Part 4; the viem equivalents are in [`src/lib/v2.ts`](src
 import { vaultV3Abi } from './src/abis/vaultV3'   // or any ABI with isPoolInRecoveryMode(address)
 
 const vaultV3 = '0xbA1333333333a1BA1108E8412f11850A5C319bA9'
-const routerAddress = '0x…'   // Part 2 / registry.json <chain>.v3.router
 
 const inRecoveryMode = await walletClient.readContract({
   address: vaultV3, abi: vaultV3Abi, functionName: 'isPoolInRecoveryMode', args: [poolState.address],
@@ -918,11 +1047,13 @@ const input: RemoveLiquidityInput = {
 const removeLiquidity = new RemoveLiquidity()
 const queryOutput = await removeLiquidity.query(input, poolState)
 
-// Approval, option A: ERC-20 approve of the BPT to the Router (what this UI does), then buildCall
-await walletClient.writeContract({
-  account, address: poolState.address, abi: erc20Abi, functionName: 'approve', args: [routerAddress, bptBalance],
-})
+// Approval, option A: ERC-20 approve of the BPT to the Router the SDK will call (what this UI does).
+// Approve `call.to`, not an address from elsewhere: the SDK targets Router v2 (Part 2), and an
+// approval to a different router reverts with ERC20InsufficientAllowance.
 const call = removeLiquidity.buildCall({ ...queryOutput, slippage, wethIsEth: false, userData: '0x' })
+await walletClient.writeContract({
+  account, address: poolState.address, abi: erc20Abi, functionName: 'approve', args: [call.to, bptBalance],
+})
 
 // Approval, option B: permit signature, single transaction (no separate approve)
 const permit = await PermitHelper.signRemoveLiquidityApproval({
@@ -946,7 +1077,10 @@ No SDK support. Use viem with the ABIs in [`src/abis`](src/abis):
 
 ```ts
 import { childChainGaugeV2Abi } from './src/abis/childChainGaugeV2'
+// LiquidityGaugeV5 / RewardsOnlyGauge:
 await walletClient.writeContract({ account, address: gauge, abi: childChainGaugeV2Abi, functionName: 'withdraw', args: [stakedBalance, true] })
+// ChildChainGauge (bal_pseudo_minter() answers): no claim flag
+await walletClient.writeContract({ account, address: gauge, abi: childChainGaugeV2Abi, functionName: 'withdraw', args: [stakedBalance] })
 ```
 
 and [`src/lib/v1.ts`](src/lib/v1.ts), [`src/lib/v2.ts`](src/lib/v2.ts) (`quoteCustomExit` for FX /

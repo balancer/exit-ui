@@ -51,6 +51,8 @@ export interface ChainConfig {
     vault: Address
     startBlock: number
     balancerQueries: Address
+    /** Ethereum only: BalancerMinter for gauge BAL emissions. L2 gauges expose bal_pseudo_minter(). */
+    balancerMinter?: Address
     factories: FactoryConfig[]
     gaugeFactories: GaugeFactoryConfig[]
   }
